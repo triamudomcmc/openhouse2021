@@ -1,18 +1,23 @@
-import React from "react";
-import Timer from '../components/Timer'
-import Ouwae from '../components/Vectors';
+import React from 'react'
+import Countdown from 'react-countdown'
+
+const renderer = ({ days, hours, minutes, seconds }) => {
+  return (
+    <span>
+      {days} วัน {hours} ชั่วโมง {minutes} นาที {seconds} วินาที
+    </span>
+  )
+}
 
 const Index = () => (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-        <div className="mb-5">
-            <Ouwae width={163} height={117}/>
-        </div>
-        <div className="text-6xl font-bold font-display">
-            TRIAM UDOM OPENHOUSE 2021
-        </div>
-        <div className="mt-4 text-6xl font-display">เตรียมอุดมโอเพ่นเฮาส์ ๒๐๒๑</div>
-        <Timer/>
+  <div className="flex flex-col items-center justify-center min-h-screen">
+    <div className="text-6xl font-bold font-display">
+      TRIAM UDOM OPENHOUSE 2021
     </div>
+    <div className="mt-8 text-6xl font-display">
+      <Countdown date={1613062800000} renderer={renderer} />
+    </div>
+  </div>
 )
 
 export default Index
