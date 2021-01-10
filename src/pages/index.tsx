@@ -10,7 +10,7 @@ const renderer = ({ days, hours, minutes, seconds }) => {
 }
 
 const Index = () => (
-  <div className="flex flex-col items-center justify-center min-h-screen">
+  <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-200 via-purple-200 to-red-200">
     <div className="text-6xl font-bold font-display">
       TRIAM UDOM OPENHOUSE 2021
     </div>
