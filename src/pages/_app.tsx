@@ -2,6 +2,8 @@ import React from 'react'
 import { AppProps } from 'next/app'
 
 import 'styles/tailwind.css'
+import 'styles/custom.css'
+
 import Head from 'next/head'
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
