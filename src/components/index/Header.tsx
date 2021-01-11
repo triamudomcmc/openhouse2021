@@ -32,7 +32,7 @@ export const Header = ({ days, hours, minutes, seconds }) => {
         </defs>
       </svg>
 
-      <div className="relative flex flex-row justify-center pb-3 -top-8 md:-top-20 font-display">
+      <div className="relative flex flex-row justify-center -top-8 md:-top-14 font-display">
         <div className="flex flex-row font-bold text-center">
           <div>
             <div className="w-12 p-2 text-xl text-gray-600 bg-white shadow-md md:p-4 md:text-5xl md:w-24 rounded-xl">
@@ -59,6 +59,15 @@ export const Header = ({ days, hours, minutes, seconds }) => {
             <h1 className="mt-2 text-sm text-gray-400 md:text-2xl">SEC</h1>
           </div>
         </div>
+      </div>
+      <div className="text-center text-gray-400 text-2xl">
+        <p>
+          เมื่อโรงเรียนเตรียมอุดมศึกษาถูกเนรมิตเป็นเมืองที่จะนำทุกคนสู่บรรยากาศแห่งความอบอุ่น
+        </p>
+        <p>
+          เมื่อสายการเรียนกลายมาเป็นบ้านแต่ละหลังที่ถึงแม้ว่าจะมีเอกลักษณ์ที่แตกต่าง
+        </p>
+        <p>แต่มีใจที่พร้อมต้อนรับทุกคนมาเป็นส่วนหนึ่งของครอบครัวเตรียมอุดมฯ</p>
       </div>
     </div>
   )

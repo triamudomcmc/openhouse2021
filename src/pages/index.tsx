@@ -17,7 +17,9 @@ const renderer = ({ completed, days, hours, minutes, seconds }) => {
     )
   } else {
     return (
-      <Header days={days} hours={hours} minutes={minutes} seconds={seconds} />
+      <div>
+        <Header days={days} hours={hours} minutes={minutes} seconds={seconds} />
+      </div>
     )
   }
 }
