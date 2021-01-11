@@ -4,8 +4,7 @@ import cookie from 'js-cookie'
 
 import firebase from './firebase'
 import { createUser } from './db'
-
-const AUTH_COOKIE = 'oph2021-auth'
+import { AUTH_COOKIE } from './constants'
 
 interface IAuthContext {
   user: firebase.User | null
