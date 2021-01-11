@@ -3,6 +3,8 @@ import Countdown from 'react-countdown'
 
 import { Header } from 'components/index/Header'
 import { Home } from 'components/index/Home'
+import { Register } from 'components/index/Register'
+import { Highlights } from 'components/index/Highlights'
 
 const renderer = ({ completed, days, hours, minutes, seconds }) => {
   if (completed) {
@@ -19,6 +21,8 @@ const renderer = ({ completed, days, hours, minutes, seconds }) => {
     return (
       <div>
         <Header days={days} hours={hours} minutes={minutes} seconds={seconds} />
+        <Register />
+        <Highlights />
       </div>
     )
   }

@@ -8,10 +8,10 @@ export const Header = ({ days, hours, minutes, seconds }) => {
   const rootClassName = cn(styles.root, styles.gradient)
 
   return (
-    <div className="min-h-screen font-display">
+    <div className="font-display">
       <div className={rootClassName}>
         <div className="flex flex-col items-center justify-center w-full h-full pb-8 md:pb-12 font-display">
-          <div className="text-3xl font-bold text-center text-white md:text-6xl">
+          <div className="mt-8 mt-16 text-3xl font-black text-center text-white md:text-6xl">
             <Home />
             <h1 className="mt-8 md:mt-16 text-shadow">TRIAM UDOM</h1>
             <h1 className="text-shadow">OPENHOUSE 2021</h1>
@@ -60,7 +60,7 @@ export const Header = ({ days, hours, minutes, seconds }) => {
           </div>
         </div>
       </div>
-      <div className="text-center text-gray-400 text-2xl">
+      <div className="max-w-xs px-4 mx-auto text-xs font-light tracking-wide text-center text-gray-400 md:text-2xl md:max-w-5xl">
         <p>
           เมื่อโรงเรียนเตรียมอุดมศึกษาถูกเนรมิตเป็นเมืองที่จะนำทุกคนสู่บรรยากาศแห่งความอบอุ่น
         </p>
