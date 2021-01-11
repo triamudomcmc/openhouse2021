@@ -2,7 +2,7 @@ import React from 'react'
 import cn from 'classnames'
 
 import { Home } from './Home'
-import styles from './Header.module.css'
+import styles from './styles/Header.module.css'
 
 export const Header = ({ days, hours, minutes, seconds }) => {
   const rootClassName = cn(styles.root, styles.gradient)
@@ -11,7 +11,7 @@ export const Header = ({ days, hours, minutes, seconds }) => {
     <div className="font-display">
       <div className={rootClassName}>
         <div className="flex flex-col items-center justify-center w-full h-full pb-8 md:pb-12 font-display">
-          <div className="mt-8 mt-16 text-3xl font-black text-center text-white md:text-6xl">
+          <div className="mt-12 md:mt-16 text-3xl font-black text-center text-white md:text-6xl">
             <Home />
             <h1 className="mt-8 md:mt-16 text-shadow">TRIAM UDOM</h1>
             <h1 className="text-shadow">OPENHOUSE 2021</h1>
