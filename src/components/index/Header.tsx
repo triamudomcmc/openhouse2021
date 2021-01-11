@@ -10,10 +10,10 @@ export const Header = ({ days, hours, minutes, seconds }) => {
   return (
     <div className="min-h-screen font-display">
       <div className={rootClassName}>
-        <div className="flex flex-col items-center justify-center w-full h-full pb-6 md:pb-12 font-display">
+        <div className="flex flex-col items-center justify-center w-full h-full pb-8 md:pb-12 font-display">
           <div className="text-3xl font-bold text-center text-white md:text-6xl">
             <Home />
-            <h1 className="mt-16 text-shadow">TRIAM UDOM</h1>
+            <h1 className="mt-8 md:mt-16 text-shadow">TRIAM UDOM</h1>
             <h1 className="text-shadow">OPENHOUSE 2021</h1>
           </div>
         </div>
@@ -32,7 +32,7 @@ export const Header = ({ days, hours, minutes, seconds }) => {
         </defs>
       </svg>
 
-      <div className="relative flex flex-row justify-center pb-3 -top-12 md:-top-20 font-display">
+      <div className="relative flex flex-row justify-center pb-3 -top-8 md:-top-20 font-display">
         <div className="flex flex-row font-bold text-center">
           <div>
             <div className="w-12 p-2 text-xl text-gray-600 bg-white shadow-md md:p-4 md:text-5xl md:w-24 rounded-xl">
