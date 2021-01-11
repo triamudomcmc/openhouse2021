@@ -1,0 +1,6 @@
+.root {
+  z-index: -1;
+  height: 600px;
+  clip-path: url(#headerCurve);
+  @apply w-full bg-gradient-to-br from-blue-200 via-purple-200 to-red-200;
+}

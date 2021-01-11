@@ -1,9 +1,11 @@
 import React from 'react'
+
 import { Home } from './Home'
+import styles from './Header.module.css'
 
 export const Header = ({ days, hours, minutes, seconds }) => (
   <div className="min-h-screen font-display">
-    <div className="w-full curved bg-gradient-to-br from-blue-200 via-purple-200 to-red-200">
+    <div className={styles.root}>
       <div className="flex flex-col items-center justify-center w-full h-full pb-6 md:pb-12 font-display">
         <div className="text-3xl font-bold text-center text-white md:text-6xl">
           <Home />
@@ -13,7 +15,7 @@ export const Header = ({ days, hours, minutes, seconds }) => (
       </div>
     </div>
 
-    <svg width="0" height="0" className="hidden">
+    <svg width="0" height="0">
       <defs>
         <clipPath id="headerCurve" clipPathUnits="objectBoundingBox">
           <path d="M 0.503906 0.972656 C 0.265625 1.035156 0.0625 0.972656 -0.0117188 0.871094 L -0.0117188 -0.105469 L 1.011719 -0.105469 L 1.011719 0.972656 C 0.921875 0.90625 0.890625 0.871094 0.503906 0.972656 Z M 0.503906 0.972656" />
