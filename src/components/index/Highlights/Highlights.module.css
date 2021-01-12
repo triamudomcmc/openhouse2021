@@ -13,15 +13,9 @@
   );
 }
 .circle2Gradient {
-  width: 273px;
+  width: 206px;
   height: 273px;
-  right: -135px;
   z-index: 1;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 236, 160, 0.3) 28.06%,
-    rgba(247, 240, 246, 0.177) 100%
-  );
 }
 .svg {
   width: 190px;
@@ -46,16 +40,9 @@
   }
 
   .circle2Gradient {
-    width: 873px;
+    width: 659px;
     height: 873px;
-    right: -235px;
-    clip: rect(0px, 638px, 873px, 0px);
     z-index: 1;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 236, 160, 0.3) 28.06%,
-      rgba(247, 240, 246, 0.177) 100%
-    );
   }
 
   .svg {
