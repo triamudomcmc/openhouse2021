@@ -12,10 +12,19 @@
     rgba(221, 214, 254, 0) 100%
   );
 }
-
+.circle2Gradient {
+  width: 206px;
+  height: 273px;
+  z-index: 1;
+}
 .svg {
   width: 190px;
   height: 111px;
+}
+
+.svg2 {
+  width: 240px;
+  height: 148px;
 }
 
 @media (min-width: 420px) {
@@ -30,8 +39,19 @@
     );
   }
 
+  .circle2Gradient {
+    width: 659px;
+    height: 873px;
+    z-index: 1;
+  }
+
   .svg {
     width: 609px;
     height: 351px;
+  }
+
+  .svg2 {
+    width: 762px;
+    height: 475px;
   }
 }
