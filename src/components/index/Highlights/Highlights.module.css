@@ -17,6 +17,16 @@
   height: 273px;
   z-index: 1;
 }
+.circle3Gradient {
+  width: 273px;
+  height: 273px;
+  left: -135px;
+  background: linear-gradient(
+    180deg,
+    rgba(221, 214, 254, 0.3) 15.75%,
+    rgba(255, 234, 238, 0.156) 100%
+  );
+}
 .svg {
   width: 190px;
   height: 111px;
@@ -25,6 +35,11 @@
 .svg2 {
   width: 240px;
   height: 148px;
+}
+
+.svg3 {
+  width: 209px;
+  height: 171px;
 }
 
 @media (min-width: 420px) {
@@ -45,6 +60,17 @@
     z-index: 1;
   }
 
+  .circle3Gradient {
+    width: 873px;
+    height: 873px;
+    left: -235px;
+    background: linear-gradient(
+      180deg,
+      rgba(221, 214, 254, 0.3) 15.75%,
+      rgba(255, 234, 238, 0.156) 100%
+    );
+  }
+
   .svg {
     width: 609px;
     height: 351px;
@@ -53,5 +79,10 @@
   .svg2 {
     width: 762px;
     height: 475px;
+  }
+
+  .svg3 {
+    width: 672px;
+    height: 541px;
   }
 }
