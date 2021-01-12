@@ -1,6 +1,12 @@
-.buttonGradiant {
-    background: linear-gradient(84.67deg, #A5F3FC -32.34%, #DDD6FE 40.06%, #FFCECE 109.5%);
+.buttonGradient {
+  background: linear-gradient(
+    84.67deg,
+    #a5f3fc -32.34%,
+    #ddd6fe 40.06%,
+    #ffcece 109.5%
+  );
 }
+
 .buttonRoot {
-    @apply inline-flex items-center px-10 py-4 text-xs font-bold text-white border border-transparent rounded-full w-max md:text-3xl font-display focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-200;
+  @apply inline-flex items-center px-10 py-4 text-xs font-bold text-white border border-transparent rounded-full w-max md:text-3xl font-display focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-200;
 }

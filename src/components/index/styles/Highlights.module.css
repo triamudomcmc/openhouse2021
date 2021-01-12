@@ -1,28 +1,37 @@
 .circle1Root {
-    @apply rounded-full
+  @apply rounded-full;
 }
 
-.circle1Gradiant {
-    width: 273px;
-    height: 273px;
-    left: -135px;
-    background: linear-gradient(180deg, rgba(255, 220, 220, 0.6) 0%, rgba(221, 214, 254, 0) 100%);
+.circle1Gradient {
+  width: 273px;
+  height: 273px;
+  left: -135px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 220, 220, 0.6) 0%,
+    rgba(221, 214, 254, 0) 100%
+  );
 }
 
 .svg {
-    width: 190px;
-    height: 111px;
+  width: 190px;
+  height: 111px;
 }
 
 @media (min-width: 420px) {
-    .circle1Gradiant {
-        width: 873px;
-        height: 873px;
-        left: -235px;
-        background: linear-gradient(180deg, rgba(247, 205, 214, 0.3) 15.75%, rgba(255, 234, 238, 0.156) 100%);
-    }
-    .svg {
-        width: 609px;
-        height: 351px;
-    }
+  .circle1Gradient {
+    width: 873px;
+    height: 873px;
+    left: -235px;
+    background: linear-gradient(
+      180deg,
+      rgba(247, 205, 214, 0.3) 15.75%,
+      rgba(255, 234, 238, 0.156) 100%
+    );
+  }
+
+  .svg {
+    width: 609px;
+    height: 351px;
+  }
 }
