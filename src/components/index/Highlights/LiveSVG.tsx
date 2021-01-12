@@ -9,8 +9,8 @@ export const Live = ({ ...restProps }) => (
     {...restProps}
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M217.033 95.3079C259.274 86.2233 303.338 91.5607 342.191 110.468C278.884 123.554 180.568 144.947 118.843 158.464L366.418 118.565C374.175 123.646 381.558 129.276 388.509 135.412L236.381 193.475L404.798 151.592C411.703 159.313 417.978 167.575 423.564 176.299L389.195 202.012L428.028 183.623C445.001 212.909 453.948 246.158 453.963 280.011H67.668C67.6888 236.631 82.3586 194.539 109.284 160.559C109.242 160.568 109.199 160.577 109.157 160.586C136.813 127.375 174.793 104.393 217.033 95.3079Z"
       fill="url(#paint0_radial)"
     />
@@ -213,8 +213,8 @@ export const Live = ({ ...restProps }) => (
         gradientUnits="userSpaceOnUse"
         gradientTransform="translate(-189.5 211.5) rotate(26.7229) scale(892.865 1825.6)"
       >
-        <stop stop-color="#FECACA" />
-        <stop offset="1" stop-color="white" />
+        <stop stopColor="#FECACA" />
+        <stop offset="1" stopColor="white" />
       </radialGradient>
     </defs>
   </svg>

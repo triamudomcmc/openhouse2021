@@ -1,9 +1,9 @@
 import React from 'react'
 import Countdown from 'react-countdown'
 
-import { Header } from 'components/index/Header'
-import { Home } from 'components/index/Home'
-import { Register } from 'components/index/Register'
+import { Home } from 'components/common/Header/Home'
+import { Intro } from 'components/index/Intro'
+import { CTA } from 'components/index/CTA'
 import { Highlights } from 'components/index/Highlights'
 
 const renderer = ({ completed, days, hours, minutes, seconds }) => {
@@ -20,8 +20,8 @@ const renderer = ({ completed, days, hours, minutes, seconds }) => {
   } else {
     return (
       <div>
-        <Header days={days} hours={hours} minutes={minutes} seconds={seconds} />
-        <Register />
+        <Intro days={days} hours={hours} minutes={minutes} seconds={seconds} />
+        <CTA />
         <Highlights />
       </div>
     )
