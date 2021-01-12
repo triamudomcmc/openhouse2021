@@ -5,7 +5,6 @@ export const Intro = ({ days, hours, minutes, seconds }) => {
   return (
     <div className="font-display">
       <Header />
-
       <div className="relative flex flex-row justify-center -top-8 md:-top-14 font-display">
         <div className="flex flex-row font-bold text-center">
           <div>
