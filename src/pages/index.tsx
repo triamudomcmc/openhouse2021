@@ -5,6 +5,7 @@ import { Home } from 'components/common/Header/Home'
 import { Intro } from 'components/index/Intro'
 import { CTA } from 'components/index/CTA'
 import { Highlights } from 'components/index/Highlights'
+import { Liveshow } from 'components/index/Live'
 
 const renderer = ({ completed, days, hours, minutes, seconds }) => {
   if (completed) {
@@ -23,6 +24,7 @@ const renderer = ({ completed, days, hours, minutes, seconds }) => {
         <Intro days={days} hours={hours} minutes={minutes} seconds={seconds} />
         <CTA />
         <Highlights />
+        <Liveshow />
       </div>
     )
   }
