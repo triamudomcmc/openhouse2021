@@ -2,10 +2,10 @@ import React from 'react'
 import cn from 'classnames'
 
 import { Home } from './Home'
-import styles from './styles/Header.module.css'
+import s from './styles/Header.module.css'
 
 export const Header = ({ days, hours, minutes, seconds }) => {
-  const rootClassName = cn(styles.root, styles.gradient)
+  const rootClassName = cn(s.root, s.gradient)
 
   return (
     <div className="font-display">
