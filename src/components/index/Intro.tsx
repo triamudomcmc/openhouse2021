@@ -33,7 +33,7 @@ export const Intro = ({ days, hours, minutes, seconds }) => {
           </div>
         </div>
       </div>
-      <div className="max-w-xs px-4 mx-auto text-xs font-light tracking-wide text-center text-gray-400 md:text-2xl md:max-w-5xl">
+      <div className="max-w-xs px-4 mx-auto text-sm font-normal tracking-wide text-center text-gray-400 md:text-2xl md:max-w-5xl">
         <p>
           เมื่อโรงเรียนเตรียมอุดมศึกษาถูกเนรมิตเป็นเมืองที่จะนำทุกคนสู่บรรยากาศแห่งความอบอุ่น
         </p>
