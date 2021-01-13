@@ -3,7 +3,6 @@ import Head from 'next/head'
 import { AppProps } from 'next/app'
 
 import 'styles/tailwind.css'
-import 'styles/custom.css'
 
 import { AuthProvider } from 'lib/auth'
 
