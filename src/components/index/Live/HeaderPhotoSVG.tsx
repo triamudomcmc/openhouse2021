@@ -1,10 +1,8 @@
 import React from 'react'
-import s from '../Highlights/Highlights.module.css'
 
 export const UndrawPositiveAttitude = ({ ...restProps }) => {
   return (
     <svg
-      className={s.svg4}
       width="854"
       height="441"
       viewBox="0 0 854 441"

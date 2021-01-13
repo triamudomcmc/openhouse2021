@@ -1,10 +1,10 @@
-import s from './Highlights.module.css'
 import React from "react";
 
 export const Clip = ({ ...restProps }) => {
   return (
     <svg
-      className={s.svg2}
+      width="391px"
+      height="244px"
       viewBox="0 0 762 475"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -220,7 +220,8 @@ export const Clip = ({ ...restProps }) => {
 export const Live = ({ ...restProps }) => {
   return (
     <svg
-      className={s.svg}
+      width="304"
+      height="175"
       viewBox="0 0 609 351"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -448,7 +449,8 @@ export const Live = ({ ...restProps }) => {
 export const CircleYellow = ({ ...restProps }) => {
   return (
     <svg
-      className={s.circle2Gradient}
+      width="164"
+      height="218"
       viewBox="0 0 659 873"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -478,13 +480,15 @@ export const CircleYellow = ({ ...restProps }) => {
   )
 }
 
-export const Giveaway = () => {
+export const Giveaway = ({... restProps }) => {
   return (
     <svg
-      className={s.svg3}
+      width="335px"
+      height="270px"
       viewBox="0 0 672 541"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...restProps}
     >
       <path
         d="M189.163 359.747C231.269 359.747 265.403 325.654 265.403 283.598C265.403 241.541 231.269 207.448 189.163 207.448C147.056 207.448 112.922 241.541 112.922 283.598C112.922 325.654 147.056 359.747 189.163 359.747Z"
@@ -614,3 +618,31 @@ export const Giveaway = () => {
   )
 }
 
+export const CirclePink = ({ ...restProps }) => {
+  return (
+    <svg width="161" height="219" viewBox="0 0 161 219" fill="none" xmlns="http://www.w3.org/2000/svg" {...restProps}>
+      <path fillRule="evenodd" clipRule="evenodd" d="M0 205.088C15.4216 213.48 33.0925 218.247 51.8743 218.247C112.003 218.247 160.748 169.39 160.748 109.123C160.748 48.8562 112.003 0 51.8743 0C33.0925 0 15.4216 4.76674 0 13.159V205.088Z" fill="url(#paint1_linear)" fillOpacity="0.3"/>
+      <defs>
+        <linearGradient id="paint1_linear" x1="51.8742" y1="-32.3572" x2="51.8742" y2="185.889" gradientUnits="userSpaceOnUse">
+          <stop offset="0.157475" stopColor="#F7CDD6"/>
+          <stop offset="1" stopColor="#FFEAEE" stopOpacity="0.52"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  )
+}
+
+export const CirclePurple = ({ ...restProps }) => {
+  return (
+    <svg width="161" height="220" viewBox="0 0 161 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 205.974C15.4216 214.367 33.0926 219.134 51.8744 219.134C112.003 219.134 160.748 170.277 160.748 110.01C160.748 49.7431 112.003 0.886963 51.8744 0.886963C33.0926 0.886963 15.4216 5.65372 0 14.0461V205.974Z" fill="url(#paint2_linear)" fill-opacity="0.3"/>
+      <defs>
+        <linearGradient id="paint2_linear" x1="51.8742" y1="0.886963" x2="51.8742" y2="219.134" gradientUnits="userSpaceOnUse">
+          <stop offset="0.157475" stop-color="#DDD6FE"/>
+          <stop offset="1" stop-color="#FFEAEE" stop-opacity="0.52"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+  )
+}
