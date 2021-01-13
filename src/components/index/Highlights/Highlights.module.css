@@ -5,22 +5,24 @@
 .circle1Gradient {
   width: 273px;
   height: 273px;
-  left: -135px;
+  left: -115px;
   background: linear-gradient(
     180deg,
     rgba(255, 220, 220, 0.6) 0%,
     rgba(221, 214, 254, 0) 100%
   );
 }
+
 .circle2Gradient {
   width: 206px;
   height: 273px;
   z-index: 1;
 }
+
 .circle3Gradient {
   width: 273px;
   height: 273px;
-  left: -135px;
+  left: -115px;
   background: linear-gradient(
     180deg,
     rgba(221, 214, 254, 0.3) 15.75%,
@@ -40,6 +42,11 @@
 .svg3 {
   width: 209px;
   height: 171px;
+}
+
+.svg4 {
+  width: 266px;
+  height: 137px;
 }
 
 @media (min-width: 420px) {
@@ -85,4 +92,10 @@
     width: 672px;
     height: 541px;
   }
+
+  .svg4 {
+    width: 854px;
+    height: 441px;
+  }
+
 }

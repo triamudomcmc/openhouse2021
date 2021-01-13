@@ -481,7 +481,7 @@ export const CircleYellow = ({ ...restProps }) => {
 export const Giveaway = () => {
   return (
     <svg
-      className={s.svg}
+      className={s.svg3}
       viewBox="0 0 672 541"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

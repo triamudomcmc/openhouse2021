@@ -49,17 +49,17 @@ export const Highlights = () => (
           </div>
         </div>
       </div>
-      <div className="flex flex-row -mt-36 md:-mt-32 h-96 md:h-873 font-display">
+      <div className="flex flex-row -mt-36 md:-mt-32 h-72 md:h-873 font-display">
         <div className="relative w-full">
           <div className={cn('rounded-full absolute', s.circle3Gradient)} />
-          <div className="absolute top-28 left-12 md:top-80 md:left-40">
+          <div className="absolute top-14 left-8 md:top-36 md:left-40">
             <Giveaway />
           </div>
         </div>
         <div className="absolute flex w-full pr-8 relative pt-2 md:pt-32 text-right md:text-center md:h-full">
           <div className="w-full">
             <div className="inline-block text-right">
-              <div className="w-64 pt-2 text-base font-normal text-gray-500 md:text-5xl md:leading-normal md:pt-10 md:w-36rem">
+              <div className="w-44 pt-10 text-base font-normal text-gray-500 md:text-5xl md:leading-normal md:pt-10 md:w-34rem">
                 <p>Giveaway ปฏิทินสอบเข้า และ sticker สุดน่ารัก</p>
               </div>
             </div>
