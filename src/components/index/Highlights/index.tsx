@@ -29,7 +29,7 @@ export const Highlights = () => (
                 อีกมากมาย
               </p>
             </div>
-            <div className="absolute right-6 md:hidden text-base text-right md:text-center font-normal text-gray-500 md:text-2xl md:leading-normal w-64">
+            <div className="absolute right-0 md:hidden text-base text-right md:text-center font-normal text-gray-500 md:text-2xl md:leading-normal w-72">
               <div className="absolute -top-6">
                 <h1 className="block md:hidden text-xl text-right font-black text-blue-400 pb-1">
                   Highlights
