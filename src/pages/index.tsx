@@ -6,7 +6,6 @@ import { Intro } from 'components/index/Intro'
 import { CTA } from 'components/index/CTA'
 import { Highlights } from 'components/index/Highlights'
 import { Liveshow } from 'components/index/Live'
-import Footer from '../components/index/Footer'
 
 const renderer = ({ completed, days, hours, minutes, seconds }) => {
   if (completed) {
@@ -21,12 +20,11 @@ const renderer = ({ completed, days, hours, minutes, seconds }) => {
     )
   } else {
     return (
-      <div>
+      <div className="pb-32">
         <Intro days={days} hours={hours} minutes={minutes} seconds={seconds} />
         <CTA />
         <Highlights />
         <Liveshow />
-        <Footer />
       </div>
     )
   }
