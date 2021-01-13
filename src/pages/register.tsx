@@ -9,16 +9,16 @@ const Register = () => {
   const auth = useAuth()
 
   return (
-    <div className="font-display">
+    <div className="pb-8 font-display">
       <Header />
-      <div className="flex flex-col items-center justify-center mt-16">
+      <div className="flex flex-col items-center justify-center mt-8 md:mt-16">
         <h1 className="text-2xl font-bold text-gray-600 md:text-4xl">
           Sign Up / ลงทะเบียน
         </h1>
-        <div className="flex flex-col items-center justify-center mt-16">
+        <div className="flex flex-col items-center justify-center mt-4 md:mt-12">
           <button
             type="button"
-            className="inline-flex items-center justify-center px-10 py-2 text-xl font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md w-96 focus:outline-none"
+            className="inline-flex items-center justify-center w-full px-5 py-2 mt-4 text-base font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md md:px-10 md:text-xl focus:outline-none"
             onClick={() => auth.signinWithGoogle('/')}
           >
             <Google className="w-5 h-5 mr-4" />
@@ -26,7 +26,7 @@ const Register = () => {
           </button>
           <button
             type="button"
-            className="inline-flex items-center justify-center px-10 py-2 mt-4 text-xl font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md w-96 focus:outline-none"
+            className="inline-flex items-center justify-center w-full px-5 py-2 mt-4 text-base font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md md:px-10 md:text-xl focus:outline-none"
             onClick={() => auth.signinWithFacebook('/')}
           >
             <Facebook className="w-5 h-5 mr-4" />
