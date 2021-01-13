@@ -11,7 +11,7 @@ export const Header = () => (
         <div className="mt-12 text-3xl font-black text-center text-white md:mt-16 md:text-6xl">
           <Home />
           <h1 className="mt-8 md:mt-16 text-shadow">TRIAM UDOM</h1>
-          <h1 className="text-shadow">OPENHOUSE 2021</h1>
+          <h1 className="text-shadow">OPEN HOUSE 2021</h1>
         </div>
       </div>
     </div>

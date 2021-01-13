@@ -9,7 +9,7 @@ import { AuthProvider } from 'lib/auth'
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <div className="antialiased">
     <Head>
-      <title>Triam Udom Openhouse 2020</title>
+      <title>Triam Udom Open House 2021</title>
     </Head>
     <AuthProvider>
       <Component {...pageProps} />
