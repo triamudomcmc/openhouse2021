@@ -7,8 +7,8 @@ export const Nav = () => {
       <header className="flex items-center py-4">
         <Link href="/">
           <div className="text-lg font-black leading-tight text-transparent cursor-pointer md:text-2xl font-display bg-clip-text bg-gradient-to-r from-blue-200 via-purple-200 to-red-200">
-            <h1>TRIAM UDOM</h1>
-            <h1>OPEN HOUSE</h1>
+            <h1>TRIAM UDOM ONLINE</h1>
+            <h1>OPEN HOUSE 2021</h1>
           </div>
         </Link>
       </header>
