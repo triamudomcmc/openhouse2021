@@ -3,11 +3,20 @@ import Router from 'next/router'
 import cookie from 'js-cookie'
 
 import firebase from './firebase'
-import { createUser } from './db'
+import { createUser, getCurrentUserData } from './db'
 import { AUTH_COOKIE } from './constants'
+
+interface IUserData {
+  uid: string
+  email: string
+  name: string
+  provider: string
+  photoUrl: string
+}
 
 interface IAuthContext {
   user: firebase.User | null
+  userData: firebase.firestore.DocumentData
   loading: boolean
   signinWithFacebook: (redirect: string) => Promise<void>
   signinWithGoogle: (redirect: string) => Promise<void>
@@ -26,15 +35,32 @@ export const AuthProvider = ({ children }) => {
 }
 
 function useProvideAuth() {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState<firebase.User | null>(null)
+  const [userData, setUserData] = useState<firebase.firestore.DocumentData>(
+    null
+  )
   const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await getCurrentUserData(user.uid)
+      if (data) {
+        setUserData(data)
+      } else {
+        setUserData(null)
+      }
+    }
+
+    if (user) {
+      getData()
+    }
+  }, [user])
 
   const handleUser = async (rawUser: firebase.User) => {
     if (rawUser) {
-      const user = await formatUser(rawUser)
-
+      const user = formatUser(rawUser)
       createUser(user.uid, user)
-      setUser(user)
+      setUser(rawUser)
 
       cookie.set(AUTH_COOKIE, true, {
         expires: 1,
@@ -42,7 +68,7 @@ function useProvideAuth() {
 
       setLoading(false)
     } else {
-      setUser(false)
+      setUser(null)
       cookie.remove(AUTH_COOKIE)
 
       setLoading(false)
@@ -92,6 +118,7 @@ function useProvideAuth() {
 
   return {
     user,
+    userData,
     loading,
     signinWithFacebook,
     signinWithGoogle,
@@ -99,7 +126,7 @@ function useProvideAuth() {
   }
 }
 
-const formatUser = async (user: firebase.User) => {
+const formatUser = (user: firebase.User): IUserData => {
   return {
     uid: user.uid,
     email: user.email,
