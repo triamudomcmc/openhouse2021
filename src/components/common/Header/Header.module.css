@@ -4,7 +4,7 @@
   clip-path: url(#headerCurveMobile);
 }
 
-@media (min-width: 420px) {
+@media (min-width: 430px) {
   .root {
     z-index: -1;
     min-height: 640px;
