@@ -1,4 +1,5 @@
 import s from './Highlights.module.css'
+import React from "react";
 
 export const Clip = ({ ...restProps }) => {
   return (
@@ -477,7 +478,7 @@ export const CircleYellow = ({ ...restProps }) => {
   )
 }
 
-export const Giveaway = ({ ...restProps }) => {
+export const Giveaway = () => {
   return (
     <svg
       className={s.svg}
@@ -612,3 +613,4 @@ export const Giveaway = ({ ...restProps }) => {
     </svg>
   )
 }
+
