@@ -44,11 +44,6 @@
   height: 171px;
 }
 
-.svg4 {
-  width: 266px;
-  height: 137px;
-}
-
 @media (min-width: 430px) {
   .circle1Gradient {
     width: 873px;
@@ -92,10 +87,4 @@
     width: 672px;
     height: 541px;
   }
-
-  .svg4 {
-    width: 854px;
-    height: 441px;
-  }
-
 }
