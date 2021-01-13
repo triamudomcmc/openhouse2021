@@ -5,7 +5,7 @@ import {Live, Clip, CircleYellow, Giveaway, CirclePink, CirclePurple} from './SV
 export const Highlights = () => (
   <div>
     <div>
-      <h1 className="hidden md:block mt-48 text-center font-black text-blue-400 text-7xl">
+      <h1 className="hidden md:block mt-52 text-center font-black text-blue-400 text-7xl">
         Highlights
       </h1>
       <div className="flex flex-wrap md:justify-center mt-2 md:mt-12 font-display">

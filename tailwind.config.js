@@ -12,6 +12,20 @@ module.exports = {
     },
   },
   theme: {
+    screens: {
+      'xs': '480px',
+      'xxs': '321px'
+    },
+    extend: {
+      colors: {
+        blue: {
+          25: '#BAE6FD'
+        },
+        yellow: {
+          25: '#FED7AA'
+        }
+      }
+    },
     fontFamily: {
       sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       display: [

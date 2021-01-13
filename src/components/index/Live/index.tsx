@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Timetable from "./Timetable";
 
 export const Liveshow = () => (
   <div>
@@ -10,16 +11,15 @@ export const Liveshow = () => (
           LIVE
         </span>
       </h1>
-      <div className="w-8/12 mx-auto flex justify-center items-center">
+      <div className="w-8/12 mx-auto max-w-2xl flex justify-center items-center">
         <Image
           src="/assets/vectors/UndrawPositiveAttitude.svg"
           width={854}
           height={441}
         />
       </div>
-      <div className="flex items-center justify-center w-full mt-1 md:mt-10">
-
-      </div>
+      <Timetable className="w-full xxs:w-11/12 max-w-2xl px-2 xxs:px-3 xs:px-10 mt-6 font-display" date="12" data={[{starttime: 1000, endtime: 1000, title:"การแสดงเชียร์เพลงพระราชนิพนธ์", club:"ชมรมเชียร์"}, {starttime: 1000, endtime: 1000, title:"การแสดงเชียร์เพลงพระราชนิพนธ์", club:"ชมรมเชียร์"},{starttime: 1000, endtime: 1000, title:"การแสดงเชียร์เพลงพระราชนิพนธ์", club:"ชมรมเชียร์"}, {starttime: 1000, endtime: 1000, title:"การแสดงเชียร์เพลงพระราชนิพนธ์", club:"ชมรมเชียร์"},{starttime: 1000, endtime: 1000, title:"การแสดงเชียร์เพลงพระราชนิพนธ์", club:"ชมรมเชียร์"}, {starttime: 1000, endtime: 1000, title:"การแสดงเชียร์เพลงพระราชนิพนธ์", club:"ชมรมเชียร์"},{starttime: 1000, endtime: 1000, title:"การแสดงเชียร์เพลงพระราชนิพนธ์", club:"ชมรมเชียร์"}, {starttime: 1000, endtime: 1000, title:"การแสดงเชียร์เพลงพระราชนิพนธ์", club:"ชมรมเชียร์"}]}/>
+      <Timetable className="w-full xxs:w-11/12 max-w-2xl px-2 xxs:px-3 xs:px-10 mt-6 font-display" date="13" data={[{starttime: 1000, endtime: 1000, title:"การแสดงเชียร์เพลงพระราชนิพนธ์", club:"ชมรมเชียร์"}, {starttime: 1000, endtime: 1000, title:"การแสดงเชียร์เพลงพระราชนิพนธ์", club:"ชมรมเชียร์"},{starttime: 1000, endtime: 1000, title:"การแสดงเชียร์เพลงพระราชนิพนธ์", club:"ชมรมเชียร์"}, {starttime: 1000, endtime: 1000, title:"การแสดงเชียร์เพลงพระราชนิพนธ์", club:"ชมรมเชียร์"},{starttime: 1000, endtime: 1000, title:"การแสดงเชียร์เพลงพระราชนิพนธ์", club:"ชมรมเชียร์"}, {starttime: 1000, endtime: 1000, title:"การแสดงเชียร์เพลงพระราชนิพนธ์", club:"ชมรมเชียร์"},{starttime: 1000, endtime: 1000, title:"การแสดงเชียร์เพลงพระราชนิพนธ์", club:"ชมรมเชียร์"}, {starttime: 1000, endtime: 1000, title:"การแสดงเชียร์เพลงพระราชนิพนธ์", club:"ชมรมเชียร์"}]}/>
     </div>
   </div>
 )
