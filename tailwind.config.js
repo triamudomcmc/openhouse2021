@@ -46,7 +46,7 @@ module.exports = {
             fontWeight: '100 900',
             fontStyle: 'normal',
             fontNamedInstance: 'Regular',
-            fontDisplay: 'optional',
+            fontDisplay: 'swap',
             src: 'url("/assets/fonts/Inter-roman.var.woff2") format("woff2")',
           },
         },
@@ -56,7 +56,7 @@ module.exports = {
             fontWeight: '100 900',
             fontStyle: 'italic',
             fontNamedInstance: 'Italic',
-            fontDisplay: 'optional',
+            fontDisplay: 'swap',
             src: 'url("/assets/fonts/Inter-italic.var.woff2") format("woff2")',
           },
         },
@@ -65,7 +65,7 @@ module.exports = {
             fontFamily: 'IBM Plex Sans Thai',
             fontStyle: 'normal',
             fontWeight: '400',
-            fontDisplay: 'optional',
+            fontDisplay: 'swap',
             src:
               'local("IBM Plex Sans Thai"), local("IBMPlexSansThai"), url("/assets/fonts/IBMPlexSansThai-Regular.woff2") format("woff2")',
           },
@@ -75,7 +75,7 @@ module.exports = {
             fontFamily: 'IBM Plex Sans Thai',
             fontStyle: 'normal',
             fontWeight: '450',
-            fontDisplay: 'optional',
+            fontDisplay: 'swap',
             src:
               'local("IBM Plex Sans Thai Text"), local("IBMPlexSansThai-Text"), url("/assets/fonts/IBMPlexSansThai-Text.woff2") format("woff2")',
           },
@@ -85,7 +85,7 @@ module.exports = {
             fontFamily: 'IBM Plex Sans Thai',
             fontStyle: 'normal',
             fontWeight: '500',
-            fontDisplay: 'optional',
+            fontDisplay: 'swap',
             src:
               'local("IBM Plex Sans Thai Medium"), local("IBMPlexSansThai-Medium"), url("/assets/fonts/IBMPlexSansThai-Medium.woff2") format("woff2")',
           },
@@ -95,7 +95,7 @@ module.exports = {
             fontFamily: 'IBM Plex Sans Thai',
             fontStyle: 'normal',
             fontWeight: '600',
-            fontDisplay: 'optional',
+            fontDisplay: 'swap',
             src:
               'local("IBM Plex Sans Thai SemiBold"), local("IBMPlexSansThai-SemiBold"), url("/assets/fonts/IBMPlexSansThai-SemiBold.woff2") format("woff2")',
           },
@@ -105,7 +105,7 @@ module.exports = {
             fontFamily: 'IBM Plex Sans Thai',
             fontStyle: 'normal',
             fontWeight: '700',
-            fontDisplay: 'optional',
+            fontDisplay: 'swap',
             src:
               'local("IBM Plex Sans Thai Bold"), local("IBMPlexSansThai-Bold"), url("/assets/fonts/IBMPlexSansThai-Bold.woff2") format("woff2")',
           },
@@ -115,7 +115,7 @@ module.exports = {
             fontFamily: 'IBM Plex Sans Thai',
             fontStyle: 'normal',
             fontWeight: '100',
-            fontDisplay: 'optional',
+            fontDisplay: 'swap',
             src:
               'local("IBM Plex Sans Thai Thin"), local("IBMPlexSansThai-Thin"), url("/assets/fonts/IBMPlexSansThai-Thin.woff2") format("woff2")',
           },
@@ -125,7 +125,7 @@ module.exports = {
             fontFamily: 'IBM Plex Sans Thai',
             fontStyle: 'normal',
             fontWeight: '200',
-            fontDisplay: 'optional',
+            fontDisplay: 'swap',
             src:
               'local("IBM Plex Sans Thai ExtraLight"), local("IBMPlexSansThai-ExtraLight"), url("/assets/fonts/IBMPlexSansThai-ExtraLight.woff2") format("woff2")',
           },
@@ -135,7 +135,7 @@ module.exports = {
             fontFamily: 'IBM Plex Sans Thai',
             fontStyle: 'normal',
             fontWeight: '300',
-            fontDisplay: 'optional',
+            fontDisplay: 'swap',
             src:
               'local("IBM Plex Sans Thai Light"), local("IBMPlexSansThai-Light"), url("/assets/fonts/IBMPlexSansThai-Light.woff2") format("woff2")',
           },
@@ -143,7 +143,7 @@ module.exports = {
         {
           '@font-face': {
             fontFamily: 'Sukhumvit Set',
-            fontDisplay: 'optional',
+            fontDisplay: 'swap',
             src: "local('Sukhumvit Set')",
             unicodeRange: 'U+0E01-0E5B, U+200C-200D, U+25CC',
           },
