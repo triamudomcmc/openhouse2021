@@ -18,29 +18,34 @@ const Timetable = ({ data, date, ...restProps }) => {
   }
 
   return (
-    <div className="flex flex-col" {...restProps}>
+    <div
+      className="flex flex-col w-full max-w-2xl px-4 mt-6 font-display"
+      {...restProps}
+    >
       <div>
         <div className="flex flex-col items-center justify-center">
           {heading}
           <span>กุมภาพันธ์</span>
         </div>
-        {data.map((value: TimetableData) => (
-          <div className="flex flex-row px-5 py-2 my-2 rounded-md shadow-md">
-            <div className="flex items-center justify-center w-1/2 pr-5 text-xs sm:text-base">
-              <span>
-                {value.starttime} - {value.endtime}
-              </span>
+        <div className="mt-4 space-y-4">
+          {data.map((value: TimetableData) => (
+            <div className="flex flex-row px-3 py-2 rounded-md shadow-md">
+              <div className="flex items-center justify-center w-1/2 pr-5 text-xs sm:text-base">
+                <span>
+                  {value.starttime} - {value.endtime}
+                </span>
+              </div>
+              <div className="flex flex-col w-full leading-4">
+                <span className="text-xs font-semibold text-gray-800 sm:text-base">
+                  {value.title}
+                </span>
+                <span className="text-xs font-normal text-gray-700 sm:text-sm">
+                  {value.club}
+                </span>
+              </div>
             </div>
-            <div className="flex flex-col w-full leading-4">
-              <span className="text-xs font-semibold text-gray-800 sm:text-base">
-                {value.title}
-              </span>
-              <span className="text-xs font-normal text-gray-700 sm:text-sm">
-                {value.club}
-              </span>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   )

@@ -19,7 +19,6 @@ export const Liveshow = () => (
         />
       </div>
       <Timetable
-        className="w-full max-w-2xl px-2 mt-6 font-display"
         date="12"
         data={[
           {
@@ -73,7 +72,6 @@ export const Liveshow = () => (
         ]}
       />
       <Timetable
-        className="w-full max-w-2xl px-2 mt-6 font-display"
         date="13"
         data={[
           {
