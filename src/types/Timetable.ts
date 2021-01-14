@@ -1,6 +1,12 @@
 export default interface TimetableData {
-  starttime: number
-  endtime: number
+  id: string
+  startTime: DT
+  endTime: DT
   title: string
   club: string
+}
+
+interface DT {
+  date: number
+  time: string
 }
