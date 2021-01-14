@@ -41,6 +41,12 @@ function useProvideAuth() {
   )
   const [loading, setLoading] = useState(true)
 
+  // useEffect(() => {
+  //   if (userData && Object.keys(userData).length === 5) {
+  //     Router.push('/onboard')
+  //   }
+  // }, [userData])
+
   useEffect(() => {
     const getData = async () => {
       const data = await getCurrentUserData(user.uid)
