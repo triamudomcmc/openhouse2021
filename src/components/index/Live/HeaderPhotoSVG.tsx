@@ -14,7 +14,7 @@ export const UndrawPositiveAttitude = ({ ...restProps }) => {
         d="M853.704 427.445H0C34.3773 212.703 212.403 49.0845 426.852 49.0845C641.302 49.0845 819.327 212.703 853.704 427.445Z"
         fill="url(#paint0_linear)"
       />
-      <g clip-path="url(#clip0)">
+      <g clipPath="url(#clip0)">
         <path
           d="M565.072 211.304C565.072 211.304 537.394 205.405 540.897 217.942C544.401 230.478 567.525 222.366 567.525 222.366L565.072 211.304Z"
           fill="#FFB8B8"
@@ -195,9 +195,9 @@ export const UndrawPositiveAttitude = ({ ...restProps }) => {
           y2="458.82"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#BAE6FD" />
-          <stop offset="0.5" stop-color="#FFF4C7" />
-          <stop offset="1" stop-color="#FECACA" />
+          <stop stopColor="#BAE6FD" />
+          <stop offset="0.5" stopColor="#FFF4C7" />
+          <stop offset="1" stopColor="#FECACA" />
         </linearGradient>
         <clipPath id="clip0">
           <rect
