@@ -1,6 +1,15 @@
 import TimetableData from 'types/Timetable'
 
-const Timetable = ({ data, date, ...restProps }) => {
+interface ITimetableProps {
+  data: TimetableData[]
+  date: string
+}
+
+/**
+ *
+ * @TODO Add unique id for show
+ */
+const Timetable: React.FC<ITimetableProps> = ({ data, date, ...restProps }) => {
   let heading: React.ReactNode
 
   if (date === '12') {
@@ -28,8 +37,11 @@ const Timetable = ({ data, date, ...restProps }) => {
           <span>กุมภาพันธ์</span>
         </div>
         <div className="mt-4 space-y-4">
-          {data.map((value: TimetableData) => (
-            <div className="flex flex-row px-3 py-2 rounded-md shadow-md">
+          {data.map((value: TimetableData, index) => (
+            <div
+              className="flex flex-row px-3 py-2 rounded-md shadow-md"
+              key={index}
+            >
               <div className="flex items-center justify-center w-1/2 pr-5 text-xs sm:text-base">
                 <span>
                   {value.starttime} - {value.endtime}
