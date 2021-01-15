@@ -14,7 +14,7 @@ export const Header = () => (
           <h1 className="text-shadow">OPEN HOUSE 2021</h1>
         </div>
         <h2 className="mt-4 text-xl font-bold text-center text-white md:mt-8 md:text-4xl">
-          12-13 FEBUARY
+          12-13 FEBRUARY
         </h2>
       </div>
     </div>
