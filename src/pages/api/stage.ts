@@ -1,16 +1,16 @@
 import ms from 'ms'
 import { NextApiRequest, NextApiResponse } from 'next'
-import { getAllLiveSchedule } from 'lib/db-admin'
+import { getStageStream } from 'lib/db-admin'
 
 // Number of seconds to cache the API response for
 const EXPIRES_SECONDS = 5
 
-export default async function getSchedule(
+export default async function getStage(
   _: NextApiRequest,
   res: NextApiResponse
 ) {
   try {
-    const schedule = await getAllLiveSchedule()
+    const stream = await getStageStream()
 
     // Set caching headers
     const expires = new Date(Date.now() + ms(`${EXPIRES_SECONDS}s`))
@@ -20,7 +20,7 @@ export default async function getSchedule(
       `s-maxage=${EXPIRES_SECONDS}, immutable, must-revalidate, stale-while-revalidate`
     )
 
-    return res.status(200).json(schedule)
+    return res.status(200).json(stream)
   } catch (e) {
     // eslint-disable-next-line no-console
     console.log(e)

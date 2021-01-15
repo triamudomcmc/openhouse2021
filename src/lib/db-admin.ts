@@ -23,3 +23,13 @@ export async function getAllLiveSchedule(): Promise<TimetableData[]> {
 
   return list
 }
+
+export async function getStageStream(): Promise<any> {
+  const ref = db.collection('stage').doc('main')
+  const doc = await ref.get()
+  const data = doc.data()
+
+  return {
+    stream: data.stream,
+  }
+}
