@@ -4,16 +4,12 @@ import { AppProps } from 'next/app'
 
 import 'styles/tailwind.css'
 
-import { AuthProvider } from 'lib/auth'
-
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <div className="antialiased">
     <Head>
       <title>Triam Udom Open House 2021</title>
     </Head>
-    <AuthProvider>
-      <Component {...pageProps} />
-    </AuthProvider>
+    <Component {...pageProps} />
   </div>
 )
 

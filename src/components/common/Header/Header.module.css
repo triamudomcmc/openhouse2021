@@ -1,13 +1,13 @@
 .root {
   z-index: -1;
-  min-height: 385px;
+  min-height: 400px;
   clip-path: url(#headerCurveMobile);
 }
 
 @media (min-width: 768px) {
   .root {
     z-index: -1;
-    min-height: 640px;
+    min-height: 700px;
     clip-path: url(#headerCurve);
   }
 }

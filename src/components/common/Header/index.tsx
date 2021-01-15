@@ -13,6 +13,9 @@ export const Header = () => (
           <h1 className="mt-8 md:mt-16 text-shadow">TRIAM UDOM</h1>
           <h1 className="text-shadow">OPEN HOUSE 2021</h1>
         </div>
+        <h2 className="mt-4 text-xl font-bold text-center text-white md:mt-8 md:text-4xl">
+          12-13 FEBUARY
+        </h2>
       </div>
     </div>
     <svg width="0" height="0">
