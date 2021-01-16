@@ -87,6 +87,44 @@ export default class Document extends NextDocument {
             type="font/woff2"
             crossOrigin="anonymous"
           />
+          <meta
+            property="og:title"
+            content="Triam Udom Online Open House 2021"
+          />
+          <meta property="og:url" content="" />
+          <meta
+            name="description"
+            content="เมื่อโรงเรียนเตรียมอุดมศึกษาถูกเนรมิตเป็นเมืองที่จะนำทุกคนสู่บรรยากาศแห่งความอบอุ่น เมื่อสายการเรียนกลายมาเป็นบ้านแต่ละหลังที่ถึงแม้ว่าจะมีเอกลักษณ์ที่แตกต่าง แต่มีใจที่พร้อมต้อนรับทุกคนมาเป็นส่วนหนึ่งของครอบครัวเตรียมอุดมฯ"
+          />
+          <meta
+            property="og:description"
+            content="เมื่อโรงเรียนเตรียมอุดมศึกษาถูกเนรมิตเป็นเมืองที่จะนำทุกคนสู่บรรยากาศแห่งความอบอุ่น เมื่อสายการเรียนกลายมาเป็นบ้านแต่ละหลังที่ถึงแม้ว่าจะมีเอกลักษณ์ที่แตกต่าง แต่มีใจที่พร้อมต้อนรับทุกคนมาเป็นส่วนหนึ่งของครอบครัวเตรียมอุดมฯ"
+          />
+          <meta name="twitter:site" content={`@TriamUdomOPH`} />
+          <meta name="twitter:card" content={'summary_large_image'} />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+          />
+          <link rel="manifest" href="/site.webmanifest" />
+          <link rel="shortcut icon" href="/favicon.ico" />
+          <meta
+            property="og:image"
+            content="https://openhouse.triamudom.ac.th/og.jpg"
+          />
         </Head>
         <body>
           <Main />
