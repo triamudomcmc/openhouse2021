@@ -12,29 +12,32 @@ const Timetable: React.FC<ITimetableProps> = ({ data, date, ...restProps }) => {
 
   if (date === 12) {
     heading = (
-      <span className="flex items-center justify-center w-16 h-16 text-3xl font-black text-white rounded-full shadow-sm bg-gradient-to-bl from-purple-200 to-blue-25">
-        12
-      </span>
+      <div className="rounded-full bg-gradient-to-r from-blue-200 to-purple-300">
+        <span className="flex items-center justify-center text-xl py-2 px-14 text-white font-black whitespace-nowrap md:py-4 md:px-24 md:text-3xl">
+          12 FEBRUARY 2021
+        </span>
+      </div>
     )
   } else if (date === 13) {
     heading = (
-      <span className="flex items-center justify-center w-16 h-16 text-3xl font-black text-white rounded-full shadow-sm bg-gradient-to-br from-red-200 to-yellow-25">
-        13
-      </span>
+      <div className="rounded-full bg-gradient-to-r from-purple-200 to-red-200">
+        <span className="flex items-center justify-center py-2 px-14 text-xl text-white font-black whitespace-nowrap md:py-4 md:px-24 md:text-3xl">
+          13 FEBRUARY 2021
+        </span>
+      </div>
     )
   }
 
   return (
     <div
-      className="flex flex-col w-full max-w-2xl px-4 mt-12 font-display"
+      className="flex flex-col w-full max-w-2xl px-4 mt-10 md:mt-16 font-display"
       {...restProps}
     >
       <div>
         <div className="flex flex-col items-center justify-center">
           {heading}
-          <span>กุมภาพันธ์</span>
         </div>
-        <div className="mt-4 space-y-4">
+        <div className="mt-8 space-y-4">
           {filtered.map((value: TimetableData) => (
             <div
               className="flex flex-row px-3 py-2 rounded-md shadow-md"

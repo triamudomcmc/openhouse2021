@@ -23,6 +23,7 @@ const Renderer = ({ completed, days, hours, minutes, seconds, schedule }) => {
           <Home />
           <h1 className="mt-4">TRIAM UDOM</h1>
           <h1>OPENHOUSE 2021</h1>
+          <h1>12-13 FEBRUARY</h1>
         </div>
       </div>
     )

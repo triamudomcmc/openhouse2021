@@ -12,7 +12,7 @@ import {
 export const Highlights = () => (
   <div>
     <div>
-      <h1 className="hidden font-black text-center text-blue-400 md:block mt-52 text-7xl">
+      <h1 className="hidden font-black text-center text-blue-400 md:block mt-52 text-7xl ">
         Highlights
       </h1>
       <div className="flex flex-wrap mt-2 md:justify-center md:mt-12 font-display">

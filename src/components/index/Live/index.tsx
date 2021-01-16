@@ -14,18 +14,14 @@ export const Live = ({ schedule }) => {
   return (
     <div>
       <div className="flex flex-col items-center justify-center w-full h-full mt-10 md:mt-56 font-display">
-        <h1 className="text-2xl font-bold text-center text-blue-400 md:text-6xl lg:text-8xl">
+        <h1 className="text-2xl font-bold text-center mb-4 md:text-6xl lg:text-8xl bg-clip-text text-blue-400">
           ตารางรายการสด
-          <span className="px-2 ml-1 text-xl text-white rounded md:ml-2 md:px-3 md:text-5xl lg:text-7xl md:rounded-lg bg-gradient-to-br from-red-300 to-red-100">
-            LIVE
-          </span>
         </h1>
         <div className="flex items-center justify-center w-8/12 max-w-2xl mx-auto">
-          <Image
-            src="/assets/vectors/UndrawPositiveAttitude.svg"
-            width={854}
-            height={441}
-          />
+          <h1 className="max-w-xs px-4 mt-2 mx-auto text-sm font-normal tracking-wide text-center text-gray-400 md:text-2xl md:max-w-5xl md:mt-8">
+            พบกับรายการสดมากมายทั้งรายการ LIVE แนะนำสายการเรียน สัมภาษณ์รุ่นพี่
+            และคอนเทนต์ที่น่าสนใจอื่น ๆ มากมาย
+          </h1>
         </div>
         <Timetable date={12} data={updatedSchedule} />
         <Timetable date={13} data={updatedSchedule} />

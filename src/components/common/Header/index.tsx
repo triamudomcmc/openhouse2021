@@ -12,6 +12,9 @@ export const Header = () => (
           <Home />
           <h1 className="mt-8 md:mt-16 text-shadow">TRIAM UDOM</h1>
           <h1 className="text-shadow">OPEN HOUSE 2021</h1>
+          <div>
+            <h2 className="text-4xl m-6 md:m-12 font-bold">12-13 FEBRUARY</h2>
+          </div>
         </div>
       </div>
     </div>
