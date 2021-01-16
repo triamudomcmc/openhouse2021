@@ -23,8 +23,10 @@ export const Live = ({ schedule }) => {
             และคอนเทนต์ที่น่าสนใจอื่น ๆ มากมาย
           </h1>
         </div>
-        <Timetable date={12} data={updatedSchedule} />
-        <Timetable date={13} data={updatedSchedule} />
+        <div className="flex flex-wrap w-full justify-center">
+          <Timetable date={12} data={updatedSchedule} />
+          <Timetable date={13} data={updatedSchedule} />
+        </div>
       </div>
     </div>
   )
