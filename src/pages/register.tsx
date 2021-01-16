@@ -12,7 +12,7 @@ const Register = () => {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center h-full">
         <div className="flex flex-col items-center justify-center flex-1">
           <div>
             <h1 className="text-2xl font-bold text-center text-gray-500 md:text-4xl">
