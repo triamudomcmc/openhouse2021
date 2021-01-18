@@ -1,0 +1,10 @@
+.root {
+  height: calc(100vh - 64px);
+  @apply flex flex-col flex-1 w-full;
+}
+
+@media (min-width: 768px) {
+  .root {
+    height: calc(100vh - 112px);
+  }
+}

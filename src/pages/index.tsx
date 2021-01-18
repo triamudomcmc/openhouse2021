@@ -1,23 +1,64 @@
 import React from 'react'
+import { GetStaticProps } from 'next'
 import Countdown from 'react-countdown'
 
-const renderer = ({ days, hours, minutes, seconds }) => {
-  return (
-    <span>
-      {days} วัน {hours} ชั่วโมง {minutes} นาที {seconds} วินาที
-    </span>
-  )
+import { CountdownContainer } from 'components/countdown'
+import { Index } from 'components/index'
+
+import { getAllLiveSchedule } from 'lib/db-admin'
+import TimetableData from 'types/Timetable'
+
+type Props = {
+  schedule: TimetableData[]
 }
 
-const Index = () => (
-  <div className="flex flex-col items-center justify-center min-h-screen">
-    <div className="text-6xl font-bold font-display">
-      TRIAM UDOM OPENHOUSE 2021
-    </div>
-    <div className="mt-8 text-6xl font-display">
-      <Countdown date={1613062800000} renderer={renderer} />
-    </div>
-  </div>
+const Renderer = ({ completed, days, hours, minutes, seconds, schedule }) => {
+  if (completed) {
+    return <Index />
+  } else {
+    return (
+      <CountdownContainer
+        days={days}
+        hours={hours}
+        minutes={minutes}
+        seconds={seconds}
+        schedule={schedule}
+      />
+    )
+  }
+}
+
+const IndexPage = ({ schedule }) => (
+  <Countdown
+    date={1613062800000}
+    renderer={({ completed, days, hours, minutes, seconds }) => (
+      <Renderer
+        completed={completed}
+        days={days}
+        hours={hours}
+        minutes={minutes}
+        seconds={seconds}
+        schedule={schedule}
+      />
+    )}
+  />
 )
 
-export default Index
+export default IndexPage
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const schedule = await getAllLiveSchedule()
+
+  if (!schedule) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      schedule,
+    },
+    revalidate: 60,
+  }
+}

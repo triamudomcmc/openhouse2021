@@ -12,6 +12,16 @@ module.exports = {
     },
   },
   theme: {
+    extend: {
+      colors: {
+        blue: {
+          25: '#BAE6FD',
+        },
+        yellow: {
+          25: '#FED7AA',
+        },
+      },
+    },
     fontFamily: {
       sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       display: [
@@ -37,8 +47,7 @@ module.exports = {
             fontStyle: 'normal',
             fontNamedInstance: 'Regular',
             fontDisplay: 'swap',
-            src:
-              'url("/assets/fonts/Inter-roman.var.woff2?3.13") format("woff2")',
+            src: 'url("/assets/fonts/Inter-roman.var.woff2") format("woff2")',
           },
         },
         {
@@ -48,8 +57,7 @@ module.exports = {
             fontStyle: 'italic',
             fontNamedInstance: 'Italic',
             fontDisplay: 'swap',
-            src:
-              'url("/assets/fonts/Inter-italic.var.woff2?3.13") format("woff2")',
+            src: 'url("/assets/fonts/Inter-italic.var.woff2") format("woff2")',
           },
         },
         {
