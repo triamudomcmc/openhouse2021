@@ -1,1 +1,5 @@
 export const AUTH_COOKIE = 'oph2021-auth'
+export const INSTAGRAM_POST_WIDTH = 1080
+export const INSTAGRAM_POST_HEIGHT = 1080
+export const INSTAGRAM_STORY_WIDTH = 1080
+export const INSTAGRAM_STORY_HEIGHT = 1920
