@@ -2,6 +2,7 @@ import Countdown from 'react-countdown'
 
 import { Home } from 'components/common/Header/Home'
 import { Intro } from 'components/index/Intro'
+import {CTA} from "../components/index/CTA";
 
 const Renderer = ({ completed, days, hours, minutes, seconds }) => {
   if (completed) {
@@ -18,6 +19,7 @@ const Renderer = ({ completed, days, hours, minutes, seconds }) => {
     return (
       <div className="pb-32">
         <Intro days={days} hours={hours} minutes={minutes} seconds={seconds} />
+        <CTA/>
       </div>
     )
   }
