@@ -37,6 +37,7 @@
   },
   "scripts": {
     "dev": "NODE_OPTIONS=--max_old_space_size=8192 next",
+    "build-debug": "NODE_OPTIONS='--inspect' next build",
     "build": "next build",
     "start": "next start"
   }
