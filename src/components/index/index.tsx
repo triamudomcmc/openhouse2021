@@ -111,24 +111,24 @@ export const Index = ({ stream }) => {
             <Group8 className="w-24 md:w-full" />
           </div>
         </div>
-        <div className="flex flex-wrap justify-between w-4/5 md:w-7/12">
-          <div className="flex flex-col items-center justify-center w-16 h-16 mx-1 mt-2 text-xs text-gray-400 bg-white shadow-lg md:font-semibold md:mt-4 md:mx-2 md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
+        <div className="flex flex-wrap justify-between w-4/5 mt-2 space-x-1 md:w-7/12 md-mt-4 md:space-x-2">
+          <div className="flex flex-col items-center justify-center w-16 h-16 text-xs text-gray-400 bg-white shadow-lg md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
             <Camera className="h-9 md:h-24" />
             วีดีโอ
           </div>
-          <div className="flex flex-col items-center justify-center w-16 h-16 mx-1 mt-2 text-xs text-gray-400 bg-white shadow-lg md:font-semibold md:mt-4 md:mx-2 md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
+          <div className="flex flex-col items-center justify-center w-16 h-16 text-xs text-gray-400 bg-white shadow-lg md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
             <Puzzle className="h-9 md:h-24" />
             ชมรม
           </div>
-          <div className="flex flex-col items-center justify-center w-16 h-16 mx-1 mt-2 text-xs text-gray-400 bg-white shadow-lg md:font-semibold md:mt-4 md:mx-2 md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
+          <div className="flex flex-col items-center justify-center w-16 h-16 text-xs text-gray-400 bg-white shadow-lg md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
             <Carv className="my-1 h-7 md:h-24" />
             การเดินทาง
           </div>
-          <div className="flex-col items-center justify-center hidden w-16 h-16 mx-1 mt-2 text-xs text-gray-400 bg-white shadow-lg md:flex md:font-semibold md:mt-4 md:mx-2 md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
+          <div className="flex-col items-center justify-center hidden w-16 h-16 text-xs text-gray-400 bg-white shadow-lg md:flex md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
             <CardV className="h-9 md:h-24" />
             การ์ดต้อนรับ
           </div>
-          <div className="flex flex-col items-center justify-center w-16 h-16 mx-1 mt-2 text-xs text-gray-400 bg-white shadow-lg md:font-semibold md:mt-4 md:mx-2 md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
+          <div className="flex flex-col items-center justify-center w-16 h-16 text-xs text-gray-400 bg-white shadow-lg md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
             <Phone className="my-1 h-7 md:h-24" />
             ติดต่อ
           </div>
