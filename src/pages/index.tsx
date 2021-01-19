@@ -7,7 +7,7 @@ import { Index } from 'components/index'
 
 import {getAllLiveSchedule, getStageStream} from 'lib/db-admin'
 import TimetableData from 'types/Timetable'
-import Stream from "../types/Stream";
+import Stream from "types/Stream";
 
 type Props = {
   schedule: TimetableData[],
