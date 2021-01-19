@@ -7,9 +7,11 @@ import { Index } from 'components/index'
 
 import {getAllLiveSchedule, getStageStream} from 'lib/db-admin'
 import TimetableData from 'types/Timetable'
+import Stream from "../types/Stream";
 
 type Props = {
-  schedule: TimetableData[]
+  schedule: TimetableData[],
+  stream: Stream
 }
 
 const Renderer = ({ completed, days, hours, minutes, seconds, schedule , stream }) => {
