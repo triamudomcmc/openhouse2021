@@ -9,11 +9,13 @@ export const Header = () => (
     <div className={cn(s.root, s.gradient)}>
       <div className="flex flex-col items-center justify-center w-full h-full pb-8 md:pb-12 font-display">
         <div className="mt-12 text-3xl font-black text-center text-white md:mt-16 md:text-6xl">
-          <Home />
+          <div className="md:max-w-screen-md">
+            <Home />
+          </div>
           <h1 className="mt-8 md:mt-16 text-shadow">TRIAM UDOM</h1>
           <h1 className="text-shadow">OPEN HOUSE 2021</h1>
           <div>
-            <h2 className="text-4xl m-6 md:m-12 font-bold">12-13 FEBRUARY</h2>
+            <h2 className="m-6 text-4xl font-bold md:m-12">12-13 FEBRUARY</h2>
           </div>
         </div>
       </div>
