@@ -5,16 +5,16 @@ import Countdown from 'react-countdown'
 import { CountdownContainer } from 'components/countdown'
 import { Index } from 'components/index'
 
-import { getAllLiveSchedule } from 'lib/db-admin'
+import {getAllLiveSchedule, getStageStream} from 'lib/db-admin'
 import TimetableData from 'types/Timetable'
 
 type Props = {
   schedule: TimetableData[]
 }
 
-const Renderer = ({ completed, days, hours, minutes, seconds, schedule }) => {
+const Renderer = ({ completed, days, hours, minutes, seconds, schedule , stream }) => {
   if (completed) {
-    return <Index />
+    return <Index stream={stream}/>
   } else {
     return (
       <CountdownContainer
@@ -28,9 +28,9 @@ const Renderer = ({ completed, days, hours, minutes, seconds, schedule }) => {
   }
 }
 
-const IndexPage = ({ schedule }) => (
+const IndexPage = ({ schedule, stream }) => (
   <Countdown
-    date={1613062800000}
+    date={1610988496000}
     renderer={({ completed, days, hours, minutes, seconds }) => (
       <Renderer
         completed={completed}
@@ -39,6 +39,7 @@ const IndexPage = ({ schedule }) => (
         minutes={minutes}
         seconds={seconds}
         schedule={schedule}
+        stream={stream}
       />
     )}
   />
@@ -48,8 +49,14 @@ export default IndexPage
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const schedule = await getAllLiveSchedule()
+  const stream = await getStageStream()
 
   if (!schedule) {
+    return {
+      notFound: true,
+    }
+  }
+  if (!stream) {
     return {
       notFound: true,
     }
@@ -58,6 +65,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   return {
     props: {
       schedule,
+      stream
     },
     revalidate: 60,
   }

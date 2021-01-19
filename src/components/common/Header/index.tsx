@@ -2,7 +2,7 @@ import React from 'react'
 import cn from 'classnames'
 
 import { Home } from './Home'
-import s from './Header.module.css'
+import s from '../../../assets/styles/Header.module.css'
 
 export const Header = () => (
   <React.Fragment>
