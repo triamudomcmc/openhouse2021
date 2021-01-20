@@ -15,7 +15,7 @@ export const Scimath = ({ ...restprops }) => {
             fill="#FEB2B2"
           />
         </g>
-        <g clip-path="url(#clip0)">
+        <g clip-path="url(#clip3)">
           <path
             d="M45.2745 21.8328C45.2681 22.4105 45.1872 22.9713 45.0413 23.5061L36.5017 15.07C37.061 14.911 37.6496 14.8225 38.2574 14.8157L38.2357 12.8496C33.4863 12.9023 29.6361 16.801 29.6528 21.5382L29.6604 28.4611L22.7398 28.4535C22.7293 28.4535 22.7196 28.4535 22.7091 28.4535C17.9837 28.4535 14.1013 32.2976 14.0488 37.0364L16.0149 37.0581C16.0214 36.4797 16.1017 35.9184 16.2465 35.3833L24.786 43.8193C24.227 43.9792 23.6389 44.0685 23.0319 44.0752L23.0538 46.0413C27.7807 45.9889 31.6311 42.0922 31.6368 37.3528L31.6289 30.4297L38.5543 30.4375C43.2914 30.4319 47.188 26.5816 47.2405 21.8546L45.2745 21.8328ZM31.6266 28.4634L31.6224 24.5748L35.5632 28.4678L31.6266 28.4634ZM22.7116 30.4197C22.7194 30.4197 22.7274 30.4198 22.7352 30.4198L22.9254 30.42L29.6702 37.083L29.6706 37.3528C29.6696 38.1707 29.5203 38.956 29.2487 39.6834L20.3213 30.8642C21.0648 30.5773 21.8708 30.4197 22.7116 30.4197ZM26.6858 42.9321L17.1063 33.4689C17.5011 32.8651 17.9904 32.3288 18.5522 31.8804L28.2543 41.4647C27.813 42.0331 27.2829 42.5291 26.6858 42.9321ZM29.6671 34.3159L25.7264 30.423L29.6626 30.4275L29.6671 34.3159ZM38.3642 28.4711L31.6194 21.808L31.619 21.5337C31.6162 20.7147 31.7631 19.9284 32.0335 19.2004L40.9613 28.02C40.2127 28.3102 39.4008 28.4702 38.5543 28.4713L38.3642 28.4711ZM42.7298 27.0032L33.0273 17.4183C33.4688 16.8509 33.9998 16.3557 34.5984 15.9537L44.178 25.4171C43.7823 26.0194 43.2923 26.555 42.7298 27.0032Z"
             fill="white"
@@ -121,7 +121,7 @@ export const Scimath = ({ ...restprops }) => {
             result="shape"
           />
         </filter>
-        <clipPath id="clip0">
+        <clipPath id="clip3">
           <rect
             width="33.1918"
             height="33.1918"
@@ -422,8 +422,8 @@ export const Korea = ({ ...restprops }) => {
       xmlns="http://www.w3.org/2000/svg"
       {...restprops}
     >
-      <g clip-path="url(#clip0)">
-        <g filter="url(#filter0_dd)">
+      <g clip-path="url(#clip4)">
+        <g filter="url(#filter4_dd)">
           <circle cx="27.4831" cy="27.2448" r="25.776" fill="white" />
         </g>
         <path
@@ -509,7 +509,7 @@ export const Korea = ({ ...restprops }) => {
       </g>
       <defs>
         <filter
-          id="filter0_dd"
+          id="filter4_dd"
           x="-2.81912"
           y="-1.54868"
           width="60.6044"
@@ -557,7 +557,7 @@ export const Korea = ({ ...restprops }) => {
             result="shape"
           />
         </filter>
-        <clipPath id="clip0">
+        <clipPath id="clip4">
           <rect
             width="54.3138"
             height="54.3138"
@@ -580,7 +580,7 @@ export const German = ({ ...restprops }) => {
       xmlns="http://www.w3.org/2000/svg"
       {...restprops}
     >
-      <g clip-path="url(#clip0)" filter="url(#filter0_dd)">
+      <g clip-path="url(#clip5)" filter="url(#filter5_dd)">
         <path
           d="M6.59277 38.0017C10.2167 47.7684 19.6178 54.7288 30.6457 54.7288C41.6735 54.7288 51.0746 47.7684 54.6985 38.0017L30.6457 35.7715L6.59277 38.0017Z"
           fill="#FFD250"
@@ -596,7 +596,7 @@ export const German = ({ ...restprops }) => {
       </g>
       <defs>
         <filter
-          id="filter0_dd"
+          id="filter5_dd"
           x="0.470922"
           y="0.415185"
           width="60.3487"
@@ -644,7 +644,7 @@ export const German = ({ ...restprops }) => {
             result="shape"
           />
         </filter>
-        <clipPath id="clip0">
+        <clipPath id="clip5">
           <rect
             width="51.2964"
             height="51.2964"
@@ -667,7 +667,7 @@ export const Spain = ({ ...restprops }) => {
       xmlns="http://www.w3.org/2000/svg"
       {...restprops}
     >
-      <g filter="url(#filter0_dd)">
+      <g filter="url(#filter6_dd)">
         <circle cx="30.5486" cy="29.0808" r="25.6482" fill="#FFD250" />
       </g>
       <path
@@ -823,7 +823,7 @@ export const Spain = ({ ...restprops }) => {
       />
       <defs>
         <filter
-          id="filter0_dd"
+          id="filter6_dd"
           x="0.374242"
           y="0.415185"
           width="60.3487"
@@ -886,7 +886,7 @@ export const French = ({ ...restprops }) => {
       xmlns="http://www.w3.org/2000/svg"
       {...restprops}
     >
-      <g clip-path="url(#clip0)" filter="url(#filter0_dd)">
+      <g clip-path="url(#clip6)" filter="url(#filter7_dd)">
         <path
           d="M30.4519 54.729C44.617 54.729 56.1001 43.2459 56.1001 29.0808C56.1001 14.9157 44.617 3.43262 30.4519 3.43262C16.2868 3.43262 4.80371 14.9157 4.80371 29.0808C4.80371 43.2459 16.2868 54.729 30.4519 54.729Z"
           fill="white"
@@ -902,7 +902,7 @@ export const French = ({ ...restprops }) => {
       </g>
       <defs>
         <filter
-          id="filter0_dd"
+          id="filter7_dd"
           x="0.277562"
           y="0.415185"
           width="60.3487"
@@ -950,7 +950,7 @@ export const French = ({ ...restprops }) => {
             result="shape"
           />
         </filter>
-        <clipPath id="clip0">
+        <clipPath id="clip6">
           <rect
             width="51.2964"
             height="51.2964"
@@ -973,13 +973,13 @@ export const Janpan = ({ ...restprops }) => {
       xmlns="http://www.w3.org/2000/svg"
       {...restprops}
     >
-      <g filter="url(#filter0_dd)">
+      <g filter="url(#filter8_dd)">
         <circle cx="30.3552" cy="29.0808" r="25.6482" fill="white" />
       </g>
       <circle cx="30.3549" cy="29.0814" r="12.0697" fill="#D80027" />
       <defs>
         <filter
-          id="filter0_dd"
+          id="filter8_dd"
           x="0.180882"
           y="0.415185"
           width="60.3487"
