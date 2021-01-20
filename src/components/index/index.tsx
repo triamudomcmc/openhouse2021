@@ -12,6 +12,7 @@ import Videos from './Videos'
 import Blogs from './Blogs'
 import Programs from './Programs'
 import Countdown from 'react-countdown'
+import Footer from "../common/Footer";
 
 export const Index = ({ stream }) => {
   const response = useSWR('/api/stage', {
@@ -137,6 +138,7 @@ export const Index = ({ stream }) => {
         <Videos />
         <Blogs />
       </div>
+      <Footer/>
     </div>
   )
 }
