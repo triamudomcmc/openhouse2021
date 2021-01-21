@@ -12,10 +12,10 @@ import Videos from './Videos'
 import Blogs from './Blogs'
 import Programs from './Programs'
 import Countdown from 'react-countdown'
-import Footer from "../common/Footer";
-import {Live} from "../common/Live";
+import Footer from '../common/Footer'
+import { Live } from '../common/Live'
 
-export const Index = ({ stream,schedule }) => {
+export const Index = ({ stream, schedule }) => {
   const response = useSWR('/api/stage', {
     initialData: stream,
     refreshInterval: 5000,
@@ -113,24 +113,24 @@ export const Index = ({ stream,schedule }) => {
             <Group8 className="w-24 md:w-full" />
           </div>
         </div>
-        <div className="flex flex-wrap items-center justify-center md:justify-between w-4/5 space-x-2 md:w-7/12 md:space-x-2">
-          <div className="flex flex-col mt-2 md:mt-4 items-center justify-center w-16 h-16 sm:w-24 sm:h-24 text-xs text-gray-400 bg-white shadow-lg md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
+        <div className="flex flex-wrap items-center justify-center w-4/5 space-x-2 md:justify-between md:w-7/12 md:space-x-2">
+          <div className="flex flex-col items-center justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
             <Camera className="h-9 sm:h-12 md:h-24" />
             วีดีโอ
           </div>
-          <div className="flex flex-col mt-2 md:mt-4 items-center justify-center w-16 h-16 sm:w-24 sm:h-24 text-xs text-gray-400 bg-white shadow-lg md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
+          <div className="flex flex-col items-center justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
             <Puzzle className="h-9 sm:h-12 md:h-24" />
             ชมรม
           </div>
-          <div className="flex flex-col mt-2 md:mt-4 items-center justify-center w-16 h-16 sm:w-24 sm:h-24 text-xs text-gray-400 bg-white shadow-lg md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
+          <div className="flex flex-col items-center justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
             <Carv className="my-1 h-7 sm:h-10 md:h-24" />
             การเดินทาง
           </div>
-          <div className="flex-col mt-2 md:mt-4 items-center justify-center hidden w-16 h-16 sm:w-24 sm:h-24 text-xs text-gray-400 bg-white shadow-lg 2xl:flex md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
+          <div className="flex-col items-center justify-center hidden w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 2xl:flex md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
             <CardV className="h-9 sm:h-10 md:h-24" />
             การ์ดต้อนรับ
           </div>
-          <div className="flex flex-col mt-2 md:mt-4 items-center justify-center w-16 h-16 sm:w-24 sm:h-24 text-xs text-gray-400 bg-white shadow-lg md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
+          <div className="flex flex-col items-center justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
             <Phone className="my-1 h-7 sm:h-10 md:h-24" />
             ติดต่อ
           </div>
@@ -138,9 +138,9 @@ export const Index = ({ stream,schedule }) => {
         <Programs />
         <Videos />
         <Blogs />
-        <Live schedule={schedule}/>
+        <Live schedule={schedule} />
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
