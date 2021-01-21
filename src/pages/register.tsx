@@ -11,7 +11,7 @@ const Register = () => {
   const auth = useAuth()
 
   return (
-    <Layout>
+    <Layout hideSignIn={true}>
       <div className="flex flex-col items-center justify-center h-full">
         <div className="flex flex-col items-center justify-center flex-1">
           <div>

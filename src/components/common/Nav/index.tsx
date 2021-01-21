@@ -1,20 +1,53 @@
 import React from 'react'
 import Link from 'next/link'
 
-export const Nav = () => {
+export const Nav = ({ hideSignIn }) => {
   return (
-    <div className="sticky top-0 flex justify-center w-full h-16 max-w-full bg-white shadow-md md:h-28">
-      <header className="flex items-center py-4">
+    <div className="sticky top-0 justify-center hidden w-full h-16 max-w-full shadow-md md:flex md:h-28 bg-gradient-to-r from-blue-200 via-purple-200 to-red-200">
+      <nav className="flex items-center justify-between w-full px-16 py-4">
         <Link href="/">
           <div className="text-lg font-black leading-tight cursor-pointer md:text-2xl font-display">
-            <h1 className="text-justify text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-purple-200 to-red-200 ">
+            <h1 className="text-justify text-white">
               TRIAM UDOM ONLINE
               <br />
               OPEN HOUSE 2021
             </h1>
           </div>
         </Link>
-      </header>
+        <div className="space-x-6 text-lg font-semibold leading-tight text-white md:text-xl font-display">
+          <Link href="/">
+            <a>หน้าแรก</a>
+          </Link>
+          <Link href="/">
+            <a>ชมรม</a>
+          </Link>
+          <Link href="/">
+            <a>บทความ</a>
+          </Link>
+          <Link href="/">
+            <a>วิดิโอ</a>
+          </Link>
+          <Link href="/">
+            <a>รายการสด</a>
+          </Link>
+          <Link href="/">
+            <a>การสอบเข้า</a>
+          </Link>
+          <Link href="/">
+            <a>ติดต่อ</a>
+          </Link>
+          {!hideSignIn && (
+            <Link href="/register">
+              <button
+                type="button"
+                className="inline-flex items-center px-6 py-2 text-base font-bold text-white text-red-200 bg-white border border-transparent rounded-full md:py-3 w-max md:text-xl font-display focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-200"
+              >
+                เข้าร่วมงาน
+              </button>
+            </Link>
+          )}
+        </div>
+      </nav>
     </div>
   )
 }

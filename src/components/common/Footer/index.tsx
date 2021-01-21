@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { SocialLink } from '../SocialLink'
 
 const Footer = () => {
   return (
@@ -70,37 +71,7 @@ const Footer = () => {
                 <h1>นโยบายความเป็นส่วนตัว</h1>
               </div>
             </div>
-
-            <div className="flex flex-row pt-8 space-x-4 md:hidden">
-              <div>
-                <Image
-                  src="/assets/vectors/facebook.svg"
-                  width={40}
-                  height={41}
-                />
-              </div>
-              <div>
-                <Image
-                  src="/assets/vectors/instagram.svg"
-                  width={40}
-                  height={41}
-                />
-              </div>
-              <div>
-                <Image
-                  src="/assets/vectors/twitter.svg"
-                  width={40}
-                  height={41}
-                />
-              </div>
-              <div>
-                <Image
-                  src="/assets/vectors/youtube.svg"
-                  width={40}
-                  height={41}
-                />
-              </div>
-            </div>
+            <SocialLink />
           </div>
         </nav>
         <section className=" md:border-t-2 md:border-gray-200 font-display">
