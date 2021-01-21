@@ -4,7 +4,7 @@ import TimetableData from 'types/Timetable'
 import { getTimestamp } from 'utils/getTimestamp'
 
 export async function getAllLiveSchedule(): Promise<TimetableData[]> {
-  let ref = db.collection('live').orderBy('startTime', 'asc')
+  let ref = db.collection('experiment').orderBy('startTime', 'asc')
 
   const snapshot = await ref.get()
   const list: TimetableData[] = []

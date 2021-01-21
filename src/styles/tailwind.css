@@ -15,7 +15,7 @@
     .text-xxs {
       font-size: 0.65rem;
     }
-    .text-smoxs{
+    .text-smoxs {
       font-size: 0.775rem;
     }
     .frame-height-mobile {
@@ -28,7 +28,22 @@
       width: 4.5rem;
     }
     .h-18 {
-    height: 4.5rem;
+      height: 4.5rem;
+    }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .scroll-hidden::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .scroll-hidden {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .overflow-custom {
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
     }
   }
 }
