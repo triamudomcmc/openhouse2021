@@ -52,7 +52,7 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="flex flex-col font-bold md:flex-row text-center md:text-right pt-4 md:pl-8">
+            <div className="flex flex-col font-bold md:flex-row text-center md:text-right md:pl-8">
               <div className="flex flex-col space-y-3 text-gray-500">
                 <h1>สายการเรียน</h1>
                 <h1>ชมรม</h1>
@@ -61,7 +61,7 @@ const Footer = () => {
                 <h1>ติดต่อ</h1>
               </div>
             </div>
-            <div className="flex flex-col font-bold md:flex-row text-center md:text-right pt-4">
+            <div className="flex flex-col font-bold md:flex-row text-center md:text-right">
               <div className="flex flex-col space-y-3 text-gray-500">
                 <h1>การสอบเข้า</h1>
                 <h1>การ์ดต้อนรับ</h1>
