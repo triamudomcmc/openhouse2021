@@ -72,7 +72,7 @@ export const Index = ({ stream,schedule }) => {
                 ไอ้ตะวัน ประธาน กช. โดนรุมกระทืบ
               </span>
             </div>
-            <div className="mt-1 md:mt-4 text-xs text-gray-300 min-w-min md:text-2xl">
+            <div className="mt-1 text-xs text-gray-300 min-w-min md:text-2xl">
               Public Event | ประธานชมรม | 10.30-16.80 น.
             </div>
           </div>
@@ -113,7 +113,7 @@ export const Index = ({ stream,schedule }) => {
             <Group8 className="w-24 md:w-full" />
           </div>
         </div>
-        <div className="flex flex-wrap items-center justify-center w-4/5 space-x-2 md:w-7/12 md:space-x-2">
+        <div className="flex flex-wrap items-center justify-center md:justify-between w-4/5 space-x-2 md:w-7/12 md:space-x-2">
           <div className="flex flex-col mt-2 md:mt-4 items-center justify-center w-16 h-16 sm:w-24 sm:h-24 text-xs text-gray-400 bg-white shadow-lg md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
             <Camera className="h-9 sm:h-12 md:h-24" />
             วีดีโอ
@@ -126,7 +126,7 @@ export const Index = ({ stream,schedule }) => {
             <Carv className="my-1 h-7 sm:h-10 md:h-24" />
             การเดินทาง
           </div>
-          <div className="flex-col mt-2 md:mt-4 items-center justify-center hidden w-16 h-16 sm:w-24 sm:h-24 text-xs text-gray-400 bg-white shadow-lg md:flex md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
+          <div className="flex-col mt-2 md:mt-4 items-center justify-center hidden w-16 h-16 sm:w-24 sm:h-24 text-xs text-gray-400 bg-white shadow-lg 2xl:flex md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
             <CardV className="h-9 sm:h-10 md:h-24" />
             การ์ดต้อนรับ
           </div>
