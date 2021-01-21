@@ -33,7 +33,7 @@ const Programs = () => {
           <div className="flex flex-row flex-1 justify-center items-center px-16 px-2 md:px-12 py-4 md:py-8 w-16 h-16 md:w-44 md:h-44 mx-3 font-semibold md:px-20 mb-4 md:py-6 md:mb-8 text-xs md:text-lg bg-white shadow-md rounded-xl md:rounded-3xl ">
             <div className="flex flex-col justify-center items-center mr-0">
               <Kamnuan className="h-9 md:h-24" />
-              <h1 className="mt-2">คำนวน</h1>
+              <h1 className="mt-2">ศิลป์คำนวณ</h1>
             </div>
           </div>
           <div className="flex flex-row flex-1 justify-center items-center px-16 px-2 md:px-12 py-4 md:py-8 w-16 h-16 md:w-44 md:h-44 mx-3 font-semibold md:px-20 mb-4 md:py-6 md:mb-8 text-xs md:text-lg bg-white shadow-md rounded-xl md:rounded-3xl ">
