@@ -1,7 +1,7 @@
 const Blogs = () => {
   return (
-    <div>
-      Contents
+    <div className="mt-6">
+      พี่ต้นเตยไม่ทำงาน
     </div>
   )
 }
