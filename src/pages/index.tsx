@@ -16,7 +16,7 @@ type Props = {
 
 const Renderer = ({ completed, days, hours, minutes, seconds, schedule , stream }) => {
   if (completed) {
-    return <Index stream={stream}/>
+    return <Index stream={stream} schedule={schedule}/>
   } else {
     return (
       <CountdownContainer

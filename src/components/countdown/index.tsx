@@ -1,7 +1,7 @@
 import React from 'react'
 import { CTA } from './CTA'
 import { Highlights } from './Highlights'
-import { Live } from './Live'
+import { Live } from '../common/Live'
 import { Intro } from './Intro'
 
 export const CountdownContainer = ({

@@ -15,6 +15,9 @@
     .text-xxs {
       font-size: 0.65rem;
     }
+    .text-smoxs{
+      font-size: 0.775rem;
+    }
     .frame-height-mobile {
       height: calc(45vw);
     }
