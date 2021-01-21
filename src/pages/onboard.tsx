@@ -7,6 +7,7 @@ const Onboard = () => {
     <Layout>
       <h1>Sign Up / ลงทะเบียน</h1>
     </Layout>
+    
   )
 }
 
