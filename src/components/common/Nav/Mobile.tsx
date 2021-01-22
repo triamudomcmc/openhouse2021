@@ -88,9 +88,50 @@ export const MobileMenu = () => {
   return (
     <>
       <div className="sticky top-0 justify-center w-full h-24 max-w-full md:flex md:h-28 bg-gradient-to-r from-blue-200 via-purple-200 to-red-200">
-        <nav className="flex items-center justify-between w-full h-full px-16 py-4">
+        <nav className="flex items-center justify-between w-full h-full px-4 py-4">
+          <button
+            aria-label="Mobile Menu"
+            type="button"
+            {...buttonProps}
+            ref={ref}
+          >
+            {state.isOpen ? (
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fill="none"
+                shapeRendering="geometricPrecision"
+                className="text-white"
+              >
+                <path d="M18 6L6 18" />
+                <path d="M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fill="none"
+                shapeRendering="geometricPrecision"
+                className="text-white"
+              >
+                <path d="M3 12h18" />
+                <path d="M3 6h18" />
+                <path d="M3 18h18" />
+              </svg>
+            )}
+          </button>
           <Link href="/">
-            <div className="text-lg font-black leading-tight cursor-pointer md:text-2xl font-display">
+            <div className="text-base font-black leading-tight cursor-pointer font-display">
               <h1 className="text-justify text-white">
                 TRIAM UDOM ONLINE
                 <br />
@@ -98,14 +139,14 @@ export const MobileMenu = () => {
               </h1>
             </div>
           </Link>
-          <button
-            aria-label="Mobile Menu"
-            type="button"
-            {...buttonProps}
-            ref={ref}
-          >
-            {state.isOpen ? 'CLOSE' : 'OPEN'}
-          </button>
+          <Link href="/register">
+            <button
+              type="button"
+              className="px-4 py-2 text-sm font-bold text-red-200 bg-white border border-transparent rounded-full shadow-md w-max font-display focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-200"
+            >
+              เข้าสู่ระบบ
+            </button>
+          </Link>
         </nav>
       </div>
       {state.isOpen && (
