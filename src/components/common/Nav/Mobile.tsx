@@ -27,7 +27,7 @@ export const Modal = (
     <div className="fixed bottom-0 left-0 right-0 z-50 flex flex-col items-center justify-center bg-white top-24">
       <FocusScope contain restoreFocus autoFocus>
         <nav
-          className="flex flex-col items-center justify-between w-full px-16 py-4"
+          className="flex flex-col items-center justify-between w-full h-full px-16 py-8"
           {...overlayProps}
           {...dialogProps}
           {...modalProps}
@@ -66,7 +66,7 @@ export const Modal = (
             </Link>
             <SocialLink />
           </div>
-          <div className="w-24 py-8 md:w-48">
+          <div className="w-24 pt-8 md:w-48">
             <Image src="/assets/tucmc.png" width={1071} height={162} />
           </div>
         </nav>
