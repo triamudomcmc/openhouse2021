@@ -24,8 +24,8 @@ const TOS = ({ content }) => {
 export default TOS
 
 export async function getStaticProps() {
-  const pp = join(process.cwd(), '/tos.md')
-  const fileContents = fs.readFileSync(pp, 'utf8')
+  const tos = join(process.cwd(), '/tos.md')
+  const fileContents = fs.readFileSync(tos, 'utf8')
 
   const content = await markdownToHtml(fileContents || '')
 
