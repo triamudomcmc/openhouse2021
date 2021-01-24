@@ -1,6 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
 
 import { Layout } from 'components/common/Layout'
 import Tabs from 'components/article/Tabs'
