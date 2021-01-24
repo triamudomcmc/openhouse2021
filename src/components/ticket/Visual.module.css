@@ -1,0 +1,37 @@
+.root {
+  @apply flex w-full min-h-screen px-32 py-64 bg-ticket-long font-display;
+}
+
+.card {
+  @apply flex flex-col justify-between flex-grow w-full p-16 text-opacity-100 border-2 border-white;
+  border-radius: 48px;
+  backdrop-filter: blur(24px);
+  background: linear-gradient(
+    320deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.title {
+  @apply text-5xl font-bold text-white;
+}
+
+.subtitle {
+  @apply text-4xl font-bold text-white;
+}
+
+.date {
+  @apply px-8 py-2 mt-4 text-2xl font-bold text-purple-300 bg-white rounded-xl max-w-max;
+}
+
+.titleWrapper {
+  @apply pb-16 leading-5 border-r-2 border-white;
+  width: calc(100% - 18.25px);
+}
+
+.ticketNumber {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  @apply w-full mt-4 text-3xl font-medium text-white;
+}
