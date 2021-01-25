@@ -16,12 +16,16 @@ module.exports = {
       colors: {
         blue: {
           25: '#BAE6FD',
-          75: '#90CDF4'
+          75: '#90CDF4',
         },
         yellow: {
           25: '#FED7AA',
         },
       },
+      backgroundImage: () => ({
+        'ticket-long': "url('/assets/ticket-bg-long.png')",
+        'ticket-sq': "url('/assets/ticket-bg-sq.png')",
+      }),
     },
     fontFamily: {
       sans: ['Inter var', ...defaultTheme.fontFamily.sans],
