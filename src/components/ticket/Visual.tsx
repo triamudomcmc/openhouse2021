@@ -13,11 +13,9 @@ const Visual = () => (
           <h1 className={s.date}>12-13 FEB</h1>
         </div>
         <p className={s.ticketNumber}>NO. 999999</p>
-        <p className="mt-16 text-4xl font-bold text-white">TO</p>
-        <p className="mt-16 text-5xl font-bold text-white">Tawan</p>
-        <p className="mt-16 text-4xl font-medium text-white">
-          อย่าให้กูเจอ กูจะเล่นแม่งให้หนัก
-        </p>
+        <p className={s.to}>TO</p>
+        <p className={s.name}>Tawan</p>
+        <p className={s.text}>อย่าให้กูเจอ กูจะเล่นแม่งให้หนัก</p>
       </div>
       <div className="flex flex-row justify-between w-full text-3xl font-medium text-white">
         <div className="flex flex-col justify-between">
