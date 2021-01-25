@@ -1,5 +1,11 @@
 .root {
-  @apply flex w-full h-screen px-32 py-64 bg-ticket-long font-display;
+  @apply flex w-full h-screen bg-cover font-display;
+}
+
+.container {
+  @apply flex px-32 py-64 bg-ticket-long;
+  width: 1080px;
+  height: 1920px;
 }
 
 .card {
@@ -45,12 +51,18 @@
 .ticketNumber {
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  @apply w-full mt-4 text-3xl font-medium text-right text-white;
+  @apply w-full mt-4 text-3xl font-medium text-white;
 }
 
 @media screen and (height: 1080px) {
   .root {
-    @apply flex w-full h-screen px-16 py-16 bg-ticket-long font-display;
+    @apply flex w-full h-screen bg-ticket-long font-display;
+  }
+
+  .container {
+    @apply flex px-16 py-16;
+    width: 1080px;
+    height: 1080px;
   }
 
   .card {
