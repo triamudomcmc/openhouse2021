@@ -1,14 +1,13 @@
 import { Layout } from 'components/common/Layout'
-import TicketVisual from 'components/ticket/Visual'
+import {Potrait} from 'components/ticket/VisualTicket'
+import React from "react";
 
 const Ticket = () => (
-  <Layout>
     <div className="w-full h-full py-16 ">
-      <div className="mx-auto">
-        <TicketVisual />
+      <div className="flex justify-center">
+        <Potrait width="1080px"/>
       </div>
     </div>
-  </Layout>
 )
 
 export default Ticket

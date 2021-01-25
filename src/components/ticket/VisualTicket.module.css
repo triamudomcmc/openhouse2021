@@ -1,0 +1,114 @@
+.container {
+    --width: 1080px;
+    width: var(--width);
+    height: calc(var(--width) * (1920/1080));
+}
+
+.vertivcal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @apply flex flex-col items-center
+}
+.line{
+    height: calc(var(--width) / 1080 * 190);
+    border-right-width: calc(var(--width) / 1080 * 3);
+    @apply border-white;
+    margin-bottom: calc(var(--width) / 1080 * 14)
+}
+.ticketNumber {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: calc(var(--width) / 37);
+    height: calc(var(--width) / 3);
+    @apply font-medium text-white;
+}
+
+.subContainer {
+    @apply h-full flex flex-col justify-between;
+    padding: calc(var(--width) / 18);
+}
+
+.card {
+    border-radius: calc(var(--width) / 1080 * 50);
+    width: calc(76/100*(var(--width)));
+    height: calc(72/100*(var(--width) * (1920/1080)));
+    backdrop-filter: blur(24px);
+    background: linear-gradient(
+            320deg,
+            rgba(255, 255, 255, 0.4) 0%,
+            rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.mainHeader {
+    line-height: 100%;
+    font-size: calc(var(--width) / 23);
+    @apply font-bold text-white
+}
+
+.subHeader {
+    line-height: 100%;
+    font-size: calc(var(--width) / 31);
+    @apply font-bold text-white;
+    margin-bottom: calc(var(--width) / 55);
+}
+
+.dateTag {
+    background: white;
+    border-radius: calc(var(--width) / 100);
+    font-size: calc(var(--width) / 50);
+    padding: calc(var(--width) / 140) calc(var(--width) / 50);
+    @apply font-bold text-purple-300
+}
+
+.contentContainer {
+
+}
+
+.contentTo {
+    font-size: calc(var(--width) / 32);
+    margin-bottom: calc(var(--width) / 30);
+    @apply font-bold text-white
+}
+
+.contentName {
+    font-size: calc(var(--width) / 24);
+    margin-bottom: calc(var(--width) / 30);
+    @apply font-bold text-white
+}
+
+.contentDescription {
+    font-size: calc(var(--width) / 31);
+    @apply font-bold text-white;
+}
+
+.qrCodeWrapper {
+    @apply flex flex-col;
+}
+
+.qrCode {
+    width: calc((var(--width) / 1080) * 128);
+}
+
+.qrText {
+    margin-top: calc(var(--width) / 120);
+    font-size: calc((var(--width) / 1080) * 20);
+    @apply text-center text-white font-black;
+}
+
+.footer {
+    @apply flex flex-row justify-between;
+}
+.contact {
+
+}
+.contactText {
+    font-size: calc((var(--width) / 1080) * 25);
+    @apply flex flex-row justify-end text-white font-semibold;
+}
+
+.contactText img{
+    margin-left: calc((var(--width) / 1080) * 20);
+    width: calc((var(--width) / 1080) * 36);
+}

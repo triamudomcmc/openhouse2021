@@ -12,8 +12,8 @@ type Props = {
 
 export const Layout = ({ children, className, hideSignIn }: Props) => (
   <div className="font-display">
-    <Nav hideSignIn={hideSignIn} restClassname="hidden md:block"/>
-    <MobileMenu restClassname="block md:hidden"/>
+    <Nav hideSignIn={hideSignIn} restClassname="hidden md:block z-50"/>
+    <MobileMenu restClassname="block md:hidden z-50"/>
     <div className="">
       <main className="flex flex-1">
         <div className={cn('flex flex-col w-full', className)}>{children}</div>
