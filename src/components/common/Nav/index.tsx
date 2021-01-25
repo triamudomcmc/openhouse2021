@@ -1,9 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
+import cn from 'classnames'
 
-export const Nav = ({ hideSignIn }) => {
+export const Nav = ({ hideSignIn , restClassname = ""}) => {
   return (
-    <div className="top-0 justify-center hidden w-full h-16 max-w-full shadow-md md:flex md:h-28 bg-gradient-to-r from-blue-200 via-purple-200 to-red-200">
+    <div className={cn("sticky top-0 justify-center hidden w-full h-16 max-w-full shadow-md md:flex md:h-28" +
+      " bg-gradient-to-r from-blue-200 via-purple-200 to-red-200",restClassname)}>
       <nav className="flex items-center justify-between w-full px-16 py-4">
         <Link href="/">
           <div className="text-lg font-black leading-tight cursor-pointer md:text-2xl font-display">

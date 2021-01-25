@@ -12,6 +12,7 @@ import { FocusScope } from '@react-aria/focus'
 import { useButton } from '@react-aria/button'
 import Link from 'next/link'
 import { SocialLink } from '../SocialLink'
+import classNames from "classnames";
 
 export const Modal = (
   props: Parameters<typeof useOverlay>[0] & Parameters<typeof useDialog>[0]
@@ -75,7 +76,7 @@ export const Modal = (
   )
 }
 
-export const MobileMenu = () => {
+export const MobileMenu = ({restClassname = ""}) => {
   const state = useOverlayTriggerState({})
   const ref = useRef<HTMLButtonElement | null>(null)
   const { buttonProps } = useButton(
@@ -87,7 +88,8 @@ export const MobileMenu = () => {
 
   return (
     <>
-      <div className="sticky top-0 justify-center w-full h-24 max-w-full md:flex md:h-28 bg-gradient-to-r from-blue-200 via-purple-200 to-red-200">
+      <div className={classNames("sticky top-0 justify-center w-full h-24 max-w-full md:flex md:h-28" +
+        " bg-gradient-to-r from-blue-200 via-purple-200 to-red-200",restClassname)}>
         <nav className="flex items-center justify-between w-full h-full px-4 py-4">
           <button
             aria-label="Mobile Menu"
