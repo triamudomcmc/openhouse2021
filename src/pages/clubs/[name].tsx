@@ -4,7 +4,7 @@ import PlaceholderProfile from "../../assets/vectors/clubs/PlaceholderProfile";
 import Footer from "../../components/common/Footer";
 import PlaceholderSuggestion from "../../assets/vectors/clubs/PlaceholderSuggestion";
 
-export default () => {
+const Page = () => {
 
   return (
     <Layout>
@@ -158,3 +158,5 @@ export default () => {
   )
 
 }
+
+export default Page
