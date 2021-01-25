@@ -1,5 +1,5 @@
-import TicketVisual from 'components/ticket/Visual'
+import { Potrait } from 'components/ticket/Visual'
 
-const TicketImage = () => <TicketVisual />
+const TicketImage = () => <Potrait width={1080} />
 
 export default TicketImage
