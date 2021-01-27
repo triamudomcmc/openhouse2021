@@ -24,6 +24,9 @@
     .frame-height-desktop {
       height: calc(31vw);
     }
+    .stage-height-desktop {
+      height: calc(50vw);
+    }
     .w-18 {
       width: 4.5rem;
     }

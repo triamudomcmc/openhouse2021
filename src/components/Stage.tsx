@@ -11,14 +11,15 @@ export const StageContainer = ({ stream }) => {
   const updatedStream = response.data || ''
 
   return (
-    <div className="flex flex-col items-center justify-center flex-1 w-full h-full">
+    <div className="flex flex-col items-center justify-center flex-1 w-full my-16">
       <iframe
+        className="w-full stage-height-desktop"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
         frameBorder="0"
         src={`${updatedStream.stream}?autoplay=1&mute=1`}
-        width="100%"
-        height="100%"
+        width="560"
+        height="340"
       />
     </div>
   )
