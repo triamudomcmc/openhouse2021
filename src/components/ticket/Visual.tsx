@@ -39,35 +39,19 @@ export const Potrait = ({ width }) => {
             <div className={css.contact}>
               <span className={css.contactText}>
                 @triamudomoph
-                <Image
-                  src="/assets/vectors/twitter-bw.svg"
-                  width={36}
-                  height={36}
-                />
+                <Image src="/assets/vectors/twitter-bw.svg" width={36} height={36} />
               </span>
               <span className={css.contactText}>
                 @triamudom.oph
-                <Image
-                  src="/assets/vectors/instagram-bw.svg"
-                  width={36}
-                  height={36}
-                />
+                <Image src="/assets/vectors/instagram-bw.svg" width={36} height={36} />
               </span>
               <span className={css.contactText}>
                 Triam Udom Open House
-                <Image
-                  src="/assets/vectors/youtube-bw.svg"
-                  width={36}
-                  height={36}
-                />
+                <Image src="/assets/vectors/youtube-bw.svg" width={36} height={36} />
               </span>
               <span className={css.contactText}>
                 Triam Udom Open House
-                <Image
-                  src="/assets/vectors/facebook-bw.svg"
-                  width={36}
-                  height={36}
-                />
+                <Image src="/assets/vectors/facebook-bw.svg" width={36} height={36} />
               </span>
             </div>
           </div>

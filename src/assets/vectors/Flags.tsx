@@ -40,15 +40,8 @@ export const Scimath = ({ ...restprops }) => {
           />
           <feOffset dy="1.50872" />
           <feGaussianBlur stdDeviation="2.26307" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -56,21 +49,9 @@ export const Scimath = ({ ...restprops }) => {
           />
           <feOffset dy="1.50872" />
           <feGaussianBlur stdDeviation="1.50872" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow"
-            result="effect2_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
         </filter>
         <filter
           id="filter1_dd"
@@ -89,15 +70,8 @@ export const Scimath = ({ ...restprops }) => {
           />
           <feOffset dy="0.470609" />
           <feGaussianBlur stdDeviation="0.705913" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -105,21 +79,9 @@ export const Scimath = ({ ...restprops }) => {
           />
           <feOffset dy="0.470609" />
           <feGaussianBlur stdDeviation="0.470609" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow"
-            result="effect2_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
         </filter>
         <clipPath id="clip3">
           <rect
@@ -151,30 +113,12 @@ export const Kamnuan = ({ ...restprops }) => {
             fill="#90CDF4"
           />
         </g>
-        <path
-          d="M40.2612 29.1543H39.0361V30.2899H40.2612V29.1543Z"
-          fill="white"
-        />
-        <path
-          d="M43.8178 29.1543H42.5928V30.2899H43.8178V29.1543Z"
-          fill="white"
-        />
-        <path
-          d="M47.4292 29.1543H46.2041V30.2899H47.4292V29.1543Z"
-          fill="white"
-        />
-        <path
-          d="M22.7878 23.4609H21.626V24.6584H22.7878V23.4609Z"
-          fill="white"
-        />
-        <path
-          d="M22.7878 26.5195H21.626V27.7168H22.7878V26.5195Z"
-          fill="white"
-        />
-        <path
-          d="M22.7878 29.5176H21.626V30.715H22.7878V29.5176Z"
-          fill="white"
-        />
+        <path d="M40.2612 29.1543H39.0361V30.2899H40.2612V29.1543Z" fill="white" />
+        <path d="M43.8178 29.1543H42.5928V30.2899H43.8178V29.1543Z" fill="white" />
+        <path d="M47.4292 29.1543H46.2041V30.2899H47.4292V29.1543Z" fill="white" />
+        <path d="M22.7878 23.4609H21.626V24.6584H22.7878V23.4609Z" fill="white" />
+        <path d="M22.7878 26.5195H21.626V27.7168H22.7878V26.5195Z" fill="white" />
+        <path d="M22.7878 29.5176H21.626V30.715H22.7878V29.5176Z" fill="white" />
         <path
           d="M47.6822 41.9783H18.3128C17.9413 41.9783 17.6963 41.7388 17.6963 41.3757V12.6768C17.6963 12.3137 17.9413 12.0742 18.3128 12.0742C18.6842 12.0742 18.9292 12.3137 18.9292 12.6768V40.7809H47.6822C48.0536 40.7809 48.2986 41.0204 48.2986 41.3834C48.2986 41.7465 47.9825 41.9783 47.6822 41.9783Z"
           fill="white"
@@ -238,15 +182,8 @@ export const Kamnuan = ({ ...restprops }) => {
           />
           <feOffset dy="1.50872" />
           <feGaussianBlur stdDeviation="2.26307" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -254,21 +191,9 @@ export const Kamnuan = ({ ...restprops }) => {
           />
           <feOffset dy="1.50872" />
           <feGaussianBlur stdDeviation="1.50872" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow"
-            result="effect2_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
         </filter>
         <filter
           id="filter3_dd"
@@ -287,15 +212,8 @@ export const Kamnuan = ({ ...restprops }) => {
           />
           <feOffset dy="0.470609" />
           <feGaussianBlur stdDeviation="0.705913" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -303,21 +221,9 @@ export const Kamnuan = ({ ...restprops }) => {
           />
           <feOffset dy="0.470609" />
           <feGaussianBlur stdDeviation="0.470609" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow"
-            result="effect2_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
         </filter>
       </defs>
     </svg>
@@ -375,15 +281,8 @@ export const Chinese = ({ ...restprops }) => {
           />
           <feOffset dy="1.50872" />
           <feGaussianBlur stdDeviation="2.26307" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -391,21 +290,9 @@ export const Chinese = ({ ...restprops }) => {
           />
           <feOffset dy="1.50872" />
           <feGaussianBlur stdDeviation="1.50872" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow"
-            result="effect2_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
         </filter>
       </defs>
     </svg>
@@ -525,15 +412,8 @@ export const Korea = ({ ...restprops }) => {
           />
           <feOffset dy="1.50872" />
           <feGaussianBlur stdDeviation="2.26307" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -541,21 +421,9 @@ export const Korea = ({ ...restprops }) => {
           />
           <feOffset dy="1.50872" />
           <feGaussianBlur stdDeviation="1.50872" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow"
-            result="effect2_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
         </filter>
         <clipPath id="clip4">
           <rect
@@ -612,15 +480,8 @@ export const German = ({ ...restprops }) => {
           />
           <feOffset dy="1.50872" />
           <feGaussianBlur stdDeviation="2.26307" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -628,21 +489,9 @@ export const German = ({ ...restprops }) => {
           />
           <feOffset dy="1.50872" />
           <feGaussianBlur stdDeviation="1.50872" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow"
-            result="effect2_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
         </filter>
         <clipPath id="clip5">
           <rect
@@ -680,22 +529,10 @@ export const Spain = ({ ...restprops }) => {
         d="M39.1982 28.4608L40.1564 24.2465C40.2447 23.8583 39.9424 23.4902 39.5356 23.4902H38.8607C38.454 23.4902 38.1519 23.8583 38.24 24.2465L39.1982 28.4608Z"
         fill="#C8414B"
       />
-      <path
-        d="M40.3285 26.252H38.0684V35.6404H40.3285V26.252Z"
-        fill="#F5F5F5"
-      />
-      <path
-        d="M40.8932 25.1484H37.5029V26.2531H40.8932V25.1484Z"
-        fill="#FAB446"
-      />
-      <path
-        d="M40.8928 28.4609H35.2422V29.5658H40.8928V28.4609Z"
-        fill="#C8414B"
-      />
-      <path
-        d="M40.8932 32.8792L37.5029 31.7746V30.6699L40.8932 31.7746V32.8792Z"
-        fill="#C8414B"
-      />
+      <path d="M40.3285 26.252H38.0684V35.6404H40.3285V26.252Z" fill="#F5F5F5" />
+      <path d="M40.8932 25.1484H37.5029V26.2531H40.8932V25.1484Z" fill="#FAB446" />
+      <path d="M40.8928 28.4609H35.2422V29.5658H40.8928V28.4609Z" fill="#C8414B" />
+      <path d="M40.8932 32.8792L37.5029 31.7746V30.6699L40.8932 31.7746V32.8792Z" fill="#C8414B" />
       <path
         d="M22.247 28.4608L23.2052 24.2465C23.2935 23.8583 22.9913 23.4902 22.5844 23.4902H21.9095C21.5028 23.4902 21.2007 23.8583 21.2888 24.2465L22.247 28.4608Z"
         fill="#C8414B"
@@ -724,47 +561,17 @@ export const Spain = ({ ...restprops }) => {
         d="M27.3323 36.1389V30.6719H26.2021V35.6299C26.5322 35.8737 26.912 36.0556 27.3323 36.1389Z"
         fill="#C8414B"
       />
-      <path
-        d="M29.5924 28.4609H26.2021V29.5656H29.5924V28.4609Z"
-        fill="#FFB441"
-      />
-      <path
-        d="M29.5924 26.252H26.2021V27.3566H29.5924V26.252Z"
-        fill="#FAB446"
-      />
-      <path
-        d="M29.0267 26.9092H26.7666V28.9102H29.0267V26.9092Z"
-        fill="#FAB446"
-      />
-      <path
-        d="M23.3763 26.252H21.1162V35.6404H23.3763V26.252Z"
-        fill="#F5F5F5"
-      />
-      <path
-        d="M23.9439 35.0898H20.5537V36.1945H23.9439V35.0898Z"
-        fill="#FAB446"
-      />
-      <path
-        d="M23.9439 25.1484H20.5537V26.2531H23.9439V25.1484Z"
-        fill="#FAB446"
-      />
-      <path
-        d="M24.5075 36.1924H19.9873V37.297H24.5075V36.1924Z"
-        fill="#5064AA"
-      />
-      <path
-        d="M41.4586 35.0898H38.0684V36.1945H41.4586V35.0898Z"
-        fill="#FAB446"
-      />
-      <path
-        d="M41.4587 36.1924H36.9385V37.297H41.4587V36.1924Z"
-        fill="#5064AA"
-      />
+      <path d="M29.5924 28.4609H26.2021V29.5656H29.5924V28.4609Z" fill="#FFB441" />
+      <path d="M29.5924 26.252H26.2021V27.3566H29.5924V26.252Z" fill="#FAB446" />
+      <path d="M29.0267 26.9092H26.7666V28.9102H29.0267V26.9092Z" fill="#FAB446" />
+      <path d="M23.3763 26.252H21.1162V35.6404H23.3763V26.252Z" fill="#F5F5F5" />
+      <path d="M23.9439 35.0898H20.5537V36.1945H23.9439V35.0898Z" fill="#FAB446" />
+      <path d="M23.9439 25.1484H20.5537V26.2531H23.9439V25.1484Z" fill="#FAB446" />
+      <path d="M24.5075 36.1924H19.9873V37.297H24.5075V36.1924Z" fill="#5064AA" />
+      <path d="M41.4586 35.0898H38.0684V36.1945H41.4586V35.0898Z" fill="#FAB446" />
+      <path d="M41.4587 36.1924H36.9385V37.297H41.4587V36.1924Z" fill="#5064AA" />
       <path d="M34.1134 24.043H27.333V25.1474H34.1134V24.043Z" fill="#FAB446" />
-      <path
-        d="M31.2893 20.7295H30.1592V24.0431H31.2893V20.7295Z"
-        fill="#FFB441"
-      />
+      <path d="M31.2893 20.7295H30.1592V24.0431H31.2893V20.7295Z" fill="#FFB441" />
       <path
         d="M29.5925 22.386C28.6577 22.386 27.8975 21.6427 27.8975 20.7291C27.8975 19.8154 28.6579 19.0723 29.5925 19.0723C30.5273 19.0723 31.2876 19.8156 31.2876 20.7291C31.2877 21.6427 30.5273 22.386 29.5925 22.386ZM29.5925 20.1768C29.2808 20.1768 29.0275 20.4243 29.0275 20.7291C29.0275 21.0338 29.2807 21.2815 29.5925 21.2815C29.9044 21.2815 30.1576 21.034 30.1576 20.7291C30.1576 20.4244 29.9044 20.1768 29.5925 20.1768Z"
         fill="#F5F5F5"
@@ -793,10 +600,7 @@ export const Spain = ({ ...restprops }) => {
         d="M30.7224 32.3263C31.6585 32.3263 32.4174 31.5845 32.4174 30.6695C32.4174 29.7545 31.6585 29.0127 30.7224 29.0127C29.7862 29.0127 29.0273 29.7545 29.0273 30.6695C29.0273 31.5845 29.7862 32.3263 30.7224 32.3263Z"
         fill="#5064AA"
       />
-      <path
-        d="M31.2893 18.5195H30.1592V21.8333H31.2893V18.5195Z"
-        fill="#FAB446"
-      />
+      <path d="M31.2893 18.5195H30.1592V21.8333H31.2893V18.5195Z" fill="#FAB446" />
       <path
         d="M27.3323 24.0431L26.2021 22.9385L26.8641 22.2915C27.8873 21.2914 29.2753 20.7295 30.7225 20.7295C32.1697 20.7295 33.5575 21.2914 34.5809 22.2915L35.2428 22.9385L34.1127 24.0431H27.3323Z"
         fill="#C8414B"
@@ -813,14 +617,8 @@ export const Spain = ({ ...restprops }) => {
         d="M32.983 23.4906C33.2951 23.4906 33.5481 23.2432 33.5481 22.9382C33.5481 22.6331 33.2951 22.3857 32.983 22.3857C32.671 22.3857 32.418 22.6331 32.418 22.9382C32.418 23.2432 32.671 23.4906 32.983 23.4906Z"
         fill="#FFD250"
       />
-      <path
-        d="M26.2043 28.4609H20.5537V29.5656H26.2043V28.4609Z"
-        fill="#C8414B"
-      />
-      <path
-        d="M20.5537 32.8792L23.9438 31.7746V30.6699L20.5537 31.7746V32.8792Z"
-        fill="#C8414B"
-      />
+      <path d="M26.2043 28.4609H20.5537V29.5656H26.2043V28.4609Z" fill="#C8414B" />
+      <path d="M20.5537 32.8792L23.9438 31.7746V30.6699L20.5537 31.7746V32.8792Z" fill="#C8414B" />
       <defs>
         <filter
           id="filter6_dd"
@@ -839,15 +637,8 @@ export const Spain = ({ ...restprops }) => {
           />
           <feOffset dy="1.50872" />
           <feGaussianBlur stdDeviation="2.26307" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -855,21 +646,9 @@ export const Spain = ({ ...restprops }) => {
           />
           <feOffset dy="1.50872" />
           <feGaussianBlur stdDeviation="1.50872" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow"
-            result="effect2_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
         </filter>
       </defs>
     </svg>
@@ -918,15 +697,8 @@ export const French = ({ ...restprops }) => {
           />
           <feOffset dy="1.50872" />
           <feGaussianBlur stdDeviation="2.26307" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -934,21 +706,9 @@ export const French = ({ ...restprops }) => {
           />
           <feOffset dy="1.50872" />
           <feGaussianBlur stdDeviation="1.50872" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow"
-            result="effect2_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
         </filter>
         <clipPath id="clip6">
           <rect
@@ -995,15 +755,8 @@ export const Janpan = ({ ...restprops }) => {
           />
           <feOffset dy="1.50872" />
           <feGaussianBlur stdDeviation="2.26307" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -1011,21 +764,9 @@ export const Janpan = ({ ...restprops }) => {
           />
           <feOffset dy="1.50872" />
           <feGaussianBlur stdDeviation="1.50872" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow"
-            result="effect2_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
         </filter>
       </defs>
     </svg>
@@ -1089,15 +830,8 @@ export const Gsci = ({ ...restprops }) => {
           />
           <feOffset dy="1.45937" />
           <feGaussianBlur stdDeviation="2.18905" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -1105,21 +839,9 @@ export const Gsci = ({ ...restprops }) => {
           />
           <feOffset dy="1.45937" />
           <feGaussianBlur stdDeviation="1.45937" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow"
-            result="effect2_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
         </filter>
         <clipPath id="clip0">
           <rect
@@ -1175,15 +897,8 @@ export const Gmath = ({ ...restprops }) => {
           />
           <feOffset dy="1.45937" />
           <feGaussianBlur stdDeviation="2.18905" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -1191,21 +906,9 @@ export const Gmath = ({ ...restprops }) => {
           />
           <feOffset dy="1.45937" />
           <feGaussianBlur stdDeviation="1.45937" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow"
-            result="effect2_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
         </filter>
         <clipPath id="clip2">
           <rect
@@ -1255,15 +958,8 @@ export const Gthai = ({ ...restprops }) => {
           />
           <feOffset dy="1.45937" />
           <feGaussianBlur stdDeviation="2.18905" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -1271,21 +967,9 @@ export const Gthai = ({ ...restprops }) => {
           />
           <feOffset dy="1.45937" />
           <feGaussianBlur stdDeviation="1.45937" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow"
-            result="effect2_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
         </filter>
       </defs>
     </svg>
@@ -1327,15 +1011,8 @@ export const Geng = ({ ...restprops }) => {
           />
           <feOffset dy="1.45937" />
           <feGaussianBlur stdDeviation="2.18905" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -1343,21 +1020,9 @@ export const Geng = ({ ...restprops }) => {
           />
           <feOffset dy="1.45937" />
           <feGaussianBlur stdDeviation="1.45937" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_dropShadow"
-            result="effect2_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" />
         </filter>
       </defs>
     </svg>

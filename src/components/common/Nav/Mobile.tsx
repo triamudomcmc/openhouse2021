@@ -1,12 +1,7 @@
 import React, { useRef } from 'react'
 import Image from 'next/image'
 import { useOverlayTriggerState } from '@react-stately/overlays'
-import {
-  useOverlay,
-  usePreventScroll,
-  useModal,
-  OverlayContainer,
-} from '@react-aria/overlays'
+import { useOverlay, usePreventScroll, useModal, OverlayContainer } from '@react-aria/overlays'
 import { useDialog } from '@react-aria/dialog'
 import { FocusScope } from '@react-aria/focus'
 import { useButton } from '@react-aria/button'
@@ -81,7 +76,7 @@ export const MobileMenu = ({ className }) => {
   const ref = useRef<HTMLButtonElement | null>(null)
   const { buttonProps } = useButton(
     {
-      onPress: () => (state.isOpen ? state.close() : state.open()),
+      onPress: () => (state.isOpen ? state.close() : state.open())
     },
     ref
   )
@@ -95,12 +90,7 @@ export const MobileMenu = ({ className }) => {
         )}
       >
         <nav className="flex items-center justify-between w-full h-full px-4 py-4">
-          <button
-            aria-label="Mobile Menu"
-            type="button"
-            {...buttonProps}
-            ref={ref}
-          >
+          <button aria-label="Mobile Menu" type="button" {...buttonProps} ref={ref}>
             {state.isOpen ? (
               <svg
                 viewBox="0 0 24 24"

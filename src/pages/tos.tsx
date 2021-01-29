@@ -12,10 +12,7 @@ const TOS = ({ content }) => {
           ข้อตกลงและเงื่อนไขในการใช้งาน
         </h1>
 
-        <div
-          className="prose lg:prose-xl"
-          dangerouslySetInnerHTML={{ __html: content }}
-        ></div>
+        <div className="prose lg:prose-xl" dangerouslySetInnerHTML={{ __html: content }}></div>
       </div>
     </Layout>
   )
@@ -31,7 +28,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      content,
-    },
+      content
+    }
   }
 }

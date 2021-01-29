@@ -18,7 +18,7 @@ const RegisterForm = () => {
         school: 'วังไกลกังวล',
         news: [],
         purpose: [],
-        tos: false,
+        tos: false
       }}
       onSubmit={async (values, { setSubmitting }) => {
         let data: any
@@ -31,36 +31,20 @@ const RegisterForm = () => {
         // setSubmitting(false)
       }}
     >
-      {({
-        values,
-        errors,
-        touched,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-        isSubmitting,
-      }) => (
+      {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
         <form onSubmit={handleSubmit} className="mt-4">
           <div className="relative">
-            <div
-              className="absolute inset-0 flex items-center"
-              aria-hidden="true"
-            >
+            <div className="absolute inset-0 flex items-center" aria-hidden="true">
               <div className="w-full border-t border-gray-300"></div>
             </div>
             <div className="relative flex justify-center">
-              <span className="px-2 text-sm text-gray-500 bg-white">
-                ข้อมูลส่วนตัว
-              </span>
+              <span className="px-2 text-sm text-gray-500 bg-white">ข้อมูลส่วนตัว</span>
             </div>
           </div>
 
           <div className="mt-4 space-y-4">
             <div>
-              <label
-                htmlFor="prefix"
-                className="block text-sm font-medium text-gray-700"
-              >
+              <label htmlFor="prefix" className="block text-sm font-medium text-gray-700">
                 คำนำหน้าชื่อ
               </label>
               <select
@@ -82,10 +66,7 @@ const RegisterForm = () => {
             </div>
 
             <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium leading-5 text-gray-700"
-              >
+              <label htmlFor="name" className="block text-sm font-medium leading-5 text-gray-700">
                 ชื่อ-สกุล
               </label>
               <div className="mt-1">
@@ -128,10 +109,7 @@ const RegisterForm = () => {
             </div>
 
             <div>
-              <label
-                htmlFor="status"
-                className="block text-sm font-medium text-gray-700"
-              >
+              <label htmlFor="status" className="block text-sm font-medium text-gray-700">
                 สถานภาพ
               </label>
               <select
@@ -150,10 +128,7 @@ const RegisterForm = () => {
             </div>
 
             <div>
-              <label
-                htmlFor="level"
-                className="block text-sm font-medium text-gray-700"
-              >
+              <label htmlFor="level" className="block text-sm font-medium text-gray-700">
                 ระดับชั้น
               </label>
               <select
@@ -178,10 +153,7 @@ const RegisterForm = () => {
             </div>
 
             <div>
-              <label
-                htmlFor="school"
-                className="block text-sm font-medium text-gray-700"
-              >
+              <label htmlFor="school" className="block text-sm font-medium text-gray-700">
                 โรงเรียน
               </label>
               <select
@@ -201,23 +173,17 @@ const RegisterForm = () => {
           </div>
 
           <div className="relative mt-4">
-            <div
-              className="absolute inset-0 flex items-center"
-              aria-hidden="true"
-            >
+            <div className="absolute inset-0 flex items-center" aria-hidden="true">
               <div className="w-full border-t border-gray-300"></div>
             </div>
             <div className="relative flex justify-center">
-              <span className="px-2 text-sm text-gray-500 bg-white">
-                แบบสอบถาม
-              </span>
+              <span className="px-2 text-sm text-gray-500 bg-white">แบบสอบถาม</span>
             </div>
           </div>
 
           <div className="mt-4 space-y-4">
             <div id="checkbox-group">
-              ได้รับข่าวสารของ Triam Udom Open House จากที่ใดบ้าง (ตอบได้มากกว่า
-              1 ข้อ)
+              ได้รับข่าวสารของ Triam Udom Open House จากที่ใดบ้าง (ตอบได้มากกว่า 1 ข้อ)
             </div>
             <div role="group" aria-labelledby="checkbox-group">
               <Field type="checkbox" name="news" value="facebook">
@@ -229,10 +195,7 @@ const RegisterForm = () => {
                       type="checkbox"
                       className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
                     />
-                    <label
-                      htmlFor="facebook"
-                      className="block ml-2 text-sm text-gray-900"
-                    >
+                    <label htmlFor="facebook" className="block ml-2 text-sm text-gray-900">
                       Facebook: Triam Udom Open House
                     </label>
                   </div>
@@ -240,7 +203,7 @@ const RegisterForm = () => {
               </Field>
               <Field type="checkbox" name="news" value="instagram">
                 {({
-                  field, // { name, value, onChange, onBlur }
+                  field // { name, value, onChange, onBlur }
                 }) => (
                   <div className="flex items-center mt-4">
                     <input
@@ -249,10 +212,7 @@ const RegisterForm = () => {
                       type="checkbox"
                       className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
                     />
-                    <label
-                      htmlFor="instagram"
-                      className="block ml-2 text-sm text-gray-900"
-                    >
+                    <label htmlFor="instagram" className="block ml-2 text-sm text-gray-900">
                       Instagram: @triamudom.oph
                     </label>
                   </div>
@@ -260,7 +220,7 @@ const RegisterForm = () => {
               </Field>
               <Field type="checkbox" name="news" value="twitter">
                 {({
-                  field, // { name, value, onChange, onBlur }
+                  field // { name, value, onChange, onBlur }
                 }) => (
                   <div className="flex items-center mt-4">
                     <input
@@ -269,10 +229,7 @@ const RegisterForm = () => {
                       type="checkbox"
                       className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
                     />
-                    <label
-                      htmlFor="twitter"
-                      className="block ml-2 text-sm text-gray-900"
-                    >
+                    <label htmlFor="twitter" className="block ml-2 text-sm text-gray-900">
                       Twittter: @triamudomoph
                     </label>
                   </div>
@@ -280,7 +237,7 @@ const RegisterForm = () => {
               </Field>
               <Field type="checkbox" name="news" value="student">
                 {({
-                  field, // { name, value, onChange, onBlur }
+                  field // { name, value, onChange, onBlur }
                 }) => (
                   <div className="flex items-center mt-4">
                     <input
@@ -289,10 +246,7 @@ const RegisterForm = () => {
                       type="checkbox"
                       className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
                     />
-                    <label
-                      htmlFor="student"
-                      className="block ml-2 text-sm text-gray-900"
-                    >
+                    <label htmlFor="student" className="block ml-2 text-sm text-gray-900">
                       นักเรียนโรงเรียนเตรียมฯ
                     </label>
                   </div>
@@ -300,7 +254,7 @@ const RegisterForm = () => {
               </Field>
               <Field type="checkbox" name="news" value="friend">
                 {({
-                  field, // { name, value, onChange, onBlur }
+                  field // { name, value, onChange, onBlur }
                 }) => (
                   <div className="flex items-center mt-4">
                     <input
@@ -309,10 +263,7 @@ const RegisterForm = () => {
                       type="checkbox"
                       className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
                     />
-                    <label
-                      htmlFor="friend"
-                      className="block ml-2 text-sm text-gray-900"
-                    >
+                    <label htmlFor="friend" className="block ml-2 text-sm text-gray-900">
                       เพื่อน
                     </label>
                   </div>
@@ -320,7 +271,7 @@ const RegisterForm = () => {
               </Field>
               <Field type="checkbox" name="news" value="parent">
                 {({
-                  field, // { name, value, onChange, onBlur }
+                  field // { name, value, onChange, onBlur }
                 }) => (
                   <div className="flex items-center mt-4">
                     <input
@@ -329,10 +280,7 @@ const RegisterForm = () => {
                       type="checkbox"
                       className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
                     />
-                    <label
-                      htmlFor="parent"
-                      className="block ml-2 text-sm text-gray-900"
-                    >
+                    <label htmlFor="parent" className="block ml-2 text-sm text-gray-900">
                       ผู้ปกครอง
                     </label>
                   </div>
@@ -340,7 +288,7 @@ const RegisterForm = () => {
               </Field>
               <Field type="checkbox" name="news" value="school">
                 {({
-                  field, // { name, value, onChange, onBlur }
+                  field // { name, value, onChange, onBlur }
                 }) => (
                   <div className="flex items-center mt-4">
                     <input
@@ -349,10 +297,7 @@ const RegisterForm = () => {
                       type="checkbox"
                       className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
                     />
-                    <label
-                      htmlFor="school-info"
-                      className="block ml-2 text-sm text-gray-900"
-                    >
+                    <label htmlFor="school-info" className="block ml-2 text-sm text-gray-900">
                       โรงเรียน
                     </label>
                   </div>
@@ -363,13 +308,12 @@ const RegisterForm = () => {
 
           <div className="mt-4 space-y-4">
             <div id="checkbox-group">
-              จุดประสงค์ในการเข้าร่วม Triam Udom Online Open House 2021
-              (ตอบได้มากกว่า 1 ข้อ)
+              จุดประสงค์ในการเข้าร่วม Triam Udom Online Open House 2021 (ตอบได้มากกว่า 1 ข้อ)
             </div>
             <div role="group" aria-labelledby="checkbox-group">
               <Field type="checkbox" name="purpose" value="admission">
                 {({
-                  field, // { name, value, onChange, onBlur }
+                  field // { name, value, onChange, onBlur }
                 }) => (
                   <div className="flex items-center mt-4">
                     <input
@@ -378,10 +322,7 @@ const RegisterForm = () => {
                       type="checkbox"
                       className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
                     />
-                    <label
-                      htmlFor="admission"
-                      className="block ml-2 text-sm text-gray-900"
-                    >
+                    <label htmlFor="admission" className="block ml-2 text-sm text-gray-900">
                       หาข้อมูลการสอบเข้าโรงเรียนเตรียมฯ
                     </label>
                   </div>
@@ -389,7 +330,7 @@ const RegisterForm = () => {
               </Field>
               <Field type="checkbox" name="purpose" value="live">
                 {({
-                  field, // { name, value, onChange, onBlur }
+                  field // { name, value, onChange, onBlur }
                 }) => (
                   <div className="flex items-center mt-4">
                     <input
@@ -398,10 +339,7 @@ const RegisterForm = () => {
                       type="checkbox"
                       className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
                     />
-                    <label
-                      htmlFor="live"
-                      className="block ml-2 text-sm text-gray-900"
-                    >
+                    <label htmlFor="live" className="block ml-2 text-sm text-gray-900">
                       ดู LIVE
                     </label>
                   </div>
@@ -409,7 +347,7 @@ const RegisterForm = () => {
               </Field>
               <Field type="checkbox" name="purpose" value="info">
                 {({
-                  field, // { name, value, onChange, onBlur }
+                  field // { name, value, onChange, onBlur }
                 }) => (
                   <div className="flex items-center mt-4">
                     <input
@@ -418,10 +356,7 @@ const RegisterForm = () => {
                       type="checkbox"
                       className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
                     />
-                    <label
-                      htmlFor="info"
-                      className="block ml-2 text-sm text-gray-900"
-                    >
+                    <label htmlFor="info" className="block ml-2 text-sm text-gray-900">
                       หาข้อมูลเกี่ยวกับโรงเรียนเตรียมฯ เพื่อประกอบการตัดสินใจ
                     </label>
                   </div>
@@ -429,7 +364,7 @@ const RegisterForm = () => {
               </Field>
               <Field type="checkbox" name="purpose" value="inspiration">
                 {({
-                  field, // { name, value, onChange, onBlur }
+                  field // { name, value, onChange, onBlur }
                 }) => (
                   <div className="flex items-center mt-4">
                     <input
@@ -438,10 +373,7 @@ const RegisterForm = () => {
                       type="checkbox"
                       className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
                     />
-                    <label
-                      htmlFor="inspiration"
-                      className="block ml-2 text-sm text-gray-900"
-                    >
+                    <label htmlFor="inspiration" className="block ml-2 text-sm text-gray-900">
                       หาแรงบันดาลใจ
                     </label>
                   </div>
@@ -451,10 +383,7 @@ const RegisterForm = () => {
           </div>
 
           <div className="relative mt-8">
-            <div
-              className="absolute inset-0 flex items-center"
-              aria-hidden="true"
-            >
+            <div className="absolute inset-0 flex items-center" aria-hidden="true">
               <div className="w-full border-t border-gray-300"></div>
             </div>
             <div className="relative flex justify-start">
@@ -480,9 +409,7 @@ const RegisterForm = () => {
               </label>
             </div>
 
-            <p className="my-2 text-sm text-red-500">
-              {errors.tos && touched.tos && errors.tos}
-            </p>
+            <p className="my-2 text-sm text-red-500">{errors.tos && touched.tos && errors.tos}</p>
           </div>
 
           <div className="flex flex-row items-baseline justify-between mt-6">

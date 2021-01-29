@@ -8,14 +8,9 @@ const PP = ({ content }) => {
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center flex-1 w-full h-full px-8 py-8 md:py-16">
-        <h1 className="text-xl font-bold text-gray-600 md:text-4xl">
-          นโยบายความเป็นส่วนตัว
-        </h1>
+        <h1 className="text-xl font-bold text-gray-600 md:text-4xl">นโยบายความเป็นส่วนตัว</h1>
 
-        <div
-          className="prose lg:prose-xl"
-          dangerouslySetInnerHTML={{ __html: content }}
-        ></div>
+        <div className="prose lg:prose-xl" dangerouslySetInnerHTML={{ __html: content }}></div>
       </div>
     </Layout>
   )
@@ -31,7 +26,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      content,
-    },
+      content
+    }
   }
 }

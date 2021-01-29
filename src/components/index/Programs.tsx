@@ -11,7 +11,7 @@ import {
   Gsci,
   Gmath,
   Gthai,
-  Geng,
+  Geng
 } from '../../assets/vectors/Flags'
 
 const Programs = () => {
@@ -57,7 +57,6 @@ const Programs = () => {
             <h1 className="mt-2">ศิลป์ญี่ปุ่น</h1>
           </div>
         </div>
-
       </div>
       <div>
         <h1 className="font-black text-center text-blue-400 mt-12 md:mt-36 text-3xl md:text-7xl">
@@ -83,7 +82,6 @@ const Programs = () => {
             <h1 className="mt-2">Gifted-English</h1>
           </div>
         </div>
-
       </div>
     </div>
   )

@@ -18,7 +18,7 @@ import { Live } from '../common/Live'
 export const Index = ({ stream, schedule }) => {
   const response = useSWR('/api/stage', {
     initialData: stream,
-    refreshInterval: 5000,
+    refreshInterval: 5000
   })
 
   const updatedStream = response.data || ''
@@ -34,9 +34,7 @@ export const Index = ({ stream, schedule }) => {
             <h1 className="mt-6 md:mt-16 text-shadow">TRIAM UDOM ONLINE</h1>
             <h1 className="text-shadow">OPEN HOUSE 2021</h1>
             <div>
-              <h2 className="m-4 text-xl font-bold md:text-4xl md:m-12">
-                12-13 FEBRUARY
-              </h2>
+              <h2 className="m-4 text-xl font-bold md:text-4xl md:m-12">12-13 FEBRUARY</h2>
             </div>
             <Link href="/register">
               <button
@@ -68,9 +66,7 @@ export const Index = ({ stream, schedule }) => {
               <span className="px-2 text-xs font-semibold text-white bg-red-400 md:text-2xl">
                 LIVE
               </span>
-              <span className="ml-2 md:ml-4">
-                ไอ้ตะวัน ประธาน กช. โดนรุมกระทืบ
-              </span>
+              <span className="ml-2 md:ml-4">ไอ้ตะวัน ประธาน กช. โดนรุมกระทืบ</span>
             </div>
             <div className="mt-1 text-xs text-gray-300 min-w-min md:text-2xl">
               Public Event | ประธานชมรม | 10.30-16.80 น.
@@ -92,22 +88,16 @@ export const Index = ({ stream, schedule }) => {
             <h1 className="text-3xl font-semibold md:font-bold md:text-7xl text-blue-75">
               สอบเข้า
             </h1>
-            <h1 className="text-xs font-bold text-gray-400 md:text-3xl">
-              6 March 2021
-            </h1>
+            <h1 className="text-xs font-bold text-gray-400 md:text-3xl">6 March 2021</h1>
           </div>
           <div className="flex flex-col items-center justify-center mx-auto">
             <Countdown
               date={1614992400000}
               renderer={({ days }) => (
-                <h1 className="text-4xl font-bold md:text-8xl text-blue-75">
-                  {days}
-                </h1>
+                <h1 className="text-4xl font-bold md:text-8xl text-blue-75">{days}</h1>
               )}
             />
-            <p className="text-xs font-medium text-gray-400 md:text-xl">
-              DAYS LEFT
-            </p>
+            <p className="text-xs font-medium text-gray-400 md:text-xl">DAYS LEFT</p>
           </div>
           <div className="flex flex-col items-center justify-center h-20 mx-auto md:h-full">
             <Group8 className="w-24 md:w-full" />

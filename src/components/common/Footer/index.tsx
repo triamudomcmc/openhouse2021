@@ -14,32 +14,16 @@ const Footer = () => {
               <h1>OPEN HOUSE 2021</h1>
               <div className="flex flex-row hidden py-4 space-x-4 md:flex">
                 <div>
-                  <Image
-                    src="/assets/vectors/facebook.svg"
-                    width={40}
-                    height={41}
-                  />
+                  <Image src="/assets/vectors/facebook.svg" width={40} height={41} />
                 </div>
                 <div>
-                  <Image
-                    src="/assets/vectors/instagram.svg"
-                    width={40}
-                    height={41}
-                  />
+                  <Image src="/assets/vectors/instagram.svg" width={40} height={41} />
                 </div>
                 <div>
-                  <Image
-                    src="/assets/vectors/twitter.svg"
-                    width={40}
-                    height={41}
-                  />
+                  <Image src="/assets/vectors/twitter.svg" width={40} height={41} />
                 </div>
                 <div>
-                  <Image
-                    src="/assets/vectors/youtube.svg"
-                    width={40}
-                    height={41}
-                  />
+                  <Image src="/assets/vectors/youtube.svg" width={40} height={41} />
                 </div>
               </div>
               <div className="flex justify-center pt-3 pb-2 md:p-0 md:justify-start">

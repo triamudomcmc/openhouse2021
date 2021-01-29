@@ -5,18 +5,18 @@ import Countdown from 'react-countdown'
 import { CountdownContainer } from 'components/countdown'
 import { Index } from 'components/index'
 
-import {getAllLiveSchedule, getStageStream} from 'lib/db-admin'
+import { getAllLiveSchedule, getStageStream } from 'lib/db-admin'
 import TimetableData from 'types/Timetable'
-import Stream from "types/Stream";
+import Stream from 'types/Stream'
 
 type Props = {
-  schedule: TimetableData[],
+  schedule: TimetableData[]
   stream: Stream
 }
 
-const Renderer = ({ completed, days, hours, minutes, seconds, schedule , stream }) => {
+const Renderer = ({ completed, days, hours, minutes, seconds, schedule, stream }) => {
   if (completed) {
-    return <Index stream={stream} schedule={schedule}/>
+    return <Index stream={stream} schedule={schedule} />
   } else {
     return (
       <CountdownContainer
@@ -55,12 +55,12 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   if (!schedule) {
     return {
-      notFound: true,
+      notFound: true
     }
   }
   if (!stream) {
     return {
-      notFound: true,
+      notFound: true
     }
   }
 
@@ -69,6 +69,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       schedule,
       stream
     },
-    revalidate: 60,
+    revalidate: 60
   }
 }

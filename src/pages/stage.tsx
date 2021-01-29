@@ -28,9 +28,7 @@ const Stage = ({ stream, schedule }) => {
                 </span>
                 ทำความรู้จักศิลป์จีนเตรียมอุดมฯ โอ้โหโอ้โหว้าวว้าวว้าวเก่งจัง
               </h1>
-              <h1 className="mt-2 text-2xl font-medium text-gray-600">
-                ละครเวที | 10.30-11.50
-              </h1>
+              <h1 className="mt-2 text-2xl font-medium text-gray-600">ละครเวที | 10.30-11.50</h1>
               <p className="mt-10 text-xl text-gray-500">
                 วิดีโอคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบาย
               </p>
@@ -39,14 +37,10 @@ const Stage = ({ stream, schedule }) => {
               <div className="flex flex-col w-10/12 h-full">
                 <div className="flex flex-row justify-center bg-white shadow-lg rounded-2xl h-1/2">
                   <div className="flex flex-col justify-center w-10/12">
-                    <h1 className="text-gray-600 h-1/4">
-                      สงสัยอะไรไหม ? พิมพ์ถามคำถามสด ๆ ได้เลย
-                    </h1>
+                    <h1 className="text-gray-600 h-1/4">สงสัยอะไรไหม ? พิมพ์ถามคำถามสด ๆ ได้เลย</h1>
                     <div className="flex flex-row justify-between h-1/3">
                       <div className="flex flex-col items-center justify-center w-10/12 bg-gray-100 rounded-2xl">
-                        <h1 className="w-10/12 text-xl font-bold text-gray-300">
-                          ถามคำถามเลย !
-                        </h1>
+                        <h1 className="w-10/12 text-xl font-bold text-gray-300">ถามคำถามเลย !</h1>
                       </div>
                       <div className="flex flex-col items-center justify-center">
                         <Submit />
@@ -58,9 +52,7 @@ const Stage = ({ stream, schedule }) => {
                   <h1 className="font-bold text-gray-500">รายการต่อไป</h1>
                   <div className="flex flex-row w-full bg-white rounded-lg shadow-lg h-1/2">
                     <div className="flex items-center justify-center w-1/2 h-full text-smoxs sm:text-base">
-                      <span className="font-semibold text-center text-gray-600">
-                        10.30 - 11.52
-                      </span>
+                      <span className="font-semibold text-center text-gray-600">10.30 - 11.52</span>
                     </div>
                     <div className="flex flex-col justify-center w-full leading-4">
                       <span className="text-xs font-semibold text-gray-800 sm:text-base">
@@ -91,20 +83,20 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   if (!schedule) {
     return {
-      notFound: true,
+      notFound: true
     }
   }
   if (!stream) {
     return {
-      notFound: true,
+      notFound: true
     }
   }
 
   return {
     props: {
       stream,
-      schedule,
+      schedule
     },
-    revalidate: 60,
+    revalidate: 60
   }
 }

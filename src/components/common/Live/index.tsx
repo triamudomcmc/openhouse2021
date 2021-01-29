@@ -6,7 +6,7 @@ import useSWR from 'swr'
 export const Live = ({ schedule }) => {
   const response = useSWR('/api/schedule', {
     initialData: schedule,
-    refreshInterval: 5000,
+    refreshInterval: 5000
   })
 
   const updatedSchedule = response.data || schedule

@@ -4,13 +4,7 @@ import { Highlights } from './Highlights'
 import { Live } from '../common/Live'
 import { Intro } from './Intro'
 
-export const CountdownContainer = ({
-  days,
-  hours,
-  minutes,
-  seconds,
-  schedule,
-}) => (
+export const CountdownContainer = ({ days, hours, minutes, seconds, schedule }) => (
   <div className="pb-32">
     <Intro days={days} hours={hours} minutes={minutes} seconds={seconds} />
     <CTA />

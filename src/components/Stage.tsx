@@ -5,7 +5,7 @@ import useSWR from 'swr'
 export const StageContainer = ({ stream }) => {
   const response = useSWR('/api/stage', {
     initialData: stream,
-    refreshInterval: 5000,
+    refreshInterval: 5000
   })
 
   const updatedStream = response.data || ''

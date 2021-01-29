@@ -7,7 +7,7 @@ export interface Props extends InputHTMLAttributes<HTMLInputElement> {
   onChange?: (...args: any[]) => any
 }
 
-const Input: React.FC<Props> = (props) => {
+const Input: React.FC<Props> = props => {
   const { className, children, onChange, ...rest } = props
 
   const rootClassName = cn(s.root, {}, className)

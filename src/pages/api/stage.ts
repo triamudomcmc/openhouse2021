@@ -5,10 +5,7 @@ import { getStageStream } from 'lib/db-admin'
 // Number of seconds to cache the API response for
 const EXPIRES_SECONDS = 5
 
-export default async function getStage(
-  _: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function getStage(_: NextApiRequest, res: NextApiResponse) {
   try {
     const stream = await getStageStream()
 
@@ -28,8 +25,8 @@ export default async function getStage(
     return res.status(500).json({
       error: {
         code: 'server_error',
-        message: 'Internal server error',
-      },
+        message: 'Internal server error'
+      }
     })
   }
 }

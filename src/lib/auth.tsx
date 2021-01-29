@@ -36,9 +36,7 @@ export const AuthProvider = ({ children }) => {
 
 function useProvideAuth() {
   const [user, setUser] = useState<firebase.User | null>(null)
-  const [userData, setUserData] = useState<firebase.firestore.DocumentData>(
-    null
-  )
+  const [userData, setUserData] = useState<firebase.firestore.DocumentData>(null)
   const [loading, setLoading] = useState(true)
 
   // useEffect(() => {
@@ -69,7 +67,7 @@ function useProvideAuth() {
       setUser(rawUser)
 
       cookie.set(AUTH_COOKIE, true, {
-        expires: 1,
+        expires: 1
       })
 
       setLoading(false)
@@ -84,9 +82,7 @@ function useProvideAuth() {
   const signinWithFacebook = async (redirect: string) => {
     setLoading(true)
 
-    const response = await firebase
-      .auth()
-      .signInWithPopup(new firebase.auth.FacebookAuthProvider())
+    const response = await firebase.auth().signInWithPopup(new firebase.auth.FacebookAuthProvider())
 
     handleUser(response.user)
 
@@ -98,9 +94,7 @@ function useProvideAuth() {
   const signinWithGoogle = async (redirect: string) => {
     setLoading(true)
 
-    const response = await firebase
-      .auth()
-      .signInWithPopup(new firebase.auth.GoogleAuthProvider())
+    const response = await firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider())
 
     handleUser(response.user)
 
@@ -128,7 +122,7 @@ function useProvideAuth() {
     loading,
     signinWithFacebook,
     signinWithGoogle,
-    signout,
+    signout
   }
 }
 
@@ -138,6 +132,6 @@ const formatUser = (user: firebase.User): IUserData => {
     email: user.email,
     name: user.displayName,
     provider: user.providerData[0].providerId,
-    photoUrl: user.photoURL,
+    photoUrl: user.photoURL
   }
 }

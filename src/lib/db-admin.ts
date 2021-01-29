@@ -9,7 +9,7 @@ export async function getAllLiveSchedule(): Promise<TimetableData[]> {
   const snapshot = await ref.get()
   const list: TimetableData[] = []
 
-  snapshot.forEach((doc) => {
+  snapshot.forEach(doc => {
     const data = doc.data()
 
     list.push({
@@ -17,7 +17,7 @@ export async function getAllLiveSchedule(): Promise<TimetableData[]> {
       startTime: getTimestamp(data.startTime),
       endTime: getTimestamp(data.endTime),
       title: data.title,
-      club: data.by,
+      club: data.by
     })
   })
 
@@ -30,6 +30,6 @@ export async function getStageStream(): Promise<any> {
   const data = doc.data()
 
   return {
-    stream: data.stream,
+    stream: data.stream
   }
 }

@@ -32,12 +32,7 @@ export const Instagram = ({ ...restprops }) => {
           <stop offset="1" stop-color="#C837AB" />
         </linearGradient>
         <clipPath id="clip0">
-          <rect
-            width="39"
-            height="39"
-            fill="white"
-            transform="translate(0.5)"
-          />
+          <rect width="39" height="39" fill="white" transform="translate(0.5)" />
         </clipPath>
       </defs>
     </svg>

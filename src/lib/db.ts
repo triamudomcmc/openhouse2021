@@ -2,17 +2,11 @@ import firebase from './firebase'
 
 const firestore = firebase.firestore()
 
-export const updateUser = (
-  uid: string,
-  data: firebase.firestore.DocumentData
-): Promise<void> => {
+export const updateUser = (uid: string, data: firebase.firestore.DocumentData): Promise<void> => {
   return firestore.collection('users').doc(uid).update(data)
 }
 
-export const createUser = (
-  uid: string,
-  data: firebase.firestore.DocumentData
-): Promise<void> => {
+export const createUser = (uid: string, data: firebase.firestore.DocumentData): Promise<void> => {
   return firestore
     .collection('users')
     .doc(uid)
