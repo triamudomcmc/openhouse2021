@@ -60,3 +60,60 @@ export const Potrait = ({ width }) => {
     </div>
   )
 }
+
+export const Square = ({ width }) => {
+  return (
+    <div
+      style={{ ['--width' as string]: `${width}px` }}
+      className={classNames(
+        'bg-ticket-sq flex items-center justify-center font-display',
+        css.squareContainer
+      )}
+    >
+      <div className={classNames('border-2 border-white', css.squareCard)}>
+        <div className={css.subContainer}>
+          <div className="relative">
+            <h1 className={css.mainHeader}>TRIAM UDOM</h1>
+            <h1 className={css.subHeader}>ONLINE OPEN HOUSE 2021</h1>
+            <span className={css.dateTag}>12-13 FEB</span>
+            <div className={css.vertivcal}>
+              <div className={css.squareLine}></div>
+              <p className={css.squareTicketNumber}>NO. 999999</p>
+            </div>
+          </div>
+          <div className={css.contentContainer}>
+            <h1 className={css.squareContentName}><span className="font-semibold">To</span> Narongdech</h1>
+            <p className={css.squareContentDescription}>
+              ขอบใจสำหรับทุก ๆ สิ่งที่ณรงค์เดชปฏิบัติมาเพื่อชาติและราชบัลลัง
+              เรานั้นได้ผ่านทุกสิ่งทุกอย่างมาด้วยกัน
+            </p>
+          </div>
+          <div className={css.footer}>
+            <div className={css.qrCodeWrapper}>
+              <img src="/assets/vectors/qrcode.svg" className={css.qrCode} />
+              <h1 className={css.qrText}>ลงทะเบียนเลย !</h1>
+            </div>
+            <div className={css.contact}>
+              <span className={css.contactText}>
+                @triamudomoph
+                <Image src="/assets/vectors/twitter-bw.svg" width={36} height={36} />
+              </span>
+              <span className={css.contactText}>
+                @triamudom.oph
+                <Image src="/assets/vectors/instagram-bw.svg" width={36} height={36} />
+              </span>
+              <span className={css.contactText}>
+                Triam Udom Open House
+                <Image src="/assets/vectors/youtube-bw.svg" width={36} height={36} />
+              </span>
+              <span className={css.contactText}>
+                Triam Udom Open House
+                <Image src="/assets/vectors/facebook-bw.svg" width={36} height={36} />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

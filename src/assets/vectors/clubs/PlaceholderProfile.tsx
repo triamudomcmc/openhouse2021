@@ -1,4 +1,4 @@
-export default ({ ...restProps }) => (
+const PlaceholderProfile = ({ ...restProps }) => (
   <svg
     width="88"
     height="89"
@@ -22,3 +22,5 @@ export default ({ ...restProps }) => (
     </defs>
   </svg>
 )
+
+export default PlaceholderProfile
