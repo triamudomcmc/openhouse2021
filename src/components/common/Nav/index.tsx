@@ -26,25 +26,25 @@ export const Nav = ({ hideSignIn, className }: Props) => {
           </div>
         </Link>
         <div className="space-x-6 text-lg font-semibold leading-tight text-white md:text-xl font-display">
-          <Link href="/">
+          <Link href="/index">
             <a>หน้าแรก</a>
           </Link>
-          <Link href="/">
+          <Link href="/clubs">
             <a>ชมรม</a>
           </Link>
-          <Link href="/">
+          <Link href="/article">
             <a>บทความ</a>
           </Link>
           <Link href="/">
             <a>วิดิโอ</a>
           </Link>
-          <Link href="/">
+          <Link href="/stage">
             <a>รายการสด</a>
           </Link>
           <Link href="/">
             <a>การสอบเข้า</a>
           </Link>
-          <Link href="/">
+          <Link href="/contact">
             <a>ติดต่อ</a>
           </Link>
           {!hideSignIn && (

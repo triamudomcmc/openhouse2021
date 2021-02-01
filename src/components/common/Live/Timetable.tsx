@@ -83,7 +83,7 @@ const Timetable: React.FC<ITimetableProps> = ({ data, date, ...restProps }) => {
     <div className="flex flex-col w-full max-w-2xl px-4 mt-10 md:mt-16 font-display" {...restProps}>
       <div>
         <div className="flex flex-col items-center justify-center">{heading}</div>
-        <div className="p-8 mt-8 space-y-4 overflow-custom scroll-hidden h-96">{table}</div>
+        <div className="p-8 mt-8 space-y-4 overflow-custom scroll-hidden h-table">{table}</div>
       </div>
     </div>
   )

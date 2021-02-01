@@ -40,7 +40,7 @@ const Stage = ({ stream, schedule }) => {
                     <h1 className="text-gray-600 text-sm mb-3 md:mb-0 md:text-medium h-1/4">สงสัยอะไรไหม ? พิมพ์ถามคำถามสด ๆ ได้เลย</h1>
                     <div className="flex flex-row justify-between h-1/3">
                       <div className="flex flex-col items-center justify-center w-10/12 bg-gray-100 rounded-2xl">
-                        <h1 className="w-10/12 text-medium md:text-xl font-bold text-gray-300">ถามคำถามเลย !</h1>
+                        <h1 className="w-10/12 text-medium md:text-xl font-semibold md:font-bold text-gray-300">ถามคำถามเลย !</h1>
                       </div>
                       <div className="flex flex-col items-center justify-center">
                         <Submit />
