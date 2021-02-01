@@ -2,7 +2,12 @@ import React from 'react'
 import Link from 'next/link'
 import cn from 'classnames'
 
-export const Nav = ({ hideSignIn, className }) => {
+type Props = {
+  hideSignIn: boolean
+  className: string
+}
+
+export const Nav = ({ hideSignIn, className }: Props) => {
   return (
     <div
       className={cn(
