@@ -5,7 +5,9 @@ import markdownToHtml from '../../lib/markdownToHTML'
 const Article = ({ post }) => {
   return (
     <Layout>
-      <div className="flex flex-row justify-center">
+      <div className="max-w-prose mx-auto">
+        <h1>{post.title}</h1>
+        <p>by {post.author}</p>
         <article
           className="prose lg:prose-xl max-w-prose"
           dangerouslySetInnerHTML={{ __html: post.content }}
@@ -16,13 +18,15 @@ const Article = ({ post }) => {
 }
 
 export async function getStaticPaths() {
-  return { paths: [{ params: { slug: 'noknangnual' } }], fallback: false }
+  return { paths: [{ params: { slug: 'TUSC' } }], fallback: false }
 }
 
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, ['title', 'author', 'content', 'coverImage'])
 
   const content = await markdownToHtml(post.content || '')
+
+  console.log(content)
 
   return {
     props: {
