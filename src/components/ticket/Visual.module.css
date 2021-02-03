@@ -57,11 +57,7 @@
   width: calc(76 / 100 * (var(--width)));
   height: calc(76 / 100 * (var(--width) * (1920 / 1080)));
   backdrop-filter: blur(24px);
-  background: linear-gradient(
-    320deg,
-    rgba(255, 255, 255, 0.4) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(320deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .squareCard {
@@ -69,11 +65,7 @@
   width: calc(76 / 100 * (var(--width)));
   height: calc(76 / 100 * (var(--width)));
   backdrop-filter: blur(24px);
-  background: linear-gradient(
-          320deg,
-          rgba(255, 255, 255, 0.4) 0%,
-          rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(320deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .mainHeader {
@@ -90,6 +82,14 @@
 }
 
 .dateTag {
+  background: white;
+  border-radius: calc(var(--width) / 100);
+  font-size: calc(var(--width) / 50);
+  padding: calc(var(--width) / 140) calc(var(--width) / 50);
+  @apply font-bold text-purple-300;
+}
+
+.squareDateTag {
   background: white;
   border-radius: calc(var(--width) / 100);
   font-size: calc(var(--width) / 50);

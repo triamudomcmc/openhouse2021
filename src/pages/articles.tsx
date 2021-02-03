@@ -3,7 +3,7 @@ import React from 'react'
 import { Layout } from 'components/common/Layout'
 import Tabs from 'components/article/Tabs'
 
-const Article = () => {
+const Articles = () => {
   return (
     <Layout>
       <div className="flex flex-col items-center w-full">
@@ -17,4 +17,4 @@ const Article = () => {
   )
 }
 
-export default Article
+export default Articles

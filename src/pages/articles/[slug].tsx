@@ -6,10 +6,9 @@ const Article = ({ post }) => {
   return (
     <Layout>
       <div className="max-w-prose mx-auto">
-        <h1>{post.title}</h1>
-        <p>by {post.author}</p>
+        <h1 className="mt-4 text-2xl md:text-4xl font-bold mx-6 mb-4">{post.title}</h1>
         <article
-          className="prose lg:prose-xl max-w-prose"
+          className="prose mx-6"
           dangerouslySetInnerHTML={{ __html: post.content }}
         ></article>
       </div>
@@ -18,7 +17,14 @@ const Article = ({ post }) => {
 }
 
 export async function getStaticPaths() {
-  return { paths: [{ params: { slug: 'TUSC' } }], fallback: false }
+  return {
+    paths: [
+      { params: { slug: 'TUSC' } },
+      { params: { slug: 'AIC' } },
+      { params: { slug: 'Arts-Spanish' } }
+    ],
+    fallback: false
+  }
 }
 
 export async function getStaticProps({ params }) {

@@ -10,10 +10,11 @@ import Group8 from '../../assets/vectors/Group8'
 import { Camera, CardV, Carv, Phone, Puzzle } from '../../assets/vectors/Icons'
 import Videos from './Videos'
 import Blogs from './Blogs'
-import Programs from './Programs'
+import Programmes from './Programmes'
 import Countdown from 'react-countdown'
 import Footer from '../common/Footer'
 import { Live } from '../common/Live'
+import { SchoolBlogs } from '../SchoolBlogs'
 
 export const Index = ({ stream, schedule }) => {
   const response = useSWR('/api/stage', {
@@ -125,7 +126,8 @@ export const Index = ({ stream, schedule }) => {
             ติดต่อ
           </div>
         </div>
-        <Programs />
+        <Programmes />
+        <SchoolBlogs />
         <Videos />
         <Blogs />
         <Live schedule={schedule} />

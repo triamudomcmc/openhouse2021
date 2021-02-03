@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import { User } from '../../assets/vectors/User'
 
-export const Programs = () => {
+export const Programmes = () => {
   return (
     <div>
       <div className="flex flex-col items-center justify-center py-4 space-y-4">

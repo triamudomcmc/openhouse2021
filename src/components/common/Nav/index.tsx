@@ -32,7 +32,7 @@ export const Nav = ({ hideSignIn, className }: Props) => {
           <Link href="/clubs">
             <a>ชมรม</a>
           </Link>
-          <Link href="/article">
+          <Link href="/articles">
             <a>บทความ</a>
           </Link>
           <Link href="/">

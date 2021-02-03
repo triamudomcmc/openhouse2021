@@ -1,6 +1,6 @@
-ชื่อบทความ: หลังบ้านกน.
-
-นามปากกา: คณะกรรมการนักเรียน
+---
+title: หลังบ้านกน.
+---
 
 <img src="/TUSC_assets/media/image1.jpeg" style="width:2.36667in;height:2.36667in" />
 

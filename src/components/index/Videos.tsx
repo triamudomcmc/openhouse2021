@@ -1,5 +1,58 @@
+import React from 'react'
+import Image from 'next/image'
+import { User } from '../../assets/vectors/User'
+import { ContentCard } from '../common/Card/ContentCard'
+
 const Videos = () => {
-  return <div className="mt-6">พี่ต้นเตยไม่ทำงาน</div>
+  return (
+    <div className="w-4/5 md:w-7/12">
+      <h1 className="font-black text-center text-blue-400 mt-16 md:mt-48 text-3xl md:text-7xl mb-10">
+        วีดีโอ
+      </h1>
+      <div className="flex flex-col items-center justify-center py-4 space-y-4">
+        <div className="flex flex-col max-w-full space-y-4 md:space-y-0 md:space-x-4 md:flex-row">
+          <ContentCard src="/assets/nok.png" duration="12.30">
+            <ContentCard.Desc>
+              เปิดพิกัด ต้นต้อยติ่งในโรงเรียน ! อาวุธสง ครามของต้องห้ามประจำโรงเรียนเตรียมอุดมศึกษา
+            </ContentCard.Desc>
+            <ContentCard.Author>ไอร่’ ตะวัน นน’ คนไม่มี คัยย.</ContentCard.Author>
+          </ContentCard>
+          <ContentCard src="/assets/nok.png" duration="12.30">
+            <ContentCard.Desc>
+              เปิดพิกัด ต้นต้อยติ่งในโรงเรียน ! อาวุธสง ครามของต้องห้ามประจำโรงเรียนเตรียมอุดมศึกษา
+            </ContentCard.Desc>
+            <ContentCard.Author>ไอร่’ ตะวัน นน’ คนไม่มี คัยย.</ContentCard.Author>
+          </ContentCard>
+          <ContentCard src="/assets/nok.png" duration="12.30">
+            <ContentCard.Desc>
+              เปิดพิกัด ต้นต้อยติ่งในโรงเรียน ! อาวุธสง ครามของต้องห้ามประจำโรงเรียนเตรียมอุดมศึกษา
+            </ContentCard.Desc>
+            <ContentCard.Author>ไอร่’ ตะวัน นน’ คนไม่มี คัยย.</ContentCard.Author>
+          </ContentCard>
+        </div>
+        <div className="flex flex-col max-w-full space-y-4 md:space-y-0 md:space-x-4 md:flex-row">
+          <ContentCard src="/assets/nok.png" duration="12.30">
+            <ContentCard.Desc>
+              เปิดพิกัด ต้นต้อยติ่งในโรงเรียน ! อาวุธสง ครามของต้องห้ามประจำโรงเรียนเตรียมอุดมศึกษา
+            </ContentCard.Desc>
+            <ContentCard.Author>ไอร่’ ตะวัน นน’ คนไม่มี คัยย.</ContentCard.Author>
+          </ContentCard>
+          <ContentCard src="/assets/nok.png" duration="12.30">
+            <ContentCard.Desc>
+              เปิดพิกัด ต้นต้อยติ่งในโรงเรียน ! อาวุธสง ครามของต้องห้ามประจำโรงเรียนเตรียมอุดมศึกษา
+            </ContentCard.Desc>
+            <ContentCard.Author>ไอร่’ ตะวัน นน’ คนไม่มี คัยย.</ContentCard.Author>
+          </ContentCard>
+          <ContentCard src="/assets/nok.png" duration="12.30">
+            <ContentCard.Desc>
+              เปิดพิกัด ต้นต้อยติ่งในโรงเรียน ! อาวุธสง ครามของต้องห้ามประจำโรงเรียนเตรียมอุดมศึกษา
+            </ContentCard.Desc>
+            <ContentCard.Author>ไอร่’ ตะวัน นน’ คนไม่มี คัยย.</ContentCard.Author>
+          </ContentCard>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Videos
