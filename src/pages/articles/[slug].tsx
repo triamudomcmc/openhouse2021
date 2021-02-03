@@ -1,17 +1,19 @@
 import { Layout } from '../../components/common/Layout'
 import { getPostBySlug } from '../../lib/api'
 import markdownToHtml from '../../lib/markdownToHTML'
+import Footer from '../../components/common/Footer'
 
 const Article = ({ post }) => {
   return (
     <Layout>
-      <div className="max-w-prose mx-auto">
+      <div className="max-w-prose mx-auto my-14">
         <h1 className="mt-4 text-2xl md:text-4xl font-bold mx-6 mb-4">{post.title}</h1>
         <article
-          className="prose mx-6"
+          className="prose lg:prose-lg mx-6"
           dangerouslySetInnerHTML={{ __html: post.content }}
         ></article>
       </div>
+      <Footer />
     </Layout>
   )
 }
