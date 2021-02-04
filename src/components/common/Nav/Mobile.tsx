@@ -39,25 +39,25 @@ export const Modal = (
             </div>
           </Link>
           <div className="flex flex-col mt-8 space-y-2 text-lg font-semibold leading-tight text-center text-gray-600 font-display">
-            <Link href="/">
+            <Link href="/index">
               <a>หน้าแรก</a>
             </Link>
-            <Link href="/">
+            <Link href="/clubs">
               <a>ชมรม</a>
             </Link>
-            <Link href="/">
+            <Link href="/articles">
               <a>บทความ</a>
             </Link>
             <Link href="/">
               <a>วิดิโอ</a>
             </Link>
-            <Link href="/">
+            <Link href="/stage">
               <a>รายการสด</a>
             </Link>
             <Link href="/">
               <a>การสอบเข้า</a>
             </Link>
-            <Link href="/">
+            <Link href="/contact">
               <a>ติดต่อ</a>
             </Link>
             <SocialLink />

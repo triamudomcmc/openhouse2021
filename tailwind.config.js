@@ -2,30 +2,40 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   corePlugins: {
-    preflight: true,
+    preflight: true
   },
   purge: {
     enabled: process.env.NODE_ENV !== 'development',
     content: ['./src/**/*.ts', './src/**/*.tsx'],
     options: {
-      defaultExtractor: (content) => content.match(/[\w-/.:]+(?<!:)/g) || [],
-    },
+      defaultExtractor: content => content.match(/[\w-/.:]+(?<!:)/g) || []
+    }
   },
   theme: {
     extend: {
       colors: {
         blue: {
           25: '#BAE6FD',
-          75: '#90CDF4',
+          75: '#90CDF4'
         },
         yellow: {
-          25: '#FED7AA',
-        },
+          25: '#FED7AA'
+        }
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            img: {
+              marginRight: 'auto',
+              marginLeft: 'auto'
+            }
+          }
+        }
       },
       backgroundImage: () => ({
         'ticket-long': "url('/assets/ticket-bg-long.png')",
-        'ticket-sq': "url('/assets/ticket-bg-sq.png')",
-      }),
+        'ticket-sq': "url('/assets/ticket-bg-sq.png')"
+      })
     },
     fontFamily: {
       sans: ['Inter var', ...defaultTheme.fontFamily.sans],
@@ -34,9 +44,9 @@ module.exports = {
         'SF Pro Display',
         'Sukhumvit Set',
         'IBM Plex Sans Thai',
-        ...defaultTheme.fontFamily.sans,
-      ],
-    },
+        ...defaultTheme.fontFamily.sans
+      ]
+    }
   },
   variants: {},
   plugins: [
@@ -52,8 +62,8 @@ module.exports = {
             fontStyle: 'normal',
             fontNamedInstance: 'Regular',
             fontDisplay: 'swap',
-            src: 'url("/assets/fonts/Inter-roman.var.woff2") format("woff2")',
-          },
+            src: 'url("/assets/fonts/Inter-roman.var.woff2") format("woff2")'
+          }
         },
         {
           '@font-face': {
@@ -62,8 +72,8 @@ module.exports = {
             fontStyle: 'italic',
             fontNamedInstance: 'Italic',
             fontDisplay: 'swap',
-            src: 'url("/assets/fonts/Inter-italic.var.woff2") format("woff2")',
-          },
+            src: 'url("/assets/fonts/Inter-italic.var.woff2") format("woff2")'
+          }
         },
         {
           '@font-face': {
@@ -72,8 +82,8 @@ module.exports = {
             fontWeight: '400',
             fontDisplay: 'swap',
             src:
-              'local("IBM Plex Sans Thai"), local("IBMPlexSansThai"), url("/assets/fonts/IBMPlexSansThai-Regular.woff2") format("woff2")',
-          },
+              'local("IBM Plex Sans Thai"), local("IBMPlexSansThai"), url("/assets/fonts/IBMPlexSansThai-Regular.woff2") format("woff2")'
+          }
         },
         {
           '@font-face': {
@@ -82,8 +92,8 @@ module.exports = {
             fontWeight: '450',
             fontDisplay: 'swap',
             src:
-              'local("IBM Plex Sans Thai Text"), local("IBMPlexSansThai-Text"), url("/assets/fonts/IBMPlexSansThai-Text.woff2") format("woff2")',
-          },
+              'local("IBM Plex Sans Thai Text"), local("IBMPlexSansThai-Text"), url("/assets/fonts/IBMPlexSansThai-Text.woff2") format("woff2")'
+          }
         },
         {
           '@font-face': {
@@ -92,8 +102,8 @@ module.exports = {
             fontWeight: '500',
             fontDisplay: 'swap',
             src:
-              'local("IBM Plex Sans Thai Medium"), local("IBMPlexSansThai-Medium"), url("/assets/fonts/IBMPlexSansThai-Medium.woff2") format("woff2")',
-          },
+              'local("IBM Plex Sans Thai Medium"), local("IBMPlexSansThai-Medium"), url("/assets/fonts/IBMPlexSansThai-Medium.woff2") format("woff2")'
+          }
         },
         {
           '@font-face': {
@@ -102,8 +112,8 @@ module.exports = {
             fontWeight: '600',
             fontDisplay: 'swap',
             src:
-              'local("IBM Plex Sans Thai SemiBold"), local("IBMPlexSansThai-SemiBold"), url("/assets/fonts/IBMPlexSansThai-SemiBold.woff2") format("woff2")',
-          },
+              'local("IBM Plex Sans Thai SemiBold"), local("IBMPlexSansThai-SemiBold"), url("/assets/fonts/IBMPlexSansThai-SemiBold.woff2") format("woff2")'
+          }
         },
         {
           '@font-face': {
@@ -112,8 +122,8 @@ module.exports = {
             fontWeight: '700',
             fontDisplay: 'swap',
             src:
-              'local("IBM Plex Sans Thai Bold"), local("IBMPlexSansThai-Bold"), url("/assets/fonts/IBMPlexSansThai-Bold.woff2") format("woff2")',
-          },
+              'local("IBM Plex Sans Thai Bold"), local("IBMPlexSansThai-Bold"), url("/assets/fonts/IBMPlexSansThai-Bold.woff2") format("woff2")'
+          }
         },
         {
           '@font-face': {
@@ -122,8 +132,8 @@ module.exports = {
             fontWeight: '100',
             fontDisplay: 'swap',
             src:
-              'local("IBM Plex Sans Thai Thin"), local("IBMPlexSansThai-Thin"), url("/assets/fonts/IBMPlexSansThai-Thin.woff2") format("woff2")',
-          },
+              'local("IBM Plex Sans Thai Thin"), local("IBMPlexSansThai-Thin"), url("/assets/fonts/IBMPlexSansThai-Thin.woff2") format("woff2")'
+          }
         },
         {
           '@font-face': {
@@ -132,8 +142,8 @@ module.exports = {
             fontWeight: '200',
             fontDisplay: 'swap',
             src:
-              'local("IBM Plex Sans Thai ExtraLight"), local("IBMPlexSansThai-ExtraLight"), url("/assets/fonts/IBMPlexSansThai-ExtraLight.woff2") format("woff2")',
-          },
+              'local("IBM Plex Sans Thai ExtraLight"), local("IBMPlexSansThai-ExtraLight"), url("/assets/fonts/IBMPlexSansThai-ExtraLight.woff2") format("woff2")'
+          }
         },
         {
           '@font-face': {
@@ -142,18 +152,18 @@ module.exports = {
             fontWeight: '300',
             fontDisplay: 'swap',
             src:
-              'local("IBM Plex Sans Thai Light"), local("IBMPlexSansThai-Light"), url("/assets/fonts/IBMPlexSansThai-Light.woff2") format("woff2")',
-          },
+              'local("IBM Plex Sans Thai Light"), local("IBMPlexSansThai-Light"), url("/assets/fonts/IBMPlexSansThai-Light.woff2") format("woff2")'
+          }
         },
         {
           '@font-face': {
             fontFamily: 'Sukhumvit Set',
             fontDisplay: 'swap',
             src: "local('Sukhumvit Set')",
-            unicodeRange: 'U+0E01-0E5B, U+200C-200D, U+25CC',
-          },
-        },
+            unicodeRange: 'U+0E01-0E5B, U+200C-200D, U+25CC'
+          }
+        }
       ])
-    },
-  ],
+    }
+  ]
 }
