@@ -4,7 +4,6 @@ import TimetableData from 'types/Timetable'
 import { getTimestamp } from 'utils/getTimestamp'
 
 export async function getAllLiveSchedule(): Promise<TimetableData[]> {
-  /*
   let ref = db.collection('experiment').orderBy('startTime', 'asc')
 
   const snapshot = await ref.get()
@@ -23,13 +22,13 @@ export async function getAllLiveSchedule(): Promise<TimetableData[]> {
   })
 
   return list
-  */
 
+  /*
   return []
+   */
 }
 
 export async function getStageStream(): Promise<any> {
-  /*
   const ref = db.collection('stage').doc('main')
   const doc = await ref.get()
   const data = doc.data()
@@ -38,7 +37,7 @@ export async function getStageStream(): Promise<any> {
     stream: data.stream
   }
 
-  */
-
+  /*
   return {}
+   */
 }
