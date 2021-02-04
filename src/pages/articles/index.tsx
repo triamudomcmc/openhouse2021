@@ -6,21 +6,21 @@ import { GetStaticProps } from 'next'
 import * as fs from 'fs'
 import parseJson from 'parse-json'
 
-export const getStaticProps: GetStaticProps = async () => {
-  const fetchedData = fs.readFileSync('./articlesMap.json')
+// export const getStaticProps: GetStaticProps = async () => {
+//   const fetchedData = fs.readFileSync('./articlesMap.json')
 
-  if (!fetchedData) {
-    return {
-      notFound: true
-    }
-  }
+//   if (!fetchedData) {
+//     return {
+//       notFound: true
+//     }
+//   }
 
-  return {
-    props: {
-      contents: parseJson(fetchedData.toString())
-    }
-  }
-}
+//   return {
+//     props: {
+//       contents: parseJson(fetchedData.toString())
+//     }
+//   }
+// }
 
 const Articles = ({ contents }) => {
   return (
@@ -29,7 +29,7 @@ const Articles = ({ contents }) => {
         <div className="max-w-full text-3xl font-bold text-center text-blue-400">
           <h1 className="pt-6">บทความ</h1>
         </div>
-        <Tabs contents={contents} />
+        {/* <Tabs contents={contents} /> */}
       </div>
     </Layout>
   )
