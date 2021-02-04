@@ -1,15 +1,15 @@
 import { Layout } from '../../components/common/Layout'
-import { getPostBySlug } from '../../lib/api'
+import { getAllPosts, getPostBySlug } from '../../lib/api'
 import markdownToHtml from '../../lib/markdownToHTML'
 import Footer from '../../components/common/Footer'
 
 const Article = ({ post }) => {
   return (
     <Layout>
-      <div className="max-w-prose mx-auto my-14">
-        <h1 className="mt-4 text-2xl md:text-4xl font-bold mx-6 mb-4">{post.title}</h1>
+      <div className="mx-auto max-w-prose my-14">
+        <h1 className="mx-6 mt-4 mb-4 text-2xl font-bold md:text-4xl">{post.title}</h1>
         <article
-          className="prose lg:prose-lg mx-6"
+          className="mx-6 prose lg:prose-lg"
           dangerouslySetInnerHTML={{ __html: post.content }}
         ></article>
       </div>
@@ -19,12 +19,16 @@ const Article = ({ post }) => {
 }
 
 export async function getStaticPaths() {
+  const posts = getAllPosts(['slug'])
+
   return {
-    paths: [
-      { params: { slug: 'TUSC' } },
-      { params: { slug: 'AIC' } },
-      { params: { slug: 'Arts-Spanish' } }
-    ],
+    paths: posts.map(posts => {
+      return {
+        params: {
+          slug: posts.slug
+        }
+      }
+    }),
     fallback: false
   }
 }

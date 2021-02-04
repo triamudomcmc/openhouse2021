@@ -8,7 +8,7 @@ import * as fs from 'fs'
 import parseJson from 'parse-json'
 
 export const getStaticProps: GetStaticProps = async () => {
-  const fetchedData = fs.readFileSync('./_articles/articlesMap.json')
+  const fetchedData = fs.readFileSync('./articlesMap.json')
   const data = await fetchedData.toString()
 
   if (!data) {
