@@ -3,15 +3,13 @@ import React from 'react'
 import { Layout } from 'components/common/Layout'
 import Tabs from 'components/article/Tabs'
 import { GetStaticProps } from 'next'
-import { util } from 'protobufjs'
 import * as fs from 'fs'
 import parseJson from 'parse-json'
 
 export const getStaticProps: GetStaticProps = async () => {
   const fetchedData = fs.readFileSync('./articlesMap.json')
-  const data = await fetchedData.toString()
 
-  if (!data) {
+  if (!fetchedData) {
     return {
       notFound: true
     }
@@ -19,7 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      contents: parseJson(data)
+      contents: parseJson(fetchedData.toString())
     }
   }
 }
