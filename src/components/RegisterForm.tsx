@@ -5,8 +5,11 @@ import * as Yup from 'yup'
 import Router from 'next/router'
 
 import Input from 'components/ui/Input'
+import { updateUser } from 'lib/db'
+import { useAuth } from 'lib/auth'
 
 const RegisterForm = () => {
+  const { userData } = useAuth()
   return (
     <Formik
       initialValues={{
@@ -21,14 +24,9 @@ const RegisterForm = () => {
         tos: false
       }}
       onSubmit={async (values, { setSubmitting }) => {
-        let data: any
-
         setSubmitting(true)
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2))
-          setSubmitting(false)
-        }, 400)
-        // setSubmitting(false)
+        await updateUser(userData.uid, values)
+        setSubmitting(false)
       }}
     >
       {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
