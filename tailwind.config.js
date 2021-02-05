@@ -16,10 +16,18 @@ module.exports = {
       colors: {
         blue: {
           25: '#BAE6FD',
-          75: '#90CDF4'
+          75: '#90CDF4',
+          70: '#A7DDFF'
         },
         yellow: {
           25: '#FED7AA'
+        },
+        purple: {
+          250: '#BBADD9',
+          450: '#BAA9FF'
+        },
+        red: {
+          250: '#FFA0A0'
         }
       },
       typography: {
@@ -34,7 +42,8 @@ module.exports = {
       },
       backgroundImage: () => ({
         'ticket-long': "url('/assets/ticket-bg-long.png')",
-        'ticket-sq': "url('/assets/ticket-bg-sq.png')"
+        'ticket-sq': "url('/assets/ticket-bg-sq.png')",
+        'ticket-show-bg': "url('/assets/ticket-show-bg.jpg')"
       })
     },
     fontFamily: {

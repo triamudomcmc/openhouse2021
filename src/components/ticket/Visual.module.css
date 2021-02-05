@@ -4,6 +4,12 @@
   height: calc(var(--width) * (1920 / 1080));
 }
 
+.nakedContainer {
+  --width: 1080px;
+  width: var(--width);
+  height: calc(var(--width) * (1700 / 1080));
+}
+
 .squareContainer {
   --width: 1080px;
   width: var(--width);
@@ -36,6 +42,12 @@
   text-orientation: mixed;
   font-size: calc(var(--width) / 46);
   height: calc(var(--width) / 3);
+  @apply font-medium text-white;
+}
+
+.simpleTicketNumber {
+  text-orientation: mixed;
+  font-size: calc(var(--width) / 37);
   @apply font-medium text-white;
 }
 
@@ -88,11 +100,42 @@
   margin-bottom: calc(var(--width) / 55);
 }
 
+.simpleSubHeader {
+  line-height: 100%;
+  font-size: calc(var(--width) / 18);
+  @apply font-bold text-white;
+  margin-bottom: calc(var(--width) / 55);
+}
+
+.simpleMTSubHeader {
+  line-height: 100%;
+  margin-top: calc(var(--width) / 14);
+  font-size: calc(var(--width) / 16);
+  @apply font-bold text-white;
+  margin-bottom: calc(var(--width) / 55);
+}
+
+.simpleSquareMTSubHeader {
+  line-height: 100%;
+  margin-top: calc(var(--width) / 24);
+  font-size: calc(var(--width) / 20);
+  @apply font-bold text-white;
+  margin-bottom: calc(var(--width) / 55);
+}
+
 .dateTag {
   background: white;
   border-radius: calc(var(--width) / 100);
   font-size: calc(var(--width) / 50);
   padding: calc(var(--width) / 140) calc(var(--width) / 50);
+  @apply font-bold text-purple-300;
+}
+
+.simpleDateTag {
+  background: white;
+  border-radius: calc(var(--width) / 100);
+  font-size: calc(var(--width) / 50);
+  padding: calc(var(--width) / 140) calc(var(--width) / 32);
   @apply font-bold text-purple-300;
 }
 
@@ -117,6 +160,28 @@
   font-size: calc(var(--width) / 18);
   margin-bottom: calc(var(--width) / 30);
   @apply font-bold text-white;
+}
+
+.simpleBigContentName {
+  font-size: calc(var(--width) / 16);
+  @apply font-bold text-white text-center leading-5;
+}
+
+.simpleContentName {
+  font-size: calc(var(--width) / 22);
+  margin-bottom: calc(var(--width) / 30);
+  @apply font-bold text-white text-center;
+}
+
+.simpleSquareBigContentName {
+  font-size: calc(var(--width) / 20);
+  @apply font-bold text-white text-center leading-5;
+}
+
+.simpleSquareContentName {
+  font-size: calc(var(--width) / 26);
+  margin-bottom: calc(var(--width) / 60);
+  @apply font-bold text-white text-center;
 }
 
 .squareContentName {
