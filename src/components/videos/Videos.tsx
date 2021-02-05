@@ -1,8 +1,7 @@
 import React from 'react'
-import Link from 'next/link'
 import { ContentCard } from '../common/Card/ContentCard'
 
-export const Clubs = ({ contents }) => {
+export const Videos = ({ contents }) => {
   let times = 1
   let temp = <></>
   let result = <></>
@@ -46,10 +45,8 @@ export const Clubs = ({ contents }) => {
 
   return (
     <div>
-      <div className="flex flex-col items-center justify-center py-4 space-y-4">
-        <div className="flex flex-wrap space-y-4 md:space-y-0 md:space-x-4 justify-center">
-          {result}
-        </div>
+      <div className="flex flex-col items-center w-full justify-center py-4 space-y-4">
+        <div className="flex flex-col w-full space-y-4 md:space-y-2 justify-center">{result}</div>
       </div>
     </div>
   )

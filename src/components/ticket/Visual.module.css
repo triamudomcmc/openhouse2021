@@ -52,10 +52,16 @@
   padding: calc(var(--width) / 18);
 }
 
+.squareSubContainer {
+  @apply flex flex-col justify-between h-full;
+  padding: calc(var(--width) / 26) calc(var(--width) / 18);
+}
+
 .card {
   border-radius: calc(var(--width) / 1080 * 50);
   width: calc(76 / 100 * (var(--width)));
   height: calc(76 / 100 * (var(--width) * (1920 / 1080)));
+  border-width: 1px;
   backdrop-filter: blur(24px);
   background: linear-gradient(320deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
 }
@@ -64,6 +70,7 @@
   border-radius: calc(var(--width) / 1080 * 50);
   width: calc(76 / 100 * (var(--width)));
   height: calc(76 / 100 * (var(--width)));
+  border-width: 1px;
   backdrop-filter: blur(24px);
   background: linear-gradient(320deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
 }
@@ -119,12 +126,12 @@
 
 .contentDescription {
   font-size: calc(var(--width) / 32);
-  @apply font-bold text-white;
+  @apply font-semibold text-white;
 }
 
 .squareContentDescription {
   font-size: calc(var(--width) / 36);
-  @apply font-bold text-white;
+  @apply font-semibold text-white;
 }
 
 .qrCodeWrapper {
@@ -138,7 +145,7 @@
 .qrText {
   margin-top: calc(var(--width) / 120);
   font-size: calc((var(--width) / 1080) * 20);
-  @apply font-black text-center text-white;
+  @apply font-semibold text-center text-white;
 }
 
 .footer {

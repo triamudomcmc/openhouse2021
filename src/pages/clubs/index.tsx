@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import { Layout } from 'components/common/Layout'
 import { ClubIndex } from 'components/clubs/Clubs'
-import Footer from "../components/common/Footer";
+import Footer from '../../components/common/Footer'
 
 const Clubs = () => {
   return (
@@ -17,7 +17,7 @@ const Clubs = () => {
           <ClubIndex />
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </Layout>
   )
 }
