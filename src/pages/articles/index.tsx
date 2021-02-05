@@ -5,11 +5,14 @@ import { GetStaticProps } from 'next'
 import * as fs from 'fs'
 import parseJson from 'parse-json'
 import { Clubs } from '../../components/article/Clubs'
+import matter from 'gray-matter'
+import { getAllPosts } from '../../lib/api'
 
 export const getStaticProps: GetStaticProps = async () => {
-  const fetchedData = fs.readFileSync('./_maps/articlesMap.json')
+  const fetchedData = getAllPosts(['slug', 'title', 'author', 'thumbnail'], '_articles')
+  let cleaned = fetchedData.filter(item => Object.keys(item).length > 1)
 
-  if (!fetchedData) {
+  if (!cleaned) {
     return {
       notFound: true
     }
@@ -17,7 +20,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      contents: parseJson(fetchedData.toString())
+      contents: cleaned
     }
   }
 }

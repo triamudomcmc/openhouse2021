@@ -19,7 +19,7 @@ const Article = ({ post }) => {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const posts = getAllPosts(['slug'], '_articles')
 
   return {
     paths: posts.map(posts => {
@@ -34,7 +34,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug, ['title', 'author', 'content', 'coverImage'])
+  const post = getPostBySlug(params.slug, ['title', 'author', 'content', 'coverImage'], '_articles')
 
   const content = await markdownToHtml(post.content || '')
 
