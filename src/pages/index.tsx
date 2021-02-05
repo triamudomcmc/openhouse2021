@@ -8,15 +8,16 @@ import { Index } from 'components/index'
 import { getAllLiveSchedule, getStageStream } from 'lib/db-admin'
 import TimetableData from 'types/Timetable'
 import Stream from 'types/Stream'
+import { getAllPosts } from '../lib/api'
 
 type Props = {
   schedule: TimetableData[]
   stream: Stream
 }
 
-const Renderer = ({ completed, days, hours, minutes, seconds, schedule, stream }) => {
+const Renderer = ({ completed, days, hours, minutes, seconds, schedule, stream, content }) => {
   if (completed) {
-    return <Index stream={stream} schedule={schedule} />
+    return <Index stream={stream} schedule={schedule} contents={content} />
   } else {
     return (
       <CountdownContainer
@@ -30,7 +31,7 @@ const Renderer = ({ completed, days, hours, minutes, seconds, schedule, stream }
   }
 }
 
-const IndexPage = ({ schedule, stream }) => (
+const IndexPage = ({ schedule, stream, content }) => (
   <Countdown
     date={1610988496000}
     renderer={({ completed, days, hours, minutes, seconds }) => (
@@ -42,6 +43,7 @@ const IndexPage = ({ schedule, stream }) => (
         seconds={seconds}
         schedule={schedule}
         stream={stream}
+        content={content}
       />
     )}
   />
@@ -52,6 +54,14 @@ export default IndexPage
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const schedule = await getAllLiveSchedule()
   const stream = await getStageStream()
+  const fetchedData = getAllPosts(['slug', 'title', 'author', 'thumbnail'], '_articles')
+  let cleaned = fetchedData.filter(item => Object.keys(item).length > 1)
+
+  if (!cleaned) {
+    return {
+      notFound: true
+    }
+  }
 
   if (!schedule) {
     return {
@@ -67,7 +77,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   return {
     props: {
       schedule,
-      stream
+      stream,
+      content: cleaned
     },
     revalidate: 60
   }
