@@ -1,10 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import * as fs from 'fs'
 
 import { Layout } from 'components/common/Layout'
 import { ClubIndex } from 'components/clubs/Clubs'
 import Footer from '../../components/common/Footer'
+import { GetStaticProps } from 'next'
 
 const Clubs = () => {
   return (
