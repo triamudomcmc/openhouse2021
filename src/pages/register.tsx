@@ -22,7 +22,7 @@ const Register = () => {
               <button
                 type="button"
                 className="inline-flex items-center justify-center w-full px-5 py-2 text-base font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md md:px-10 md:text-xl focus:outline-none"
-                onClick={() => auth.signinWithGoogle('/')}
+                onClick={() => auth.signinWithGoogle('/onboard')}
               >
                 <Google className="w-5 h-5 mr-4" />
                 Sign in with Google
@@ -30,7 +30,7 @@ const Register = () => {
               <button
                 type="button"
                 className="inline-flex items-center justify-center w-full px-5 py-2 text-base font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md md:px-10 md:text-xl focus:outline-none"
-                onClick={() => auth.signinWithFacebook('/')}
+                onClick={() => auth.signinWithFacebook('/onboard')}
               >
                 <Facebook className="w-5 h-5 mr-4" />
                 Sign in with Facebook

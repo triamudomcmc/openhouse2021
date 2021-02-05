@@ -6,7 +6,21 @@ import firebase from './firebase'
 import { createUser, getCurrentUserData } from './db'
 import { AUTH_COOKIE } from './constants'
 
-interface IUserData {
+export interface IUserData extends IInitialUserData {
+  prefix: string
+  firstname: string
+  lastname: string
+  nickname: string
+  status: string
+  level: string
+  school: string
+  news: string[]
+  purpose: string[]
+  tos: boolean
+  wishes: string
+}
+
+interface IInitialUserData {
   uid: string
   email: string
   name: string
@@ -16,7 +30,7 @@ interface IUserData {
 
 interface IAuthContext {
   user: firebase.User | null
-  userData: firebase.firestore.DocumentData
+  userData: IUserData
   loading: boolean
   signinWithFacebook: (redirect: string) => Promise<void>
   signinWithGoogle: (redirect: string) => Promise<void>
@@ -36,20 +50,20 @@ export const AuthProvider = ({ children }) => {
 
 function useProvideAuth() {
   const [user, setUser] = useState<firebase.User | null>(null)
-  const [userData, setUserData] = useState<firebase.firestore.DocumentData>(null)
+  const [userData, setUserData] = useState<IUserData>(null)
   const [loading, setLoading] = useState(true)
 
-  // useEffect(() => {
-  //   if (userData && Object.keys(userData).length === 5) {
-  //     Router.push('/onboard')
-  //   }
-  // }, [userData])
+  useEffect(() => {
+    if (userData && Object.keys(userData).length === 5) {
+      Router.push('/onboard')
+    }
+  }, [userData])
 
   useEffect(() => {
     const getData = async () => {
       const data = await getCurrentUserData(user.uid)
       if (data) {
-        setUserData(data)
+        setUserData(data as IUserData)
       } else {
         setUserData(null)
       }
@@ -126,7 +140,7 @@ function useProvideAuth() {
   }
 }
 
-const formatUser = (user: firebase.User): IUserData => {
+const formatUser = (user: firebase.User): IInitialUserData => {
   return {
     uid: user.uid,
     email: user.email,

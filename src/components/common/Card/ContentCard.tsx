@@ -25,9 +25,9 @@ export const ContentCard = ({ className = '', duration = '', src, children, href
           <Image src={src === '' ? '/assets/nok.png' : src} width={288} height={188} />
         ) : (
           <div className="relative">
-            <Image src={src} width={288} height={188} />
-            <div className="absolute right-3 bottom-3 mx-2">
-              <div className="bg-white text-sm font-semibold rounded-lg px-2 py-1">{duration}</div>
+            <img src={src} width={288} height={188} className="w-full" />
+            <div className="absolute mx-2 right-3 bottom-3">
+              <div className="px-2 py-1 text-sm font-semibold bg-white rounded-lg">{duration}</div>
             </div>
           </div>
         )}
