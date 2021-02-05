@@ -4,7 +4,7 @@ import { getTicketData } from 'lib/db-admin'
 
 export default async function ticketImages(req: NextApiRequest, res: NextApiResponse) {
   const {
-    query: { uid }
+    query: { uid, type }
   } = req
 
   if (uid) {
@@ -12,7 +12,7 @@ export default async function ticketImages(req: NextApiRequest, res: NextApiResp
     const file = await screenshot(
       `http://localhost:3000/ticket-image?nickname=${encodeURIComponent(
         ticketData?.nickname
-      )}&wishes=${encodeURIComponent(ticketData?.wishes)}&type=pot`
+      )}&wishes=${encodeURIComponent(ticketData?.wishes)}&type=${encodeURIComponent(`${type}`)}`
     )
 
     res.setHeader('Content-Type', `image/png`)
