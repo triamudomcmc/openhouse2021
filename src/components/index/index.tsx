@@ -16,7 +16,7 @@ import Footer from '../common/Footer'
 import { Live } from '../common/Live'
 import { SchoolBlogs } from '../SchoolBlogs'
 
-export const Index = ({ stream, schedule }) => {
+export const Index = ({ stream, schedule, contents }) => {
   const response = useSWR('/api/stage', {
     initialData: stream,
     refreshInterval: 5000
@@ -129,7 +129,7 @@ export const Index = ({ stream, schedule }) => {
         <Programmes />
         <SchoolBlogs />
         <Videos />
-        <Blogs />
+        <Blogs content={contents} />
         <Live schedule={schedule} />
       </div>
       <Footer />

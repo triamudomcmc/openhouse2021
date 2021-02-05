@@ -21,7 +21,7 @@ const Videos = ({ post }) => {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const posts = getAllPosts(['slug'], '_videos')
 
   return {
     paths: posts.map(posts => {
@@ -36,7 +36,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug, ['title', 'video'])
+  const post = getPostBySlug(params.slug, ['title', 'video'], '_videos')
 
   const content = await markdownToHtml(post.content || '')
 
