@@ -20,6 +20,7 @@ export function getPostBySlug(slug: string, fields: string[] = [], dir: string) 
       .replace(`title${escapedString}`, 'title:')
       .replace(`author${escapedString}`, 'author:')
       .replace(`thumbnail${escapedString}`, 'thumbnail:')
+      .replace(`video${escapedString}`, 'video:')
   )
 
   type Items = {
@@ -31,15 +32,15 @@ export function getPostBySlug(slug: string, fields: string[] = [], dir: string) 
   // Ensure only the minimal needed data is exposed
   fields.forEach(field => {
     if (field === 'slug') {
-      items[field] = realSlug
+      items[field] = realSlug.replaceAll(escapedString, ':')
     }
 
     if (field === 'content') {
-      items[field] = content
+      items[field] = content.replaceAll(escapedString, ':')
     }
 
     if (data[field]) {
-      items[field] = data[field]
+      items[field] = data[field].replaceAll(escapedString, ':')
     }
   })
 
