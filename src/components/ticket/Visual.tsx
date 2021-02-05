@@ -3,8 +3,14 @@ import Image from 'next/image'
 import React from 'react'
 import css from './Visual.module.css'
 
-//Portrait Card
-export const Portrait = ({ width }) => {
+type Props = {
+  width: number
+  nickname: string
+  wishes?: string
+  number?: number
+}
+
+export const Portrait = ({ width, nickname, wishes, number = 999999 }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
@@ -21,16 +27,13 @@ export const Portrait = ({ width }) => {
             <span className={css.dateTag}>12-13 FEB</span>
             <div className={css.vertivcal}>
               <div className={css.line}></div>
-              <p className={css.ticketNumber}>NO. 999999</p>
+              <p className={css.ticketNumber}>NO. {number}</p>
             </div>
           </div>
           <div className={css.contentContainer}>
             <h1 className={css.contentTo}>TO</h1>
-            <h1 className={css.contentName}>Narongdech</h1>
-            <p className={css.contentDescription}>
-              ขอบใจสำหรับทุก ๆ สิ่งที่ณรงค์เดชปฏิบัติมาเพื่อชาติและราชบัลลัง
-              เรานั้นได้ผ่านทุกสิ่งทุกอย่างมาด้วยกัน
-            </p>
+            <h1 className={css.contentName}>{nickname}</h1>
+            <p className={css.contentDescription}>{wishes}</p>
           </div>
           <div className={css.footer}>
             <div className={css.qrCodeWrapper}>
@@ -62,8 +65,7 @@ export const Portrait = ({ width }) => {
   )
 }
 
-//Portrait Simple design
-export const SimplePortrait = ({ width }) => {
+export const SimplePortrait = ({ width, nickname, wishes, number = 999999 }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
@@ -72,8 +74,8 @@ export const SimplePortrait = ({ width }) => {
       <div className={classNames('border-white', css.card)}>
         <div className={css.subContainer}>
           <div className="flex flex-col items-center">
-            <h1 className={css.simpleMTSubHeader}>tatatatawan</h1>
-            <p className={css.simpleTicketNumber}>NO. 999999</p>
+            <h1 className={css.simpleMTSubHeader}>{nickname}</h1>
+            <p className={css.simpleTicketNumber}>NO. {number}</p>
           </div>
           <div className={classNames(css.contentContainer, 'flex flex-col items-center')}>
             <h1 className={css.simpleContentName}>WELCOME TO</h1>
@@ -111,8 +113,7 @@ export const SimplePortrait = ({ width }) => {
   )
 }
 
-//Portrait without bg
-export const NakedPortrait = ({ width }) => {
+export const NakedPortrait = ({ width, nickname, wishes, number = 999999 }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
@@ -126,16 +127,13 @@ export const NakedPortrait = ({ width }) => {
             <span className={css.dateTag}>12-13 FEB</span>
             <div className={css.vertivcal}>
               <div className={css.line}></div>
-              <p className={css.ticketNumber}>NO. 999999</p>
+              <p className={css.ticketNumber}>NO. {number}</p>
             </div>
           </div>
           <div className={css.contentContainer}>
             <h1 className={css.contentTo}>TO</h1>
-            <h1 className={css.contentName}>Narongdech</h1>
-            <p className={css.contentDescription}>
-              ขอบใจสำหรับทุก ๆ สิ่งที่ณรงค์เดชปฏิบัติมาเพื่อชาติและราชบัลลัง
-              เรานั้นได้ผ่านทุกสิ่งทุกอย่างมาด้วยกัน
-            </p>
+            <h1 className={css.contentName}>{nickname}</h1>
+            <p className={css.contentDescription}>{wishes}</p>
           </div>
           <div className={css.footer}>
             <div className={css.qrCodeWrapper}>
@@ -167,8 +165,7 @@ export const NakedPortrait = ({ width }) => {
   )
 }
 
-//Square card
-export const Square = ({ width }) => {
+export const Square = ({ width, nickname, wishes, number = 999999 }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
@@ -185,17 +182,14 @@ export const Square = ({ width }) => {
             <span className={css.dateTag}>12-13 FEB</span>
             <div className={css.vertivcal}>
               <div className={css.squareLine}></div>
-              <p className={css.squareTicketNumber}>NO. 999999</p>
+              <p className={css.squareTicketNumber}>NO. {number}</p>
             </div>
           </div>
           <div className={css.contentContainer}>
             <h1 className={css.squareContentName}>
-              <span className="font-semibold">To</span> Narongdech
+              <span className="font-semibold">TO</span> {nickname}
             </h1>
-            <p className={css.squareContentDescription}>
-              ขอบใจสำหรับทุก ๆ สิ่งที่ณรงค์เดชปฏิบัติมาเพื่อชาติและราชบัลลัง
-              เรานั้นได้ผ่านทุกสิ่งทุกอย่างมาด้วยกัน
-            </p>
+            <p className={css.squareContentDescription}>{wishes}</p>
           </div>
           <div className={css.footer}>
             <div className={css.qrCodeWrapper}>
@@ -227,8 +221,7 @@ export const Square = ({ width }) => {
   )
 }
 
-//Square simple desgin
-export const SimpleSquare = ({ width }) => {
+export const SimpleSquare = ({ width, nickname, wishes, number = 999999 }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
@@ -237,8 +230,8 @@ export const SimpleSquare = ({ width }) => {
       <div className={classNames('border-white', css.squareCard)}>
         <div className={css.squareSubContainer}>
           <div className="flex flex-col items-center">
-            <h1 className={css.simpleSquareMTSubHeader}>tatatatawan</h1>
-            <p className={css.simpleTicketNumber}>NO. 999999</p>
+            <h1 className={css.simpleSquareMTSubHeader}>{nickname}</h1>
+            <p className={css.simpleTicketNumber}>NO. {number}</p>
           </div>
           <div className={classNames(css.contentContainer, 'flex flex-col items-center')}>
             <h1 className={css.simpleSquareContentName}>WELCOME TO</h1>
@@ -276,8 +269,7 @@ export const SimpleSquare = ({ width }) => {
   )
 }
 
-//Square without bg
-export const NakedSquare = ({ width }) => {
+export const NakedSquare = ({ width, nickname, wishes, number = 999999 }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
@@ -291,17 +283,14 @@ export const NakedSquare = ({ width }) => {
             <span className={css.dateTag}>12-13 FEB</span>
             <div className={css.vertivcal}>
               <div className={css.squareLine}></div>
-              <p className={css.squareTicketNumber}>NO. 999999</p>
+              <p className={css.squareTicketNumber}>NO. {number}</p>
             </div>
           </div>
           <div className={css.contentContainer}>
             <h1 className={css.squareContentName}>
-              <span className="font-semibold">To</span> Narongdech
+              <span className="font-semibold">TO</span> {nickname}
             </h1>
-            <p className={css.squareContentDescription}>
-              ขอบใจสำหรับทุก ๆ สิ่งที่ณรงค์เดชปฏิบัติมาเพื่อชาติและราชบัลลัง
-              เรานั้นได้ผ่านทุกสิ่งทุกอย่างมาด้วยกัน
-            </p>
+            <p className={css.squareContentDescription}>{wishes}</p>
           </div>
           <div className={css.footer}>
             <div className={css.qrCodeWrapper}>

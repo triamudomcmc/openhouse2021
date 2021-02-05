@@ -1,6 +1,6 @@
 import { Layout } from 'components/common/Layout'
 import Router from 'next/router'
-import { Potrait, Square } from 'components/ticket/Visual'
+import { Portrait, Square } from 'components/ticket/Visual'
 import useWindowSize from 'lib/hooks/useWindowSize'
 import React, { useEffect, useRef, useState } from 'react'
 import Footer from '../components/common/Footer'
@@ -95,7 +95,7 @@ const Ticket = () => {
             />
           )}
           {portraitDis && (
-            <Potrait
+            <Portrait
               width={width / 4}
               nickname={userData?.nickname}
               wishes={userData?.wishes}

@@ -6,7 +6,7 @@ const TicketImage = () => {
   const { query } = useRouter()
   if (query.type === 'pot') {
     return (
-      <Potrait
+      <Portrait
         width={1080}
         nickname={query.nickname ? query.nickname.toString() : undefined}
         wishes={query.wishes ? query.wishes.toString() : undefined}
