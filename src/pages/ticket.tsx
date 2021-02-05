@@ -2,12 +2,33 @@ import { Layout } from 'components/common/Layout'
 import Router from 'next/router'
 import { Potrait, Square } from 'components/ticket/Visual'
 import useWindowSize from 'lib/hooks/useWindowSize'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Footer from '../components/common/Footer'
 import { useAuth } from 'lib/auth'
 
 const Ticket = () => {
   const { loading, user, userData } = useAuth()
+  const [imgReady, setImgReady] = useState(false)
+  const [imgLoading, setImgLoading] = useState(false)
+
+  const downloadLink = useRef<HTMLAnchorElement>()
+  const downloadUrl = `/api/ticket-images/${userData?.uid}`
+
+  useEffect(() => {
+    setImgReady(false)
+
+    const img = new Image()
+
+    img.src = downloadUrl
+    img.onload = () => {
+      setImgReady(true)
+      setImgLoading(false)
+      if (downloadLink.current) {
+        downloadLink.current.click()
+        downloadLink.current = undefined
+      }
+    }
+  }, [downloadUrl])
 
   useEffect(() => {
     if (!loading && !user) {
@@ -65,8 +86,22 @@ const Ticket = () => {
               </div>
             </div>
           )}
-          {squareDis && <Square width={width / 1.8} userData={userData} />}
-          {portraitDis && <Potrait width={width / 1.8} userData={userData} />}
+          {squareDis && (
+            <Square
+              width={width / 1.8}
+              nickname={userData?.nickname}
+              wishes={userData?.wishes}
+              number={999999}
+            />
+          )}
+          {portraitDis && (
+            <Potrait
+              width={width / 1.8}
+              nickname={userData?.nickname}
+              wishes={userData?.wishes}
+              number={999999}
+            />
+          )}
           <div style={{ width: width / 1.8 }} className="flex flex-row mt-6 mb-10 space-x-2">
             <div className="flex flex-col items-center justify-center justify-between w-1/3 py-2 font-medium text-center text-gray-400 bg-white shadow-lg text-xxs md:text-base md:py-4 rounded-xl">
               <img className="w-6 md:w-9" src="/assets/icon/twitter.png" />
@@ -76,10 +111,22 @@ const Ticket = () => {
               <img className="w-6 md:w-auto" src="/assets/icon/facebook.png" />
               Share to Facebook
             </div>
-            <div className="flex flex-col items-center justify-center w-1/3 py-2 font-medium text-center text-gray-400 bg-white shadow-lg md:justify-between text-xxs md:text-base md:py-4 rounded-xl">
+            <a
+              className="flex flex-col items-center justify-center w-1/3 py-2 font-medium text-center text-gray-400 bg-white shadow-lg md:justify-between text-xxs md:text-base md:py-4 rounded-xl"
+              href={imgLoading ? undefined : downloadUrl}
+              onClick={e => {
+                if (imgReady) return
+
+                e.preventDefault()
+                downloadLink.current = e.currentTarget
+                // Wait for the image download to finish
+                setImgLoading(true)
+              }}
+              download="ticket.png"
+            >
               <img className="w-6 md:w-auto" src="/assets/icon/download.png" />
               Download
-            </div>
+            </a>
           </div>
         </div>
         <Footer />

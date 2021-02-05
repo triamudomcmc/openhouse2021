@@ -6,10 +6,12 @@ import css from './Visual.module.css'
 
 type Props = {
   width: number
-  userData: IUserData
+  nickname: string
+  wishes: string
+  number?: number
 }
 
-export const Potrait = ({ width, userData }: Props) => {
+export const Potrait = ({ width, nickname, wishes, number = 999999 }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
@@ -26,13 +28,13 @@ export const Potrait = ({ width, userData }: Props) => {
             <span className={css.dateTag}>12-13 FEB</span>
             <div className={css.vertivcal}>
               <div className={css.line}></div>
-              <p className={css.ticketNumber}>NO. 999999</p>
+              <p className={css.ticketNumber}>NO. {number}</p>
             </div>
           </div>
           <div className={css.contentContainer}>
             <h1 className={css.contentTo}>TO</h1>
-            <h1 className={css.contentName}>{userData?.nickname}</h1>
-            <p className={css.contentDescription}>{userData?.wishes}</p>
+            <h1 className={css.contentName}>{nickname}</h1>
+            <p className={css.contentDescription}>{wishes}</p>
           </div>
           <div className={css.footer}>
             <div className={css.qrCodeWrapper}>
@@ -64,7 +66,7 @@ export const Potrait = ({ width, userData }: Props) => {
   )
 }
 
-export const Square = ({ width, userData }: Props) => {
+export const Square = ({ width, nickname, wishes, number = 999999 }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
@@ -81,14 +83,14 @@ export const Square = ({ width, userData }: Props) => {
             <span className={css.dateTag}>12-13 FEB</span>
             <div className={css.vertivcal}>
               <div className={css.squareLine}></div>
-              <p className={css.squareTicketNumber}>NO. 999999</p>
+              <p className={css.squareTicketNumber}>NO. {number}</p>
             </div>
           </div>
           <div className={css.contentContainer}>
             <h1 className={css.squareContentName}>
-              <span className="font-semibold">TO</span> {userData?.nickname}
+              <span className="font-semibold">TO</span> {nickname}
             </h1>
-            <p className={css.squareContentDescription}>{userData?.wishes}</p>
+            <p className={css.squareContentDescription}>{wishes}</p>
           </div>
           <div className={css.footer}>
             <div className={css.qrCodeWrapper}>
