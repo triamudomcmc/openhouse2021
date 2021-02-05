@@ -1,4 +1,4 @@
-import { Potrait, Square } from 'components/ticket/Visual'
+import { Portrait, Square } from 'components/ticket/Visual'
 import { useRouter } from 'next/router'
 import React from 'react'
 

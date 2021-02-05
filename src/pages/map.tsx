@@ -11,7 +11,7 @@ const Map = () => {
         <div className="max-w-full text-5xl font-bold text-center text-blue-400">
           <h1 className="pt-6">การเดินทาง</h1>
         </div>
-        <div className="max-w-full md:w-7/12">
+        <div className="max-w-full md:w-10/12">
           <MapIndex />
         </div>
       </div>
