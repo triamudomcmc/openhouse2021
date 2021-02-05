@@ -16,7 +16,7 @@ const Ticket = () => {
   const downloadLink = useRef<HTMLAnchorElement>()
   const permalink = encodeURIComponent(`https://localhost:3000/tickets/${userData?.uid}`)
   const downloadUrl = `/api/ticket-images/${userData?.uid}?type=${encodeURIComponent(
-    getImgDownloadQS(userData?.type, squareDis)
+    getImgDownloadQS(userData?.wishes ? 'wishes' : 'nowishes', squareDis)
   )}`
   const text = encodeURIComponent(`#TriamUdomOnlineOpenHouse2021 #triamOPH2021 #tu84 #tu85`)
   const tweetUrl = `https://twitter.com/intent/tweet?url=${permalink}&via=triamudomoph&text=${text}`
@@ -46,7 +46,7 @@ const Ticket = () => {
   const { width } = useWindowSize()
 
   const getTicket = () => {
-    if (userData?.type === 'wishes') {
+    if (userData?.haveWishes) {
       if (squareDis) {
         return (
           <Square

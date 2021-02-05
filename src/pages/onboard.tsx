@@ -14,7 +14,7 @@ const Onboard = () => {
   }, [loading, user])
 
   useEffect(() => {
-    if (userData && Object.keys(userData).length >= 14) {
+    if (userData && Object.keys(userData).length >= 15) {
       Router.push('/')
     }
   }, [userData])

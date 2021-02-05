@@ -18,7 +18,7 @@ export interface IUserData extends IInitialUserData {
   purpose: string[]
   tos: boolean
   wishes: string
-  type: string
+  haveWishes: boolean
 }
 
 interface IInitialUserData {

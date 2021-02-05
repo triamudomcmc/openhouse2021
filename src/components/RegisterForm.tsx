@@ -23,7 +23,8 @@ const RegisterForm = () => {
         school: 'วังไกลกังวล',
         news: [],
         purpose: [],
-        tos: false
+        tos: false,
+        haveWishes: true
       }}
       onSubmit={async (values, { setSubmitting }) => {
         const payload = {
@@ -35,7 +36,7 @@ const RegisterForm = () => {
         await updateUser(userData.uid, payload)
         setSubmitting(false)
 
-        Router.push('/ticket')
+        Router.push('/tickets')
       }}
     >
       {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
@@ -150,7 +151,12 @@ const RegisterForm = () => {
                 onBlur={handleBlur}
                 value={values.status}
               >
-                <option>เสียชีวิต</option>
+                <option>นักเรียน</option>
+                <option>นักศึกษา</option>
+                <option>ผู้ปกครอง</option>
+                <option>นักเรียนเก่า</option>
+                <option>ครู/อาจารย์</option>
+                <option>อื่น ๆ</option>
               </select>
               <p className="my-2 text-sm text-red-500">
                 {errors.status && touched.status && errors.status}
@@ -440,6 +446,26 @@ const RegisterForm = () => {
             </div>
 
             <p className="my-2 text-sm text-red-500">{errors.tos && touched.tos && errors.tos}</p>
+          </div>
+
+          <div>
+            <div className="flex items-center mt-4">
+              <input
+                id="haveWishes"
+                name="haveWishes"
+                type="checkbox"
+                className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              <label htmlFor="haveWishes" className="block ml-2 text-sm text-gray-900">
+                คำอวยพร
+              </label>
+            </div>
+
+            <p className="my-2 text-sm text-red-500">
+              {errors.haveWishes && touched.haveWishes && errors.haveWishes}
+            </p>
           </div>
 
           <div className="flex flex-row items-baseline justify-between mt-6">
