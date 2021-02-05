@@ -1,9 +1,15 @@
 import classNames from 'classnames'
+import { IUserData } from 'lib/auth'
 import Image from 'next/image'
 import React from 'react'
 import css from './Visual.module.css'
 
-export const Potrait = ({ width }) => {
+type Props = {
+  width: number
+  userData: IUserData
+}
+
+export const Potrait = ({ width, userData }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
@@ -25,11 +31,8 @@ export const Potrait = ({ width }) => {
           </div>
           <div className={css.contentContainer}>
             <h1 className={css.contentTo}>TO</h1>
-            <h1 className={css.contentName}>Narongdech</h1>
-            <p className={css.contentDescription}>
-              ขอบใจสำหรับทุก ๆ สิ่งที่ณรงค์เดชปฏิบัติมาเพื่อชาติและราชบัลลัง
-              เรานั้นได้ผ่านทุกสิ่งทุกอย่างมาด้วยกัน
-            </p>
+            <h1 className={css.contentName}>{userData?.nickname}</h1>
+            <p className={css.contentDescription}>{userData?.wishes}</p>
           </div>
           <div className={css.footer}>
             <div className={css.qrCodeWrapper}>
@@ -61,7 +64,7 @@ export const Potrait = ({ width }) => {
   )
 }
 
-export const Square = ({ width }) => {
+export const Square = ({ width, userData }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
@@ -83,12 +86,9 @@ export const Square = ({ width }) => {
           </div>
           <div className={css.contentContainer}>
             <h1 className={css.squareContentName}>
-              <span className="font-semibold">To</span> Narongdech
+              <span className="font-semibold">TO</span> {userData?.nickname}
             </h1>
-            <p className={css.squareContentDescription}>
-              ขอบใจสำหรับทุก ๆ สิ่งที่ณรงค์เดชปฏิบัติมาเพื่อชาติและราชบัลลัง
-              เรานั้นได้ผ่านทุกสิ่งทุกอย่างมาด้วยกัน
-            </p>
+            <p className={css.squareContentDescription}>{userData?.wishes}</p>
           </div>
           <div className={css.footer}>
             <div className={css.qrCodeWrapper}>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { SSRProvider, OverlayProvider } from 'react-aria'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
