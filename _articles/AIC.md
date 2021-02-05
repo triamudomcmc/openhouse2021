@@ -1,5 +1,7 @@
 ---
 title: Do you know AIC ?
+author: นักเรียนกลุ่มเอไอซี
+thumbnail: /assets/articles/_thumbnails/thumb_12.jpg
 ---
 
 AIC คือ กลุ่มนักเรียนเตรียมอุดมศึกษาที่มีใจรักในการทำกิจกรรม
@@ -22,25 +24,25 @@ C ย่อมาจาก **C**ontrol แปลว่า การควบค�
 
 รู้ความหมายกันไปแล้ว ต่อไปเรามาดูกิจกรรมที่ AIC ทำกัน !
 
-<img src="/AIC_assets/media/image1.jpeg" style="width:4.73056in;height:3.14931in" />
+<img src="assets/articles/AIC_assets/media/image1.jpeg" style="width:4.73056in;height:3.14931in" />
 
-<img src="/AIC_assets/media/image2.jpeg" style="width:4.73056in;height:3.14931in" />
+<img src="assets/articles/AIC_assets/media/image2.jpeg" style="width:4.73056in;height:3.14931in" />
 
 ฐาน AIC โครงการพัฒนาศักยภาพ
 
-<img src="/AIC_assets/media/image3.jpeg" style="width:4.72441in;height:3.14961in" />
+<img src="assets/articles/AIC_assets/media/image3.jpeg" style="width:4.72441in;height:3.14961in" />
 
-<img src="/AIC_assets/media/image4.jpeg" style="width:4.72431in;height:3.14931in" />
+<img src="assets/articles/AIC_assets/media/image4.jpeg" style="width:4.72431in;height:3.14931in" />
 
 งานปฐมนิเทศ AIC
 
-<img src="/AIC_assets/media/image5.jpeg" style="width:4.72569in;height:3.14931in" /><img src="/AIC_assets/media/image6.jpeg" style="width:4.72441in;height:3.14961in" /><img src="/AIC_assets/media/image7.jpeg" style="width:4.72441in;height:3.14961in" />
+<img src="assets/articles/AIC_assets/media/image5.jpeg" style="width:4.72569in;height:3.14931in" /><img src="assets/articles/AIC_assets/media/image6.jpeg" style="width:4.72441in;height:3.14961in" /><img src="assets/articles/AIC_assets/media/image7.jpeg" style="width:4.72441in;height:3.14961in" />
 
 ค่าย AIC
 
-<img src="/AIC_assets/media/image8.jpeg" style="width:4.72441in;height:3.14961in" />
+<img src="assets/articles/AIC_assets/media/image8.jpeg" style="width:4.72441in;height:3.14961in" />
 
-<img src="/AIC_assets/media/image9.PNG" style="width:4.71431in;height:3.1482in" />
+<img src="assets/articles/AIC_assets/media/image9.PNG" style="width:4.71431in;height:3.1482in" />
 
 ซุ้มเกมงานสืบสาน
 
@@ -80,7 +82,7 @@ A: สู้ ๆ นะ ตอนนี้ก็เหลือเวลาอ�
 ถ้าอยากรู้จัก AIC มากขึ้น
 สามารถดูคลิปวิดีโอของพวกเราตามรายละเอียดบนโปสเตอร์ได้เลย
 
-<img src="/AIC_assets/media/image10.png" style="width:4.6375in;height:4.6375in" />อย่าลืมไปดูกันนะ
+<img src="assets/articles/AIC_assets/media/image10.png" style="width:4.6375in;height:4.6375in" />อย่าลืมไปดูกันนะ
 !
 
 **CONTACT**

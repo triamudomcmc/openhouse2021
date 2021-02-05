@@ -31,7 +31,7 @@ export const ContentCard = ({ className = '', duration = '', src, children, href
             </div>
           </div>
         )}
-        <h1 className="mx-2 font-bold truncate ">{description}</h1>
+        <h1 className="mx-2 font-bold truncate">{description}</h1>
         <div className="flex flex-row space-x-1 text-gray-300 ">
           <User />
           <p>{author}</p>

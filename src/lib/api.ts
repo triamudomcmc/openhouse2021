@@ -2,17 +2,25 @@ import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 
-const postsDirectory = join(process.cwd(), '_videos')
+const escapedString = 'BigOChungus'
 
-export function getPostSlugs() {
+export function getPostSlugs(dir: string) {
+  const postsDirectory = join(process.cwd(), dir)
   return fs.readdirSync(postsDirectory)
 }
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
+export function getPostBySlug(slug: string, fields: string[] = [], dir: string) {
+  const postsDirectory = join(process.cwd(), dir)
   const realSlug = slug.replace(/\.md$/, '')
   const fullPath = join(postsDirectory, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const { data, content } = matter(fileContents)
+  const { data, content } = matter(
+    fileContents
+      .replace(/:/g, escapedString)
+      .replace(`title${escapedString}`, 'title:')
+      .replace(`author${escapedString}`, 'author:')
+      .replace(`thumbnail${escapedString}`, 'thumbnail:')
+  )
 
   type Items = {
     [key: string]: string
@@ -25,6 +33,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     if (field === 'slug') {
       items[field] = realSlug
     }
+
     if (field === 'content') {
       items[field] = content
     }
@@ -37,8 +46,8 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   return items
 }
 
-export function getAllPosts(fields: string[] = []) {
-  const slugs = getPostSlugs()
-  const posts = slugs.map(slug => getPostBySlug(slug, fields))
+export function getAllPosts(fields: string[] = [], dir: string) {
+  const slugs = getPostSlugs(dir)
+  const posts = slugs.map(slug => getPostBySlug(slug, fields, dir))
   return posts
 }
