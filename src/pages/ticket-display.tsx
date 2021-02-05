@@ -1,6 +1,11 @@
 import { Layout } from '../components/common/Layout'
 import Footer from '../components/common/Footer'
-import { NakedPotrait, NakedSquare, SimplePotrait, SimpleSquare } from '../components/ticket/Visual'
+import {
+  NakedPortrait,
+  NakedSquare,
+  SimplePortrait,
+  SimpleSquare
+} from '../components/ticket/Visual'
 import Image from 'next/image'
 import React from 'react'
 import useWindowSize from '../lib/hooks/useWindowSize'
@@ -18,7 +23,7 @@ const Page = () => {
           <h1 className="font-black text-sm md:text-2xl text-white">OPEN HOUSE 2021</h1>
         </div>
         <div className="md:-mt-16">
-          <SimpleSquare width={width > 500 ? width / 1.8 : width / 1} />
+          <SimplePortrait width={width > 500 ? width / 1.8 : width / 1} />
         </div>
         <div className="md:-mt-16 mb-24 md:mb-40 flex flex-col items-center">
           <h1 className="text-lg md:text-4xl font-medium text-white">การ์ดของ</h1>

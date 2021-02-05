@@ -25,7 +25,7 @@ export const Videos = ({ contents }) => {
       result = (
         <>
           {result}
-          <div className="flex flex-row justify-center">{temp}</div>
+          <div className="flex flex-col md:flex-row justify-center w-full">{temp}</div>
         </>
       )
 
@@ -35,7 +35,7 @@ export const Videos = ({ contents }) => {
       result = (
         <>
           {result}
-          <div className="flex flex-row justify-start">{temp}</div>
+          <div className="flex flex-col md:flex-row justify-start w-full">{temp}</div>
         </>
       )
     }
@@ -45,8 +45,10 @@ export const Videos = ({ contents }) => {
 
   return (
     <div>
-      <div className="flex flex-col items-center w-full justify-center py-4 space-y-4">
-        <div className="flex flex-col w-full space-y-4 md:space-y-2 justify-center">{result}</div>
+      <div className="flex flex-col items-center justify-center py-4 space-y-4">
+        <div className="flex flex-wrap space-y-4 md:space-y-0 justify-center w-11/12 md:w-full">
+          {result}
+        </div>
       </div>
     </div>
   )

@@ -33,7 +33,7 @@ const Articles = ({ contents }) => {
           <h1 className="pt-6">บทความ</h1>
         </div>
         {
-          <div className="max-w-full md:w-8/12">
+          <div className="max-w-full w-10/12 md:w-8/12">
             <Clubs contents={contents} />
           </div>
         }

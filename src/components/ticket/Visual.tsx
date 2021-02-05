@@ -3,7 +3,8 @@ import Image from 'next/image'
 import React from 'react'
 import css from './Visual.module.css'
 
-export const Potrait = ({ width }) => {
+//Portrait Card
+export const Portrait = ({ width }) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
@@ -61,7 +62,8 @@ export const Potrait = ({ width }) => {
   )
 }
 
-export const SimplePotrait = ({ width }) => {
+//Portrait Simple design
+export const SimplePortrait = ({ width }) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
@@ -109,7 +111,8 @@ export const SimplePotrait = ({ width }) => {
   )
 }
 
-export const NakedPotrait = ({ width }) => {
+//Portrait without bg
+export const NakedPortrait = ({ width }) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
@@ -164,6 +167,7 @@ export const NakedPotrait = ({ width }) => {
   )
 }
 
+//Square card
 export const Square = ({ width }) => {
   return (
     <div
@@ -223,6 +227,7 @@ export const Square = ({ width }) => {
   )
 }
 
+//Square simple desgin
 export const SimpleSquare = ({ width }) => {
   return (
     <div
@@ -271,6 +276,7 @@ export const SimpleSquare = ({ width }) => {
   )
 }
 
+//Square without bg
 export const NakedSquare = ({ width }) => {
   return (
     <div
