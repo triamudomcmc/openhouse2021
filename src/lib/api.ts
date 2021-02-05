@@ -32,15 +32,15 @@ export function getPostBySlug(slug: string, fields: string[] = [], dir: string) 
   // Ensure only the minimal needed data is exposed
   fields.forEach(field => {
     if (field === 'slug') {
-      items[field] = realSlug.replaceAll(escapedString, ':')
+      items[field] = realSlug.replace(new RegExp(escapedString, 'g'), ':')
     }
 
     if (field === 'content') {
-      items[field] = content.replaceAll(escapedString, ':')
+      items[field] = content.replace(new RegExp(escapedString, 'g'), ':')
     }
 
     if (data[field]) {
-      items[field] = data[field].replaceAll(escapedString, ':')
+      items[field] = data[field].replace(new RegExp(escapedString, 'g'), ':')
     }
   })
 
