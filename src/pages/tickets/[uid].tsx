@@ -1,4 +1,4 @@
-import { NakedSimpleSquare } from 'components/ticket/Visual'
+import { NakedSimpleSquare, SimpleSquare } from 'components/ticket/Visual'
 import Image from 'next/image'
 import React from 'react'
 import useWindowSize from 'lib/hooks/useWindowSize'
@@ -23,7 +23,7 @@ const Page = ({ nickname }) => {
           <h1 className="text-sm font-black text-white md:text-2xl">OPEN HOUSE 2021</h1>
         </div>
         <div className="md:-mt-16">
-          <NakedSimpleSquare width={width > 500 ? width / 3.6 : width / 2} nickname={nickname} />
+          <SimpleSquare nickname={nickname} width={width > 500 ? width / 1.8 : width / 1} />
         </div>
         <div className="flex flex-col items-center mb-24 md:-mt-16 md:mb-40">
           <h1 className="text-lg font-medium text-white md:text-4xl">การ์ดของ</h1>
