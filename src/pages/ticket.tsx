@@ -58,16 +58,16 @@ const Ticket = () => {
           {portraitDis ? (
             <div className="flex flex-row mb-10 space-x-8">
               <div onClick={switchToSquare} className="flex flex-col items-center">
-                <div className="flex flex-row items-center justify-center bg-white rounded-lg shadow-lg w-18 h-18 md:w-24 md:h-24">
+                <div className="flex flex-row items-center justify-center bg-white rounded-lg shadow-md w-18 h-18 md:w-24 md:h-24">
                   <div className="w-12 h-12 border-2 border-gray-400 rounded md:w-16 md:h-16 md:rounded-lg"></div>
                 </div>
-                <h1 className="text-sm font-medium text-gray-400 md:text-base">square</h1>
+                <h1 className="mt-4 text-sm font-medium text-gray-400 md:text-base">Square</h1>
               </div>
               <div onClick={switchToPortrait} className="flex flex-col items-center">
-                <div className="flex flex-row items-center justify-center rounded-lg shadow-lg bg-blue-25 w-18 h-18 md:w-24 md:h-24">
+                <div className="flex flex-row items-center justify-center rounded-lg shadow-md bg-blue-25 w-18 h-18 md:w-24 md:h-24">
                   <div className="w-8 h-12 border-2 border-white rounded-lg md:w-10 md:h-16"></div>
                 </div>
-                <h1 className="text-sm font-medium text-gray-400 md:text-base">portrait</h1>
+                <h1 className="mt-4 text-sm font-medium text-gray-400 md:text-base">Portrait</h1>
               </div>
             </div>
           ) : (
