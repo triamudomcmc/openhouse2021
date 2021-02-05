@@ -1,6 +1,4 @@
-import { Layout } from '../components/common/Layout'
-import Footer from '../components/common/Footer'
-import { NakedPotrait, NakedSquare, SimplePotrait, SimpleSquare } from '../components/ticket/Visual'
+import { SimpleSquare } from '../components/ticket/Visual'
 import Image from 'next/image'
 import React from 'react'
 import useWindowSize from '../lib/hooks/useWindowSize'
@@ -12,28 +10,28 @@ const Page = () => {
 
   return (
     <div className="font-display">
-      <div className="flex flex-col justify-center items-center bg-cover bg-ticket-show-bg">
+      <div className="flex flex-col items-center justify-center bg-cover bg-ticket-show-bg">
         <div className="mt-4 md:mt-10">
-          <h1 className="font-black text-xs md:text-xl text-white leading-3">TRIAM UDOM ONLINE</h1>
-          <h1 className="font-black text-sm md:text-2xl text-white">OPEN HOUSE 2021</h1>
+          <h1 className="text-xs font-black leading-3 text-white md:text-xl">TRIAM UDOM ONLINE</h1>
+          <h1 className="text-sm font-black text-white md:text-2xl">OPEN HOUSE 2021</h1>
         </div>
         <div className="md:-mt-16">
-          <SimpleSquare width={width > 500 ? width / 1.8 : width / 1} />
+          <SimpleSquare width={width > 500 ? width / 1.8 : width / 1} nickname="tatatatatawan" />
         </div>
-        <div className="md:-mt-16 mb-24 md:mb-40 flex flex-col items-center">
-          <h1 className="text-lg md:text-4xl font-medium text-white">การ์ดของ</h1>
-          <h1 className="text-lg md:text-4xl font-semibold text-white">tatatatawan</h1>
+        <div className="flex flex-col items-center mb-24 md:-mt-16 md:mb-40">
+          <h1 className="text-lg font-medium text-white md:text-4xl">การ์ดของ</h1>
+          <h1 className="text-lg font-semibold text-white md:text-4xl">tatatatawan</h1>
         </div>
       </div>
       <div className="bg-white">
         <div className="relative -top-14 md:-top-24">
           <div className="flex flex-row justify-center">
-            <div className="flex flex-col justify-between items-center w-10/12 md:w-3/12 bg-white shadow-lg p-5 md:p-6 rounded-3xl">
-              <div className="text-lg font-semibold pb-4 md:pb-5">
-                <h1 className="text-purple-250 text-base text-center">ลงทะเบียนเข้าร่วมงาน</h1>
-                <h1 className="text-purple-250 text-base text-center">เพื่อรับการ์ดของคุณ</h1>
+            <div className="flex flex-col items-center justify-between w-10/12 p-5 bg-white shadow-lg md:w-3/12 md:p-6 rounded-3xl">
+              <div className="pb-4 text-lg font-semibold md:pb-5">
+                <h1 className="text-base text-center text-purple-250">ลงทะเบียนเข้าร่วมงาน</h1>
+                <h1 className="text-base text-center text-purple-250">เพื่อรับการ์ดของคุณ</h1>
               </div>
-              <div className="flex flex-row py-3 justify-center text-base md:text-xl rounded-xl bg-gradient-to-r from-blue-70 via-purple-450 to-red-250 text-white font-black shadow-md w-full">
+              <div className="flex flex-row justify-center w-full py-3 text-base font-black text-white shadow-md md:text-xl rounded-xl bg-gradient-to-r from-blue-70 via-purple-450 to-red-250">
                 ลงทะเบียน
               </div>
             </div>
