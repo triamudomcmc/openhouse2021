@@ -41,3 +41,14 @@ export async function getStageStream(): Promise<any> {
   return {}
    */
 }
+
+export async function getTicketData(uid) {
+  const ref = db.collection('users').doc(uid)
+  const doc = await ref.get()
+  const data = doc.data()
+
+  return {
+    nickname: data.nickname,
+    wishes: data.wishes
+  }
+}

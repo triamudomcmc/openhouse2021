@@ -7,6 +7,7 @@ import Router from 'next/router'
 import Input from 'components/ui/Input'
 import { updateUser } from 'lib/db'
 import { useAuth } from 'lib/auth'
+import { getRandomWishes } from 'utils/wishes'
 
 const RegisterForm = () => {
   const { userData } = useAuth()
@@ -15,6 +16,7 @@ const RegisterForm = () => {
       initialValues={{
         prefix: 'นางสาว',
         name: '',
+        lastname: '',
         nickname: '',
         status: 'เสียชีวิต',
         level: 'มัธยมศึกษาปีที่ 1',
@@ -24,9 +26,16 @@ const RegisterForm = () => {
         tos: false
       }}
       onSubmit={async (values, { setSubmitting }) => {
+        const payload = {
+          ...values,
+          wishes: getRandomWishes()
+        }
+
         setSubmitting(true)
-        await updateUser(userData.uid, values)
+        await updateUser(userData.uid, payload)
         setSubmitting(false)
+
+        Router.push('/ticket')
       }}
     >
       {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
@@ -65,7 +74,7 @@ const RegisterForm = () => {
 
             <div>
               <label htmlFor="name" className="block text-sm font-medium leading-5 text-gray-700">
-                ชื่อ-สกุล
+                ชื่อ
               </label>
               <div className="mt-1">
                 <Input
@@ -80,6 +89,29 @@ const RegisterForm = () => {
               </div>
               <p className="my-2 text-sm text-red-500">
                 {errors.name && touched.name && errors.name}
+              </p>
+            </div>
+
+            <div>
+              <label
+                htmlFor="lastname"
+                className="block text-sm font-medium leading-5 text-gray-700"
+              >
+                นามสกุล
+              </label>
+              <div className="mt-1">
+                <Input
+                  id="lastname"
+                  type="text"
+                  name="lastname"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.lastname}
+                  required
+                />
+              </div>
+              <p className="my-2 text-sm text-red-500">
+                {errors.lastname && touched.lastname && errors.lastname}
               </p>
             </div>
 

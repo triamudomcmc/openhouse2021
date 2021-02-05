@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Link from 'next/link'
+import cn from 'classnames'
 import { BusInfo } from './bus'
 import { BtsInfo } from './bts'
 import { MrtInfo } from './mrt'
@@ -69,10 +69,10 @@ export const Inside = () => {
           <div className="flex flex-col self-center max-w-full py-12 space-y-2 md:space-y-0 md:space-x-4 md:flex-row">
             <div>
               <p
-                className={
-                  highlightbus +
-                  ' flex items-center w-14 h-14 justify-center rounded-full shadow-md md:h-24 md:w-24'
-                }
+                className={cn(
+                  'flex items-center w-14 h-14 justify-center rounded-full shadow-md md:h-24 md:w-24',
+                  highlightbus
+                )}
                 onClick={() => setCurrentTab('bus')}
               >
                 <div className={currentTab === 'bus' ? 'hidden' : 'flex'}>
@@ -88,10 +88,10 @@ export const Inside = () => {
             </div>
             <div>
               <p
-                className={
-                  highlightbts +
-                  ' flex items-center w-14 h-14 justify-center rounded-full shadow-md md:h-24 md:w-24'
-                }
+                className={cn(
+                  'flex items-center w-14 h-14 justify-center rounded-full shadow-md md:h-24 md:w-24',
+                  highlightbts
+                )}
                 onClick={() => setCurrentTab('bts')}
               >
                 <div className={currentTab === 'bts' ? 'hidden' : 'flex'}>
@@ -107,10 +107,10 @@ export const Inside = () => {
             </div>
             <div>
               <p
-                className={
-                  highlightmrt +
-                  ' flex  items-center pb-1 w-14 h-14 justify-center md:pb-2 rounded-full shadow-md md:h-24 md:w-24'
-                }
+                className={cn(
+                  'flex items-center pb-1 w-14 h-14 justify-center md:pb-2 rounded-full shadow-md md:h-24 md:w-24',
+                  highlightmrt
+                )}
                 onClick={() => setCurrentTab('mrt')}
               >
                 <div className={currentTab === 'mrt' ? 'hidden' : 'flex'}>
