@@ -8,6 +8,7 @@ export const ContentCard = ({ className = '', duration = '', src, children, href
   const description = React.Children.map(children, child =>
     child.type.displayName === 'Desc' ? child : null
   )
+
   const author = React.Children.map(children, child =>
     child.type.displayName === 'Author' ? child : null
   )
@@ -16,8 +17,7 @@ export const ContentCard = ({ className = '', duration = '', src, children, href
     <Link href={href}>
       <div
         className={classNames(
-          'flex flex-col justify-between px-2 pt-3 pb-1 mx-2 space-y-2 shadow-md' +
-            ' md:w-1/3 rounded-xl',
+          'flex flex-col justify-between px-2 pt-3 pb-1 mx-2 space-y-2 shadow-md md:w-1/3 rounded-xl',
           className
         )}
       >
@@ -26,8 +26,8 @@ export const ContentCard = ({ className = '', duration = '', src, children, href
         ) : (
           <div className="relative">
             <Image src={src} width={288} height={188} />
-            <div className="absolute right-3 bottom-3 mx-2">
-              <div className="bg-white text-sm font-semibold rounded-lg px-2 py-1">{duration}</div>
+            <div className="absolute mx-2 right-3 bottom-3">
+              <div className="px-2 py-1 text-sm font-semibold bg-white rounded-lg">{duration}</div>
             </div>
           </div>
         )}
@@ -44,6 +44,7 @@ export const ContentCard = ({ className = '', duration = '', src, children, href
 const Description = ({ children }) => children
 Description.displayName = 'Desc'
 ContentCard.Desc = Description
+
 const Author = ({ children }) => children
 Author.displayName = 'Author'
 ContentCard.Author = Author
