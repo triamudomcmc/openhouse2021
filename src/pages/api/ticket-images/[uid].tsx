@@ -6,18 +6,23 @@ export default async function ticketImages(req: NextApiRequest, res: NextApiResp
   const {
     query: { uid }
   } = req
-  const ticketData = await getTicketData(uid)
-  const file = await screenshot(
-    `http://localhost:3000/ticket-image?nickname=${encodeURIComponent(
-      ticketData.nickname
-    )}&wishes=${encodeURIComponent(ticketData.wishes)}&type=pot`
-  )
 
-  res.setHeader('Content-Type', `image/png`)
-  res.setHeader(
-    'Cache-Control',
-    `public, immutable, no-transform, s-maxage=31536000, max-age=31536000`
-  )
-  res.statusCode = 200
-  res.end(file)
+  if (uid) {
+    const ticketData = await getTicketData(uid)
+    const file = await screenshot(
+      `http://localhost:3000/ticket-image?nickname=${encodeURIComponent(
+        ticketData?.nickname
+      )}&wishes=${encodeURIComponent(ticketData?.wishes)}&type=pot`
+    )
+
+    res.setHeader('Content-Type', `image/png`)
+    res.setHeader(
+      'Cache-Control',
+      `public, immutable, no-transform, s-maxage=31536000, max-age=31536000`
+    )
+    res.statusCode = 200
+    res.end(file)
+  } else {
+    res.status(404).send('Not Found')
+  }
 }

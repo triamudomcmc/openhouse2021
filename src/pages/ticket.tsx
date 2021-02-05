@@ -88,7 +88,7 @@ const Ticket = () => {
           )}
           {squareDis && (
             <Square
-              width={width / 1.8}
+              width={width / 4}
               nickname={userData?.nickname}
               wishes={userData?.wishes}
               number={999999}
@@ -96,13 +96,13 @@ const Ticket = () => {
           )}
           {portraitDis && (
             <Potrait
-              width={width / 1.8}
+              width={width / 4}
               nickname={userData?.nickname}
               wishes={userData?.wishes}
               number={999999}
             />
           )}
-          <div style={{ width: width / 1.8 }} className="flex flex-row mt-6 mb-10 space-x-2">
+          <div style={{ width: width / 4 }} className="flex flex-row mt-6 mb-10 space-x-2">
             <div className="flex flex-col items-center justify-center justify-between w-1/3 py-2 font-medium text-center text-gray-400 bg-white shadow-lg text-xxs md:text-base md:py-4 rounded-xl">
               <img className="w-6 md:w-9" src="/assets/icon/twitter.png" />
               Share to Twitter
