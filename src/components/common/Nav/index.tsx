@@ -26,7 +26,7 @@ export const Nav = ({ hideSignIn, className }: Props) => {
           </div>
         </Link>
         <div className="space-x-6 text-lg font-semibold leading-tight text-white md:text-xl font-display">
-          <Link href="/index">
+          <Link href="/">
             <a>หน้าแรก</a>
           </Link>
           <Link href="/clubs">
@@ -35,7 +35,7 @@ export const Nav = ({ hideSignIn, className }: Props) => {
           <Link href="/articles">
             <a>บทความ</a>
           </Link>
-          <Link href="/">
+          <Link href="/videos">
             <a>วิดิโอ</a>
           </Link>
           <Link href="/stage">

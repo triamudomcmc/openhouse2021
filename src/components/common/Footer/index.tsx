@@ -39,20 +39,38 @@ const Footer = () => {
             </div>
             <div className="flex flex-col font-bold text-center md:flex-row md:text-right md:pl-8">
               <div className="flex flex-col space-y-3 text-gray-500">
-                <h1>สายการเรียน</h1>
-                <h1>ชมรม</h1>
-                <h1>บทความ</h1>
-                <h1>คลิปวิดีโอ</h1>
-                <h1>ติดต่อ</h1>
+                <Link href="/programmes">
+                  <h1>สายการเรียน</h1>
+                </Link>
+                <Link href="/clubs">
+                  <h1>ชมรม</h1>
+                </Link>
+                <Link href="/articles">
+                  <h1>บทความ</h1>
+                </Link>
+                <Link href="/videos">
+                  <h1>คลิปวิดีโอ</h1>
+                </Link>
+                <Link href="/contact">
+                  <h1>ติดต่อ</h1>
+                </Link>
               </div>
             </div>
             <div className="flex flex-col font-bold text-center md:flex-row md:text-right">
               <div className="flex flex-col space-y-3 text-gray-500">
                 <h1>การสอบเข้า</h1>
-                <h1>การ์ดต้อนรับ</h1>
-                <h1>การเดินทาง</h1>
-                <h1>รายการสด</h1>
-                <h1>นโยบายความเป็นส่วนตัว</h1>
+                <Link href="/ticket">
+                  <h1>การ์ดต้อนรับ</h1>
+                </Link>
+                <Link href="/map">
+                  <h1>การเดินทาง</h1>
+                </Link>
+                <Link href="/stage">
+                  <h1>รายการสด</h1>
+                </Link>
+                <Link href="/tos">
+                  <h1>นโยบายความเป็นส่วนตัว</h1>
+                </Link>
               </div>
             </div>
             <SocialLink />

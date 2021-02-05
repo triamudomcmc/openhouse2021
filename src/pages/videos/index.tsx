@@ -4,10 +4,10 @@ import { Layout } from 'components/common/Layout'
 import { GetStaticProps } from 'next'
 import * as fs from 'fs'
 import parseJson from 'parse-json'
-import { Clubs } from '../../components/article/Clubs'
+import { Videos } from '../../components/videos/Videos'
 
 export const getStaticProps: GetStaticProps = async () => {
-  const fetchedData = fs.readFileSync('./_maps/articlesMap.json')
+  const fetchedData = fs.readFileSync('./_maps/videosMap.json')
 
   if (!fetchedData) {
     return {
@@ -27,11 +27,11 @@ const Articles = ({ contents }) => {
     <Layout>
       <div className="flex flex-col items-center w-full">
         <div className="max-w-full text-3xl font-bold text-center text-blue-400">
-          <h1 className="pt-6">บทความ</h1>
+          <h1 className="pt-6">วีดีโอ</h1>
         </div>
         {
           <div className="max-w-full md:w-8/12">
-            <Clubs contents={contents} />
+            <Videos contents={contents} />
           </div>
         }
       </div>

@@ -12,7 +12,7 @@ export const Live = ({ schedule }) => {
   const updatedSchedule = response.data || schedule
 
   return (
-    <div>
+    <div className="w-full">
       <div className="flex flex-col items-center justify-center w-full h-full mt-10 md:mt-56 font-display">
         <h1 className="text-2xl font-bold text-center mb-4 md:text-6xl lg:text-8xl bg-clip-text text-blue-400">
           ตารางรายการสด

@@ -12,7 +12,7 @@ export const Potrait = ({ width }) => {
         css.container
       )}
     >
-      <div className={classNames('border-2 border-white', css.card)}>
+      <div className={classNames('border-white', css.card)}>
         <div className={css.subContainer}>
           <div className="relative">
             <h1 className={css.mainHeader}>TRIAM UDOM</h1>
@@ -70,8 +70,8 @@ export const Square = ({ width }) => {
         css.squareContainer
       )}
     >
-      <div className={classNames('border-2 border-white', css.squareCard)}>
-        <div className={css.subContainer}>
+      <div className={classNames('border-white', css.squareCard)}>
+        <div className={css.squareSubContainer}>
           <div className="relative">
             <h1 className={css.mainHeader}>TRIAM UDOM</h1>
             <h1 className={css.subHeader}>ONLINE OPEN HOUSE 2021</h1>
@@ -82,7 +82,9 @@ export const Square = ({ width }) => {
             </div>
           </div>
           <div className={css.contentContainer}>
-            <h1 className={css.squareContentName}><span className="font-semibold">To</span> Narongdech</h1>
+            <h1 className={css.squareContentName}>
+              <span className="font-semibold">To</span> Narongdech
+            </h1>
             <p className={css.squareContentDescription}>
               ขอบใจสำหรับทุก ๆ สิ่งที่ณรงค์เดชปฏิบัติมาเพื่อชาติและราชบัลลัง
               เรานั้นได้ผ่านทุกสิ่งทุกอย่างมาด้วยกัน
