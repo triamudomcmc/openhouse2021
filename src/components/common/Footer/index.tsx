@@ -12,18 +12,29 @@ const Footer = () => {
             <div className="max-w-full text-xl font-bold text-gray-500">
               <h1>TRIAM UDOM ONLINE</h1>
               <h1>OPEN HOUSE 2021</h1>
-              <div className="flex flex-row hidden py-4 space-x-4 md:flex">
+              <div className="flex-row hidden py-4 space-x-4 md:flex">
                 <div>
-                  <Image src="/assets/vectors/facebook.svg" width={40} height={41} />
+                  <a href="https://www.facebook.com/TriamUdomOPH" target="_blank">
+                    <Image src="/assets/vectors/facebook.svg" width={40} height={41} />
+                  </a>
                 </div>
                 <div>
-                  <Image src="/assets/vectors/instagram.svg" width={40} height={41} />
+                  <a href="https://www.instagram.com/triamudom.oph/" target="_blank">
+                    <Image src="/assets/vectors/instagram.svg" width={40} height={41} />
+                  </a>
                 </div>
                 <div>
-                  <Image src="/assets/vectors/twitter.svg" width={40} height={41} />
+                  <a href="https://twitter.com/triamudomoph" target="_blank">
+                    <Image src="/assets/vectors/twitter.svg" width={40} height={41} />
+                  </a>
                 </div>
                 <div>
-                  <Image src="/assets/vectors/youtube.svg" width={40} height={41} />
+                  <a
+                    href="https://www.youtube.com/channel/UCHebOxW-sZkK8IFmmSFXU6Q"
+                    target="_blank"
+                  >
+                    <Image src="/assets/vectors/youtube.svg" width={40} height={41} />
+                  </a>
                 </div>
               </div>
               <div className="flex justify-center pt-3 pb-2 md:p-0 md:justify-start">
@@ -59,7 +70,7 @@ const Footer = () => {
             <div className="flex flex-col font-bold text-center md:flex-row md:text-right">
               <div className="flex flex-col space-y-3 text-gray-500">
                 <h1>การสอบเข้า</h1>
-                <Link href="/ticket">
+                <Link href="/tickets">
                   <h1>การ์ดต้อนรับ</h1>
                 </Link>
                 <Link href="/map">

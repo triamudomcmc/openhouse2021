@@ -7,6 +7,7 @@ import parseJson from 'parse-json'
 import { Clubs } from '../../components/article/Clubs'
 import matter from 'gray-matter'
 import { getAllPosts } from '../../lib/api'
+import Footer from 'components/common/Footer'
 
 export const getStaticProps: GetStaticProps = async () => {
   const fetchedData = getAllPosts(['slug', 'title', 'author', 'thumbnail'], '_articles')
@@ -33,11 +34,12 @@ const Articles = ({ contents }) => {
           <h1 className="pt-6">บทความ</h1>
         </div>
         {
-          <div className="max-w-full w-10/12 md:w-8/12">
+          <div className="w-10/12 max-w-full pb-12 md:w-8/12">
             <Clubs contents={contents} />
           </div>
         }
       </div>
+      <Footer />
     </Layout>
   )
 }

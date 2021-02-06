@@ -5,6 +5,7 @@ import { GetStaticProps } from 'next'
 import * as fs from 'fs'
 import parseJson from 'parse-json'
 import { Videos } from '../../components/videos/Videos'
+import Footer from 'components/common/Footer'
 
 export const getStaticProps: GetStaticProps = async () => {
   const fetchedData = fs.readFileSync('./_maps/videosMap.json')
@@ -30,11 +31,12 @@ const Articles = ({ contents }) => {
           <h1 className="pt-6">วีดีโอ</h1>
         </div>
         {
-          <div className="max-w-full w-10/12 md:w-8/12">
+          <div className="w-10/12 max-w-full pb-12 md:w-8/12">
             <Videos contents={contents} />
           </div>
         }
       </div>
+      <Footer />
     </Layout>
   )
 }
