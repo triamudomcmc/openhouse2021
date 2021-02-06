@@ -92,7 +92,7 @@ const Page = ({ nickname, wishes, haveWishes }) => {
             }}
             className="fixed cursor-pointer"
           >
-            <Toast type="failed" text="Sorry, Content restricted." show={warnToast} />
+            <Toast type="failed" text="Sorry, content restricted." show={warnToast} />
           </div>
           <nav className="flex flex-col items-center p-6 m-auto">
             <div className="flex flex-col justify-between md:w-7/12 md:flex-row">
