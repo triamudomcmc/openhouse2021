@@ -151,9 +151,9 @@ const Page = ({ nickname, wishes, haveWishes }) => {
                   <Link href="/tickets">
                     <h1>การ์ดต้อนรับ</h1>
                   </Link>
-                  <Link href="/map">
-                    <h1>การเดินทาง</h1>
-                  </Link>
+                  <a onClick={turnWarnToastOn} className="text-gray-400">
+                    การเดินทาง
+                  </a>
                   <h1 onClick={turnWarnToastOn} className="text-gray-400">
                     รายการสด
                   </h1>

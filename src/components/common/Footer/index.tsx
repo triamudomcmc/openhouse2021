@@ -99,9 +99,9 @@ const Footer = () => {
                 <Link href="/tickets">
                   <a>การ์ดต้อนรับ</a>
                 </Link>
-                <Link href="/map">
-                  <a>การเดินทาง</a>
-                </Link>
+                <a onClick={turnWarnToastOn} className="text-gray-400">
+                  การเดินทาง
+                </a>
                 <a onClick={turnWarnToastOn} className="text-gray-400">
                   รายการสด
                 </a>
