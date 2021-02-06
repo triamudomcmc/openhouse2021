@@ -1,12 +1,13 @@
 import { NakedSimplePortrait, NakedSimpleSquare, SimpleSquare } from 'components/ticket/Visual'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import useWindowSize from 'lib/hooks/useWindowSize'
 import Link from 'next/link'
 import { SocialLink } from 'components/common/SocialLink'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { getTicketData } from 'lib/db-admin'
 import { motion } from 'framer-motion'
+import Toast from '../../components/common/Toasts/Toast'
 
 type Props = {
   nickname: string
@@ -15,6 +16,17 @@ type Props = {
 
 const Page = ({ nickname }) => {
   const { width } = useWindowSize()
+  const [warnToast, setWarnToast] = useState(false)
+  const turnWarnToastOn = () => {
+    setWarnToast(prev => {
+      return true
+    })
+    setTimeout(() => {
+      setWarnToast(prev => {
+        return false
+      })
+    }, 4000)
+  }
 
   return (
     <div className="font-display">
@@ -24,7 +36,7 @@ const Page = ({ nickname }) => {
           <h1 className="text-sm font-black text-white md:text-2xl">OPEN HOUSE 2021</h1>
         </div>
         <div className="md:-mt-16">
-          <NakedSimplePortrait nickname={nickname} width={width > 500 ? width / 1.8 : width / 1} />
+          <NakedSimpleSquare nickname={nickname} width={width > 500 ? width / 1.8 : width / 1} />
         </div>
         <div className="flex flex-col items-center mb-24 md:-mt-16 md:mb-40">
           <h1 className="text-lg font-medium text-white md:text-4xl">การ์ดของ</h1>
@@ -51,6 +63,16 @@ const Page = ({ nickname }) => {
           </div>
         </div>
         <footer className="footer -mt-14 sfont-display">
+          <div
+            onClick={() => {
+              setWarnToast(prevState => {
+                return false
+              })
+            }}
+            className="fixed cursor-pointer"
+          >
+            <Toast type="failed" text="Sorry, Content restricted." show={warnToast} />
+          </div>
           <nav className="flex flex-col items-center p-6 m-auto">
             <div className="flex flex-col justify-between md:w-7/12 md:flex-row">
               <div className="max-w-full text-xl font-bold text-gray-500">
@@ -83,18 +105,18 @@ const Page = ({ nickname }) => {
               </div>
               <div className="flex flex-col font-bold text-center md:flex-row md:text-right md:pl-8">
                 <div className="flex flex-col space-y-3 text-gray-500">
-                  <Link href="/programmes">
-                    <h1>สายการเรียน</h1>
-                  </Link>
-                  <Link href="/clubs">
-                    <h1>ชมรม</h1>
-                  </Link>
-                  <Link href="/articles">
-                    <h1>บทความ</h1>
-                  </Link>
-                  <Link href="/videos">
-                    <h1>คลิปวิดีโอ</h1>
-                  </Link>
+                  <h1 onClick={turnWarnToastOn} className="text-gray-400">
+                    สายการเรียน
+                  </h1>
+                  <h1 onClick={turnWarnToastOn} className="text-gray-400">
+                    ชมรม
+                  </h1>
+                  <h1 onClick={turnWarnToastOn} className="text-gray-400">
+                    บทความ
+                  </h1>
+                  <h1 onClick={turnWarnToastOn} className="text-gray-400">
+                    คลิปวิดีโอ
+                  </h1>
                   <Link href="/contact">
                     <h1>ติดต่อ</h1>
                   </Link>
@@ -102,16 +124,18 @@ const Page = ({ nickname }) => {
               </div>
               <div className="flex flex-col font-bold text-center md:flex-row md:text-right">
                 <div className="flex flex-col space-y-3 text-gray-500">
-                  <h1>การสอบเข้า</h1>
-                  <Link href="/ticket">
+                  <h1 onClick={turnWarnToastOn} className="text-gray-400">
+                    การสอบเข้า
+                  </h1>
+                  <Link href="/tickets">
                     <h1>การ์ดต้อนรับ</h1>
                   </Link>
                   <Link href="/map">
                     <h1>การเดินทาง</h1>
                   </Link>
-                  <Link href="/stage">
-                    <h1>รายการสด</h1>
-                  </Link>
+                  <h1 onClick={turnWarnToastOn} className="text-gray-400">
+                    รายการสด
+                  </h1>
                   <Link href="/tos">
                     <h1>นโยบายความเป็นส่วนตัว</h1>
                   </Link>

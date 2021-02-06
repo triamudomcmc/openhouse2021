@@ -17,6 +17,10 @@ const Ticket = () => {
   const [imgLoading, setImgLoading] = useState(false)
 
   useEffect(() => {
+    Router.push('/')
+  }, [])
+
+  useEffect(() => {
     if (user) {
       updateUserData()
     }
