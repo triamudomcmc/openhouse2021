@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import cn from 'classnames'
-import Warning from '../Toasts/Warning'
+import Toast from '../Toasts/Toast'
 import { useAuth } from 'lib/auth'
 
 type Props = {

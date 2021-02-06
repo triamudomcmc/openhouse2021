@@ -25,32 +25,48 @@ export const Contact = () => {
                 </div>
                 <div className="flex flex-col justify-center pt-4 text-gray-500 md:flex-row md:border-r-2 md:border-gray-200">
                   <div className="flex flex-col flex-wrap">
-                    <div className="flex flex-col justify-center px-16 py-4 mx-3 mb-4 text-xs font-semibold bg-white shadow-md md:h-28 md:py-8 md:px-10 md:mb-8 md:text-lg rounded-xl md:rounded-3xl l">
-                      <div className="flex flex-row items-center justify-center">
-                        <Image src="/assets/vectors/instagram.svg" width={40} height={41} />
-                        <h1 className="pl-2">triamudom.oph</h1>
-                      </div>
-                    </div>
-                    <div className="flex flex-col justify-center px-16 py-4 mx-3 mb-4 text-xs font-semibold bg-white shadow-md md:h-28 md:py-8 md:px-10 md:mb-8 md:text-lg rounded-xl md:rounded-3xl ">
-                      <div className="flex flex-row items-center justify-center">
-                        <Image src="/assets/vectors/facebook.svg" width={40} height={41} />
-                        <h1 className="pl-2 md:w-32">TRIAM UDOM OPEN HOUSE</h1>
-                      </div>
-                    </div>
+                    <Link href="https://www.instagram.com/triamudom.oph/">
+                      <a target="_blank">
+                        <div className="flex flex-col hover:bg-gray-100 justify-center px-16 py-4 mx-3 mb-4 text-xs font-semibold bg-white shadow-md md:h-28 md:py-8 md:px-10 md:mb-8 md:text-lg rounded-xl md:rounded-3xl l">
+                          <div className="flex flex-row items-center justify-center">
+                            <Image src="/assets/vectors/instagram.svg" width={40} height={41} />
+                            <h1 className="pl-2">triamudom.oph</h1>
+                          </div>
+                        </div>
+                      </a>
+                    </Link>
+                    <Link href="https://www.facebook.com/TriamUdomOPH">
+                      <a target="_blank">
+                        <div className="flex flex-col justify-center hover:bg-gray-100 px-16 py-4 mx-3 mb-4 text-xs font-semibold bg-white shadow-md md:h-28 md:py-8 md:px-10 md:mb-8 md:text-lg rounded-xl md:rounded-3xl ">
+                          <div className="flex flex-row items-center justify-center">
+                            <Image src="/assets/vectors/facebook.svg" width={40} height={41} />
+                            <h1 className="pl-2 md:w-32">TRIAM UDOM OPEN HOUSE</h1>
+                          </div>
+                        </div>
+                      </a>
+                    </Link>
                   </div>
                   <div className="flex flex-col flex-wrap">
-                    <div className="flex flex-col justify-center px-16 py-4 mx-3 mb-4 text-xs font-semibold bg-white shadow-md md:h-28 md:py-8 md:px-10 md:mb-8 md:text-lg rounded-xl md:rounded-3xl ">
-                      <div className="flex flex-row items-center justify-center">
-                        <Image src="/assets/vectors/twitter.svg" width={40} height={41} />
-                        <h1 className="pl-2">@triamudomoph</h1>
-                      </div>
-                    </div>
-                    <div className="flex flex-col justify-center px-16 py-4 mx-3 mb-4 text-xs font-semibold bg-white shadow-md md:h-28 md:py-8 md:px-10 md:mb-8 md:text-lg rounded-xl md:rounded-3xl ">
-                      <div className="flex flex-row items-center justify-center">
-                        <Image src="/assets/vectors/youtube.svg" width={40} height={41} />
-                        <h1 className="pl-2">@triamudomoph</h1>
-                      </div>
-                    </div>
+                    <Link href="https://twitter.com/triamudomoph">
+                      <a target="_blank">
+                        <div className="flex flex-col justify-center px-16 hover:bg-gray-100 py-4 mx-3 mb-4 text-xs font-semibold bg-white shadow-md md:h-28 md:py-8 md:px-10 md:mb-8 md:text-lg rounded-xl md:rounded-3xl ">
+                          <div className="flex flex-row items-center justify-center">
+                            <Image src="/assets/vectors/twitter.svg" width={40} height={41} />
+                            <h1 className="pl-2">@triamudomoph</h1>
+                          </div>
+                        </div>
+                      </a>
+                    </Link>
+                    <Link href="https://www.youtube.com/channel/UCHebOxW-sZkK8IFmmSFXU6Q">
+                      <a target="_blank">
+                        <div className="flex flex-col justify-center px-16 hover:bg-gray-100 py-4 mx-3 mb-4 text-xs font-semibold bg-white shadow-md md:h-28 md:py-8 md:px-10 md:mb-8 md:text-lg rounded-xl md:rounded-3xl ">
+                          <div className="flex flex-row items-center justify-center">
+                            <Image src="/assets/vectors/youtube.svg" width={40} height={41} />
+                            <h1 className="pl-2">@triamudomoph</h1>
+                          </div>
+                        </div>
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -60,18 +76,26 @@ export const Contact = () => {
                 </div>
                 <div className="flex flex-col justify-center pt-4 text-gray-500 md:flex-row">
                   <div className="flex flex-col flex-wrap">
-                    <div className="flex flex-col justify-center px-16 py-4 mx-3 mb-4 text-xs font-semibold bg-white shadow-md md:h-28 md:py-8 md:px-10 md:mb-8 md:text-lg rounded-xl md:rounded-3xl ">
-                      <div className="flex flex-row items-center justify-center">
-                        <Image src="/assets/vectors/instagram.svg" width={40} height={41} />
-                        <h1 className="pl-2">tucmc_official</h1>
-                      </div>
-                    </div>
-                    <div className="flex flex-col justify-center px-16 py-4 mx-3 mb-4 text-xs font-semibold bg-white shadow-md md:h-28 md:py-8 md:px-10 md:mb-8 md:text-lg rounded-xl md:rounded-3xl ">
-                      <div className="flex flex-row items-center justify-center">
-                        <Image src="/assets/vectors/facebook.svg" width={40} height={41} />
-                        <h1 className="pl-2">TUCMC</h1>
-                      </div>
-                    </div>
+                    <Link href="https://www.instagram.com/tucmc_official/">
+                      <a target="_blank">
+                        <div className="flex flex-col justify-center hover:bg-gray-100 px-16 py-4 mx-3 mb-4 text-xs font-semibold bg-white shadow-md md:h-28 md:py-8 md:px-10 md:mb-8 md:text-lg rounded-xl md:rounded-3xl ">
+                          <div className="flex flex-row items-center justify-center">
+                            <Image src="/assets/vectors/instagram.svg" width={40} height={41} />
+                            <h1 className="pl-2">tucmc_official</h1>
+                          </div>
+                        </div>
+                      </a>
+                    </Link>
+                    <Link href="https://www.facebook.com/triamudomclubs">
+                      <a target="_blank">
+                        <div className="flex flex-col justify-center hover:bg-gray-100 px-16 py-4 mx-3 mb-4 text-xs font-semibold bg-white shadow-md md:h-28 md:py-8 md:px-10 md:mb-8 md:text-lg rounded-xl md:rounded-3xl ">
+                          <div className="flex flex-row items-center justify-center">
+                            <Image src="/assets/vectors/facebook.svg" width={40} height={41} />
+                            <h1 className="pl-2">TUCMC</h1>
+                          </div>
+                        </div>
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
