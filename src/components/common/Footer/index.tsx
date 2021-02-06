@@ -96,7 +96,7 @@ const Footer = () => {
                 <h1 onClick={turnWarnToastOn} className="text-gray-400">
                   การสอบเข้า
                 </h1>
-                <Link href="/ticket">
+                <Link href="/tickets">
                   <h1>การ์ดต้อนรับ</h1>
                 </Link>
                 <Link href="/map">

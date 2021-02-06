@@ -5,13 +5,14 @@ import {
   SimpleSquare
 } from 'components/ticket/Visual'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import useWindowSize from 'lib/hooks/useWindowSize'
 import Link from 'next/link'
 import { SocialLink } from 'components/common/SocialLink'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { getTicketData } from 'lib/db-admin'
 import { motion } from 'framer-motion'
+import Toast from '../../components/common/Toasts/Toast'
 
 type Props = {
   nickname: string
@@ -20,6 +21,17 @@ type Props = {
 
 const Page = ({ nickname, wishes, haveWishes }) => {
   const { width } = useWindowSize()
+  const [warnToast, setWarnToast] = useState(false)
+  const turnWarnToastOn = () => {
+    setWarnToast(prev => {
+      return true
+    })
+    setTimeout(() => {
+      setWarnToast(prev => {
+        return false
+      })
+    }, 4000)
+  }
 
   return (
     <div className="font-display">
@@ -35,15 +47,15 @@ const Page = ({ nickname, wishes, haveWishes }) => {
 
         <div className="md:-mt-16">
           {haveWishes ? (
-            <NakedSimplePortrait
-              nickname={nickname}
-              width={width > 500 ? width / 3.6 : width / 2}
-            />
-          ) : (
             <NakedPortrait
               nickname={nickname}
               width={width > 500 ? width / 3.6 : width / 2}
               wishes={wishes}
+            />
+          ) : (
+            <NakedSimplePortrait
+              nickname={nickname}
+              width={width > 500 ? width / 3.6 : width / 2}
             />
           )}
         </div>
@@ -72,6 +84,16 @@ const Page = ({ nickname, wishes, haveWishes }) => {
           </div>
         </div>
         <footer className="footer -mt-14 sfont-display">
+          <div
+            onClick={() => {
+              setWarnToast(prevState => {
+                return false
+              })
+            }}
+            className="fixed cursor-pointer"
+          >
+            <Toast type="failed" text="Sorry, Content restricted." show={warnToast} />
+          </div>
           <nav className="flex flex-col items-center p-6 m-auto">
             <div className="flex flex-col justify-between md:w-7/12 md:flex-row">
               <div className="max-w-full text-xl font-bold text-gray-500">
@@ -104,18 +126,18 @@ const Page = ({ nickname, wishes, haveWishes }) => {
               </div>
               <div className="flex flex-col font-bold text-center md:flex-row md:text-right md:pl-8">
                 <div className="flex flex-col space-y-3 text-gray-500">
-                  <Link href="/programmes">
-                    <h1>สายการเรียน</h1>
-                  </Link>
-                  <Link href="/clubs">
-                    <h1>ชมรม</h1>
-                  </Link>
-                  <Link href="/articles">
-                    <h1>บทความ</h1>
-                  </Link>
-                  <Link href="/videos">
-                    <h1>คลิปวิดีโอ</h1>
-                  </Link>
+                  <h1 onClick={turnWarnToastOn} className="text-gray-400">
+                    สายการเรียน
+                  </h1>
+                  <h1 onClick={turnWarnToastOn} className="text-gray-400">
+                    ชมรม
+                  </h1>
+                  <h1 onClick={turnWarnToastOn} className="text-gray-400">
+                    บทความ
+                  </h1>
+                  <h1 onClick={turnWarnToastOn} className="text-gray-400">
+                    คลิปวิดีโอ
+                  </h1>
                   <Link href="/contact">
                     <h1>ติดต่อ</h1>
                   </Link>
@@ -123,16 +145,18 @@ const Page = ({ nickname, wishes, haveWishes }) => {
               </div>
               <div className="flex flex-col font-bold text-center md:flex-row md:text-right">
                 <div className="flex flex-col space-y-3 text-gray-500">
-                  <h1>การสอบเข้า</h1>
-                  <Link href="/ticket">
+                  <h1 onClick={turnWarnToastOn} className="text-gray-400">
+                    การสอบเข้า
+                  </h1>
+                  <Link href="/tickets">
                     <h1>การ์ดต้อนรับ</h1>
                   </Link>
                   <Link href="/map">
                     <h1>การเดินทาง</h1>
                   </Link>
-                  <Link href="/stage">
-                    <h1>รายการสด</h1>
-                  </Link>
+                  <h1 onClick={turnWarnToastOn} className="text-gray-400">
+                    รายการสด
+                  </h1>
                   <Link href="/tos">
                     <h1>นโยบายความเป็นส่วนตัว</h1>
                   </Link>
@@ -165,7 +189,8 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
     return {
       props: {
         nickname: ticketData.nickname || null,
-        wishes: ticketData.wishes || null
+        wishes: ticketData.wishes || null,
+        haveWishes: ticketData.haveWishes || null
       },
       revalidate: 5
     }

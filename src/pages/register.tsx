@@ -12,6 +12,10 @@ const Register = () => {
   const auth = useAuth()
 
   useEffect(() => {
+    Router.push('/')
+  }, [])
+
+  useEffect(() => {
     if (auth.userData && Object.keys(auth.userData).length === 5) {
       Router.push('/onboard')
     }
