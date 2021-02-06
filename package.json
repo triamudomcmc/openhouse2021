@@ -53,7 +53,7 @@
   "scripts": {
     "dev": "NODE_OPTIONS=--max_old_space_size=8192 next",
     "build-debug": "NODE_OPTIONS='--inspect' next build",
-    "analyze": "ANALYZE=true yarn build",
+    "analyse": "ANALYZE=true yarn build",
     "build": "next build",
     "start": "next start",
     "add:live": "ts-node ./scripts/addTimetable.ts"

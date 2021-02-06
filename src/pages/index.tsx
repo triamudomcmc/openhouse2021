@@ -3,7 +3,6 @@ import { GetStaticProps } from 'next'
 import Countdown from 'react-countdown'
 
 import { CountdownContainer } from 'components/countdown'
-import { Index } from 'components/index'
 
 import { getAllLiveSchedule } from 'lib/db-admin'
 import TimetableData from 'types/Timetable'
@@ -17,7 +16,7 @@ type Props = {
 
 const Renderer = ({ completed, days, hours, minutes, seconds, schedule, stream, content }) => {
   if (completed) {
-    return <Index stream={stream} schedule={schedule} contents={content} />
+    return <div></div>
   } else {
     return (
       <CountdownContainer
