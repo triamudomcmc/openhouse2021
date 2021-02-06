@@ -33,7 +33,7 @@ const Renderer = ({ completed, days, hours, minutes, seconds, schedule, stream, 
 
 const IndexPage = ({ schedule, stream, content }) => (
   <Countdown
-    date={1610988496000}
+    date={1613596770000}
     renderer={({ completed, days, hours, minutes, seconds }) => (
       <Renderer
         completed={completed}

@@ -4,16 +4,24 @@
   clip-path: url(#headerCurveMobile);
 }
 
+.headerIcon {
+  width: 18rem;
+}
+
 @media (min-width: 768px) {
   .root {
     z-index: -1;
     min-height: 640px;
     clip-path: url(#headerCurve);
   }
+  .headerIcon {
+    width: 34rem;
+  }
 }
 
 .gradient {
-  @apply w-full bg-gradient-to-br from-blue-200 via-purple-200 to-red-200;
+  background: linear-gradient(97.19deg, #a7ddff 0.83%, #baa9ff 48.04%, #ffa0a0 99.62%);
+  @apply w-full;
 }
 
 .indexGradient {
