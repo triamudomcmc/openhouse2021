@@ -37,9 +37,6 @@ export const Nav = ({ hideSignIn, className }: Props) => {
           <span className="text-gray-200">วิดิโอ</span>
           <span className="text-gray-200">รายการสด</span>
           <span className="text-gray-200">การสอบเข้า</span> */}
-          <Link href="/contact">
-            <a>ติดต่อ</a>
-          </Link>
           {!hideSignIn ||
             (!loading && !user && (
               <Link href="/register">

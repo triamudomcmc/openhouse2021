@@ -57,9 +57,6 @@ export const Modal = (
             <Link href="/">
               <a>การสอบเข้า</a>
             </Link> */}
-            <Link href="/contact">
-              <a>ติดต่อ</a>
-            </Link>
             <SocialLink />
           </div>
           <div className="w-24 pt-8 md:w-48">

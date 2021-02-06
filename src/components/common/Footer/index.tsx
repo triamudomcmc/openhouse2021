@@ -86,9 +86,9 @@ const Footer = () => {
                 <a onClick={turnWarnToastOn} className="text-gray-400">
                   คลิปวิดีโอ
                 </a>
-                <Link href="/contact">
-                  <a>ติดต่อ</a>
-                </Link>
+                <a onClick={turnWarnToastOn} className="text-gray-400">
+                  ติดต่อ
+                </a>
               </div>
             </div>
             <div className="flex flex-col font-bold text-center md:flex-row md:text-right">

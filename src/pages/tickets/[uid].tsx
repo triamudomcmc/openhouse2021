@@ -132,9 +132,9 @@ const Page = ({ nickname, wishes, haveWishes }) => {
                   <h1 onClick={turnWarnToastOn} className="text-gray-400">
                     คลิปวิดีโอ
                   </h1>
-                  <Link href="/contact">
-                    <h1>ติดต่อ</h1>
-                  </Link>
+                  <h1 onClick={turnWarnToastOn} className="text-gray-400">
+                    ติดต่อ
+                  </h1>
                 </div>
               </div>
               <div className="flex flex-col font-bold text-center md:flex-row md:text-right">
