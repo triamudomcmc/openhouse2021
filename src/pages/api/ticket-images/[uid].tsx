@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import screenshot from 'lib/screenshot'
 import { getTicketData } from 'lib/db-admin'
+import { SITE_URL } from 'lib/constants'
 
 export default async function ticketImages(req: NextApiRequest, res: NextApiResponse) {
   const {
@@ -10,7 +11,7 @@ export default async function ticketImages(req: NextApiRequest, res: NextApiResp
   if (uid) {
     const ticketData = await getTicketData(uid)
     const file = await screenshot(
-      `http://localhost:3000/ticket-image?nickname=${encodeURIComponent(
+      `${SITE_URL}/ticket-image?nickname=${encodeURIComponent(
         ticketData?.nickname
       )}&wishes=${encodeURIComponent(ticketData?.wishes)}&type=${encodeURIComponent(`${type}`)}`
     )
