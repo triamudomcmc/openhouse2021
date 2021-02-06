@@ -7,6 +7,8 @@ import { Facebook } from 'components/common/Logo/Facebook'
 import { Layout } from 'components/common/Layout'
 
 import { useAuth } from 'lib/auth'
+import Link from 'next/link'
+import { Email } from '../components/common/Logo/Email'
 
 const Register = () => {
   const auth = useAuth()
@@ -48,6 +50,15 @@ const Register = () => {
                 <Facebook className="w-5 h-5 mr-4" />
                 Sign in with Facebook
               </button>
+              <Link href="/signup">
+                <button
+                  type="button"
+                  className="inline-flex items-center justify-center w-full px-5 py-2 text-base font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md hover:bg-gray-100 md:px-10 md:text-xl focus:outline-none"
+                >
+                  <Email className="w-5 h-5 mr-4" />
+                  Sign in with Email
+                </button>
+              </Link>
             </div>
           </div>
         </div>

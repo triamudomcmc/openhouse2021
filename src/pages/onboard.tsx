@@ -3,13 +3,31 @@ import { Layout } from 'components/common/Layout'
 import RegisterForm from 'components/RegisterForm'
 import { useAuth } from 'lib/auth'
 import Router from 'next/router'
+import firebase from 'firebase/app'
+import { getCurrentUserData } from '../lib/db'
 
 const Onboard = () => {
+  const auth = useAuth()
   const { user, loading, userData } = useAuth()
 
   useEffect(() => {
-    if (!loading && !user) {
-      Router.push('/register')
+    if (firebase.auth().isSignInWithEmailLink(window.location.href)) {
+      let email = window.localStorage.getItem('emailForSignIn')
+      console.log(email)
+      if (email !== null) {
+        auth.signinWithEmail(email, window.location.href)
+        window.localStorage.removeItem('emailForSignIn')
+      } else {
+        Router.push('/signup')
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!firebase.auth().isSignInWithEmailLink(window.location.href)) {
+      if (!loading && !user) {
+        Router.push('/register')
+      }
     }
   }, [loading, user])
 

@@ -35,6 +35,7 @@ interface IAuthContext {
   loading: boolean
   signinWithFacebook: (redirect: string) => Promise<void>
   signinWithGoogle: (redirect: string) => Promise<void>
+  signinWithEmail: (email: string, emaillink: string) => Promise<void>
   signout: () => void
   updateUserData: () => Promise<void>
 }
@@ -101,6 +102,14 @@ function useProvideAuth() {
     }
   }
 
+  const signinWithEmail = async (email: string, emaillink: string) => {
+    setLoading(true)
+
+    const response = await firebase.auth().signInWithEmailLink(email, emaillink)
+
+    handleUser(response.user)
+  }
+
   const signinWithGoogle = async (redirect: string) => {
     setLoading(true)
 
@@ -132,6 +141,7 @@ function useProvideAuth() {
     loading,
     signinWithFacebook,
     signinWithGoogle,
+    signinWithEmail,
     signout,
     updateUserData
   }

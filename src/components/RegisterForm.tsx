@@ -5,7 +5,7 @@ import * as Yup from 'yup'
 import Router from 'next/router'
 
 import Input from 'components/ui/Input'
-import { updateUser } from 'lib/db'
+import { getCurrentUserData, updateUser } from 'lib/db'
 import { useAuth } from 'lib/auth'
 import { getRandomWishes } from 'utils/wishes'
 import Link from 'next/link'
@@ -33,11 +33,16 @@ const RegisterForm = () => {
           wishes: getRandomWishes()
         }
 
-        setSubmitting(true)
-        await updateUser(userData.uid, payload)
-        setSubmitting(false)
+        const data = await getCurrentUserData(userData.uid)
+        if (Object.keys(data).length >= 15) {
+          Router.reload()
+        } else {
+          setSubmitting(true)
+          await updateUser(userData.uid, payload)
+          setSubmitting(false)
 
-        Router.push('/tickets')
+          Router.push('/tickets')
+        }
       }}
     >
       {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
