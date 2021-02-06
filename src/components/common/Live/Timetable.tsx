@@ -33,10 +33,8 @@ const Timetable: React.FC<ITimetableProps> = ({ data, date, ...restProps }) => {
     i++
     return i === 2 ? (
       <div className="flex flex-row px-3 py-2 rounded-md shadow-md" key={value.id}>
-        <div className="flex items-center justify-center w-1/2 pr-5 text-smoxs sm:text-base">
-          <span className="font-semibold text-gray-600">
-            {value.startTime.time} - {value.endTime.time}
-          </span>
+        <div className="flex items-center justify-center w-1/2 pr-5 text-xl sm:text-3xl">
+          <span className="font-medium text-gray-600 md:text-gray-500">{value.startTime.time}</span>
         </div>
         <div className="flex flex-col w-full leading-4">
           <span className="text-xs font-semibold text-gray-800 sm:text-base">{value.title}</span>
@@ -45,10 +43,8 @@ const Timetable: React.FC<ITimetableProps> = ({ data, date, ...restProps }) => {
       </div>
     ) : (
       <div className="flex flex-row px-3 py-2 rounded-md shadow-md" key={value.id}>
-        <div className="flex items-center justify-center w-1/2 pr-5 text-smoxs sm:text-base">
-          <span className="font-semibold text-gray-600">
-            {value.startTime.time} - {value.endTime.time}
-          </span>
+        <div className="flex items-center justify-center w-1/2 pr-5 text-xl sm:text-3xl">
+          <span className="font-medium text-gray-600 md:text-gray-500">{value.startTime.time}</span>
         </div>
         <div className="flex flex-col w-full leading-4">
           <span className="text-xs font-semibold text-gray-800 sm:text-base">{value.title}</span>
