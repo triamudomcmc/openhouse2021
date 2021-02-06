@@ -8,6 +8,7 @@ import { useAuth } from 'lib/auth'
 import getImgDownloadQS from 'utils/getImgDownloadQS'
 import { motion } from 'framer-motion'
 import Toast from '../../components/common/Toasts/Toast'
+import { SITE_URL } from 'lib/constants'
 
 const Ticket = () => {
   const { loading, user, userData, updateUserData } = useAuth()
@@ -22,7 +23,7 @@ const Ticket = () => {
   }, [user])
 
   const downloadLink = useRef<HTMLAnchorElement>()
-  const link = `https://openhouse.triamudom.ac.th/tickets/${userData?.uid}`
+  const link = `${SITE_URL}/tickets/${userData?.uid}`
   const permalink = encodeURIComponent(link)
   const downloadUrl = `/api/ticket-images/${userData?.uid}?type=${encodeURIComponent(
     getImgDownloadQS(userData?.wishes ? 'wishes' : 'nowishes', squareDis)
