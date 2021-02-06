@@ -16,7 +16,7 @@ const Register = () => {
 
   useEffect(() => {
     if (window.localStorage.getItem('emailForSignIn') !== null) {
-      Router.push('/')
+      Router.push('/signup')
     }
   }, [])
 
