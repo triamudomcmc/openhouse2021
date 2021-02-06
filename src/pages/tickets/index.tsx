@@ -34,6 +34,7 @@ const Ticket = () => {
   )}`
   const text = encodeURIComponent(`#TriamUdomOnlineOpenHouse2021 #triamOPH2021 #tu84 #tu85`)
   const tweetUrl = `https://twitter.com/intent/tweet?url=${permalink}&via=triamudomoph&text=${text}`
+  const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${permalink}`
 
   useEffect(() => {
     setImgReady(false)
@@ -174,10 +175,15 @@ const Ticket = () => {
               <img className="w-6 md:w-9" src="/assets/icon/twitter.png" />
               Share to Twitter
             </a>
-            <div className="flex flex-col items-center justify-center justify-between w-1/3 py-2 font-medium text-center text-gray-400 bg-white shadow-lg hover:bg-gray-100 text-xxs md:text-base md:py-4 rounded-xl">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={facebookUrl}
+              className="flex flex-col items-center justify-center justify-between w-1/3 py-2 font-medium text-center text-gray-400 bg-white shadow-lg hover:bg-gray-100 text-xxs md:text-base md:py-4 rounded-xl"
+            >
               <img className="w-6 md:w-auto" src="/assets/icon/facebook.png" />
               Share to Facebook
-            </div>
+            </a>
             <a
               className="flex flex-col items-center justify-center w-1/3 py-2 font-medium text-center text-gray-400 bg-white shadow-lg hover:bg-gray-100 md:justify-between text-xxs md:text-base md:py-4 rounded-xl"
               href={imgLoading ? undefined : downloadUrl}
