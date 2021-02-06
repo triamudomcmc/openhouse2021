@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import cn from 'classnames'
+import Warning from '../Toasts/Warning'
 
 type Props = {
   hideSignIn: boolean
@@ -29,21 +30,11 @@ export const Nav = ({ hideSignIn, className }: Props) => {
           <Link href="/">
             <a>หน้าแรก</a>
           </Link>
-          <Link href="/clubs">
-            <a>ชมรม</a>
-          </Link>
-          <Link href="/articles">
-            <a>บทความ</a>
-          </Link>
-          <Link href="/videos">
-            <a>วิดิโอ</a>
-          </Link>
-          <Link href="/stage">
-            <a>รายการสด</a>
-          </Link>
-          <Link href="/">
-            <a>การสอบเข้า</a>
-          </Link>
+          <span className="text-gray-200">ชมรม</span>
+          <span className="text-gray-200">บทความ</span>
+          <span className="text-gray-200">วิดิโอ</span>
+          <span className="text-gray-200">รายการสด</span>
+          <span className="text-gray-200">การสอบเข้า</span>
           <Link href="/contact">
             <a>ติดต่อ</a>
           </Link>
