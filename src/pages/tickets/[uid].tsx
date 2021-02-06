@@ -1,4 +1,4 @@
-import { NakedSimpleSquare, SimpleSquare } from 'components/ticket/Visual'
+import { NakedSimplePortrait, NakedSimpleSquare, SimpleSquare } from 'components/ticket/Visual'
 import Image from 'next/image'
 import React from 'react'
 import useWindowSize from 'lib/hooks/useWindowSize'
@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { SocialLink } from 'components/common/SocialLink'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { getTicketData } from 'lib/db-admin'
+import { motion } from 'framer-motion'
 
 type Props = {
   nickname: string
@@ -23,7 +24,7 @@ const Page = ({ nickname }) => {
           <h1 className="text-sm font-black text-white md:text-2xl">OPEN HOUSE 2021</h1>
         </div>
         <div className="md:-mt-16">
-          <NakedSimpleSquare nickname={nickname} width={width > 500 ? width / 1.8 : width / 1} />
+          <NakedSimplePortrait nickname={nickname} width={width > 500 ? width / 1.8 : width / 1} />
         </div>
         <div className="flex flex-col items-center mb-24 md:-mt-16 md:mb-40">
           <h1 className="text-lg font-medium text-white md:text-4xl">การ์ดของ</h1>
@@ -38,9 +39,14 @@ const Page = ({ nickname }) => {
                 <h1 className="text-base text-center text-purple-250">ลงทะเบียนเข้าร่วมงาน</h1>
                 <h1 className="text-base text-center text-purple-250">เพื่อรับการ์ดของคุณ</h1>
               </div>
-              <div className="flex flex-row justify-center w-full py-3 text-base font-black text-white shadow-md md:text-xl rounded-xl bg-gradient-to-r from-blue-70 via-purple-450 to-red-250">
-                ลงทะเบียน
-              </div>
+              <Link href="/register">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  className="flex cursor-pointer flex-row justify-center w-full py-3 text-base font-black text-white shadow-md md:text-xl rounded-xl bg-gradient-to-r from-blue-70 via-purple-450 to-red-250"
+                >
+                  ลงทะเบียน
+                </motion.button>
+              </Link>
             </div>
           </div>
         </div>
