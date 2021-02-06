@@ -11,7 +11,7 @@ type Props = {
 }
 
 export const Layout = ({ children, className, hideSignIn }: Props) => (
-  <div className="font-display">
+  <div className="min-h-screen font-display">
     <Nav hideSignIn={hideSignIn} className="z-50 hidden md:block" />
     <MobileMenu className="z-50 block md:hidden" />
     <div className={s.root}>
