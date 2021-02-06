@@ -26,7 +26,7 @@ const Ticket = () => {
   const link = `${SITE_URL}/tickets/${userData?.uid}`
   const permalink = encodeURIComponent(link)
   const downloadUrl = `/api/ticket-images/${userData?.uid}?type=${encodeURIComponent(
-    getImgDownloadQS(userData?.wishes ? 'wishes' : 'nowishes', squareDis)
+    getImgDownloadQS(userData?.haveWishes ? 'wishes' : 'nowishes', squareDis)
   )}`
   const text = encodeURIComponent(`#TriamUdomOnlineOpenHouse2021 #triamOPH2021 #tu84 #tu85`)
   const tweetUrl = `https://twitter.com/intent/tweet?url=${permalink}&via=triamudomoph&text=${text}`
