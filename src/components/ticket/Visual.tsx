@@ -238,7 +238,7 @@ export const Square = ({ width, nickname, wishes, number = 120221 }: Props) => {
           </div>
           <div className={css.contentContainer}>
             <h1 className={css.squareContentName}>
-              <span className="font-semibold">TO</span> {nickname}
+              <span className={css.squareTo}>TO</span> {nickname}
             </h1>
             <p className={css.squareContentDescription}>{wishes}</p>
           </div>

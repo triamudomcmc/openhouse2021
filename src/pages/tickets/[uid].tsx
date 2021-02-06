@@ -22,6 +22,7 @@ type Props = {
 const Page = ({ nickname, wishes, haveWishes }) => {
   const { width } = useWindowSize()
   const [warnToast, setWarnToast] = useState(false)
+  const cardWidth: number = width / 2 < 500 ? (width / 2 < 350 ? 350 : width / 2) : 500
   const turnWarnToastOn = () => {
     setWarnToast(prev => {
       return true
@@ -37,31 +38,24 @@ const Page = ({ nickname, wishes, haveWishes }) => {
     <div className="font-display">
       <div className="flex flex-col items-center justify-center bg-cover bg-ticket-show-bg">
         <Link href="/">
-          <div className="mt-4 md:mt-10">
+          <motion.div className="mt-4 md:mt-10 z-10 cursor-pointer" whileHover={{ scale: 1.05 }}>
             <h1 className="text-xs font-black leading-3 text-white md:text-xl">
               TRIAM UDOM ONLINE
             </h1>
             <h1 className="text-sm font-black text-white md:text-2xl">OPEN HOUSE 2021</h1>
-          </div>
+          </motion.div>
         </Link>
 
-        <div className="md:-mt-16">
+        <div className="pt-0 md:pt-14 md:-mt-16">
           {haveWishes ? (
-            <NakedPortrait
-              nickname={nickname}
-              width={width > 500 ? width / 3.6 : width / 2}
-              wishes={wishes}
-            />
+            <NakedPortrait nickname={nickname} width={cardWidth} wishes={wishes} />
           ) : (
-            <NakedSimplePortrait
-              nickname={nickname}
-              width={width > 500 ? width / 3.6 : width / 2}
-            />
+            <NakedSimplePortrait nickname={nickname} width={cardWidth} />
           )}
         </div>
-        <div className="flex flex-col items-center mb-24 md:-mt-16 md:mb-40">
+        <div className="flex flex-col items-center mb-24 -mt-10 md:-mt-16 md:mb-40">
           <h1 className="mt-8 text-lg font-medium text-white md:text-4xl">การ์ดของ</h1>
-          <h1 className="text-lg font-semibold text-white md:text-4xl">{nickname}</h1>
+          <h1 className="text-lg font-semibold leading-4 text-white md:text-4xl">{nickname}</h1>
         </div>
       </div>
       <div className="bg-white">
@@ -92,7 +86,7 @@ const Page = ({ nickname, wishes, haveWishes }) => {
             }}
             className="fixed cursor-pointer"
           >
-            <Toast type="failed" text="Sorry, content restricted." show={warnToast} />
+            <Toast type="failed" text="เนื้อหายังไม่เปิดใช้งาน" show={warnToast} />
           </div>
           <nav className="flex flex-col items-center p-6 m-auto">
             <div className="flex flex-col justify-between md:w-7/12 md:flex-row">
@@ -151,9 +145,9 @@ const Page = ({ nickname, wishes, haveWishes }) => {
                   <Link href="/tickets">
                     <h1>การ์ดต้อนรับ</h1>
                   </Link>
-                  <Link href="/map">
-                    <h1>การเดินทาง</h1>
-                  </Link>
+                  <a onClick={turnWarnToastOn} className="text-gray-400">
+                    การเดินทาง
+                  </a>
                   <h1 onClick={turnWarnToastOn} className="text-gray-400">
                     รายการสด
                   </h1>

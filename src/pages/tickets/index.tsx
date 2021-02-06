@@ -69,6 +69,8 @@ const Ticket = () => {
     }, 4000)
   }
 
+  const cardWidth: number = width / 2 < 500 ? (width / 2 < 350 ? 350 : width / 2) : 500
+
   const copy = () => {
     turnToastOn()
     const url = urlText.current.value
@@ -83,21 +85,21 @@ const Ticket = () => {
   const getTicket = () => {
     if (userData?.haveWishes) {
       if (squareDis) {
-        return <Square width={width / 2} nickname={userData?.nickname} wishes={userData?.wishes} />
+        return <Square width={cardWidth} nickname={userData?.nickname} wishes={userData?.wishes} />
       } else {
         return (
-          <Portrait width={width / 2} nickname={userData?.nickname} wishes={userData?.wishes} />
+          <Portrait width={cardWidth} nickname={userData?.nickname} wishes={userData?.wishes} />
         )
       }
     } else {
       if (squareDis) {
         return (
-          <SimpleSquare width={width / 2} nickname={userData?.nickname} wishes={userData?.wishes} />
+          <SimpleSquare width={cardWidth} nickname={userData?.nickname} wishes={userData?.wishes} />
         )
       } else {
         return (
           <SimplePortrait
-            width={width / 2}
+            width={cardWidth}
             nickname={userData?.nickname}
             wishes={userData?.wishes}
           />
@@ -124,7 +126,7 @@ const Ticket = () => {
         }}
         className="fixed cursor-pointer"
       >
-        <Toast type="success" text="Link copied." show={toast} />
+        <Toast type="success" text="คัลลอกลิงก์สำเร็จ" show={toast} />
       </div>
       <div className="w-full h-full py-16">
         <div className="flex flex-col items-center">
@@ -161,7 +163,7 @@ const Ticket = () => {
             </div>
           )}
           {!loading && user && getTicket()}
-          <div style={{ width: width / 2 }} className="flex flex-row mt-6 mb-10 space-x-2">
+          <div style={{ width: cardWidth }} className="flex flex-row mt-6 mb-10 space-x-2">
             <a
               className="flex flex-col items-center justify-center justify-between w-1/3 py-2 font-medium text-center text-gray-400 bg-white shadow-lg hover:bg-gray-100 text-xxs md:text-base md:py-4 rounded-xl"
               href={tweetUrl}
@@ -197,7 +199,7 @@ const Ticket = () => {
               Download
             </a>
           </div>
-          <div className="mb-16" style={{ width: width / 2 }}>
+          <div className="mb-16" style={{ width: cardWidth }}>
             <h1 className="ml-3 text-sm font-medium text-gray-400 md:ml-6 md:text-xl">
               Your ticket URL
             </h1>

@@ -26,7 +26,7 @@ export const CTA = () => {
             type="button"
             className="inline-flex items-center px-16 py-3 text-2xl font-black text-white border border-transparent rounded-full bg-gradient-to-r from-blue-70 via-purple-450 to-red-250 md:py-4 w-max md:text-3xl font-display focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-200"
           >
-            บัตรเข้าร่วมงาน
+            การ์ดต้อนรับ
           </motion.button>
         </Link>
       )}

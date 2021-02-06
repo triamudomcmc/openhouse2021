@@ -85,7 +85,7 @@ export const MobileMenu = ({ className }) => {
     <>
       <div
         className={classNames(
-          'top-0 justify-center w-full h-24 max-w-full md:flex md:h-28 bg-gradient-to-r from-blue-200 via-purple-200 to-red-200',
+          'top-0 justify-center w-full h-24 max-w-full md:flex md:h-28 bg-gradient-to-r from-blue-70 via-purple-450 to-red-250',
           className
         )}
       >

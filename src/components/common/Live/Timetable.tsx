@@ -13,7 +13,7 @@ const Timetable: React.FC<ITimetableProps> = ({ data, date, ...restProps }) => {
 
   if (date === 12) {
     heading = (
-      <div className="rounded-full bg-gradient-to-r from-blue-25 to-purple-300">
+      <div className="rounded-full bg-gradient-to-r from-blue-70 via-purple-450 to-red-250">
         <span className="flex items-center justify-center py-2 text-xl font-black text-white px-14 whitespace-nowrap md:py-4 md:px-24 md:text-3xl">
           12 FEBRUARY 2021
         </span>
@@ -21,7 +21,7 @@ const Timetable: React.FC<ITimetableProps> = ({ data, date, ...restProps }) => {
     )
   } else if (date === 13) {
     heading = (
-      <div className="rounded-full bg-gradient-to-r from-purple-200 to-red-200">
+      <div className="rounded-full bg-gradient-to-r from-blue-70 via-purple-450 to-red-250">
         <span className="flex items-center justify-center py-2 text-xl font-black text-white px-14 whitespace-nowrap md:py-4 md:px-24 md:text-3xl">
           13 FEBRUARY 2021
         </span>
@@ -32,36 +32,15 @@ const Timetable: React.FC<ITimetableProps> = ({ data, date, ...restProps }) => {
   const table = filtered.map((value: TimetableData) => {
     i++
     return i === 2 ? (
-      <div
-        className={
-          date === 12
-            ? 'flex flex-row px-3 py-2 rounded-md shadow-md bg-gradient-to-r from-blue-25' +
-              ' to-purple-300'
-            : 'flex flex-row px-3 py-2 rounded-md shadow-md bg-gradient-to-r from-purple-200 to-red-200'
-        }
-        key={value.id}
-      >
-        <div className="flex flex-col items-center justify-center w-1/2 pr-5 text-smoxs sm:text-base">
-          <div className="flex flex-col">
-            <span className="font-semibold text-white">
-              {value.startTime.time} - {value.endTime.time}
-            </span>
-            <span
-              className={
-                date === 12
-                  ? 'text-blue-25 text-center bg-white rounded-md md:rounded-lg' +
-                    ' text-xxs md:text-xs font-black'
-                  : 'text-purple-200 text-center bg-white rounded-md md:rounded-lg' +
-                    ' text-xxs md:text-xs font-black'
-              }
-            >
-              กำลังถ่ายทอดสด
-            </span>
-          </div>
+      <div className="flex flex-row px-3 py-2 rounded-md shadow-md" key={value.id}>
+        <div className="flex items-center justify-center w-1/2 pr-5 text-smoxs sm:text-base">
+          <span className="font-semibold text-gray-600">
+            {value.startTime.time} - {value.endTime.time}
+          </span>
         </div>
         <div className="flex flex-col w-full leading-4">
-          <span className="text-xs font-bold text-white sm:text-base">{value.title}</span>
-          <span className="text-xs font-normal text-white sm:text-sm">{value.club}</span>
+          <span className="text-xs font-semibold text-gray-800 sm:text-base">{value.title}</span>
+          <span className="text-xs font-normal text-gray-700 sm:text-sm">{value.club}</span>
         </div>
       </div>
     ) : (

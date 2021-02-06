@@ -170,7 +170,7 @@
 .simpleContentName {
   font-size: calc(var(--width) / 22);
   margin-bottom: calc(var(--width) / 30);
-  @apply mt-4 font-bold text-center text-white;
+  @apply font-bold text-center text-white;
 }
 
 .simpleSquareBigContentName {
@@ -189,12 +189,18 @@
   @apply font-bold text-white;
 }
 
+.squareTo {
+  font-size: calc(var(--width) / 34);
+  @apply font-semibold text-white;
+}
+
 .contentDescription {
   font-size: calc(var(--width) / 32);
   @apply font-semibold text-white;
 }
 
 .squareContentDescription {
+  margin-top: calc(var(--width) / 100);
   font-size: calc(var(--width) / 36);
   @apply font-semibold text-white;
 }

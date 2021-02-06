@@ -30,7 +30,7 @@ const Footer = () => {
           }}
           className="fixed cursor-pointer"
         >
-          <Toast type="failed" text="Sorry, content restricted." show={warnToast} />
+          <Toast type="failed" text="เนื้อหายังไม่เปิดใช้งาน" show={warnToast} />
         </div>
         <nav className="flex flex-col items-center p-6 m-auto">
           <div className="flex flex-col justify-between md:w-7/12 md:flex-row">
@@ -99,9 +99,9 @@ const Footer = () => {
                 <Link href="/tickets">
                   <a>การ์ดต้อนรับ</a>
                 </Link>
-                <Link href="/map">
-                  <a>การเดินทาง</a>
-                </Link>
+                <a onClick={turnWarnToastOn} className="text-gray-400">
+                  การเดินทาง
+                </a>
                 <a onClick={turnWarnToastOn} className="text-gray-400">
                   รายการสด
                 </a>

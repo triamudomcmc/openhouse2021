@@ -458,7 +458,7 @@ const RegisterForm = () => {
               <div className="w-full border-t border-gray-300"></div>
             </div>
             <div className="relative flex justify-start">
-              <span className="px-2 text-sm text-gray-500 bg-white">คำอวยพร</span>
+              <span className="px-2 text-sm text-gray-500 bg-white">การ์ดต้อนรับ</span>
             </div>
           </div>
 
@@ -473,7 +473,7 @@ const RegisterForm = () => {
                 onBlur={handleBlur}
               />
               <label htmlFor="haveWishes" className="block ml-2 text-sm text-gray-900">
-                รับการ์ดอวยพร
+                รับคำอวยพรจากรุ่นพี่เตรียมฯ
               </label>
             </div>
 

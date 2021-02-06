@@ -14,7 +14,7 @@ export const Nav = ({ hideSignIn, className }: Props) => {
   return (
     <div
       className={cn(
-        'top-0 justify-center hidden w-full h-16 max-w-full shadow-md md:flex md:h-28 bg-gradient-to-r from-blue-200 via-purple-200 to-red-200',
+        'top-0 justify-center hidden w-full h-16 max-w-full shadow-md md:flex md:h-28 bg-gradient-to-r from-blue-70 via-purple-450 to-red-250',
         className
       )}
     >

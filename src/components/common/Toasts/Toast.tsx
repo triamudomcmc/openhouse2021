@@ -52,7 +52,7 @@ const Toast = ({ show, text, type = 'success' }) => {
   return show ? (
     <motion.div
       className={classNames(
-        'fixed -right-96 top-2 flex items-center border-l-4 py-2 px-3 rounded-l-md shadow-md mb-2',
+        'fixed -right-96 top-2 flex items-center border-l-4 py-2 px-3 rounded-l-md shadow-md mb-2 z-50',
         bg
       )}
       animate={{ x: -380 }}
@@ -63,7 +63,7 @@ const Toast = ({ show, text, type = 'success' }) => {
   ) : (
     <motion.div
       className={classNames(
-        'fixed -right-96 top-2 flex items-center border-l-4 py-2 px-3 rounded-l-md shadow-md mb-2',
+        'fixed -right-96 top-2 flex items-center border-l-4 py-2 px-3 rounded-l-md shadow-md mb-2 z-50',
         bg
       )}
       animate={{ x: 4 }}
