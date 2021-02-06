@@ -42,7 +42,7 @@ export const Modal = (
             <Link href="/">
               <a>หน้าแรก</a>
             </Link>
-            <Link href="/clubs">
+            {/* <Link href="/clubs">
               <a>ชมรม</a>
             </Link>
             <Link href="/articles">
@@ -56,7 +56,7 @@ export const Modal = (
             </Link>
             <Link href="/">
               <a>การสอบเข้า</a>
-            </Link>
+            </Link> */}
             <Link href="/contact">
               <a>ติดต่อ</a>
             </Link>

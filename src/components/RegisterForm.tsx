@@ -8,6 +8,7 @@ import Input from 'components/ui/Input'
 import { updateUser } from 'lib/db'
 import { useAuth } from 'lib/auth'
 import { getRandomWishes } from 'utils/wishes'
+import school from 'data/school'
 
 const RegisterForm = () => {
   const { userData } = useAuth()
@@ -18,13 +19,13 @@ const RegisterForm = () => {
         name: '',
         lastname: '',
         nickname: '',
-        status: 'เสียชีวิต',
+        status: 'นักเรียน',
         level: 'มัธยมศึกษาปีที่ 1',
-        school: 'วังไกลกังวล',
+        school: '',
         news: [],
         purpose: [],
         tos: false,
-        haveWishes: true
+        haveWishes: false
       }}
       onSubmit={async (values, { setSubmitting }) => {
         const payload = {
@@ -70,6 +71,7 @@ const RegisterForm = () => {
                 <option>เด็กหญิง</option>
                 <option>ว่าที่ร้อยตรี</option>
                 <option>ว่าที่ร้อยตรีหญิง</option>
+                <option>อื่น ๆ</option>
               </select>
             </div>
 
@@ -163,45 +165,48 @@ const RegisterForm = () => {
               </p>
             </div>
 
-            <div>
-              <label htmlFor="level" className="block text-sm font-medium text-gray-700">
-                ระดับชั้น
-              </label>
-              <select
-                id="level"
-                name="level"
-                className="block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 rounded-md focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.level}
-              >
-                <option>ต่ำกว่ามัธยมศึกษาปีที่ 1</option>
-                <option>มัธยมศึกษาปีที่ 1</option>
-                <option>มัธยมศึกษาปีที่ 2</option>
-                <option>มัธยมศึกษาปีที่ 3</option>
-                <option>มัธยมศึกษาปีที่ 4</option>
-                <option>มัธยมศึกษาปีที่ 5</option>
-                <option>มัธยมศึกษาปีที่ 6</option>
-              </select>
-              <p className="my-2 text-sm text-red-500">
-                {errors.level && touched.level && errors.level}
-              </p>
-            </div>
+            {values.status === 'นักเรียน' && (
+              <div>
+                <label htmlFor="level" className="block text-sm font-medium text-gray-700">
+                  ระดับชั้น
+                </label>
+                <select
+                  id="level"
+                  name="level"
+                  className="block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 rounded-md focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.level}
+                >
+                  <option>ต่ำกว่ามัธยมศึกษาปีที่ 1</option>
+                  <option>มัธยมศึกษาปีที่ 1</option>
+                  <option>มัธยมศึกษาปีที่ 2</option>
+                  <option>มัธยมศึกษาปีที่ 3</option>
+                  <option>มัธยมศึกษาปีที่ 4</option>
+                  <option>มัธยมศึกษาปีที่ 5</option>
+                  <option>มัธยมศึกษาปีที่ 6</option>
+                </select>
+                <p className="my-2 text-sm text-red-500">
+                  {errors.level && touched.level && errors.level}
+                </p>
+              </div>
+            )}
 
             <div>
-              <label htmlFor="school" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="school" className="block text-sm font-medium leading-5 text-gray-700">
                 โรงเรียน
               </label>
-              <select
-                id="school"
-                name="school"
-                className="block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 rounded-md focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.school}
-              >
-                <option>วังไกลกังวล</option>
-              </select>
+              <div className="mt-1">
+                <Input
+                  id="school"
+                  type="text"
+                  name="school"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.school}
+                  required
+                />
+              </div>
               <p className="my-2 text-sm text-red-500">
                 {errors.school && touched.school && errors.school}
               </p>

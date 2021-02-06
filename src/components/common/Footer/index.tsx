@@ -2,8 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { SocialLink } from '../SocialLink'
+import { useAuth } from 'lib/auth'
 
 const Footer = () => {
+  const { loading, user } = useAuth()
+
   return (
     <div>
       <footer className="border-t-2 border-gray-200 footer font-display">
@@ -27,14 +30,16 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex justify-center pt-3 pb-2 md:p-0 md:justify-start">
-                <Link href="/register">
-                  <button
-                    type="button"
-                    className="px-6 py-2 text-base font-bold text-white border border-transparent rounded-full shadow-md bg-gradient-to-r from-blue-200 via-purple-200 to-red-200 md:py-2 w-max md:text-xl font-display focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-200"
-                  >
-                    เข้าสู่ระบบ
-                  </button>
-                </Link>
+                {!loading && !user && (
+                  <Link href="/register">
+                    <button
+                      type="button"
+                      className="px-6 py-2 text-base font-bold text-white border border-transparent rounded-full shadow-md bg-gradient-to-r from-blue-200 via-purple-200 to-red-200 md:py-2 w-max md:text-xl font-display focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-200"
+                    >
+                      เข้าสู่ระบบ
+                    </button>
+                  </Link>
+                )}
               </div>
             </div>
             <div className="flex flex-col font-bold text-center md:flex-row md:text-right md:pl-8">

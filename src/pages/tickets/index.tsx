@@ -133,7 +133,7 @@ const Ticket = () => {
               </div>
             </div>
           )}
-          {getTicket()}
+          {!loading && user && getTicket()}
           <div style={{ width: width / 4 }} className="flex flex-row mt-6 mb-10 space-x-2">
             <a
               className="flex flex-col items-center justify-center justify-between w-1/3 py-2 font-medium text-center text-gray-400 bg-white shadow-lg text-xxs md:text-base md:py-4 rounded-xl"

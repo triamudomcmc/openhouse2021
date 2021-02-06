@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Router from 'next/router'
 import Image from 'next/image'
 
 import { Google } from 'components/common/Logo/Google'
@@ -9,6 +10,18 @@ import { useAuth } from 'lib/auth'
 
 const Register = () => {
   const auth = useAuth()
+
+  useEffect(() => {
+    if (auth.userData && Object.keys(auth.userData).length === 5) {
+      Router.push('/onboard')
+    }
+  }, [auth.userData])
+
+  useEffect(() => {
+    if (auth.userData && Object.keys(auth.userData).length >= 15) {
+      Router.push('/')
+    }
+  }, [auth.userData])
 
   return (
     <Layout hideSignIn={true}>

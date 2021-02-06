@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import cn from 'classnames'
 import Warning from '../Toasts/Warning'
+import { useAuth } from 'lib/auth'
 
 type Props = {
   hideSignIn: boolean
@@ -9,6 +10,7 @@ type Props = {
 }
 
 export const Nav = ({ hideSignIn, className }: Props) => {
+  const { user, loading } = useAuth()
   return (
     <div
       className={cn(
@@ -30,24 +32,25 @@ export const Nav = ({ hideSignIn, className }: Props) => {
           <Link href="/">
             <a>หน้าแรก</a>
           </Link>
-          <span className="text-gray-200">ชมรม</span>
+          {/* <span className="text-gray-200">ชมรม</span>
           <span className="text-gray-200">บทความ</span>
           <span className="text-gray-200">วิดิโอ</span>
           <span className="text-gray-200">รายการสด</span>
-          <span className="text-gray-200">การสอบเข้า</span>
+          <span className="text-gray-200">การสอบเข้า</span> */}
           <Link href="/contact">
             <a>ติดต่อ</a>
           </Link>
-          {!hideSignIn && (
-            <Link href="/register">
-              <button
-                type="button"
-                className="inline-flex items-center px-6 py-2 text-base font-bold text-white text-red-200 bg-white border border-transparent rounded-full md:py-3 w-max md:text-xl font-display focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-200"
-              >
-                เข้าร่วมงาน
-              </button>
-            </Link>
-          )}
+          {!hideSignIn ||
+            (!loading && !user && (
+              <Link href="/register">
+                <button
+                  type="button"
+                  className="inline-flex items-center px-6 py-2 text-base font-bold text-white text-red-200 bg-white border border-transparent rounded-full md:py-3 w-max md:text-xl font-display focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-200"
+                >
+                  เข้าร่วมงาน
+                </button>
+              </Link>
+            ))}
         </div>
       </nav>
     </div>
