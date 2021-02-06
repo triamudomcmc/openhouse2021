@@ -62,7 +62,7 @@ export const Inside = () => {
   return (
     <div className="max-w-full pt-14 md:pt-0">
       <div className="flex max-w-full ">
-        <div className="flex items-center justify-center max-w-full -ml-4 -mr-16 md:m-0 h-80 md:h-full md:w-1/2 md:flex-col">
+        <div className="flex items-center justify-center max-w-full -ml-4 -mr-16 md:m-0 h-80 md:h-full md:max-w-1/2 md:flex-col">
           {getCurrentMap()}
         </div>
         <div className="flex flex-col items-center justify-center md:w-1/2">
@@ -125,7 +125,7 @@ export const Inside = () => {
               </p>
             </div>
           </div>
-          <div className="hidden h-1/3 md:flex">{getCurrentTab()}</div>
+          <div className="hidden max-w-full h-1/3 md:flex">{getCurrentTab()}</div>
         </div>
       </div>
       <div className="flex items-center justify-center pt-16 mx-4 h-1/3 md:hidden">

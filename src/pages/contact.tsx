@@ -13,15 +13,17 @@ export const Contact = () => {
         <div className="flex flex-col items-center md:w-7/12">
           <div className="max-w-full text-3xl font-bold text-center text-blue-400">
             <h1 className="pt-6 md:hidden">ช่องทางการติดตาม</h1>
-            <div className="flex max-w-xs py-2 md:max-w-screen-md md:py-12">
-              <Contacthead />
+            <div className="flex flex-col items-center ">
+              <div className="flex py-2 md:max-w-screen-md md:h-96 md:w-96 ">
+                <Contacthead />
+              </div>
             </div>
           </div>
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col max-w-full">
             <div className="flex flex-col md:flex-row">
               <div className="flex flex-col text-center md:w-2/3">
                 <div className="flex-col hidden md:flex">
-                  <h1 className="text-3xl font-bold text-blue-400">ช่องทางการติดตาม</h1>
+                  <h1 className="text-3xl font-bold text-blue-400">ติดตามงานโอเพนเฮาส์</h1>
                 </div>
                 <div className="flex flex-col justify-center pt-4 text-gray-500 md:flex-row md:border-r-2 md:border-gray-200">
                   <div className="flex flex-col flex-wrap">

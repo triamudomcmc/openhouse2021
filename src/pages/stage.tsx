@@ -20,27 +20,33 @@ const Stage = ({ stream, schedule }) => {
       <div className="mb-20">
         <StageContainer stream={stream} />
         <div className="flex flex-col items-center justify-center">
-          <div className="flex flex-col md:flex-row w-9/12">
+          <div className="flex flex-col w-9/12 md:flex-row">
             <div className="md:w-1/2">
-              <h1 className="text-base md:text-3xl font-black text-gray-600">
-                <span className="inline-block px-2 md:py-1 mr-2 text-sm md:text-xl font-medium text-white align-middle bg-red-400">
+              <h1 className="text-base font-black text-gray-600 md:text-3xl">
+                <span className="inline-block px-2 mr-2 text-sm font-medium text-white align-middle bg-red-400 md:py-1 md:text-xl">
                   LIVE
                 </span>
                 ทำความรู้จักศิลป์จีนเตรียมอุดมฯ โอ้โหโอ้โหว้าวว้าวว้าวเก่งจัง
               </h1>
-              <h1 className="mt-2 text-sm md:text-2xl font-medium text-gray-600">ละครเวที | 10.30-11.50</h1>
-              <p className="mt-8 text-sm md:text-xl text-gray-500">
+              <h1 className="mt-2 text-sm font-medium text-gray-600 md:text-2xl">
+                ละครเวที | 10.30-11.50
+              </h1>
+              <p className="mt-8 text-sm text-gray-500 md:text-xl">
                 วิดีโอคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบาย
               </p>
             </div>
             <div className="flex flex-row items-center justify-center md:justify-end md:w-1/2">
-              <div className="flex flex-col w-full md:w-10/12 mt-8 md:mt-0 h-full">
+              <div className="flex flex-col w-full h-full mt-8 md:w-10/12 md:mt-0">
                 <div className="flex flex-row justify-center bg-white shadow-lg rounded-2xl h-1/2">
                   <div className="flex flex-col justify-center w-10/12">
-                    <h1 className="text-gray-600 text-sm mb-3 md:mb-0 md:text-medium h-1/4">สงสัยอะไรไหม ? พิมพ์ถามคำถามสด ๆ ได้เลย</h1>
+                    <h1 className="mb-3 text-sm text-gray-600 md:mb-0 md:text-medium h-1/4">
+                      สงสัยอะไรไหม ? พิมพ์ถามคำถามสด ๆ ได้เลย
+                    </h1>
                     <div className="flex flex-row justify-between h-1/3">
                       <div className="flex flex-col items-center justify-center w-10/12 bg-gray-100 rounded-2xl">
-                        <h1 className="w-10/12 text-medium md:text-xl font-semibold md:font-bold text-gray-300">ถามคำถามเลย !</h1>
+                        <h1 className="w-10/12 font-semibold text-gray-300 text-medium md:text-xl md:font-bold">
+                          ถามคำถามเลย !
+                        </h1>
                       </div>
                       <div className="flex flex-col items-center justify-center">
                         <Submit />
@@ -49,8 +55,10 @@ const Stage = ({ stream, schedule }) => {
                   </div>
                 </div>
                 <div className="flex flex-col justify-end mt-4 md:mt-0 h-1/2">
-                  <h1 className="font-bold text-sm md:text-medium mb-1 md:mb-0 text-gray-500">รายการต่อไป</h1>
-                  <div className="flex flex-row w-full bg-white rounded-lg shadow-lg py-3 md: py-0 h-1/2">
+                  <h1 className="mb-1 text-sm font-bold text-gray-500 md:text-medium md:mb-0">
+                    รายการต่อไป
+                  </h1>
+                  <div className="flex flex-row w-full py-3 bg-white rounded-lg shadow-lg md:py-0 h-1/2">
                     <div className="flex items-center justify-center w-1/2 h-full text-smoxs sm:text-base">
                       <span className="font-semibold text-center text-gray-600">10.30 - 11.52</span>
                     </div>

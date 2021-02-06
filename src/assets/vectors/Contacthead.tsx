@@ -1,8 +1,7 @@
 export const Contacthead = ({ ...restprops }) => {
   return (
     <svg
-      width="439"
-      height="339"
+      className="w-48 h-48 md:h-96 md:w-96 "
       viewBox="0 0 439 339"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
