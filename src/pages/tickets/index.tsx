@@ -17,10 +17,6 @@ const Ticket = () => {
   const [imgLoading, setImgLoading] = useState(false)
 
   useEffect(() => {
-    Router.push('/')
-  }, [])
-
-  useEffect(() => {
     if (user) {
       updateUserData()
     }
@@ -127,7 +123,7 @@ const Ticket = () => {
         }}
         className="fixed cursor-pointer"
       >
-        <Toast type="success" text="Successfully copied link." show={toast} />
+        <Toast type="success" text="Link copied." show={toast} />
       </div>
       <div className="w-full h-full py-16">
         <div className="flex flex-col items-center">
