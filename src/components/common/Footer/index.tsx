@@ -105,7 +105,7 @@ const Footer = () => {
                 <a onClick={turnWarnToastOn} className="text-gray-400">
                   รายการสด
                 </a>
-                <Link href="/tos">
+                <Link href="/privacy-policy">
                   <a>นโยบายความเป็นส่วนตัว</a>
                 </Link>
               </div>
