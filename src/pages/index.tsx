@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { GetStaticProps } from 'next'
 import Countdown from 'react-countdown'
 
@@ -8,6 +8,8 @@ import { getAllLiveSchedule } from 'lib/db-admin'
 import TimetableData from 'types/Timetable'
 import { useKonamiCode } from 'lib/hooks/useKonamiCode'
 import firebase from 'lib/firebase'
+import { useAuth } from 'lib/auth'
+import Router from 'next/router'
 
 type Props = {
   schedule: TimetableData[]
@@ -31,6 +33,14 @@ const Renderer = ({ completed, days, hours, minutes, seconds, schedule, stream, 
 }
 
 const IndexPage = ({ schedule, stream, content }) => {
+  const { userData } = useAuth()
+
+  useEffect(() => {
+    if (userData && Object.keys(userData).length === 5) {
+      Router.push('/onboard')
+    }
+  }, [userData])
+
   useKonamiCode(async () => {
     await firebase.auth().signOut()
   })

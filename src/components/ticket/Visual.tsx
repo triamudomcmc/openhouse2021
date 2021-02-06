@@ -10,12 +10,12 @@ type Props = {
   number?: number
 }
 
-export const Portrait = ({ width, nickname, wishes, number = 999999 }: Props) => {
+export const Portrait = ({ width, nickname, wishes, number = 120221 }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
       className={classNames(
-        'bg-ticket-long flex items-center justify-center font-display',
+        'bg-ticket-long bg-cover flex items-center justify-center font-display',
         css.container
       )}
     >
@@ -65,12 +65,12 @@ export const Portrait = ({ width, nickname, wishes, number = 999999 }: Props) =>
   )
 }
 
-export const SimplePortrait = ({ width, nickname, wishes, number = 999999 }: Props) => {
+export const SimplePortrait = ({ width, nickname, wishes, number = 120221 }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
       className={classNames(
-        'bg-ticket-long flex items-center justify-center font-display',
+        'bg-ticket-long bg-cover flex items-center justify-center font-display',
         css.nakedContainer
       )}
     >
@@ -116,7 +116,7 @@ export const SimplePortrait = ({ width, nickname, wishes, number = 999999 }: Pro
   )
 }
 
-export const NakedPortrait = ({ width, nickname, wishes, number = 999999 }: Props) => {
+export const NakedPortrait = ({ width, nickname, wishes, number = 120221 }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
@@ -168,7 +168,7 @@ export const NakedPortrait = ({ width, nickname, wishes, number = 999999 }: Prop
   )
 }
 
-export const NakedSimplePortrait = ({ width, nickname, wishes, number = 999999 }: Props) => {
+export const NakedSimplePortrait = ({ width, nickname, wishes, number = 120221 }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
@@ -216,12 +216,12 @@ export const NakedSimplePortrait = ({ width, nickname, wishes, number = 999999 }
   )
 }
 
-export const Square = ({ width, nickname, wishes, number = 999999 }: Props) => {
+export const Square = ({ width, nickname, wishes, number = 120221 }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
       className={classNames(
-        'bg-ticket-sq flex items-center justify-center font-display',
+        'bg-ticket-sq bg-cover flex items-center justify-center font-display',
         css.squareContainer
       )}
     >
@@ -272,12 +272,12 @@ export const Square = ({ width, nickname, wishes, number = 999999 }: Props) => {
   )
 }
 
-export const SimpleSquare = ({ width, nickname, wishes, number = 999999 }: Props) => {
+export const SimpleSquare = ({ width, nickname, wishes, number = 120221 }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
       className={classNames(
-        'bg-ticket-sq flex items-center justify-center font-display',
+        'bg-ticket-sq bg-cover flex items-center justify-center font-display',
         css.squareContainer
       )}
     >
@@ -323,7 +323,7 @@ export const SimpleSquare = ({ width, nickname, wishes, number = 999999 }: Props
   )
 }
 
-export const NakedSquare = ({ width, nickname, wishes, number = 999999 }: Props) => {
+export const NakedSquare = ({ width, nickname, wishes, number = 120221 }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}
@@ -376,7 +376,7 @@ export const NakedSquare = ({ width, nickname, wishes, number = 999999 }: Props)
   )
 }
 
-export const NakedSimpleSquare = ({ width, nickname, wishes, number = 999999 }: Props) => {
+export const NakedSimpleSquare = ({ width, nickname, wishes, number = 120221 }: Props) => {
   return (
     <div
       style={{ ['--width' as string]: `${width}px` }}

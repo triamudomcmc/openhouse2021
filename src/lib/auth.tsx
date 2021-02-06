@@ -65,12 +65,6 @@ function useProvideAuth() {
   }
 
   useEffect(() => {
-    if (userData && Object.keys(userData).length === 5) {
-      Router.push('/onboard')
-    }
-  }, [userData])
-
-  useEffect(() => {
     if (user) {
       updateUserData()
     }

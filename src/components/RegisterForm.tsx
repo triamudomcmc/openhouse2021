@@ -8,7 +8,7 @@ import Input from 'components/ui/Input'
 import { updateUser } from 'lib/db'
 import { useAuth } from 'lib/auth'
 import { getRandomWishes } from 'utils/wishes'
-import school from 'data/school'
+import Link from 'next/link'
 
 const RegisterForm = () => {
   const { userData } = useAuth()
@@ -123,7 +123,7 @@ const RegisterForm = () => {
                 htmlFor="nickname"
                 className="block text-sm font-medium leading-5 text-gray-700"
               >
-                ชื่อเล่น
+                Username
               </label>
               <div className="mt-1">
                 <Input
@@ -445,12 +445,21 @@ const RegisterForm = () => {
                 onBlur={handleBlur}
                 required
               />
-              <label htmlFor="tos" className="block ml-2 text-sm text-gray-900">
+              <a href="/tos" target="_blank" className="block ml-2 text-sm text-gray-900">
                 ยอมรับข้อตกลงและเงื่อนไขการใช้งาน
-              </label>
+              </a>
             </div>
 
             <p className="my-2 text-sm text-red-500">{errors.tos && touched.tos && errors.tos}</p>
+          </div>
+
+          <div className="relative mt-8">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+              <div className="w-full border-t border-gray-300"></div>
+            </div>
+            <div className="relative flex justify-start">
+              <span className="px-2 text-sm text-gray-500 bg-white">คำอวยพร</span>
+            </div>
           </div>
 
           <div>
@@ -464,7 +473,7 @@ const RegisterForm = () => {
                 onBlur={handleBlur}
               />
               <label htmlFor="haveWishes" className="block ml-2 text-sm text-gray-900">
-                คำอวยพร
+                รับการ์ดอวยพร
               </label>
             </div>
 
