@@ -151,7 +151,7 @@ const Page = ({ nickname, wishes, haveWishes }) => {
                   <h1 onClick={turnWarnToastOn} className="text-gray-400">
                     รายการสด
                   </h1>
-                  <Link href="/tos">
+                  <Link href="/privacy-policy">
                     <h1>นโยบายความเป็นส่วนตัว</h1>
                   </Link>
                 </div>
