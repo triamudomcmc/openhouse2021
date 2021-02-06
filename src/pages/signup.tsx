@@ -13,6 +13,7 @@ const Signup = () => {
   const email = useRef(null)
   const [toast, setToast] = useState(false)
   const [gtoast, setgToast] = useState(false)
+  const [switc, setswitc] = useState(false)
   const [ftext, setFText] = useState('')
   const [content, setContent] = useState(<div></div>)
   const auth = useAuth()
@@ -68,9 +69,11 @@ const Signup = () => {
   const reEnterEmail = () => {
     window.localStorage.removeItem('emailForSignIn')
     setgToast(false)
+    setswitc(true)
   }
 
   useEffect(() => {
+    setswitc(false)
     if (window.localStorage.getItem('emailForSignIn') === null) {
       setContent(
         <>
@@ -128,7 +131,7 @@ const Signup = () => {
         </>
       )
     }
-  }, [gtoast])
+  }, [gtoast, switc])
 
   return (
     <Layout hideSignIn={true}>
