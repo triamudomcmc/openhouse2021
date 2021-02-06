@@ -164,7 +164,8 @@
 
 .simpleBigContentName {
   font-size: calc(var(--width) / 16);
-  @apply font-bold leading-5 text-center text-white;
+  line-height: calc(var(--width) / 20);
+  @apply font-bold text-center text-white;
 }
 
 .simpleContentName {
@@ -175,7 +176,8 @@
 
 .simpleSquareBigContentName {
   font-size: calc(var(--width) / 20);
-  @apply font-bold leading-5 text-center text-white;
+  line-height: calc(var(--width) / 26);
+  @apply font-bold text-center text-white;
 }
 
 .simpleSquareContentName {

@@ -71,7 +71,7 @@ export const SimplePortrait = ({ width, nickname, wishes, number = 120221 }: Pro
       style={{ ['--width' as string]: `${width}px` }}
       className={classNames(
         'bg-ticket-long bg-cover flex items-center justify-center font-display',
-        css.nakedContainer
+        css.container
       )}
     >
       <div className={classNames('border-white', css.card)}>
