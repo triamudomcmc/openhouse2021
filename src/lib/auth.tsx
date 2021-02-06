@@ -36,6 +36,7 @@ interface IAuthContext {
   signinWithFacebook: (redirect: string) => Promise<void>
   signinWithGoogle: (redirect: string) => Promise<void>
   signout: () => void
+  updateUserData: () => Promise<void>
 }
 
 const AuthContext = React.createContext<IAuthContext | null>(null)
@@ -54,6 +55,15 @@ function useProvideAuth() {
   const [userData, setUserData] = useState<IUserData>(null)
   const [loading, setLoading] = useState(true)
 
+  const updateUserData = async () => {
+    const data = await getCurrentUserData(user.uid)
+    if (data) {
+      setUserData(data as IUserData)
+    } else {
+      setUserData(null)
+    }
+  }
+
   useEffect(() => {
     if (userData && Object.keys(userData).length === 5) {
       Router.push('/onboard')
@@ -61,17 +71,8 @@ function useProvideAuth() {
   }, [userData])
 
   useEffect(() => {
-    const getData = async () => {
-      const data = await getCurrentUserData(user.uid)
-      if (data) {
-        setUserData(data as IUserData)
-      } else {
-        setUserData(null)
-      }
-    }
-
     if (user) {
-      getData()
+      updateUserData()
     }
   }, [user])
 
@@ -137,7 +138,8 @@ function useProvideAuth() {
     loading,
     signinWithFacebook,
     signinWithGoogle,
-    signout
+    signout,
+    updateUserData
   }
 }
 

@@ -8,10 +8,14 @@ import { useAuth } from 'lib/auth'
 import getImgDownloadQS from 'utils/getImgDownloadQS'
 
 const Ticket = () => {
-  const { loading, user, userData } = useAuth()
+  const { loading, user, userData, updateUserData } = useAuth()
   const [squareDis, setSquareDis] = useState(false)
   const [imgReady, setImgReady] = useState(false)
   const [imgLoading, setImgLoading] = useState(false)
+
+  useEffect(() => {
+    updateUserData()
+  }, [])
 
   const downloadLink = useRef<HTMLAnchorElement>()
   const permalink = encodeURIComponent(`https://localhost:3000/tickets/${userData?.uid}`)
