@@ -16,7 +16,7 @@ export const Layout = ({ children, className, hideSignIn }: Props) => (
     <MobileMenu className="z-50 block md:hidden" />
     <div className={s.root}>
       <main className="flex flex-1">
-        <div className={cn('flex flex-col w-full', className)}>{children}</div>
+        <div className={cn('flex flex-col w-full h-full', className)}>{children}</div>
       </main>
     </div>
   </div>
