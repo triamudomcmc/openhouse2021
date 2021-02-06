@@ -16,7 +16,7 @@ const RegisterForm = () => {
     <Formik
       initialValues={{
         prefix: 'นางสาว',
-        name: '',
+        firstname: '',
         lastname: '',
         nickname: '',
         status: 'นักเรียน',
@@ -76,22 +76,25 @@ const RegisterForm = () => {
             </div>
 
             <div>
-              <label htmlFor="name" className="block text-sm font-medium leading-5 text-gray-700">
+              <label
+                htmlFor="firstname"
+                className="block text-sm font-medium leading-5 text-gray-700"
+              >
                 ชื่อ
               </label>
               <div className="mt-1">
                 <Input
-                  id="name"
+                  id="firstname"
                   type="text"
-                  name="name"
+                  name="firstname"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.name}
+                  value={values.firstname}
                   required
                 />
               </div>
               <p className="my-2 text-sm text-red-500">
-                {errors.name && touched.name && errors.name}
+                {errors.firstname && touched.firstname && errors.firstname}
               </p>
             </div>
 
