@@ -9,9 +9,16 @@ import { Layout } from 'components/common/Layout'
 import { useAuth } from 'lib/auth'
 import Link from 'next/link'
 import { Email } from '../components/common/Logo/Email'
+import firebase from 'firebase'
 
 const Register = () => {
   const auth = useAuth()
+
+  useEffect(() => {
+    if (window.localStorage.getItem('emailForSignIn') !== null) {
+      Router.push('/')
+    }
+  }, [])
 
   useEffect(() => {
     if (auth.userData && Object.keys(auth.userData).length === 5) {

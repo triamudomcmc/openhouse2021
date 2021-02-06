@@ -17,6 +17,12 @@ const Ticket = () => {
   const [imgLoading, setImgLoading] = useState(false)
 
   useEffect(() => {
+    if (window.localStorage.getItem('emailForSignIn') !== null) {
+      Router.push('/')
+    }
+  }, [])
+
+  useEffect(() => {
     if (user) {
       updateUserData()
     }
