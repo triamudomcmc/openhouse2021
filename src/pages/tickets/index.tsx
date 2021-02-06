@@ -28,7 +28,7 @@ const Ticket = () => {
   const downloadUrl = `/api/ticket-images/${userData?.uid}?type=${encodeURIComponent(
     getImgDownloadQS(userData?.haveWishes ? 'wishes' : 'nowishes', squareDis)
   )}`
-  const text = encodeURIComponent(`#TriamUdomOnlineOpenHouse2021 #triamOPH2021 #tu84 #tu85`)
+  const text = encodeURIComponent(`#TriamUdomOnlineOpenHouse2021`)
   const tweetUrl = `https://twitter.com/intent/tweet?url=${permalink}&via=triamudomoph&text=${text}`
   const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${permalink}`
 
