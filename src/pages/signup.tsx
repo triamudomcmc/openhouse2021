@@ -50,7 +50,7 @@ const Signup = () => {
     if (email != '') {
       if (email.includes('@')) {
         await firebase.auth().sendSignInLinkToEmail(email, {
-          url: 'http://localhost:3000/onboard',
+          url: 'https://openhouse.triamudom.ac.th/onboard',
           handleCodeInApp: true
         })
         window.localStorage.setItem('emailForSignIn', email)
@@ -101,7 +101,8 @@ const Signup = () => {
           </div>
           <div className="mt-10 text-md md:text-lg flex flex-row justify-center font-medium text-gray-400">
             <div className="w-2/3 text-center">
-              หมายเหตุ: ควรใช้บราวเซอร์เดียวกันกับบราวเซอร์ที่ใช้ลงทะเบียนในการเปิดลิงก์ยืนยันอีเมล
+              หมายเหตุ: ควรใช้บราวเซอร์เดียวกันกับบราวเซอร์ที่ใช้ลงทะเบียน
+              ในการเปิดลิงก์ยืนยันที่อยู่อีเมล
             </div>
           </div>
         </>
@@ -111,7 +112,6 @@ const Signup = () => {
         <>
           <div className="mt-10 text-md md:text-lg max-w-4xl flex mx-3 flex-row justify-center font-medium text-gray-500">
             <div className="text-center text-2xl">
-              อีเมลถูกส่งไปที่ {window.localStorage.getItem('emailForSignIn')}{' '}
               กรุณาเช็คอีเมลเพื่อยืนยันการลงทะเบียนหรือ{' '}
               <a className="cursor-pointer hover:underline text-blue-400" onClick={reEnterEmail}>
                 ขอลงทะเบียนใหม่
@@ -121,7 +121,8 @@ const Signup = () => {
           </div>
           <div className="mt-10 text-md md:text-lg flex flex-row justify-center font-medium text-gray-400">
             <div className="w-2/3 text-center">
-              หมายเหตุ: ควรใช้บราวเซอร์เดียวกันกับบราวเซอร์ที่ใช้ลงทะเบียนในการเปิดลิงก์ยืนยันอีเมล
+              หมายเหตุ: ควรใช้บราวเซอร์เดียวกันกับบราวเซอร์ที่ใช้ลงทะเบียน
+              ในการเปิดลิงก์ยืนยันที่อยู่อีเมล
             </div>
           </div>
         </>
