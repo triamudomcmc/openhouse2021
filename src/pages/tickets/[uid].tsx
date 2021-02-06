@@ -1,4 +1,9 @@
-import { NakedSimplePortrait, NakedSimpleSquare, SimpleSquare } from 'components/ticket/Visual'
+import {
+  NakedPortrait,
+  NakedSimplePortrait,
+  NakedSimpleSquare,
+  SimpleSquare
+} from 'components/ticket/Visual'
 import Image from 'next/image'
 import React from 'react'
 import useWindowSize from 'lib/hooks/useWindowSize'
@@ -13,21 +18,37 @@ type Props = {
   wishes: string
 }
 
-const Page = ({ nickname }) => {
+const Page = ({ nickname, wishes, haveWishes }) => {
   const { width } = useWindowSize()
 
   return (
     <div className="font-display">
       <div className="flex flex-col items-center justify-center bg-cover bg-ticket-show-bg">
-        <div className="mt-4 md:mt-10">
-          <h1 className="text-xs font-black leading-3 text-white md:text-xl">TRIAM UDOM ONLINE</h1>
-          <h1 className="text-sm font-black text-white md:text-2xl">OPEN HOUSE 2021</h1>
-        </div>
+        <Link href="/">
+          <div className="mt-4 md:mt-10">
+            <h1 className="text-xs font-black leading-3 text-white md:text-xl">
+              TRIAM UDOM ONLINE
+            </h1>
+            <h1 className="text-sm font-black text-white md:text-2xl">OPEN HOUSE 2021</h1>
+          </div>
+        </Link>
+
         <div className="md:-mt-16">
-          <NakedSimplePortrait nickname={nickname} width={width > 500 ? width / 1.8 : width / 1} />
+          {haveWishes ? (
+            <NakedSimplePortrait
+              nickname={nickname}
+              width={width > 500 ? width / 3.6 : width / 2}
+            />
+          ) : (
+            <NakedPortrait
+              nickname={nickname}
+              width={width > 500 ? width / 3.6 : width / 2}
+              wishes={wishes}
+            />
+          )}
         </div>
         <div className="flex flex-col items-center mb-24 md:-mt-16 md:mb-40">
-          <h1 className="text-lg font-medium text-white md:text-4xl">การ์ดของ</h1>
+          <h1 className="mt-8 text-lg font-medium text-white md:text-4xl">การ์ดของ</h1>
           <h1 className="text-lg font-semibold text-white md:text-4xl">{nickname}</h1>
         </div>
       </div>
@@ -42,7 +63,7 @@ const Page = ({ nickname }) => {
               <Link href="/register">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-                  className="flex cursor-pointer flex-row justify-center w-full py-3 text-base font-black text-white shadow-md md:text-xl rounded-xl bg-gradient-to-r from-blue-70 via-purple-450 to-red-250"
+                  className="flex flex-row justify-center w-full py-3 text-base font-black text-white shadow-md cursor-pointer md:text-xl rounded-xl bg-gradient-to-r from-blue-70 via-purple-450 to-red-250"
                 >
                   ลงทะเบียน
                 </motion.button>

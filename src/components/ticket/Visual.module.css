@@ -164,24 +164,24 @@
 
 .simpleBigContentName {
   font-size: calc(var(--width) / 16);
-  @apply font-bold text-white text-center leading-5;
+  @apply font-bold leading-5 text-center text-white;
 }
 
 .simpleContentName {
   font-size: calc(var(--width) / 22);
   margin-bottom: calc(var(--width) / 30);
-  @apply font-bold text-white text-center;
+  @apply mt-4 font-bold text-center text-white;
 }
 
 .simpleSquareBigContentName {
   font-size: calc(var(--width) / 20);
-  @apply font-bold text-white text-center leading-5;
+  @apply font-bold leading-5 text-center text-white;
 }
 
 .simpleSquareContentName {
   font-size: calc(var(--width) / 26);
   margin-bottom: calc(var(--width) / 60);
-  @apply font-bold text-white text-center;
+  @apply font-bold text-center text-white;
 }
 
 .squareContentName {
