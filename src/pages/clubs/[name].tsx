@@ -159,6 +159,7 @@ const Page = ({ contents }) => {
                         src={item.profileURL}
                         width="96px"
                         height="96px"
+                        style={{ height: '96px' }}
                         className="rounded-xl"
                       />
                     </div>
