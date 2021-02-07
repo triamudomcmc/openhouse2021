@@ -32,11 +32,21 @@ export const Nav = ({ hideSignIn, className }: Props) => {
           <Link href="/">
             <a>หน้าแรก</a>
           </Link>
-          {/* <span className="text-gray-200">ชมรม</span>
-          <span className="text-gray-200">บทความ</span>
-          <span className="text-gray-200">วิดิโอ</span>
-          <span className="text-gray-200">รายการสด</span>
-          <span className="text-gray-200">การสอบเข้า</span> */}
+          <Link href="/clubs">
+            <a>ชมรม</a>
+          </Link>
+          <Link href="/articles">
+            <a>บทความ</a>
+          </Link>
+          <Link href="/videos">
+            <a>วิดีโอ</a>
+          </Link>
+          <Link href="/stage">
+            <a>รายการสด</a>
+          </Link>
+          <Link href="/">
+            <a>การสอบเข้า</a>
+          </Link>
           {!hideSignIn ||
             (!loading && !user && (
               <Link href="/register">

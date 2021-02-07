@@ -63,7 +63,7 @@ const Register = () => {
                   className="inline-flex items-center justify-center w-full px-5 py-2 text-base font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md hover:bg-gray-100 md:px-10 md:text-xl focus:outline-none"
                 >
                   <Email className="w-5 h-5 mr-4" />
-                  Sign in with Email
+                  Sign in with email
                 </button>
               </Link>
             </div>

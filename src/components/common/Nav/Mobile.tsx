@@ -42,21 +42,21 @@ export const Modal = (
             <Link href="/">
               <a>หน้าแรก</a>
             </Link>
-            {/* <Link href="/clubs">
+            <Link href="/clubs">
               <a>ชมรม</a>
             </Link>
             <Link href="/articles">
               <a>บทความ</a>
             </Link>
             <Link href="/videos">
-              <a>วิดิโอ</a>
+              <a>วิดีโอ</a>
             </Link>
             <Link href="/stage">
               <a>รายการสด</a>
             </Link>
             <Link href="/">
               <a>การสอบเข้า</a>
-            </Link> */}
+            </Link>
             <SocialLink />
           </div>
           <div className="w-24 pt-8 md:w-48">

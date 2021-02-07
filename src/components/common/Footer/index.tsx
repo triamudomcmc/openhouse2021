@@ -74,39 +74,37 @@ const Footer = () => {
             </div>
             <div className="flex flex-col font-bold text-center md:flex-row md:text-right md:pl-8">
               <div className="flex flex-col space-y-3 text-gray-500">
-                <a onClick={turnWarnToastOn} className="text-gray-400">
-                  สายการเรียน
-                </a>
-                <a onClick={turnWarnToastOn} className="text-gray-400">
-                  ชมรม
-                </a>
-                <a onClick={turnWarnToastOn} className="text-gray-400">
-                  บทความ
-                </a>
-                <a onClick={turnWarnToastOn} className="text-gray-400">
-                  คลิปวิดีโอ
-                </a>
-                <a onClick={turnWarnToastOn} className="text-gray-400">
-                  ติดต่อ
-                </a>
+                <Link href="/programmes">
+                  <h1 className="cursor-pointer">สายการเรียน</h1>
+                </Link>
+                <Link href="/clubs">
+                  <h1 className="cursor-pointer">ชมรม</h1>
+                </Link>
+                <Link href="/articles">
+                  <h1 className="cursor-pointer">บทความ</h1>
+                </Link>
+                <Link href="/videos">
+                  <h1 className="cursor-pointer">คลิปวิดีโอ</h1>
+                </Link>
+                <Link href="/contact">
+                  <h1 className="cursor-pointer">ติดต่อ</h1>
+                </Link>
               </div>
             </div>
             <div className="flex flex-col font-bold text-center md:flex-row md:text-right">
               <div className="flex flex-col space-y-3 text-gray-500">
-                <a onClick={turnWarnToastOn} className="text-gray-400">
-                  การสอบเข้า
-                </a>
+                <h1 className="text-gray-300">การสอบเข้า</h1>
                 <Link href="/tickets">
-                  <a>การ์ดต้อนรับ</a>
+                  <h1 className="cursor-pointer">การ์ดต้อนรับ</h1>
                 </Link>
-                <a onClick={turnWarnToastOn} className="text-gray-400">
-                  การเดินทาง
-                </a>
-                <a onClick={turnWarnToastOn} className="text-gray-400">
-                  รายการสด
-                </a>
+                <Link href="/map">
+                  <h1 className="cursor-pointer">การเดินทาง</h1>
+                </Link>
+                <Link href="/stage">
+                  <h1 className="cursor-pointer">รายการสด</h1>
+                </Link>
                 <Link href="/privacy-policy">
-                  <a>นโยบายความเป็นส่วนตัว</a>
+                  <h1 className="cursor-pointer">นโยบายความเป็นส่วนตัว</h1>
                 </Link>
               </div>
             </div>
