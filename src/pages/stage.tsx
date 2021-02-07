@@ -8,6 +8,7 @@ import { GetStaticProps } from 'next'
 import Stream from 'types/Stream'
 import Submit from '../assets/vectors/stage/Submit'
 import { Live } from '../components/common/Live'
+import { motion } from 'framer-motion'
 import Footer from '../components/common/Footer'
 
 type Props = {
@@ -43,14 +44,19 @@ const Stage = ({ stream, schedule }) => {
                       สงสัยอะไรไหม ? พิมพ์ถามคำถามสด ๆ ได้เลย
                     </h1>
                     <div className="flex flex-row justify-between h-1/3">
-                      <div className="flex flex-col items-center justify-center w-10/12 bg-gray-100 rounded-2xl">
-                        <h1 className="w-10/12 text-medium md:text-xl font-semibold md:font-bold text-gray-300">
-                          ถามคำถามเลย !
-                        </h1>
+                      <div className="flex flex-col justify-center w-10/12 bg-gray-100 rounded-2xl">
+                        <input
+                          className="text-medium md:text-xl bg-gray-100 mx-4 font-semibold text-gray-400 placeholder-gray-300"
+                          placeholder="ถามคำถามเลย !"
+                        />
                       </div>
-                      <div className="flex flex-col items-center justify-center">
+                      <motion.div
+                        className="flex cursor-pointer flex-col items-center justify-center"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                      >
                         <Submit />
-                      </div>
+                      </motion.div>
                     </div>
                   </div>
                 </div>

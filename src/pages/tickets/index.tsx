@@ -91,16 +91,10 @@ const Ticket = () => {
   const getTicket = () => {
     if (userData?.haveWishes) {
       if (squareDis) {
-        return (
-          <SimpleSquare width={cardWidth} nickname={userData?.nickname} wishes={userData?.wishes} />
-        )
+        return <Square width={cardWidth} nickname={userData?.nickname} wishes={userData?.wishes} />
       } else {
         return (
-          <SimplePortrait
-            width={cardWidth}
-            nickname={userData?.nickname}
-            wishes={userData?.wishes}
-          />
+          <Portrait width={cardWidth} nickname={userData?.nickname} wishes={userData?.wishes} />
         )
       }
     } else {
