@@ -146,7 +146,7 @@ const Signup = () => {
         <Toast type="failed" text={ftext} show={toast} />
       </div>
       <div className="fixed cursor-pointer">
-        <Toast type="success" text="ส่งอีเมลสำเร็จ กรุณาเช็คอีเมล" show={gtoast} />
+        <Toast type="success" text="ส่งอีเมลสำเร็จ กรุณาเช็กอีเมล" show={gtoast} />
       </div>
       <div className="flex flex-col items-center justify-center flex-1 w-full h-full px-8 py-24">
         <h1 className="text-2xl font-bold text-gray-600 md:text-4xl">ลงทะเบียนด้วยอีเมล</h1>
