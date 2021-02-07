@@ -8,7 +8,7 @@ const Toast = ({ show, text, type = 'success' }) => {
   if (type == 'success') {
     bg = 'bg-green-500 border-green-700'
     icon = (
-      <div className="text-green-500 rounded-full bg-white mr-3">
+      <div className="mr-3 text-green-500 bg-white rounded-full">
         <svg
           width="1.8em"
           height="1.8em"
@@ -28,7 +28,7 @@ const Toast = ({ show, text, type = 'success' }) => {
   if (type == 'failed') {
     bg = 'bg-red-500 border-red-700'
     icon = (
-      <div className="text-red-500 rounded-full bg-white mr-3">
+      <div className="mr-3 text-red-500 bg-white rounded-full">
         <svg
           width="1.8em"
           height="1.8em"
@@ -58,7 +58,7 @@ const Toast = ({ show, text, type = 'success' }) => {
       animate={{ x: -380 }}
     >
       {icon}
-      <div className="text-white max-w-xs ">{text}</div>
+      <div className="max-w-xs text-white ">{text}</div>
     </motion.div>
   ) : (
     <motion.div
@@ -70,7 +70,7 @@ const Toast = ({ show, text, type = 'success' }) => {
       transition={{ ease: 'easeIn', duration: 1 }}
     >
       {icon}
-      <div className="text-white max-w-xs ">{text}</div>
+      <div className="max-w-xs text-white ">{text}</div>
     </motion.div>
   )
 }
