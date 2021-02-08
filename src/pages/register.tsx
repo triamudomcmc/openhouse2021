@@ -79,17 +79,18 @@ const Register = () => {
             ) : (
               <>
                 <h1 className="text-2xl font-bold text-center text-gray-500 md:text-4xl">
-                  เบราว์เซอร์ไม่รองรับ
+                  Sign Up / ลงทะเบียน
                 </h1>
-                <div className="flex flex-col items-center mx-10 font-semibold text-lg md:text-xl text-red-400 text-center justify-center mt-4 space-y-4 md:mt-12">
-                  <p>
-                    ขออภัย เบราว์เซอร์ที่กำลังใช้อยู่ขณะนี้ไม่สามารถใช้ในการลงทะเบียนได้
-                    กรุณาเปลี่ยนเบราว์เซอร์ที่ใช้ลงทะเบียน
-                  </p>
-                  <p className="text-sm md:text-base text-gray-400">
-                    คำแนะนำ: ให้ใช้เบราว์เซอร์เริ่มต้นของอุปกรณ์ เช่น Safari, Chrome
-                    และควรหลีกเลี่ยงการใช้ In-App Browsers
-                  </p>
+                <div className="flex flex-col items-center justify-center mt-4 space-y-4 md:mt-12">
+                  <Link href="/signup">
+                    <button
+                      type="button"
+                      className="inline-flex items-center justify-center w-full px-5 py-2 text-base font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md hover:bg-gray-100 md:px-10 md:text-xl focus:outline-none"
+                    >
+                      <Email className="w-5 h-5 mr-4" />
+                      Sign in with email
+                    </button>
+                  </Link>
                 </div>
               </>
             )}
