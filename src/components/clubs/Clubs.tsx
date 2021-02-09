@@ -12,9 +12,14 @@ const generateContent = data => {
       <>
         {tempStorage1}
         <Link href={item.path}>
-          <div className="relative flex flex-col items-center justify-between flex-grow-0 pb-1 mx-2 space-y-2 shadow-md md:w-1/5 rounded-xl md:shadow-none">
+          <div
+            className="relative flex flex-col items-center flex-grow-0 pb-1 px-2 space-y-2 shadow-md md:w-1/5 rounded-xl md:shadow-none"
+            style={{ width: '216px', height: '197px' }}
+          >
             <Image src={item.thumbnail} width={200} height={137} />
-            <h1 className="font-bold">{item.title}</h1>
+            <div className="flex flex-col justify-center my-auto">
+              <h1 className="font-bold text-center">{item.title}</h1>
+            </div>
           </div>
         </Link>
       </>

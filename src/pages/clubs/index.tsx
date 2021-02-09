@@ -6,7 +6,7 @@ import { GetStaticProps } from 'next'
 import * as fs from 'fs'
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = fs.readFileSync('./_clubs/clubs.json', { encoding: 'utf8', flag: 'r' })
+  const data = fs.readFileSync('./_maps/clubsMap.json', { encoding: 'utf8', flag: 'r' })
   const obj = JSON.parse(data)
   const items = Object.values(obj) as [
     { englishName: string; imageURL: Array<{ url: string; description: string }>; thaiName: string }
@@ -32,7 +32,7 @@ const Clubs = ({ contents }) => {
         <div className="max-w-full pb-12 text-3xl font-bold text-center text-blue-400">
           <h1 className="pt-6">ชมรม</h1>
         </div>
-        <div className="max-w-full md:w-7/12">
+        <div className="max-w-full md:w-8/12">
           <ClubIndex contents={contents} />
         </div>
       </div>

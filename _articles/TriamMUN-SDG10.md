@@ -1,6 +1,6 @@
 ---
 title: SDG 10: Reduced Inequalities
-author: Chawakorn Mesommonta
+author: TriamMUN
 thumbnail: /assets/articles/_thumbnails/thumb_16.jpg
 ---
 

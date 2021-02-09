@@ -1,6 +1,6 @@
 ---
 title: SDG 4: Quality Education
-author: Ramanya Kamutharat
+author: TriamMUN
 thumbnail: /assets/articles/_thumbnails/thumb_13.jpg
 ---
 

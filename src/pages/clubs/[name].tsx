@@ -6,11 +6,14 @@ import PlaceholderSuggestion from '../../assets/vectors/clubs/PlaceholderSuggest
 import { GetStaticPaths, GetStaticProps } from 'next'
 import * as fs from 'fs'
 import markdownToHtml from '../../lib/markdownToHTML'
+import Link from 'next/link'
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const file = fs.readFileSync('./_clubs/clubs.json', { encoding: 'utf8', flag: 'r' })
+  const file = fs.readFileSync('./_maps/clubsMap.json', { encoding: 'utf8', flag: 'r' })
   const obj = JSON.parse(file)
   const fname: string = params.name as string
+  const keys = Object.keys(obj)
+
   const reviewItems = await Promise.all(
     obj[fname].reviews.map(async (item, index) => {
       return {
@@ -20,6 +23,23 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       }
     })
   )
+
+  let random = []
+  while (random.length < 6) {
+    let r = Math.floor(Math.random() * 55)
+    if (random.indexOf(r) === -1 && r !== keys.indexOf(fname)) random.push(r)
+  }
+
+  const suggestion = random.map(index => {
+    return {
+      path: `/clubs/${obj[keys[index]].englishName}`,
+      thumbnail:
+        obj[keys[index]].imageURL.length >= 1
+          ? obj[keys[index]].imageURL[0].url
+          : '/assets/nok.png',
+      title: obj[keys[index]].thaiName
+    }
+  })
 
   const content = {
     thaiName: obj[fname].thaiName,
@@ -32,17 +52,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     reviews: reviewItems
   }
 
-  console.log(content)
-
   return {
     props: {
-      contents: content
+      contents: content,
+      suggestion: suggestion
     }
   }
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const file = fs.readFileSync('./_clubs/clubs.json', { encoding: 'utf8', flag: 'r' })
+  const file = fs.readFileSync('./_maps/clubsMap.json', { encoding: 'utf8', flag: 'r' })
   const obj = JSON.parse(file)
   return {
     paths: Object.keys(obj).map(post => {
@@ -56,7 +75,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-const Page = ({ contents }) => {
+const Page = ({ contents, suggestion }) => {
   return (
     <Layout>
       <div className="flex justify-center">
@@ -196,30 +215,22 @@ const Page = ({ contents }) => {
           <div className="mt-20">
             <h1 className="text-2xl font-bold text-center mb-6">ชมรมอื่นๆ</h1>
             <div className="flex flex-wrap justify-center space-x-4">
-              <div className="text-center mb-10">
-                <PlaceholderSuggestion className="pb-2 w-60" />
-                <span className="font-semibold">พัฒนาศักยภาพทางวิทยาศาสตร์</span>
-              </div>
-              <div className="text-center mb-10">
-                <PlaceholderSuggestion className="pb-2 w-60" />
-                <span className="font-semibold">พัฒนาศักยภาพทางวิทยาศาสตร์</span>
-              </div>
-              <div className="text-center mb-10">
-                <PlaceholderSuggestion className="pb-2 w-60" />
-                <span className="font-semibold">พัฒนาศักยภาพทางวิทยาศาสตร์</span>
-              </div>
-              <div className="text-center mb-10">
-                <PlaceholderSuggestion className="pb-2 w-60" />
-                <span className="font-semibold">พัฒนาศักยภาพทางวิทยาศาสตร์</span>
-              </div>
-              <div className="text-center mb-10">
-                <PlaceholderSuggestion className="pb-2 w-60" />
-                <span className="font-semibold">พัฒนาศักยภาพทางวิทยาศาสตร์</span>
-              </div>
-              <div className="text-center mb-10">
-                <PlaceholderSuggestion className="pb-2 w-60" />
-                <span className="font-semibold">พัฒนาศักยภาพทางวิทยาศาสตร์</span>
-              </div>
+              {suggestion.map(value => {
+                return (
+                  <Link href={value.path}>
+                    <div className="text-center mb-10">
+                      <img
+                        src={value.thumbnail}
+                        style={{ width: '240px', height: '162px' }}
+                        className="pb-2 w-60 rounded-xl"
+                      />
+                      <p style={{ width: '240px' }} className="font-semibold">
+                        {value.title}
+                      </p>
+                    </div>
+                  </Link>
+                )
+              })}
             </div>
           </div>
         </div>

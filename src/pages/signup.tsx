@@ -104,7 +104,7 @@ const Signup = () => {
           </div>
           <div className="mt-10 text-md md:text-lg flex flex-row justify-center font-medium text-gray-400">
             <div className="w-2/3 text-center">
-              หมายเหตุ: ควรใช้บราวเซอร์เดียวกันกับบราวเซอร์ที่ใช้ลงทะเบียน
+              หมายเหตุ: ควรใช้เบราว์เซอร์เดียวกันกับเบราว์เซอร์ที่ใช้ลงทะเบียน
               ในการเปิดลิงก์ยืนยันที่อยู่อีเมล
             </div>
           </div>
@@ -124,7 +124,7 @@ const Signup = () => {
           </div>
           <div className="mt-10 text-md md:text-lg flex flex-row justify-center font-medium text-gray-400">
             <div className="w-2/3 text-center">
-              หมายเหตุ: ควรใช้บราวเซอร์เดียวกันกับบราวเซอร์ที่ใช้ลงทะเบียน
+              หมายเหตุ: ควรใช้เบราว์เซอร์เดียวกันกับเบราว์เซอร์ที่ใช้ลงทะเบียน
               ในการเปิดลิงก์ยืนยันที่อยู่อีเมล
             </div>
           </div>

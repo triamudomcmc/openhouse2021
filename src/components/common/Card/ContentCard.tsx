@@ -22,10 +22,22 @@ export const ContentCard = ({ className = '', duration = '', src, children, href
         )}
       >
         {duration === '' ? (
-          <Image src={src === '' ? '/assets/nok.png' : src} width={288} height={188} />
+          <img
+            src={src === '' ? '/assets/nok.png' : src}
+            style={{ minWidth: '288px' }}
+            className="mx-auto"
+            width={288}
+            height={188}
+          />
         ) : (
           <div className="relative">
-            <img src={src} width={288} height={188} className="w-full" />
+            <img
+              src={src}
+              width={288}
+              height={188}
+              style={{ minWidth: '288px' }}
+              className="w-full"
+            />
             <div className="absolute mx-2 right-3 bottom-3">
               <div className="px-2 py-1 text-sm font-semibold bg-white rounded-lg">{duration}</div>
             </div>

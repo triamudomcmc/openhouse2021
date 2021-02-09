@@ -1,6 +1,6 @@
 ---
 title: Model United Nations: A Unique Experience in Triam Udom
-author: Pawada Umpriwan, Tanapat Witayangkun
+author: TriamMUN
 thumbnail: /assets/articles/_thumbnails/thumb_15.jpg
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: It’s Okay ti Not Be Okay
+title: It’s Okay to Not Be Okay
 author: มุก (IG: xxmook), กวางตุ้ง (IG: salislnkt) และ เจตน์ (IG: _jae.dn)
 thumbnail: /assets/articles/_thumbnails/thumb_6.jpg
 ---
