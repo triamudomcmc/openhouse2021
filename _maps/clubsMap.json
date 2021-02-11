@@ -52,12 +52,12 @@
         "profileContent": {
           "name": "แพร",
           "year": "82",
-          "contact": "ไม่มีcontact+ไม่มีรูป"
+          "contact": ""
         }
       }
     ],
     "reviewURL": [],
-    "imageURL": []
+    "imageURL": [{ "url": "/assets/clubs/mathclub_image_1.jpg", "description": "" }]
   },
   "triamudomsuksashortfilmclub": {
     "thaiName": "ชมรมภาพยนตร์สั้นเเละสื่อโทรทัศน์",

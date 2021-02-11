@@ -28,7 +28,7 @@ const Videos = ({ post, suggestion }) => {
             dangerouslySetInnerHTML={{ __html: post.description }}
           ></article>
         </div>
-        <div className="mt-20 w-7/12">
+        {/*<div className="mt-20 w-7/12">
           <h1 className="text-2xl font-bold text-center mb-6">ชมรมอื่นๆ</h1>
           <div className="flex flex-wrap justify-center space-x-4">
             {suggestion.map(value => {
@@ -48,7 +48,7 @@ const Videos = ({ post, suggestion }) => {
               )
             })}
           </div>
-        </div>
+        </div>*/}
       </div>
       <Footer />
     </Layout>
@@ -59,7 +59,7 @@ export async function getStaticPaths() {
   const fetchedData = fs.readFileSync('./_maps/videosMap.json')
   let pathsItem = []
   let i = 1
-  while (i <= 24) {
+  while (i <= 26) {
     pathsItem.push(i)
     i++
   }

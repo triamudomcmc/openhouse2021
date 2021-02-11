@@ -88,11 +88,8 @@ const Stage = ({ stream, schedule }) => {
                 ทำความรู้จักศิลป์จีนเตรียมอุดมฯ โอ้โหโอ้โหว้าวว้าวว้าวเก่งจัง
               </h1>
               <h1 className="mt-2 text-sm font-medium text-gray-600 md:text-2xl">
-                ละครเวที | 10.30-11.50
+                รายการสด | 10.30-11.50
               </h1>
-              <p className="mt-8 text-sm text-gray-500 md:text-xl">
-                วิดีโอคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบายวิดีโอคำอธิบาย
-              </p>
             </div>
             <div className="flex flex-row items-center justify-center md:justify-end md:w-1/2">
               <div className="flex flex-col w-full h-full mt-8 md:w-10/12 md:mt-0">

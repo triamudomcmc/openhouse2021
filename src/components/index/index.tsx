@@ -17,6 +17,8 @@ import { Live } from '../common/Live'
 import { SchoolBlogs } from '../SchoolBlogs'
 
 export const Index = ({ stream, schedule, contents, videos }) => {
+  const date = new Date()
+  console.log(date.getHours())
   const response = useSWR('/api/stage', {
     initialData: stream,
     refreshInterval: 5000

@@ -8,6 +8,7 @@ import { Clubs } from '../../components/article/Clubs'
 import matter from 'gray-matter'
 import { getAllPosts } from '../../lib/api'
 import { ContentCard } from '../../components/common/Card/ContentCard'
+import Footer from '../../components/common/Footer'
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -36,7 +37,7 @@ export const getStaticProps: GetStaticProps = async () => {
 const Articles = ({ contents }) => {
   return (
     <Layout>
-      <div className="flex flex-col items-center w-full">
+      <div className="flex flex-col items-center w-full mb-10">
         <div className="max-w-full text-3xl font-bold text-center text-blue-400">
           <h1 className="pt-6">บทความ</h1>
         </div>
@@ -66,6 +67,7 @@ const Articles = ({ contents }) => {
           </div>
         }
       </div>
+      <Footer />
     </Layout>
   )
 }
