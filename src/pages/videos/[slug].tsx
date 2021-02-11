@@ -96,7 +96,7 @@ export async function getStaticProps({ params }) {
   let random = []
   while (random.length < 4) {
     let r = Math.floor(Math.random() * 5)
-    if (random.indexOf(r) === -1 && r !== parseInt(params.slug - 1)) random.push(r)
+    if (random.indexOf(r) === -1 && r !== parseInt(params.slug) - 1) random.push(r)
   }
 
   const suggestion = random.map(index => {

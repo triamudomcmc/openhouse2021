@@ -9,6 +9,14 @@ import matter from 'gray-matter'
 import { getAllPosts } from '../../lib/api'
 import { ContentCard } from '../../components/common/Card/ContentCard'
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[array[i], array[j]] = [array[j], array[i]]
+  }
+  return array
+}
+
 export const getStaticProps: GetStaticProps = async () => {
   const fetchedData = getAllPosts(['slug', 'title', 'author', 'thumbnail'], '_articles')
   let cleaned = fetchedData.filter(item => Object.keys(item).length > 1)
@@ -20,7 +28,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      contents: cleaned
+      contents: shuffleArray(cleaned)
     }
   }
 }
@@ -34,14 +42,26 @@ const Articles = ({ contents }) => {
         </div>
         {
           <div className="max-w-full w-10/12 md:w-8/12">
-            <ContentCard
-              src="/assets/articles/stat/thumbnail.jpg"
-              href={`/articles/statistic`}
-              className="mx-auto my-4 md:w-1/3"
-            >
-              <ContentCard.Desc>สถิติการสอบเข้ามหาวิทยาลยของนักเรียนเตรียมฯ</ContentCard.Desc>
-              <ContentCard.Author>โรงเรียนเตรียมอุดมศึกษา</ContentCard.Author>
-            </ContentCard>
+            <div className="flex flex-row justify-center">
+              <ContentCard
+                src="/assets/articles/stat/thumbnail.jpg"
+                href={`/articles/statistic`}
+                className="my-4 md:w-1/3"
+              >
+                <ContentCard.Desc>สถิติการสอบเข้ามหาวิทยาลยของนักเรียนเตรียมฯ</ContentCard.Desc>
+                <ContentCard.Author>โรงเรียนเตรียมอุดมศึกษา</ContentCard.Author>
+              </ContentCard>
+              <ContentCard
+                src="/assets/articles/admission/thumbnail.jpg"
+                href={`/articles/admission`}
+                className="my-4 md:w-1/3"
+              >
+                <ContentCard.Desc>
+                  การรับนักเรียนชั้นมัธยมศึกษาปีที่ ๔ ปีการศึกษา ๒๕๖๔
+                </ContentCard.Desc>
+                <ContentCard.Author>โรงเรียนเตรียมอุดมศึกษา</ContentCard.Author>
+              </ContentCard>
+            </div>
             <Clubs contents={contents} />
           </div>
         }

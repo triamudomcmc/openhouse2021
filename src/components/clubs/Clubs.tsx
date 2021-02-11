@@ -65,6 +65,18 @@ const generateContent = data => {
       tempStorage2 = <></>
     }
 
+    if (data.length - times < 5) {
+      dataReturn = (
+        <>
+          {dataReturn}
+          <div className="flex flex-row items-center justify-center md:flex-col">
+            {tempStorage2}
+          </div>
+        </>
+      )
+      tempStorage2 = <></>
+    }
+
     times++
   })
 

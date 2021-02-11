@@ -8,6 +8,13 @@ const Article = ({ post }) => {
     <Layout>
       {post === 'loadstat' ? (
         <img className="w-11/12 mx-auto" src="/assets/articles/stat/gradstat.jpg" />
+      ) : post === 'loadadmission' ? (
+        <iframe
+          className="w-full"
+          src="https://drive.google.com/file/d/1V59y328M1Y2Ja7oouPHApa3opiUEj1X9/preview"
+          width="640"
+          height="1000"
+        ></iframe>
       ) : (
         <div className="mx-auto max-w-prose my-14">
           <h1 className="mx-6 mt-4 mb-4 text-2xl font-bold md:text-4xl">{post.title}</h1>
@@ -39,6 +46,12 @@ export async function getStaticPaths() {
     }
   })
 
+  urls.push({
+    params: {
+      slug: 'admission'
+    }
+  })
+
   return {
     paths: urls,
     fallback: false
@@ -46,7 +59,19 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  if (params.slug !== 'statistic') {
+  if (params.slug === 'statistic') {
+    return {
+      props: {
+        post: 'loadstat'
+      }
+    }
+  } else if (params.slug === 'admission') {
+    return {
+      props: {
+        post: 'loadadmission'
+      }
+    }
+  } else {
     const post = getPostBySlug(
       params.slug,
       ['title', 'author', 'content', 'coverImage'],
@@ -60,12 +85,6 @@ export async function getStaticProps({ params }) {
           ...post,
           content
         }
-      }
-    }
-  } else {
-    return {
-      props: {
-        post: 'loadstat'
       }
     }
   }
