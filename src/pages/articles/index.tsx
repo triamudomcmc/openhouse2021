@@ -11,7 +11,6 @@ import { getAllPosts } from '../../lib/api'
 export const getStaticProps: GetStaticProps = async () => {
   const fetchedData = getAllPosts(['slug', 'title', 'author', 'thumbnail'], '_articles')
   let cleaned = fetchedData.filter(item => Object.keys(item).length > 1)
-
   if (!cleaned) {
     return {
       notFound: true

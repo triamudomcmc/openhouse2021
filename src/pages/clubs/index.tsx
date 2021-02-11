@@ -32,7 +32,7 @@ const Clubs = ({ contents }) => {
         <div className="max-w-full pb-12 text-3xl font-bold text-center text-blue-400">
           <h1 className="pt-6">ชมรม</h1>
         </div>
-        <div className="max-w-full md:w-8/12">
+        <div className="w-8/12">
           <ClubIndex contents={contents} />
         </div>
       </div>

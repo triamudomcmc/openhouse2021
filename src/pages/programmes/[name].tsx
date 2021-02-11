@@ -63,6 +63,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const file = fs.readFileSync('./_maps/programmesMap.json', { encoding: 'utf8', flag: 'r' })
   const obj = JSON.parse(file)
+  console.log(Object.keys(obj))
   return {
     paths: Object.keys(obj).map(post => {
       return {
@@ -81,7 +82,12 @@ const Page = ({ contents, suggestion }) => {
       <div className="flex justify-center">
         <div className="w-10/12 md:max-w-3xl">
           <div className="flex flex-col justify-center items-center mt-20">
-            <h1 className="text-4xl md:text-6xl font-bold text-blue-400">{contents.thaiName}</h1>
+            <h1
+              className="text-4xl md:text-6xl font-bold text-center text-blue-400"
+              style={{ lineHeight: 1.2 }}
+            >
+              {contents.thaiName}
+            </h1>
             <h1 className="text-blue-400 font-medium text-xl md:text-2xl mt-2">
               สายการเรียน | {contents.count} คน
             </h1>
@@ -90,6 +96,7 @@ const Page = ({ contents, suggestion }) => {
             {contents.pictures.length >= 1 ? (
               <>
                 <img
+                  style={{ objectFit: 'cover' }}
                   src={contents.pictures[0].url}
                   className="bg-gray-300 h-60 md:h-96 w-full"
                 ></img>
@@ -102,7 +109,7 @@ const Page = ({ contents, suggestion }) => {
             )}
           </div>
           <div className="mt-20">
-            <h1 className="font-medium text-2xl md:text-3xl">ชมรมนี้ทำอะไร</h1>
+            <h1 className="font-medium text-2xl md:text-3xl">การรับสมัครและการสอบเข้า</h1>
             <article
               className="prose text-gray-500 text-medium md:text-xl mt-12"
               dangerouslySetInnerHTML={{ __html: contents.admission }}
@@ -111,6 +118,7 @@ const Page = ({ contents, suggestion }) => {
               {contents.pictures.length >= 2 ? (
                 <>
                   <img
+                    style={{ objectFit: 'cover' }}
                     src={contents.pictures[1].url}
                     className="bg-gray-300 h-60 md:h-96 w-full"
                   ></img>
@@ -124,7 +132,7 @@ const Page = ({ contents, suggestion }) => {
             </div>
           </div>
           <div className="mt-20">
-            <h1 className="font-medium text-2xl md:text-3xl">ประโยชน์ที่ได้รับจากการเข้าชมรม</h1>
+            <h1 className="font-medium text-2xl md:text-3xl">วิชาหรือหลักสูตรเพิ่มเติมที่เรียน</h1>
             <article
               className="prose text-gray-500 text-medium md:text-xl mt-12"
               dangerouslySetInnerHTML={{ __html: contents.exsubject }}
@@ -133,6 +141,7 @@ const Page = ({ contents, suggestion }) => {
               {contents.pictures.length >= 3 ? (
                 <>
                   <img
+                    style={{ objectFit: 'cover' }}
                     src={contents.pictures[2].url}
                     className="bg-gray-300 h-60 md:h-96 w-full"
                   ></img>
@@ -146,15 +155,26 @@ const Page = ({ contents, suggestion }) => {
             </div>
           </div>
           <div className="mt-20">
-            <h1 className="font-medium text-2xl md:text-3xl">ผลงานที่ผ่านมาของชมรม</h1>
-            <article
-              className="prose text-gray-500 text-medium md:text-xl mt-12"
-              dangerouslySetInnerHTML={{ __html: contents.interest }}
-            ></article>
+            {contents.interest
+              .replace(/<li>/g, '')
+              .replace(new RegExp('</li>', 'g'), '')
+              .replace(/<ul>/g, '')
+              .replace(new RegExp('</ul>', 'g'), '').length > 10 ? (
+              <>
+                <h1 className="font-medium text-2xl md:text-3xl">ความน่าสนใจของสายการเรียน</h1>
+                <article
+                  className="prose text-gray-500 text-medium md:text-xl mt-12"
+                  dangerouslySetInnerHTML={{ __html: contents.interest }}
+                ></article>
+              </>
+            ) : (
+              <></>
+            )}
             <div className="flex flex-col justify-center items-center mt-12">
               {contents.pictures.length >= 4 ? (
                 <>
                   <img
+                    style={{ objectFit: 'cover' }}
                     src={contents.pictures[3].url}
                     className="bg-gray-300 h-60 md:h-96 w-full"
                   ></img>
@@ -178,11 +198,16 @@ const Page = ({ contents, suggestion }) => {
                         src={item.profileURL}
                         width="96px"
                         height="96px"
-                        style={{ height: '96px' }}
+                        style={{
+                          height: '96px',
+                          width: '96px',
+                          minWidth: '96px',
+                          objectFit: 'cover'
+                        }}
                         className="rounded-xl"
                       />
                     </div>
-                    <div className="flex flex-col text-gray-500 md:pl-0 pl-2">
+                    <div className="flex flex-col text-gray-500 mt-1 md:pl-0 pl-2">
                       <h1 className="text-xl md:text-2xl font-black">{item.profileData.name}</h1>
                       <span className="text-xs">เตรียมอุดม {item.profileData.year}</span>
                       <span className="w-max text-xs">IG: {item.profileData.contact}</span>
@@ -221,7 +246,7 @@ const Page = ({ contents, suggestion }) => {
                     <div className="text-center mb-10">
                       <img
                         src={value.thumbnail}
-                        style={{ width: '240px', height: '162px' }}
+                        style={{ width: '240px', height: '162px', objectFit: 'cover' }}
                         className="pb-2 w-60 rounded-xl"
                       />
                       <p style={{ width: '240px' }} className="font-semibold">

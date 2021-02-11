@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      contents: parseJson(fetchedData.toString())
+      contents: JSON.parse(fetchedData.toString())
     }
   }
 }

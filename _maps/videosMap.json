@@ -25,6 +25,7 @@
   },
   {
     "path": "/videos/6",
+    "video": "https://www.youtube.com/embed/gAeZykF_pbU",
     "title": "เปิดบ้านกน.",
     "author": "คณะกรรมการนักเรียน",
     "duration": "3.33",
@@ -81,6 +82,7 @@
   },
   {
     "path": "/videos/13",
+    "video": "https://www.youtube.com/embed/YaUPR9Ev0ok",
     "title": "Online or Traditional classes. Which is better? ",
     "author": "English Debate (อันนี้เป็นคลิปที่เอาขึ้นไลฟ ไม่มั่นใจว่าต้องส่งไหม)",
     "duration": "3.33",
@@ -145,6 +147,7 @@
   },
   {
     "path": "/videos/22",
+    "video": "https://www.youtube.com/embed/O_oWLPvy4KM",
     "title": "Cellmates the Musical Full Show",
     "author": "ชมรมภาษาอังกฤษ (English Drama)",
     "duration": "3.33",
@@ -161,6 +164,7 @@
   },
   {
     "path": "/videos/24",
+    "video": "https://www.youtube.com/embed/iYB4QASz6g4",
     "title": "Sincerely Yours Full Show",
     "author": "ชมรมภาษาอังกฤษ (English Drama)",
     "duration": "3.33",
@@ -185,6 +189,7 @@
   },
   {
     "path": "/videos/27",
+    "video": "https://www.youtube.com/embed/NvnjqsKRuaM",
     "title": "นักเก็ตสอนลูกเจี๊ยบ",
     "author": "ภาษา-ภาษา (ฝรั่งเศส)",
     "duration": "3.33",
