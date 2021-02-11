@@ -97,7 +97,7 @@ const Page = ({ contents, suggestion }) => {
                 <img
                   style={{ objectFit: 'cover' }}
                   src={contents.pictures[0].url}
-                  className="bg-gray-300 h-60 md:h-96 w-full"
+                  className="bg-gray-300 w-full"
                 ></img>
                 <h1 className="text-gray-300 font-semibold text-sm md:text-xl pt-3">
                   {contents.pictures[0].description}
@@ -119,7 +119,7 @@ const Page = ({ contents, suggestion }) => {
                   <img
                     style={{ objectFit: 'cover' }}
                     src={contents.pictures[1].url}
-                    className="bg-gray-300 h-60 md:h-96 w-full"
+                    className="bg-gray-300 w-full"
                   ></img>
                   <h1 className="text-gray-300 font-semibold text-sm md:text-xl pt-3">
                     {contents.pictures[1].description}

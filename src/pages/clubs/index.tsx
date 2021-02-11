@@ -4,6 +4,7 @@ import { ClubIndex } from 'components/clubs/Clubs'
 import Footer from '../../components/common/Footer'
 import { GetStaticProps } from 'next'
 import * as fs from 'fs'
+import { ContentCard } from '../../components/common/Card/ContentCard'
 
 export const getStaticProps: GetStaticProps = async () => {
   const data = fs.readFileSync('./_maps/clubsMap.json', { encoding: 'utf8', flag: 'r' })
@@ -11,6 +12,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const items = Object.values(obj) as [
     { englishName: string; imageURL: Array<{ url: string; description: string }>; thaiName: string }
   ]
+
+  console.log(Object.values(obj).length)
   const objContents = items.map(item => {
     return {
       path: `clubs/${item.englishName}`,

@@ -67,7 +67,7 @@ export const ContentCard = ({
       <div
         onClick={callback}
         className={classNames(
-          'flex flex-col justify-between px-2 pt-3 pb-1 mx-2 space-y-2 shadow-md' +
+          'flex flex-col bg-gray-200 justify-between px-2 pt-3 pb-1 mx-2 space-y-2 shadow-md' +
             ' md:w-1/3 rounded-xl',
           className
         )}
@@ -90,7 +90,7 @@ export const ContentCard = ({
               className="w-full"
             />
             <div className="absolute mx-2 right-3 bottom-3">
-              <div className="px-2 py-1 text-sm font-semibold bg-white rounded-lg">{duration}</div>
+              <div className="px-2 py-1 text-sm font-semibold bg-white rounded-lg">--.--</div>
             </div>
           </div>
         )}
