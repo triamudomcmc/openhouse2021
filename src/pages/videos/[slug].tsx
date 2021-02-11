@@ -59,7 +59,7 @@ export async function getStaticPaths() {
   const fetchedData = fs.readFileSync('./_maps/videosMap.json')
   let pathsItem = []
   let i = 1
-  while (i <= 27) {
+  while (i <= 24) {
     pathsItem.push(i)
     i++
   }
@@ -96,10 +96,8 @@ export async function getStaticProps({ params }) {
   let random = []
   while (random.length < 4) {
     let r = Math.floor(Math.random() * 5)
-    if (random.indexOf(r) === -1 && r !== parseInt(params.slug)) random.push(r)
+    if (random.indexOf(r) === -1 && r !== parseInt(params.slug) - 1) random.push(r)
   }
-
-  console.log(random)
 
   const suggestion = random.map(index => {
     return {
@@ -113,7 +111,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      post: data[params.slug],
+      post: data[params.slug - 1],
       suggestion: suggestion
     }
   }
