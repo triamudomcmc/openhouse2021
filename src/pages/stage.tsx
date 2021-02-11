@@ -29,6 +29,7 @@ const Stage = ({ stream, schedule }) => {
 
   const submitQuestion = async () => {
     const questionID = await addQuestion(question)
+    console.log(questionID)
     if (questionID) {
       setQuestion('')
     }
@@ -51,7 +52,7 @@ const Stage = ({ stream, schedule }) => {
               <button
                 type="button"
                 className="inline-flex items-center justify-center w-full px-5 py-2 text-base font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md hover:bg-gray-100 md:px-10 md:text-xl focus:outline-none"
-                onClick={() => signinWithGoogle('/onboard')}
+                onClick={() => signinWithGoogle('/stage')}
               >
                 <Google className="w-5 h-5 mr-4" />
                 Sign in with Google
@@ -59,7 +60,7 @@ const Stage = ({ stream, schedule }) => {
               <button
                 type="button"
                 className="inline-flex items-center justify-center w-full px-5 py-2 text-base font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md hover:bg-gray-100 md:px-10 md:text-xl focus:outline-none"
-                onClick={() => signinWithFacebook('/onboard')}
+                onClick={() => signinWithFacebook('/stage')}
               >
                 <Facebook className="w-5 h-5 mr-4" />
                 Sign in with Facebook
@@ -105,7 +106,8 @@ const Stage = ({ stream, schedule }) => {
                         <input
                           className="mx-4 font-semibold text-gray-400 placeholder-gray-300 bg-gray-100 text-medium md:text-xl"
                           placeholder="ถามคำถามเลย !"
-                          onClick={e => setQuestion(e.currentTarget.value)}
+                          onChange={e => setQuestion(e.currentTarget.value)}
+                          value={question}
                         />
                       </div>
                       <motion.div

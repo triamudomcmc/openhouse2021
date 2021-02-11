@@ -14,7 +14,7 @@ export const createUser = (uid: string, data: firebase.firestore.DocumentData): 
 }
 
 export const addQuestion = (question: string) => {
-  return firestore.collection('question').add({ question })
+  return firestore.collection('questions').add({ question })
 }
 
 export const getCurrentUserData = async (
