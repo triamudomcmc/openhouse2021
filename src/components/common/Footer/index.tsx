@@ -80,9 +80,9 @@ const Footer = () => {
                 <Link href="/articles">
                   <h1 className="cursor-pointer">บทความ</h1>
                 </Link>
-                <h1 className="cursor-pointer text-gray-200" onClick={turnWarnToastOn}>
-                  คลิปวิดีโอ
-                </h1>
+                <Link href="/videos">
+                  <h1 className="cursor-pointer">คลิปวิดีโอ</h1>
+                </Link>
                 <Link href="/contact">
                   <h1 className="cursor-pointer">ติดต่อ</h1>
                 </Link>

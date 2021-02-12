@@ -87,31 +87,35 @@ export const Index = ({ stream, schedule, contents, videos }) => {
             ></iframe>
           </div>
         </div>
-        <div className="flex flex-row justify-center w-4/5 px-4 py-4 mb-3 bg-white shadow-lg md:w-7/12 rounded-3xl md:px-12 md:py-16">
-          <div className="flex flex-col items-center justify-center mx-auto">
-            <h1 className="text-3xl font-semibold md:font-bold md:text-7xl text-blue-75">
-              สอบเข้า
-            </h1>
-            <h1 className="text-xs font-bold text-gray-400 md:text-3xl">6 March 2021</h1>
+        <Link href="/articles/admission">
+          <div className="flex flex-row justify-center w-4/5 px-4 py-4 mb-3 bg-white shadow-lg md:w-7/12 rounded-3xl md:px-12 md:py-16">
+            <div className="flex flex-col items-center justify-center mx-auto">
+              <h1 className="text-3xl font-semibold md:font-bold md:text-7xl text-blue-75">
+                สอบเข้า
+              </h1>
+              <h1 className="text-xs font-bold text-gray-400 md:text-3xl">6 March 2021</h1>
+            </div>
+            <div className="flex flex-col items-center justify-center mx-auto">
+              <Countdown
+                date={1614992400000}
+                renderer={({ days }) => (
+                  <h1 className="text-4xl font-bold md:text-8xl text-blue-75">{days}</h1>
+                )}
+              />
+              <p className="text-xs font-medium text-gray-400 md:text-xl">DAYS LEFT</p>
+            </div>
+            <div className="flex flex-col items-center justify-center h-20 mx-auto md:h-full">
+              <Group8 className="w-24 md:w-full" />
+            </div>
           </div>
-          <div className="flex flex-col items-center justify-center mx-auto">
-            <Countdown
-              date={1614992400000}
-              renderer={({ days }) => (
-                <h1 className="text-4xl font-bold md:text-8xl text-blue-75">{days}</h1>
-              )}
-            />
-            <p className="text-xs font-medium text-gray-400 md:text-xl">DAYS LEFT</p>
-          </div>
-          <div className="flex flex-col items-center justify-center h-20 mx-auto md:h-full">
-            <Group8 className="w-24 md:w-full" />
-          </div>
-        </div>
+        </Link>
         <div className="flex flex-wrap items-center justify-center w-4/5 space-x-2 md:justify-between md:w-7/12 md:space-x-2">
-          <div className="flex flex-col items-center justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
-            <Camera className="h-9 sm:h-12 md:h-24" />
-            วีดีโอ
-          </div>
+          <Link href="/videos">
+            <div className="flex flex-col cursor-pointer items-center justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
+              <Camera className="h-9 sm:h-12 md:h-24" />
+              วีดีโอ
+            </div>
+          </Link>
           <div className="flex flex-col items-center justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
             <Puzzle className="h-9 sm:h-12 md:h-24" />
             ชมรม
