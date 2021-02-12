@@ -14,16 +14,22 @@ const generateContent = data => {
         <Link href={item.path}>
           <div
             className="relative flex flex-col items-center pb-1 px-2 space-y-2 shadow-md md:w-1/5 rounded-xl md:shadow-none"
-            style={{ width: '216px', height: '197px' }}
+            style={{ width: '40vw', maxWidth: '216px', height: '200px' }}
           >
             <img
-              style={{ objectFit: 'cover', height: '137px' }}
+              style={{
+                objectFit: 'cover',
+                maxHeight: '137px',
+                maxWidth: '200px',
+                minHeight: '137px',
+                width: '38vw'
+              }}
               src={item.thumbnail}
               width={200}
               height={137}
             />
             <div className="flex flex-col justify-center my-auto">
-              <h1 className="font-bold text-center">{item.title}</h1>
+              <h1 className="font-bold text-sm md:text-base text-center">{item.title}</h1>
             </div>
           </div>
         </Link>

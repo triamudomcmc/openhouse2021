@@ -11,14 +11,15 @@ export const StageContainer = ({ stream }) => {
   const updatedStream = response.data || ''
 
   return (
-    <div className="flex flex-col items-center justify-center flex-1 w-full mb-16">
+    <div className="flex flex-col items-center justify-center flex-1 md:w-full mb-16">
       <iframe
         src={`${updatedStream.stream}`}
         frameBorder="0"
         allowFullScreen
         scrolling="no"
-        height="340"
-        width="560"
+        height="560"
+        width="1000"
+        style={{ width: '80vw', height: '46vw' }}
       ></iframe>
     </div>
   )

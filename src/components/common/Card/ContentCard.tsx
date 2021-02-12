@@ -33,7 +33,13 @@ export const ContentCard = ({
           {duration === '' ? (
             <img
               src={src === '' ? '/assets/nok.png' : src}
-              style={{ height: '168px', minWidth: '240px', objectFit: 'cover' }}
+              style={{
+                height: '18vw',
+                minHeight: '145px',
+                width: '60vw',
+                maxHeight: '188px',
+                objectFit: 'cover'
+              }}
               className="mx-auto"
               width={240}
               height={188}
@@ -41,13 +47,19 @@ export const ContentCard = ({
           ) : (
             <img
               src={src === '' ? '/assets/nok.png' : src}
-              style={{ height: '168px', minWidth: '240px', objectFit: 'cover' }}
+              style={{
+                height: '18vw',
+                minHeight: '145px',
+                width: '60vw',
+                maxHeight: '188px',
+                objectFit: 'cover'
+              }}
               className="mx-auto"
               width={240}
               height={188}
             />
           )}
-          <h1 style={{ width: '240px' }} className="mx-2 font-bold truncate">
+          <h1 style={{ width: '60vw', maxWidth: '240px' }} className="mx-2 font-bold truncate">
             {description}
           </h1>
           <div className="flex flex-row space-x-1 text-gray-300 ">
@@ -70,7 +82,13 @@ export const ContentCard = ({
         {duration === '' ? (
           <img
             src={src === '' ? '/assets/nok.png' : src}
-            style={{ height: '168px', minWidth: '240px', objectFit: 'cover' }}
+            style={{
+              height: '18vw',
+              minHeight: '145px',
+              width: '60vw',
+              maxHeight: '188px',
+              objectFit: 'cover'
+            }}
             className="mx-auto"
             width={240}
             height={188}
@@ -78,13 +96,21 @@ export const ContentCard = ({
         ) : (
           <img
             src={src === '' ? '/assets/nok.png' : src}
-            style={{ height: '168px', minWidth: '240px', objectFit: 'cover' }}
+            style={{
+              height: '18vw',
+              minHeight: '145px',
+              width: '60vw',
+              maxHeight: '188px',
+              objectFit: 'cover'
+            }}
             className="mx-auto"
             width={240}
             height={188}
           />
         )}
-        <h1 className="mx-2 font-bold truncate">{description}</h1>
+        <h1 style={{ width: '60vw', maxWidth: '240px' }} className="mx-2 font-bold truncate">
+          {description}
+        </h1>
         <div className="flex flex-row space-x-1 text-gray-300 ">
           <User />
           <p>{author}</p>

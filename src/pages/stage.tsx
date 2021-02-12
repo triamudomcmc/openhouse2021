@@ -79,7 +79,7 @@ const Stage = ({ stream, schedule }) => {
         )}
 
         <div className="flex flex-col items-center justify-center">
-          <div className="flex flex-col w-9/12 md:flex-row">
+          <div className="flex flex-col w-9/12 md:flex-row h-40">
             <div className="md:w-1/2">
               <h1 className="text-base font-black text-gray-600 md:text-3xl">
                 <span className="inline-block px-2 mr-2 text-sm font-medium text-white align-middle bg-red-400 md:py-1 md:text-xl">
@@ -118,11 +118,7 @@ const Stage = ({ stream, schedule }) => {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col justify-end mt-4 md:mt-0 h-1/2">
-                  <h1 className="mb-1 text-sm font-bold text-gray-500 md:text-medium md:mb-0">
-                    รายการต่อไป
-                  </h1>
-                </div>
+                <div className="flex flex-col justify-end mt-4 md:mt-0 h-1/2"></div>
               </div>
             </div>
           </div>
