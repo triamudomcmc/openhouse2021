@@ -3,6 +3,7 @@ import React from 'react'
 import { User } from '../../../assets/vectors/User'
 import classNames from 'classnames'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 export const ContentCard = ({
   className = '',
@@ -23,11 +24,12 @@ export const ContentCard = ({
   if (!disabled) {
     return (
       <Link href={href}>
-        <div
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           className={classNames(
-            'flex flex-col justify-between px-2 pt-3 pb-1 mx-2 space-y-2 shadow-md' +
-              ' md:w-1/3 rounded-xl',
-            className
+            'flex flex-col justify-between cursor-pointer px-2 pt-3 pb-1 mx-2 space-y-2 shadow-md rounded-xl',
+            className.replace('md:w-1/3', '')
           )}
         >
           {duration === '' ? (
@@ -59,14 +61,14 @@ export const ContentCard = ({
               height={188}
             />
           )}
-          <h1 style={{ width: '60vw', maxWidth: '240px' }} className="mx-2 font-bold truncate">
+          <h1 style={{ width: '60vw', maxWidth: '320px' }} className="mx-2 font-bold truncate">
             {description}
           </h1>
           <div className="flex flex-row space-x-1 text-gray-300 ">
             <User />
             <p>{author}</p>
           </div>
-        </div>
+        </motion.div>
       </Link>
     )
   } else {
@@ -74,9 +76,8 @@ export const ContentCard = ({
       <div
         onClick={callback}
         className={classNames(
-          'flex flex-col bg-gray-200 justify-between px-2 pt-3 pb-1 mx-2 space-y-2 shadow-md' +
-            ' md:w-1/3 rounded-xl',
-          className
+          'flex flex-col bg-gray-200 cursor-pointer justify-between px-2 pt-3 pb-1 mx-2 space-y-2 shadow-md rounded-xl',
+          className.replace('md:w-1/3', '')
         )}
       >
         {duration === '' ? (
@@ -108,7 +109,7 @@ export const ContentCard = ({
             height={188}
           />
         )}
-        <h1 style={{ width: '60vw', maxWidth: '240px' }} className="mx-2 font-bold truncate">
+        <h1 style={{ width: '60vw', maxWidth: '320px' }} className="mx-2 font-bold truncate">
           {description}
         </h1>
         <div className="flex flex-row space-x-1 text-gray-300 ">

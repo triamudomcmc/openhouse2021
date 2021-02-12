@@ -13,7 +13,7 @@ const generateContent = data => {
         {tempStorage1}
         <Link href={item.path}>
           <div
-            className="relative flex flex-col items-center pb-1 px-2 space-y-2 shadow-md md:w-1/5 rounded-xl md:shadow-none"
+            className="relative flex cursor-pointer flex-col items-center pb-1 px-2 space-y-2 shadow-md md:w-1/5 rounded-xl md:shadow-none"
             style={{ width: '40vw', maxWidth: '216px', height: '200px' }}
           >
             <img

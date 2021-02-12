@@ -16,6 +16,7 @@ import Footer from '../common/Footer'
 import { Live } from '../common/Live'
 import { SchoolBlogs } from '../SchoolBlogs'
 import { useAuth } from '../../lib/auth'
+import { motion } from 'framer-motion'
 
 export const Index = ({ stream, schedule, contents, videos }) => {
   const date = new Date()
@@ -41,12 +42,14 @@ export const Index = ({ stream, schedule, contents, videos }) => {
               <h2 className="m-4 text-xl font-bold md:text-4xl md:m-12">12-13 FEBRUARY</h2>
             </div>
             <Link href="/register">
-              <button
+              <motion.button
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
                 type="button"
                 className="inline-flex items-center px-10 py-2 text-base font-bold text-white text-purple-200 bg-white border border-transparent rounded-full md:py-4 w-max md:text-3xl font-display focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-200"
               >
                 เข้าร่วมงาน
-              </button>
+              </motion.button>
             </Link>
           </div>
         </div>
@@ -88,7 +91,11 @@ export const Index = ({ stream, schedule, contents, videos }) => {
           </div>
         </div>
         <Link href="/articles/admission">
-          <div className="flex flex-row justify-center w-4/5 px-4 py-4 mb-3 bg-white shadow-lg md:w-7/12 rounded-3xl md:px-12 md:py-16">
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex flex-row justify-center w-4/5 px-4 py-4 mb-3 bg-white shadow-lg md:w-7/12 rounded-3xl md:px-12 md:py-16"
+          >
             <div className="flex flex-col items-center justify-center mx-auto">
               <h1 className="text-3xl font-semibold md:font-bold md:text-7xl text-blue-75">
                 สอบเข้า
@@ -107,30 +114,63 @@ export const Index = ({ stream, schedule, contents, videos }) => {
             <div className="flex flex-col items-center justify-center h-20 mx-auto md:h-full">
               <Group8 className="w-24 md:w-full" />
             </div>
-          </div>
+          </motion.div>
         </Link>
-        <div className="flex flex-wrap items-center justify-center w-4/5 space-x-2 md:justify-between md:w-7/12 md:space-x-2">
-          <Link href="/videos">
-            <div className="flex flex-col cursor-pointer items-center justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
-              <Camera className="h-9 sm:h-12 md:h-24" />
-              วีดีโอ
-            </div>
-          </Link>
-          <div className="flex flex-col items-center justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
-            <Puzzle className="h-9 sm:h-12 md:h-24" />
-            ชมรม
+        <div className="flex flex-wrap items-center justify-evenly w-4/5 md:w-7/12">
+          <div className="w-1/5">
+            <Link href="/videos">
+              <div
+                style={{ width: '96%', height: '10vw' }}
+                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 w-full justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:h-44 rounded-xl md:rounded-3xl"
+              >
+                <Camera className="h-9 sm:h-12 md:h-24" />
+                วีดีโอ
+              </div>
+            </Link>
           </div>
-          <div className="flex flex-col items-center justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
-            <Carv className="my-1 h-7 sm:h-10 md:h-24" />
-            การเดินทาง
+          <div className="w-1/5">
+            <Link href="/clubs">
+              <div
+                style={{ width: '96%', height: '10vw' }}
+                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:h-44 rounded-xl md:rounded-3xl"
+              >
+                <Puzzle className="h-9 sm:h-12 md:h-24" />
+                ชมรม
+              </div>
+            </Link>
           </div>
-          <div className="flex-col items-center justify-center hidden w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 2xl:flex md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
-            <CardV className="h-9 sm:h-10 md:h-24" />
-            การ์ดต้อนรับ
+          <div className="w-1/5">
+            <Link href="/map">
+              <div
+                style={{ width: '96%', height: '10vw' }}
+                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:h-44 rounded-xl md:rounded-3xl"
+              >
+                <Carv className="my-1 h-7 sm:h-10 md:h-24" />
+                การเดินทาง
+              </div>
+            </Link>
           </div>
-          <div className="flex flex-col items-center justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
-            <Phone className="my-1 h-7 sm:h-10 md:h-24" />
-            ติดต่อ
+          <div className="w-1/5">
+            <Link href="/tickets">
+              <div
+                style={{ width: '96%', height: '10vw' }}
+                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:h-44 rounded-xl md:rounded-3xl"
+              >
+                <CardV className="h-9 sm:h-10 md:h-24" />
+                การ์ดต้อนรับ
+              </div>
+            </Link>
+          </div>
+          <div className="w-1/5">
+            <Link href="/contact">
+              <div
+                style={{ width: '96%', height: '10vw' }}
+                className="flex flex-col items-center cursor-pointer hover:bg-gray-100 justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:h-44 rounded-xl md:rounded-3xl"
+              >
+                <Phone className="my-1 h-7 sm:h-10 md:h-24" />
+                ติดต่อ
+              </div>
+            </Link>
           </div>
         </div>
         <Programmes />

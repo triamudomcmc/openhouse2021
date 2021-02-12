@@ -44,7 +44,7 @@ export const Nav = ({ hideSignIn, className }: Props) => {
           <Link href="/stage">
             <a>รายการสด</a>
           </Link>
-          <Link href="/">
+          <Link href="/articles/admission">
             <a>การสอบเข้า</a>
           </Link>
           {!hideSignIn ||

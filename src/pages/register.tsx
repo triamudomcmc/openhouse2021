@@ -34,7 +34,7 @@ const Register = () => {
 
   useEffect(() => {
     if (auth.userData && Object.keys(auth.userData).length >= 15) {
-      Router.push('/')
+      Router.push('/stage')
     }
   }, [auth.userData])
 
