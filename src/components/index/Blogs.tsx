@@ -1,5 +1,6 @@
 import { ContentCard } from '../common/Card/ContentCard'
 import React from 'react'
+import Link from 'next/link'
 
 const shuffle = array => {
   return array.sort(() => Math.random() - 0.5)
@@ -17,7 +18,9 @@ const Blogs = ({ content }) => {
         <h1 className="text-3xl font-black text-center text-blue-400 md:mt-48 md:text-7xl">
           บทความ
         </h1>
-        <h1 className="block md:hidden font-bold text-lg text-gray-400">ดูทั้งหมด</h1>
+        <Link href="/articles">
+          <h1 className="block md:hidden font-bold text-lg text-gray-400">ดูทั้งหมด</h1>
+        </Link>
       </div>
       <div className="flex flex-col items-center justify-center py-4 space-y-4">
         <div className="flex max-w-full pb-6 space-y-4 overflow-x-scroll md:space-y-0 md:space-x-4 flex-row">

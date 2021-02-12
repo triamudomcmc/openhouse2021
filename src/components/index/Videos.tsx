@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { User } from '../../assets/vectors/User'
 import { ContentCard } from '../common/Card/ContentCard'
 import Toast from '../common/Toasts/Toast'
+import Link from 'next/link'
 
 const shuffle = array => {
   return array.sort(() => Math.random() - 0.5)
@@ -41,14 +42,21 @@ const Videos = ({ videos }) => {
         <h1 className="text-3xl font-black text-center text-blue-400 md:mt-48 md:text-7xl">
           วีดีโอ
         </h1>
-        <h1 className="block md:hidden font-bold text-lg text-gray-400">ดูทั้งหมด</h1>
+        <h1 onClick={turnWarnToastOn} className="block md:hidden font-bold text-lg text-gray-400">
+          ดูทั้งหมด
+        </h1>
       </div>
       <div className="flex flex-col items-center justify-center py-4 space-y-4">
         <div className="flex max-w-full pb-6 space-y-4 overflow-x-scroll md:space-y-0 md:space-x-4 flex-row">
           {top.map(data => {
             if ('video' in data) {
               return (
-                <ContentCard src={data.thumbnail} duration={data.duration} className="md:w-1/3">
+                <ContentCard
+                  href={data.path}
+                  src={data.thumbnail}
+                  duration={data.duration}
+                  className="md:w-1/3"
+                >
                   <ContentCard.Desc>{data.title}</ContentCard.Desc>
                   <ContentCard.Author>{data.author}</ContentCard.Author>
                 </ContentCard>
@@ -57,6 +65,7 @@ const Videos = ({ videos }) => {
               return (
                 <ContentCard
                   src={data.thumbnail}
+                  href={data.path}
                   duration={data.duration}
                   className="md:w-1/3"
                   disabled={true}
@@ -75,7 +84,12 @@ const Videos = ({ videos }) => {
           {bottom.map(data => {
             if ('video' in data) {
               return (
-                <ContentCard src={data.thumbnail} duration={data.duration} className="md:w-1/3">
+                <ContentCard
+                  src={data.thumbnail}
+                  href={data.path}
+                  duration={data.duration}
+                  className="md:w-1/3"
+                >
                   <ContentCard.Desc>{data.title}</ContentCard.Desc>
                   <ContentCard.Author>{data.author}</ContentCard.Author>
                 </ContentCard>
@@ -85,6 +99,7 @@ const Videos = ({ videos }) => {
                 <ContentCard
                   src={data.thumbnail}
                   duration={data.duration}
+                  href={data.path}
                   className="md:w-1/3"
                   disabled={true}
                   callback={() => {

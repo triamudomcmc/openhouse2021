@@ -43,7 +43,7 @@ const Articles = ({ contents }) => {
         </div>
         {
           <div className="max-w-full w-10/12 md:w-8/12">
-            <div className="flex flex-row justify-center">
+            <div className="flex flex-col md:flex-row justify-center">
               <ContentCard
                 src="/assets/articles/stat/thumbnail.jpg"
                 href={`/articles/statistic`}

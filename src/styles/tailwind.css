@@ -47,6 +47,14 @@
       display: none;
     }
 
+    .h-465 {
+      height: 465px;
+    }
+
+    .z-extra {
+      z-index: 999;
+    }
+
     /* Hide scrollbar for IE, Edge and Firefox */
     .scroll-hidden {
       -ms-overflow-style: none; /* IE and Edge */

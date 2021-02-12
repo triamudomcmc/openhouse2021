@@ -15,6 +15,7 @@ import Countdown from 'react-countdown'
 import Footer from '../common/Footer'
 import { Live } from '../common/Live'
 import { SchoolBlogs } from '../SchoolBlogs'
+import { useAuth } from '../../lib/auth'
 
 export const Index = ({ stream, schedule, contents, videos }) => {
   const date = new Date()
@@ -69,10 +70,10 @@ export const Index = ({ stream, schedule, contents, videos }) => {
               <span className="px-2 text-xs font-semibold text-white bg-red-400 md:text-2xl">
                 LIVE
               </span>
-              <span className="ml-2 md:ml-4">ไอ้ตะวัน ประธาน กช. โดนรุมกระทืบ</span>
+              <span className="ml-2 md:ml-4">รายการถ่ายทอดสด</span>
             </div>
             <div className="mt-1 text-xs text-gray-300 min-w-min md:text-2xl">
-              Public Event | ประธานชมรม | 10.30-16.80 น.
+              Public Event | รายการถ่ายทอดสด | วันที่ 12 กุมภาพันธ์
             </div>
           </div>
           <div className="frame-height-mobile md:frame-height-desktop">
@@ -129,7 +130,6 @@ export const Index = ({ stream, schedule, contents, videos }) => {
           </div>
         </div>
         <Programmes />
-        <SchoolBlogs />
         <Videos videos={videos} />
         <Blogs content={contents} />
         <Live schedule={schedule} />

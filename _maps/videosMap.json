@@ -84,7 +84,7 @@
     "path": "/videos/11",
     "video": "https://www.youtube.com/embed/YaUPR9Ev0ok",
     "title": "Online or Traditional classes. Which is better? ",
-    "author": "English Debate (อันนี้เป็นคลิปที่เอาขึ้นไลฟ ไม่มั่นใจว่าต้องส่งไหม)",
+    "author": "English Debate",
     "duration": "3.33",
     "thumbnail": "/assets/videos/_thumbnails/thumb_13.jpg",
     "description": "Mock debate by Triam Debate members"
@@ -213,5 +213,14 @@
     "duration": "7.47",
     "thumbnail": "/assets/videos/_thumbnails/thumb_29.jpg",
     "description": "ทำความรู้จัก งานแนะแนว โรงเรียนเตรียมอุดมศึกษา"
+  },
+  {
+    "path": "/videos/27",
+    "video": "https://www.youtube.com/embed/rVm2mU9ooB0",
+    "title": "กิจกรรม กลุ่มสาระ คณิตศาสตร์",
+    "author": "กลุ่มสาระ คณิตศาสตร์",
+    "duration": "2.07",
+    "thumbnail": "/assets/videos/_thumbnails/thumb_30.jpg",
+    "description": ""
   }
 ]

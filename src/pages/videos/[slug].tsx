@@ -10,10 +10,11 @@ const Videos = ({ post, suggestion }) => {
   return (
     <Layout>
       <div className="flex flex-col items-center mb-10 w-full">
-        <div className="flex flex-col items-center w-7/12 space-y- mt-20">
+        <div className="flex flex-col items-center w-9/12 md:w-7/12 space-y- mt-20">
           <iframe
             width="100%"
             height="465"
+            className="h-80 md:h-465"
             src={post.video}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -59,7 +60,7 @@ export async function getStaticPaths() {
   const fetchedData = fs.readFileSync('./_maps/videosMap.json')
   let pathsItem = []
   let i = 1
-  while (i <= 26) {
+  while (i <= 27) {
     pathsItem.push(i)
     i++
   }

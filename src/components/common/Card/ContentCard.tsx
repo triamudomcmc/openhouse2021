@@ -33,28 +33,23 @@ export const ContentCard = ({
           {duration === '' ? (
             <img
               src={src === '' ? '/assets/nok.png' : src}
-              style={{ height: '168px', minWidth: '288px', objectFit: 'cover' }}
+              style={{ height: '168px', minWidth: '240px', objectFit: 'cover' }}
               className="mx-auto"
-              width={288}
+              width={240}
               height={188}
             />
           ) : (
-            <div className="relative">
-              <img
-                src={src}
-                width={288}
-                height={188}
-                style={{ height: '188px', minWidth: '288px', objectFit: 'cover' }}
-                className="w-full"
-              />
-              <div className="absolute mx-2 right-3 bottom-3">
-                <div className="px-2 py-1 text-sm font-semibold bg-white rounded-lg">
-                  {duration}
-                </div>
-              </div>
-            </div>
+            <img
+              src={src === '' ? '/assets/nok.png' : src}
+              style={{ height: '168px', minWidth: '240px', objectFit: 'cover' }}
+              className="mx-auto"
+              width={240}
+              height={188}
+            />
           )}
-          <h1 className="mx-2 font-bold truncate">{description}</h1>
+          <h1 style={{ width: '240px' }} className="mx-2 font-bold truncate">
+            {description}
+          </h1>
           <div className="flex flex-row space-x-1 text-gray-300 ">
             <User />
             <p>{author}</p>
@@ -75,24 +70,19 @@ export const ContentCard = ({
         {duration === '' ? (
           <img
             src={src === '' ? '/assets/nok.png' : src}
-            style={{ height: '168px', minWidth: '288px', objectFit: 'cover' }}
+            style={{ height: '168px', minWidth: '240px', objectFit: 'cover' }}
             className="mx-auto"
-            width={288}
+            width={240}
             height={188}
           />
         ) : (
-          <div className="relative">
-            <img
-              src={src}
-              width={288}
-              height={188}
-              style={{ height: '188px', minWidth: '288px', objectFit: 'cover' }}
-              className="w-full"
-            />
-            <div className="absolute mx-2 right-3 bottom-3">
-              <div className="px-2 py-1 text-sm font-semibold bg-white rounded-lg">--.--</div>
-            </div>
-          </div>
+          <img
+            src={src === '' ? '/assets/nok.png' : src}
+            style={{ height: '168px', minWidth: '240px', objectFit: 'cover' }}
+            className="mx-auto"
+            width={240}
+            height={188}
+          />
         )}
         <h1 className="mx-2 font-bold truncate">{description}</h1>
         <div className="flex flex-row space-x-1 text-gray-300 ">

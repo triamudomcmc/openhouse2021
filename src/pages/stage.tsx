@@ -85,17 +85,17 @@ const Stage = ({ stream, schedule }) => {
                 <span className="inline-block px-2 mr-2 text-sm font-medium text-white align-middle bg-red-400 md:py-1 md:text-xl">
                   LIVE
                 </span>
-                ทำความรู้จักศิลป์จีนเตรียมอุดมฯ โอ้โหโอ้โหว้าวว้าวว้าวเก่งจัง
+                รายการถ่ายทอดสด
               </h1>
               <h1 className="mt-2 text-sm font-medium text-gray-600 md:text-2xl">
-                รายการสด | 10.30-11.50
+                รายการสด | วันที่ 12 กุมภาพันธ์
               </h1>
             </div>
             <div className="flex flex-row items-center justify-center md:justify-end md:w-1/2">
               <div className="flex flex-col w-full h-full mt-8 md:w-10/12 md:mt-0">
                 <div className="flex flex-row justify-center bg-white shadow-lg rounded-2xl h-1/2">
                   <div className="flex flex-col justify-center w-10/12">
-                    <h1 className="mb-3 text-sm text-gray-600 md:mb-0 md:text-medium h-1/4">
+                    <h1 className="mb-3 text-sm text-gray-600 md:mb-2 md:text-medium h-1/4">
                       สงสัยอะไรไหม ? พิมพ์ถามคำถามสด ๆ ได้เลย
                     </h1>
                     <div className="flex flex-row justify-between h-1/3">
@@ -122,19 +122,6 @@ const Stage = ({ stream, schedule }) => {
                   <h1 className="mb-1 text-sm font-bold text-gray-500 md:text-medium md:mb-0">
                     รายการต่อไป
                   </h1>
-                  <div className="flex flex-row w-full py-0 py-3 bg-white rounded-lg shadow-lg md: h-1/2">
-                    <div className="flex items-center justify-center w-1/2 h-full text-smoxs sm:text-base">
-                      <span className="font-semibold text-center text-gray-600">10.30 - 11.52</span>
-                    </div>
-                    <div className="flex flex-col justify-center w-full leading-4">
-                      <span className="text-xs font-semibold text-gray-800 sm:text-base">
-                        การแสดงเชียร์เพลงพระราชนิพนธ์
-                      </span>
-                      <span className="text-xs font-normal text-gray-700 sm:text-sm">
-                        ชมรมเชียร์
-                      </span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
