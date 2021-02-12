@@ -78,13 +78,13 @@ export const Index = ({ stream, schedule, contents, videos }) => {
           </div>
           <div className="frame-height-mobile md:frame-height-desktop">
             <iframe
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+              src={`${updatedStream.stream}`}
               frameBorder="0"
-              src={`${updatedStream.stream}?autoplay=1&mute=1`}
-              width="100%"
+              allowFullScreen
+              scrolling="no"
               height="100%"
-            />
+              width="100%"
+            ></iframe>
           </div>
         </div>
         <div className="flex flex-row justify-center w-4/5 px-4 py-4 mb-3 bg-white shadow-lg md:w-7/12 rounded-3xl md:px-12 md:py-16">

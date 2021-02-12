@@ -113,7 +113,7 @@ const Footer = () => {
         <section className=" md:border-t-2 md:border-gray-200 font-display">
           <div className="flex flex-col items-center p-6 m-auto">
             <div className="w-24 md:w-48">
-              <Image src="/assets/tucmc.png" width={1071} height={162} />
+              <Image src="/assets/tucmc.png" width={1071} height={161} />
             </div>
           </div>
         </section>
