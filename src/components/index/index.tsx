@@ -209,7 +209,7 @@ export const Index = ({ stream, schedule, contents, videos }) => {
             style={{ paddingTop: '2.4vw', paddingBottom: '2.4vw' }}
             className="flex flex-row justify-center w-4/5 px-4 mb-3 bg-white shadow-lg md:w-7/12 rounded-3xl md:px-12"
           >
-            <div className="flex flex-col items-center justify-center sm:mx-auto">
+            <div className="flex flex-col items-center justify-center mx-auto">
               <h1
                 style={{ fontSize: 'calc(15px + 3.5vw)' }}
                 className="text-3xl font-semibold md:font-bold md:text-7xl text-blue-75"
@@ -242,7 +242,7 @@ export const Index = ({ stream, schedule, contents, videos }) => {
                 DAYS LEFT
               </p>
             </div>
-            <div className="flex flex-col items-center justify-center h-20 sm:mx-auto md:h-full">
+            <div className="flex flex-col items-center justify-center h-20 mx-auto md:h-full">
               <Group8 style={{ width: '16vw' }} className="w-24 md:w-full" />
             </div>
           </motion.div>
