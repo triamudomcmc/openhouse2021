@@ -8,7 +8,6 @@ import Input from 'components/ui/Input'
 import { getCurrentUserData, updateUser } from 'lib/db'
 import { useAuth } from 'lib/auth'
 import { getRandomWishes } from 'utils/wishes'
-import Link from 'next/link'
 
 const RegisterForm = () => {
   const { userData } = useAuth()

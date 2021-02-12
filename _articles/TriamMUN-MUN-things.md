@@ -1,6 +1,6 @@
 ---
 title: MUN: Things that You May Don’t Know
-author: Raiwin Vongsakajornkit
+author: TriamMUN
 thumbnail: /assets/articles/_thumbnails/thumb_17.jpg
 ---
 
