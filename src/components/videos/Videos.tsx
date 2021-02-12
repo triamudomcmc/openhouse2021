@@ -26,7 +26,7 @@ export const Videos = ({ contents }) => {
             src={data.thumbnail}
             href={`${data.path}`}
             duration={data.duration}
-            className="md:w-1/3"
+            className="md:w-1/3 md:mt-4"
           >
             <ContentCard.Desc>{data.title}</ContentCard.Desc>
             <ContentCard.Author>{data.author}</ContentCard.Author>
@@ -44,7 +44,7 @@ export const Videos = ({ contents }) => {
               turnWarnToastOn()
             }}
             duration={data.duration}
-            className="md:w-1/3"
+            className="md:w-1/3 md:mt-4"
           >
             <ContentCard.Desc>{data.title}</ContentCard.Desc>
             <ContentCard.Author>{data.author}</ContentCard.Author>

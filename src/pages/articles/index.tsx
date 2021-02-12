@@ -9,6 +9,10 @@ import matter from 'gray-matter'
 import { getAllPosts } from '../../lib/api'
 import { ContentCard } from '../../components/common/Card/ContentCard'
 import Footer from '../../components/common/Footer'
+import { motion } from 'framer-motion'
+import classNames from 'classnames'
+import { User } from '../../assets/vectors/User'
+import Link from 'next/link'
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -44,24 +48,66 @@ const Articles = ({ contents }) => {
         {
           <div className="max-w-full w-10/12 md:w-8/12">
             <div className="flex flex-col md:flex-row justify-center">
-              <ContentCard
-                src="/assets/articles/stat/thumbnail.jpg"
-                href={`/articles/statistic`}
-                className="my-4 md:w-1/3"
-              >
-                <ContentCard.Desc>สถิติการสอบเข้ามหาวิทยาลยของนักเรียนเตรียมฯ</ContentCard.Desc>
-                <ContentCard.Author>โรงเรียนเตรียมอุดมศึกษา</ContentCard.Author>
-              </ContentCard>
-              <ContentCard
-                src="/assets/articles/admission/thumbnail.jpg"
-                href={`/articles/admission`}
-                className="my-4 md:w-1/3"
-              >
-                <ContentCard.Desc>
-                  การรับนักเรียนชั้นมัธยมศึกษาปีที่ ๔ ปีการศึกษา ๒๕๖๔
-                </ContentCard.Desc>
-                <ContentCard.Author>โรงเรียนเตรียมอุดมศึกษา</ContentCard.Author>
-              </ContentCard>
+              <Link href="/articles/statistic">
+                <motion.div
+                  style={{ maxWidth: '400px' }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex flex-col justify-between cursor-pointer px-2 pt-3 pb-1 mx-2 space-y-2 shadow-md rounded-xl my-4 md:w-2/5"
+                >
+                  <img
+                    src="/assets/articles/stat/thumbnail.jpg"
+                    style={{
+                      height: '18vw',
+                      minHeight: '145px',
+                      width: '60vw',
+                      maxHeight: '188px',
+                      maxWidth: '375px',
+                      objectFit: 'cover'
+                    }}
+                    className="mx-auto"
+                    width={240}
+                    height={188}
+                  />
+                  <h1 style={{ width: '100%' }} className="mx-2 font-bold truncate">
+                    สถิติการสอบเข้ามหาวิทยาลยของนักเรียนเตรียมฯ
+                  </h1>
+                  <div className="flex flex-row space-x-1 text-gray-300 ">
+                    <User />
+                    <p>โรงเรียนเตรียมอุดมศึกษา</p>
+                  </div>
+                </motion.div>
+              </Link>
+              <Link href="/articles/admission">
+                <motion.div
+                  style={{ maxWidth: '400px' }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex flex-col justify-between cursor-pointer px-2 pt-3 pb-1 mx-2 space-y-2 shadow-md rounded-xl my-4 md:w-2/5"
+                >
+                  <img
+                    src="/assets/articles/admission/thumbnail.jpg"
+                    style={{
+                      height: '18vw',
+                      minHeight: '145px',
+                      width: '60vw',
+                      maxHeight: '188px',
+                      maxWidth: '375px',
+                      objectFit: 'cover'
+                    }}
+                    className="mx-auto"
+                    width={240}
+                    height={188}
+                  />
+                  <h1 style={{ width: '100%' }} className="mx-2 font-bold truncate">
+                    การรับนักเรียนชั้นมัธยมศึกษาปีที่ ๔ ปีการศึกษา ๒๕๖๔
+                  </h1>
+                  <div className="flex flex-row space-x-1 text-gray-300 ">
+                    <User />
+                    <p>โรงเรียนเตรียมอุดมศึกษา</p>
+                  </div>
+                </motion.div>
+              </Link>
             </div>
             <Clubs contents={contents} />
           </div>

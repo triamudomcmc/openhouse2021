@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 import { Google } from 'components/common/Logo/Google'
@@ -18,6 +18,7 @@ import { motion } from 'framer-motion'
 import Footer from '../components/common/Footer'
 import { useAuth } from 'lib/auth'
 import { addQuestion } from 'lib/db'
+import InApp from 'detect-inapp'
 
 type Props = {
   stream: Stream
@@ -26,10 +27,17 @@ type Props = {
 const Stage = ({ stream, schedule }) => {
   const { loading, user, signinWithGoogle, signinWithFacebook } = useAuth()
   const [question, setQuestion] = useState('')
+  const [blocked, setBlocked] = useState(false)
+
+  useEffect(() => {
+    const inapp = new InApp(navigator.userAgent || navigator.vendor)
+    if (inapp.isInApp) {
+      setBlocked(true)
+    }
+  }, [])
 
   const submitQuestion = async () => {
     const questionID = await addQuestion(question)
-    console.log(questionID)
     if (questionID) {
       setQuestion('')
     }
@@ -41,40 +49,64 @@ const Stage = ({ stream, schedule }) => {
         {!loading && user ? (
           <StageContainer stream={stream} />
         ) : (
-          <div className="flex flex-col items-center justify-center flex-1 px-4 my-16">
-            <h1 className="text-2xl font-bold text-center text-gray-500 md:text-4xl">
-              โปรดลงทะเบียน
-            </h1>
-            <h1 className="text-2xl font-bold text-center text-gray-500 md:text-4xl">
-              เพื่อเข้าชมการถ่ายทอดสด
-            </h1>
-            <div className="flex flex-col items-center justify-center mt-4 space-y-4 md:mt-12">
-              <button
-                type="button"
-                className="inline-flex items-center justify-center w-full px-5 py-2 text-base font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md hover:bg-gray-100 md:px-10 md:text-xl focus:outline-none"
-                onClick={() => signinWithGoogle('/stage')}
-              >
-                <Google className="w-5 h-5 mr-4" />
-                Sign in with Google
-              </button>
-              <button
-                type="button"
-                className="inline-flex items-center justify-center w-full px-5 py-2 text-base font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md hover:bg-gray-100 md:px-10 md:text-xl focus:outline-none"
-                onClick={() => signinWithFacebook('/stage')}
-              >
-                <Facebook className="w-5 h-5 mr-4" />
-                Sign in with Facebook
-              </button>
-              <Link href="/signup">
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center w-full px-5 py-2 text-base font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md hover:bg-gray-100 md:px-10 md:text-xl focus:outline-none"
-                >
-                  <Email className="w-5 h-5 mr-4" />
-                  Sign in with email
-                </button>
-              </Link>
-            </div>
+          <div className="flex flex-col h-full justify-center">
+            {!blocked ? (
+              <div className="flex flex-col items-center justify-center flex-1 px-4 my-20">
+                <h1 className="text-2xl font-bold text-center text-gray-500 md:text-4xl">
+                  โปรดลงทะเบียน
+                </h1>
+                <h1 className="text-2xl font-bold text-center text-gray-500 md:text-4xl">
+                  เพื่อเข้าชมการถ่ายทอดสด
+                </h1>
+                <div className="flex flex-col items-center justify-center mt-4 space-y-4 md:mt-12">
+                  <button
+                    type="button"
+                    className="inline-flex items-center justify-center w-full px-5 py-2 text-base font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md hover:bg-gray-100 md:px-10 md:text-xl focus:outline-none"
+                    onClick={() => signinWithGoogle('/stage')}
+                  >
+                    <Google className="w-5 h-5 mr-4" />
+                    Sign in with Google
+                  </button>
+                  <button
+                    type="button"
+                    className="inline-flex items-center justify-center w-full px-5 py-2 text-base font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md hover:bg-gray-100 md:px-10 md:text-xl focus:outline-none"
+                    onClick={() => signinWithFacebook('/stage')}
+                  >
+                    <Facebook className="w-5 h-5 mr-4" />
+                    Sign in with Facebook
+                  </button>
+                  <Link href="/signup">
+                    <button
+                      type="button"
+                      className="inline-flex items-center justify-center w-full px-5 py-2 text-base font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md hover:bg-gray-100 md:px-10 md:text-xl focus:outline-none"
+                    >
+                      <Email className="w-5 h-5 mr-4" />
+                      Sign in with email
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            ) : (
+              <div className="flex flex-col items-center justify-center flex-1 px-4 my-20">
+                <h1 className="text-2xl font-bold text-center text-gray-500 md:text-4xl">
+                  โปรดลงทะเบียน
+                </h1>
+                <h1 className="text-2xl font-bold text-center text-gray-500 md:text-4xl">
+                  เพื่อเข้าชมการถ่ายทอดสด
+                </h1>
+                <div className="flex flex-col items-center justify-center mt-4 space-y-4 md:mt-12">
+                  <Link href="/signup">
+                    <button
+                      type="button"
+                      className="inline-flex items-center justify-center w-full px-5 py-2 text-base font-medium text-center text-gray-600 bg-white border border-transparent rounded-full shadow-md hover:bg-gray-100 md:px-10 md:text-xl focus:outline-none"
+                    >
+                      <Email className="w-5 h-5 mr-4" />
+                      Sign in with email
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
         )}
 
@@ -88,7 +120,7 @@ const Stage = ({ stream, schedule }) => {
                 รายการถ่ายทอดสด
               </h1>
               <h1 className="mt-2 text-sm font-medium text-gray-600 md:text-2xl">
-                รายการสด | วันที่ 12 กุมภาพันธ์
+                รายการสด | วันที่ 13 กุมภาพันธ์ 2021
               </h1>
             </div>
             <div className="flex flex-row items-center justify-center md:justify-end md:w-1/2">
@@ -123,7 +155,7 @@ const Stage = ({ stream, schedule }) => {
             </div>
           </div>
         </div>
-        <Live schedule={schedule} />
+        <Live schedule={schedule} topClassName="mt-12 md:mt-20" />
       </div>
       <Footer />
     </Layout>

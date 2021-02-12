@@ -22,11 +22,9 @@ const Signup = () => {
     if (auth.userData && Object.keys(auth.userData).length === 5) {
       Router.push('/onboard')
     }
-  }, [auth.userData])
-
-  useEffect(() => {
     if (auth.userData && Object.keys(auth.userData).length >= 15) {
       Router.push('/')
+      window.localStorage.removeItem('emailForSignIn')
     }
   }, [auth.userData])
 

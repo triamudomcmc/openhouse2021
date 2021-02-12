@@ -13,8 +13,8 @@ const Videos = ({ post, suggestion }) => {
         <div className="flex flex-col items-center w-9/12 md:w-7/12 space-y- mt-20">
           <iframe
             width="100%"
-            height="465"
-            className="h-80 md:h-465"
+            height="505"
+            className="h-80 md:h-505"
             src={post.video}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

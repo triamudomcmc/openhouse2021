@@ -4,7 +4,7 @@ import Timetable from './Timetable'
 import useSWR from 'swr'
 import classNames from 'classnames'
 
-export const Live = ({ schedule, className = '' }) => {
+export const Live = ({ schedule, className = '', topClassName = 'mt-10 md:mt-56' }) => {
   const response = useSWR('/api/schedule', {
     initialData: schedule
   })
@@ -13,7 +13,12 @@ export const Live = ({ schedule, className = '' }) => {
 
   return (
     <div className="w-full mb-20">
-      <div className="flex flex-col items-center justify-center w-full h-full mt-10 md:mt-56 font-display">
+      <div
+        className={classNames(
+          'flex flex-col items-center justify-center w-full h-full' + ' font-display',
+          topClassName
+        )}
+      >
         <h1 className="text-2xl font-bold text-center mb-4 md:text-6xl lg:text-8xl bg-clip-text text-blue-400">
           ตารางรายการสด
         </h1>
