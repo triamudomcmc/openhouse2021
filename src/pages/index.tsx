@@ -60,7 +60,7 @@ const IndexPage = ({ schedule, stream, content, videos }) => {
 
   return (
     <Countdown
-      date={1612001600000}
+      date={1613091600000}
       renderer={({ completed, days, hours, minutes, seconds }) => (
         <Renderer
           completed={completed}
