@@ -94,25 +94,44 @@ export const Index = ({ stream, schedule, contents, videos }) => {
           <motion.div
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.95 }}
-            className="flex flex-row justify-center w-4/5 px-4 py-4 mb-3 bg-white shadow-lg md:w-7/12 rounded-3xl md:px-12 md:py-16"
+            style={{ paddingTop: '2.4vw', paddingBottom: '2.4vw' }}
+            className="flex flex-row justify-center w-4/5 px-4 mb-3 bg-white shadow-lg md:w-7/12 rounded-3xl md:px-12"
           >
             <div className="flex flex-col items-center justify-center mx-auto">
-              <h1 className="text-3xl font-semibold md:font-bold md:text-7xl text-blue-75">
+              <h1
+                style={{ fontSize: '5vw' }}
+                className="text-3xl font-semibold md:font-bold md:text-7xl text-blue-75"
+              >
                 สอบเข้า
               </h1>
-              <h1 className="text-xs font-bold text-gray-400 md:text-3xl">6 March 2021</h1>
+              <h1
+                style={{ fontSize: '2.4vw' }}
+                className="text-xs font-bold text-gray-400 md:text-3xl"
+              >
+                6 March 2021
+              </h1>
             </div>
             <div className="flex flex-col items-center justify-center mx-auto">
               <Countdown
                 date={1614992400000}
                 renderer={({ days }) => (
-                  <h1 className="text-4xl font-bold md:text-8xl text-blue-75">{days}</h1>
+                  <h1
+                    style={{ fontSize: '6vw' }}
+                    className="text-4xl font-bold md:text-8xl text-blue-75"
+                  >
+                    {days}
+                  </h1>
                 )}
               />
-              <p className="text-xs font-medium text-gray-400 md:text-xl">DAYS LEFT</p>
+              <p
+                style={{ fontSize: '1.1vw' }}
+                className="text-xs font-medium text-gray-400 md:text-xl"
+              >
+                DAYS LEFT
+              </p>
             </div>
             <div className="flex flex-col items-center justify-center h-20 mx-auto md:h-full">
-              <Group8 className="w-24 md:w-full" />
+              <Group8 style={{ width: '16vw' }} className="w-24 md:w-full" />
             </div>
           </motion.div>
         </Link>
@@ -120,10 +139,10 @@ export const Index = ({ stream, schedule, contents, videos }) => {
           <div className="w-1/5">
             <Link href="/videos">
               <div
-                style={{ width: '96%', height: '10vw' }}
-                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 w-full justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:h-44 rounded-xl md:rounded-3xl"
+                style={{ width: '96%', height: '12vw', fontSize: '1.8vw' }}
+                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 w-full justify-center w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
               >
-                <Camera className="h-9 sm:h-12 md:h-24" />
+                <Camera style={{ width: '50%', height: '50%' }} className="h-9 sm:h-12 md:h-24" />
                 วีดีโอ
               </div>
             </Link>
@@ -131,10 +150,10 @@ export const Index = ({ stream, schedule, contents, videos }) => {
           <div className="w-1/5">
             <Link href="/clubs">
               <div
-                style={{ width: '96%', height: '10vw' }}
-                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:h-44 rounded-xl md:rounded-3xl"
+                style={{ width: '96%', height: '12vw', fontSize: '1.8vw' }}
+                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 justify-center w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
               >
-                <Puzzle className="h-9 sm:h-12 md:h-24" />
+                <Puzzle style={{ width: '50%', height: '50%' }} className="h-9 sm:h-12 md:h-24" />
                 ชมรม
               </div>
             </Link>
@@ -142,10 +161,13 @@ export const Index = ({ stream, schedule, contents, videos }) => {
           <div className="w-1/5">
             <Link href="/map">
               <div
-                style={{ width: '96%', height: '10vw' }}
-                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:h-44 rounded-xl md:rounded-3xl"
+                style={{ width: '96%', height: '12vw', fontSize: '1.8vw' }}
+                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 justify-center w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
               >
-                <Carv className="my-1 h-7 sm:h-10 md:h-24" />
+                <Carv
+                  style={{ width: '40%', height: '40%' }}
+                  className="my-1 h-7 sm:h-10 md:h-24"
+                />
                 การเดินทาง
               </div>
             </Link>
@@ -153,21 +175,24 @@ export const Index = ({ stream, schedule, contents, videos }) => {
           <div className="w-1/5">
             <Link href="/tickets">
               <div
-                style={{ width: '96%', height: '10vw' }}
-                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:h-44 rounded-xl md:rounded-3xl"
+                style={{ width: '96%', height: '12vw', fontSize: '1.8vw' }}
+                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 justify-center w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
               >
-                <CardV className="h-9 sm:h-10 md:h-24" />
-                การ์ดต้อนรับ
+                <CardV style={{ width: '50%', height: '50%' }} className="h-9 sm:h-10 md:h-24" />
+                การ์ด
               </div>
             </Link>
           </div>
           <div className="w-1/5">
             <Link href="/contact">
               <div
-                style={{ width: '96%', height: '10vw' }}
-                className="flex flex-col items-center cursor-pointer hover:bg-gray-100 justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:h-44 rounded-xl md:rounded-3xl"
+                style={{ width: '96%', height: '12vw', fontSize: '1.8vw' }}
+                className="flex flex-col items-center cursor-pointer hover:bg-gray-100 justify-center w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
               >
-                <Phone className="my-1 h-7 sm:h-10 md:h-24" />
+                <Phone
+                  style={{ width: '50%', height: '50%' }}
+                  className="my-1 h-7 sm:h-10 md:h-24"
+                />
                 ติดต่อ
               </div>
             </Link>
