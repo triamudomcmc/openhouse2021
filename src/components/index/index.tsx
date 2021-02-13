@@ -26,10 +26,15 @@ import InApp from 'detect-inapp'
 export const Index = ({ stream, schedule, contents, videos }) => {
   const [blocked, setBlocked] = useState(false)
   const [currenTTime, setCurrentTime] = useState(0)
+  const [redirectCancel, invokeRedirectCancelEvent] = useState(false)
   const [liveContent, setLiveContent] = useState({
     title: 'รายการถ่ายทอดสด',
     club: 'รายการถ่ายทอดสด'
   })
+
+  const redirectToStage = () => {
+    Router.push('/stage')
+  }
 
   const convertTomin = time => {
     return parseInt(time.split(':')[0]) * 60 + parseInt(time.split(':')[1])
@@ -116,7 +121,12 @@ export const Index = ({ stream, schedule, contents, videos }) => {
         </defs>
       </svg>
       <div className="relative flex flex-col items-center justify-center -top-16 md:-top-36 font-display">
-        <div className="w-4/5 px-5 py-5 mb-3 bg-white shadow-lg md:w-7/12 rounded-3xl md:px-10 smd:py-8">
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={redirectToStage}
+          className="w-4/5 px-5 py-5 mb-3 bg-white shadow-lg md:w-7/12 rounded-3xl md:px-10 smd:py-8"
+        >
           <div className="mb-2 ml-2 font-medium lg:mb-8">
             <div className="flex items-center text-xs md:text-2xl">
               <span className="px-2 text-xs font-semibold text-white bg-red-400 md:text-2xl">
@@ -200,7 +210,7 @@ export const Index = ({ stream, schedule, contents, videos }) => {
               </div>
             )}
           </div>
-        </div>
+        </motion.div>
         <Link href="/articles/admission">
           <motion.div
             whileHover={{ scale: 1.02 }}
