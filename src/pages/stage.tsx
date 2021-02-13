@@ -28,13 +28,46 @@ const Stage = ({ stream, schedule }) => {
   const { loading, user, signinWithGoogle, signinWithFacebook } = useAuth()
   const [question, setQuestion] = useState('')
   const [blocked, setBlocked] = useState(false)
+  const [currenTTime, setCurrentTime] = useState(0)
+  const [liveContent, setLiveContent] = useState({
+    title: 'รายการถ่ายทอดสด',
+    club: 'รายการถ่ายทอดสด'
+  })
+
+  const convertTomin = time => {
+    return parseInt(time.split(':')[0]) * 60 + parseInt(time.split(':')[1])
+  }
 
   useEffect(() => {
     const inapp = new InApp(navigator.userAgent || navigator.vendor)
     if (inapp.isInApp) {
       setBlocked(true)
     }
+    const date = new Date()
+    setCurrentTime(date.getHours() * 60 + date.getMinutes())
+    setInterval(() => {
+      let date = new Date()
+      setCurrentTime(date.getHours() * 60 + date.getMinutes())
+    }, 5000)
   }, [])
+
+  useEffect(() => {
+    let now = new Date().getDate()
+    schedule.forEach(item => {
+      if (now === item.startTime.date) {
+        const start = convertTomin(item.startTime.time)
+        const end = convertTomin(item.endTime.time)
+        if (start <= currenTTime && currenTTime < end) {
+          setLiveContent({
+            title: item.title,
+            club: item.club
+          })
+        }
+      }
+    })
+  }, [currenTTime])
+
+  const date = new Date()
 
   const submitQuestion = async () => {
     const questionID = await addQuestion(question)
@@ -111,16 +144,16 @@ const Stage = ({ stream, schedule }) => {
         )}
 
         <div className="flex flex-col items-center justify-center">
-          <div className="flex flex-col w-9/12 md:flex-row h-40">
+          <div className="flex flex-col w-9/12 md:flex-row h-60">
             <div className="md:w-1/2">
               <h1 className="text-base font-black text-gray-600 md:text-3xl">
                 <span className="inline-block px-2 mr-2 text-sm font-medium text-white align-middle bg-red-400 md:py-1 md:text-xl">
                   LIVE
                 </span>
-                รายการถ่ายทอดสด
+                {liveContent.title}
               </h1>
               <h1 className="mt-2 text-sm font-medium text-gray-600 md:text-2xl">
-                รายการสด | วันที่ 13 กุมภาพันธ์ 2021
+                {liveContent.club} | วันที่ 13 กุมภาพันธ์ 2021
               </h1>
             </div>
             <div className="flex flex-row items-center justify-center md:justify-end md:w-1/2">

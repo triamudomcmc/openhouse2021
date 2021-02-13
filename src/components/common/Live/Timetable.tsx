@@ -36,7 +36,7 @@ const Timetable: React.FC<ITimetableProps> = ({ data, date, ...restProps }) => {
         if (start <= currenTTime && currenTTime < end) {
           setCurrentLive(times)
           if (containerRef.current && oldState !== times) {
-            containerRef.current.scrollTo(0, (times - 1) * 68)
+            containerRef.current.scrollTo(0, (times - 1) * 76)
             oldState = times
           }
         }

@@ -26,7 +26,6 @@ import InApp from 'detect-inapp'
 export const Index = ({ stream, schedule, contents, videos }) => {
   const [blocked, setBlocked] = useState(false)
   const [currenTTime, setCurrentTime] = useState(0)
-  const [redirectCancel, invokeRedirectCancelEvent] = useState(false)
   const [liveContent, setLiveContent] = useState({
     title: 'รายการถ่ายทอดสด',
     club: 'รายการถ่ายทอดสด'
