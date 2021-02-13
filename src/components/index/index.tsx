@@ -56,7 +56,6 @@ export const Index = ({ stream, schedule, contents, videos }) => {
       if (now === item.startTime.date) {
         const start = convertTomin(item.startTime.time)
         const end = convertTomin(item.endTime.time)
-        console.log(currenTTime)
         if (start <= currenTTime && currenTTime < end) {
           setLiveContent({
             title: item.title,
