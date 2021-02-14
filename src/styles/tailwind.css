@@ -59,6 +59,14 @@
       width: 76vw;
     }
 
+    .w-60vw {
+      width: 60vw;
+    }
+
+    .w-20vw {
+      width: 20vw;
+    }
+
     .z-extra {
       z-index: 999;
     }

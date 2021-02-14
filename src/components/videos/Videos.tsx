@@ -26,7 +26,7 @@ export const Videos = ({ contents }) => {
             src={data.thumbnail}
             href={`${data.path}`}
             duration={data.duration}
-            className="md:w-1/3 md:mt-4"
+            className="lg:w-1/3 lg:mt-4"
           >
             <ContentCard.Desc>{data.title}</ContentCard.Desc>
             <ContentCard.Author>{data.author}</ContentCard.Author>
@@ -44,7 +44,7 @@ export const Videos = ({ contents }) => {
               turnWarnToastOn()
             }}
             duration={data.duration}
-            className="md:w-1/3 md:mt-4"
+            className="lg:w-1/3 lg:mt-4"
           >
             <ContentCard.Desc>{data.title}</ContentCard.Desc>
             <ContentCard.Author>{data.author}</ContentCard.Author>
@@ -57,7 +57,7 @@ export const Videos = ({ contents }) => {
       result = (
         <>
           {result}
-          <div className="flex flex-col md:flex-row justify-center w-full">{temp}</div>
+          <div className="flex flex-col lg:flex-row items-center justify-center w-full">{temp}</div>
         </>
       )
 
@@ -67,7 +67,7 @@ export const Videos = ({ contents }) => {
       result = (
         <>
           {result}
-          <div className="flex flex-col md:flex-row justify-start w-full">{temp}</div>
+          <div className="flex flex-col lg:flex-row items-center justify-start w-full">{temp}</div>
         </>
       )
     }
@@ -88,7 +88,7 @@ export const Videos = ({ contents }) => {
         <Toast type="failed" text="เนื้อหายังไม่เปิดใช้งาน" show={warnToast} />
       </div>
       <div className="flex flex-col items-center justify-center py-4 space-y-4">
-        <div className="flex flex-wrap space-y-4 md:space-y-0 justify-center w-11/12 md:w-full">
+        <div className="flex flex-wrap space-y-4 lg:space-y-0 justify-center w-11/12 lg:w-full">
           {result}
         </div>
       </div>
