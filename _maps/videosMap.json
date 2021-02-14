@@ -1,7 +1,8 @@
 [
   {
     "path": "/videos/1",
-    "title": "Get to know us Tucld (Cheer club)",
+    "video": "https://www.youtube.com/embed/wDRUa_w0nPM",
+    "title": "Get to know us TUCLD (Cheer club)",
     "author": "ชมรมเชียร์",
     "duration": "3.33",
     "thumbnail": "/assets/videos/_thumbnails/thumb_1.jpg",
@@ -9,6 +10,7 @@
   },
   {
     "path": "/videos/2",
+    "video": "https://www.youtube.com/embed/5gZWmPu79-s",
     "title": "cheerleader(s) family ",
     "author": "ชมรมเชียร์",
     "duration": "3.33",
@@ -17,6 +19,7 @@
   },
   {
     "path": "/videos/3",
+    "videos": "https://www.youtube.com/embed/TDdMbmu1yN0",
     "title": "TU French Chorus - Au Clair De La Lune (Under The Moonlight)",
     "author": "ชมรมสีสรรพ์ภาษาต่างประเทศที่ 2 (French Chorus)",
     "duration": "3.33",
@@ -34,6 +37,7 @@
   },
   {
     "path": "/videos/5",
+    "video": "https://www.youtube.com/embed/qt5zw79s3hM",
     "title": "After school vlog | หลังเลิกเรียนทำอะไร ver. เด็กเตรียม",
     "author": "ศิลป์-คำนวณ",
     "duration": "3.33",
@@ -42,6 +46,7 @@
   },
   {
     "path": "/videos/6",
+    "video": "https://www.youtube.com/embed/pK9s1ovvB9I",
     "title": "AIC ทำอะไรกับโรงเรียนเนี่ย !!!",
     "author": "AIC",
     "duration": "3.33",
@@ -50,6 +55,7 @@
   },
   {
     "path": "/videos/7",
+    "video": "https://www.youtube.com/embed/BNIpKho9KVg",
     "title": "The Warriors",
     "author": "TUentertainer",
     "duration": "3.33",
@@ -58,6 +64,7 @@
   },
   {
     "path": "/videos/8",
+    "video": "https://www.youtube.com/embed/ihKVu1nvc5o",
     "title": "International Politics in a Nutshell",
     "author": "Triam Udom Model United Nations (TriamMUN)",
     "duration": "3.33",
@@ -66,6 +73,7 @@
   },
   {
     "path": "/videos/9",
+    "video": "https://www.youtube.com/embed/YaUPR9Ev0ok",
     "title": "Senior Interview",
     "author": "ชมรมภาษาอังกฤษ (English Debate)",
     "duration": "3.33",
@@ -74,6 +82,7 @@
   },
   {
     "path": "/videos/10",
+    "video": "https://www.youtube.com/embed/HtFOciYiDog",
     "title": "E.P. Chorus — \"Mystical Midnight\" | Triam Udom Online Open House 2021",
     "author": "ชมรมขับร้องประสานเสียง",
     "duration": "3.33",
@@ -91,6 +100,7 @@
   },
   {
     "path": "/videos/12",
+    "video": "https://www.youtube.com/embed/n7sCkrVkSl8",
     "title": "Hikaru nara - Your Lie in April | Cover by [ Stelism02]",
     "author": "ชมรมการ์ตูน",
     "duration": "3.33",
@@ -99,6 +109,7 @@
   },
   {
     "path": "/videos/13",
+    "video": "https://www.youtube.com/embed/Eq12mO34nfI",
     "title": " ¡uno dos tres ESPAÑOL!",
     "author": "สายศิลป์-ภาษาสเปน​",
     "duration": "3.33",
@@ -107,6 +118,7 @@
   },
   {
     "path": "/videos/14",
+    "video": "https://www.youtube.com/embed/Zh-xcOA_vLI",
     "title": "ลองมั้ย...ลองมารู้จักศิลป์ญี่กัน",
     "author": "ศิลป์-ญี่ปุ่น",
     "duration": "3.33",
@@ -115,6 +127,7 @@
   },
   {
     "path": "/videos/15",
+    "video": "",
     "title": "After school vlog | หลังเลิกเรียนทำอะไร ver. เด็กเตรียม teaser",
     "author": "ศิลป์-คำนวณ",
     "duration": "3.33",
@@ -123,6 +136,7 @@
   },
   {
     "path": "/videos/16",
+    "video": "https://www.youtube.com/embed/mlhvyafKAlw",
     "title": "TUEDC Secret Footage!",
     "author": "ชมรมภาษาอังกฤษ (English Drama)",
     "duration": "3.33",
@@ -131,6 +145,7 @@
   },
   {
     "path": "/videos/17",
+    "video": "https://www.youtube.com/embed/OsD9V-DTvxo",
     "title": "TUEDC Music Compilation Part 1",
     "author": "ชมรมภาษาอังกฤษ (English Drama)",
     "duration": "3.33",
@@ -139,6 +154,7 @@
   },
   {
     "path": "/videos/18",
+    "video": "https://www.youtube.com/embed/5DvUGwGMKBA",
     "title": "TUEDC Music Compilation Part 2",
     "author": "ชมรมภาษาอังกฤษ (English Drama)",
     "duration": "3.33",
@@ -156,6 +172,7 @@
   },
   {
     "path": "/videos/20",
+    "video": "https://www.youtube.com/embed/MCozJuGAf1s",
     "title": "Cellmates the Musical Highlights",
     "author": "ชมรมภาษาอังกฤษ (English Drama)",
     "duration": "3.33",
@@ -173,6 +190,7 @@
   },
   {
     "path": "/videos/22",
+    "video": "https://www.youtube.com/embed/EaHE0L3KGgk",
     "title": "Sincerely Yours Highlights",
     "author": "ชมรมภาษาอังกฤษ (English Drama)",
     "duration": "3.33",
@@ -181,7 +199,8 @@
   },
   {
     "path": "/videos/23",
-    "title": "TriamUdom scimath gameshow",
+    "video": "https://www.youtube.com/embed/a43KGhTFVfk",
+    "title": "Triam Udom Sci-Math Game Show",
     "author": "สายวิทย์ - คณิต",
     "duration": "3.33",
     "thumbnail": "/assets/videos/_thumbnails/thumb_26.jpg",
