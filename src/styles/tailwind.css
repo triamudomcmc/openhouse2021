@@ -51,6 +51,14 @@
       height: 505px;
     }
 
+    .w-24vw {
+      width: 24vw;
+    }
+
+    .w-76vw {
+      width: 76vw;
+    }
+
     .z-extra {
       z-index: 999;
     }

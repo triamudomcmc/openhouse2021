@@ -62,7 +62,7 @@ export const Inside = () => {
   return (
     <div className="max-w-full pt-14 lg:pt-0">
       <div className="flex max-w-full ">
-        <div className="flex items-center justify-center max-w-full -ml-4 -mr-16 lg:m-0 h-80 lg:h-full lg:w-1/2 lg:flex-col">
+        <div className="flex w-full items-center justify-center max-w-full -ml-4 -mr-16 lg:m-0 h-80 lg:h-full lg:w-1/2 lg:flex-col">
           {getCurrentMap()}
         </div>
         <div className="flex flex-col items-center justify-center lg:w-1/2">

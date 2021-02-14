@@ -47,30 +47,29 @@ const Articles = ({ contents }) => {
         </div>
         {
           <div className="max-w-full w-10/12 md:w-8/12">
-            <div className="flex flex-col md:flex-row justify-center">
+            <div className="flex flex-col items-center lg:flex-row justify-center">
               <Link href="/articles/statistic">
                 <motion.div
                   style={{ maxWidth: '400px' }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex flex-col justify-between cursor-pointer px-2 pt-3 pb-1 mx-2 space-y-2 shadow-md rounded-xl my-4 md:w-2/5"
+                  className="flex flex-col justify-between cursor-pointer px-2 pt-3 pb-1 mx-2 space-y-2 shadow-md rounded-xl my-4 lg:w-2/5"
                 >
                   <img
                     src="/assets/articles/stat/thumbnail.jpg"
                     style={{
                       height: '18vw',
                       minHeight: '145px',
-                      width: '60vw',
                       maxHeight: '188px',
                       maxWidth: '375px',
                       objectFit: 'cover'
                     }}
-                    className="mx-auto"
+                    className="mx-auto w-76vw lg:w-24vw"
                     width={240}
                     height={188}
                   />
                   <h1 style={{ width: '100%' }} className="mx-2 font-bold truncate">
-                    สถิติการสอบเข้ามหาวิทยาลยของนักเรียนเตรียมฯ
+                    สถิติการสอบเข้ามหาวิทยาลัยของนักเรียนเตรียมฯ
                   </h1>
                   <div className="flex flex-row space-x-1 text-gray-300 ">
                     <User />
@@ -83,19 +82,18 @@ const Articles = ({ contents }) => {
                   style={{ maxWidth: '400px' }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex flex-col justify-between cursor-pointer px-2 pt-3 pb-1 mx-2 space-y-2 shadow-md rounded-xl my-4 md:w-2/5"
+                  className="flex flex-col justify-between cursor-pointer px-2 pt-3 pb-1 mx-2 space-y-2 shadow-md rounded-xl my-4 lg:w-2/5"
                 >
                   <img
                     src="/assets/articles/admission/thumbnail.jpg"
                     style={{
                       height: '18vw',
                       minHeight: '145px',
-                      width: '60vw',
                       maxHeight: '188px',
                       maxWidth: '375px',
                       objectFit: 'cover'
                     }}
-                    className="mx-auto"
+                    className="mx-auto w-76vw lg:w-24vw"
                     width={240}
                     height={188}
                   />

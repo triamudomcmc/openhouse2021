@@ -88,7 +88,7 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="flex flex-col font-bold text-center md:flex-row md:text-right">
+            <div className="flex flex-col font-bold text-center mt-3 md:mt-0 md:flex-row md:text-right">
               <div className="flex flex-col space-y-3 text-gray-500">
                 <Link href="/articles/admission">
                   <h1 className="cursor-pointer">การสอบเข้า</h1>

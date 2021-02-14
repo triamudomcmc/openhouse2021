@@ -31,7 +31,7 @@ const Videos = ({ post, suggestion }) => {
         </div>
         <div className="mt-20 w-7/12">
           <h1 className="text-2xl font-bold text-center mb-6">ชมรมอื่นๆ</h1>
-          <div className="flex flex-wrap justify-center space-x-4">
+          <div className="flex flex-wrap max-w-3xl justify-center mx-auto space-x-4">
             {suggestion.map(value => {
               return (
                 <Link href={value.path}>
@@ -95,8 +95,8 @@ export async function getStaticProps({ params }) {
   }
 
   let random = []
-  while (random.length < 4) {
-    let r = Math.floor(Math.random() * 5)
+  while (random.length < 6) {
+    let r = Math.floor(Math.random() * 7)
     if (random.indexOf(r) === -1 && r !== parseInt(params.slug) - 1) random.push(r)
   }
 

@@ -28,7 +28,7 @@ export const ContentCard = ({
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className={classNames(
-            'flex flex-col justify-between cursor-pointer px-2 pt-3 pb-1 mx-2 space-y-2 shadow-md rounded-xl',
+            'flex flex-col justify-between cursor-pointer px-2 pt-3 pb-1 max-w-sm mx-2 space-y-2 shadow-md rounded-xl',
             className.replace('md:w-1/3', '')
           )}
         >
@@ -37,8 +37,8 @@ export const ContentCard = ({
               src={src === '' ? '/assets/nok.png' : src}
               style={{
                 height: '18vw',
-                minHeight: '145px',
-                width: '60vw',
+                minHeight: '195px',
+                width: '72vw',
                 maxHeight: '188px',
                 objectFit: 'cover'
               }}
@@ -52,8 +52,8 @@ export const ContentCard = ({
                 src={src === '' ? '/assets/nok.png' : src}
                 style={{
                   height: '18vw',
-                  minHeight: '145px',
-                  width: '60vw',
+                  minHeight: '195px',
+                  width: '72vw',
                   maxHeight: '188px',
                   objectFit: 'cover'
                 }}
@@ -66,7 +66,7 @@ export const ContentCard = ({
               </span>
             </div>
           )}
-          <h1 style={{ width: '60vw', maxWidth: '320px' }} className="mx-2 font-bold truncate">
+          <h1 style={{ width: '20vw', maxWidth: '320px' }} className="mx-2 font-bold truncate">
             {description}
           </h1>
           <div className="flex flex-row space-x-1 text-gray-300 ">
@@ -90,8 +90,8 @@ export const ContentCard = ({
             src={src === '' ? '/assets/nok.png' : src}
             style={{
               height: '18vw',
-              minHeight: '145px',
-              width: '60vw',
+              minHeight: '195px',
+              width: '72vw',
               maxHeight: '188px',
               objectFit: 'cover'
             }}
@@ -104,8 +104,8 @@ export const ContentCard = ({
             src={src === '' ? '/assets/nok.png' : src}
             style={{
               height: '18vw',
-              minHeight: '145px',
-              width: '60vw',
+              minHeight: '195px',
+              width: '72หvw',
               maxHeight: '188px',
               objectFit: 'cover'
             }}
@@ -114,7 +114,7 @@ export const ContentCard = ({
             height={188}
           />
         )}
-        <h1 style={{ width: '60vw', maxWidth: '320px' }} className="mx-2 font-bold truncate">
+        <h1 style={{ width: '20vw', maxWidth: '320px' }} className="mx-2 font-bold truncate">
           {description}
         </h1>
         <div className="flex flex-row space-x-1 text-gray-300 ">
