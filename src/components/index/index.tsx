@@ -128,8 +128,8 @@ export const Index = ({ stream, schedule, contents, videos }) => {
         >
           <div className="mb-2 ml-2 font-medium lg:mb-8">
             <div className="flex items-center text-xs md:text-2xl">
-              <span className="px-2 text-xs font-semibold text-white bg-red-400 md:text-2xl">
-                LIVE
+              <span className="px-2 text-xs font-semibold text-white bg-gray-400 md:text-2xl">
+                OFFLINE
               </span>
               <span className="ml-2 md:ml-4">{liveContent.title}</span>
             </div>

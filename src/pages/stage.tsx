@@ -147,8 +147,8 @@ const Stage = ({ stream, schedule }) => {
           <div className="flex flex-col w-9/12 md:flex-row h-60">
             <div className="md:w-1/2">
               <h1 className="text-base font-black text-gray-600 md:text-3xl">
-                <span className="inline-block px-2 mr-2 text-sm font-medium text-white align-middle bg-red-400 md:py-1 md:text-xl">
-                  LIVE
+                <span className="inline-block px-2 mr-2 text-sm font-medium text-white align-middle bg-gray-400 md:py-1 md:text-xl">
+                  OFFLINE
                 </span>
                 {liveContent.title}
               </h1>

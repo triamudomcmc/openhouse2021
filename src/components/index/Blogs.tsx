@@ -15,11 +15,15 @@ const Blogs = ({ content }) => {
   return (
     <div className="w-4/5 md:w-7/12">
       <div className="flex flex-row justify-between md:justify-center mt-16 mb-10 items-end">
-        <h1 className="text-3xl font-black text-center text-blue-400 md:mt-48 md:text-7xl">
-          บทความ
-        </h1>
         <Link href="/articles">
-          <h1 className="block md:hidden font-bold text-lg text-gray-400">ดูทั้งหมด</h1>
+          <h1 className="text-3xl cursor-pointer font-black text-center text-blue-400 md:mt-48 md:text-7xl">
+            บทความ
+          </h1>
+        </Link>
+        <Link href="/articles">
+          <h1 className="block md:hidden cursor-pointer font-bold text-lg text-gray-400">
+            ดูทั้งหมด
+          </h1>
         </Link>
       </div>
       <div className="flex flex-col items-center justify-center py-4 space-y-4">

@@ -42,24 +42,29 @@ export const ContentCard = ({
                 maxHeight: '188px',
                 objectFit: 'cover'
               }}
-              className="mx-auto"
+              className="mx-auto rounded-lg"
               width={240}
               height={188}
             />
           ) : (
-            <img
-              src={src === '' ? '/assets/nok.png' : src}
-              style={{
-                height: '18vw',
-                minHeight: '145px',
-                width: '60vw',
-                maxHeight: '188px',
-                objectFit: 'cover'
-              }}
-              className="mx-auto"
-              width={240}
-              height={188}
-            />
+            <div className="relative">
+              <img
+                src={src === '' ? '/assets/nok.png' : src}
+                style={{
+                  height: '18vw',
+                  minHeight: '145px',
+                  width: '60vw',
+                  maxHeight: '188px',
+                  objectFit: 'cover'
+                }}
+                className="mx-auto rounded-lg"
+                width={240}
+                height={188}
+              />
+              <span className="absolute right-0 mr-2 py-1 px-2 bg-white text-sm rounded-md font-semibold bottom-2">
+                {duration}
+              </span>
+            </div>
           )}
           <h1 style={{ width: '60vw', maxWidth: '320px' }} className="mx-2 font-bold truncate">
             {description}
