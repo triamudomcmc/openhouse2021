@@ -238,7 +238,7 @@ const Page = ({ contents, suggestion }) => {
             })}
           </div>
           <div className="mt-20">
-            <h1 className="text-2xl font-bold text-center mb-6">ชมรมอื่นๆ</h1>
+            <h1 className="text-2xl font-bold text-center mb-6">สายการเรียนอื่นๆ</h1>
             <div className="flex flex-wrap justify-center space-x-4">
               {suggestion.map(value => {
                 return (
