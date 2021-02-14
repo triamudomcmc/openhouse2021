@@ -12,7 +12,8 @@ export const ContentCard = ({
   children,
   href = '#',
   disabled = false,
-  callback = () => {}
+  callback = () => {},
+  slider = false
 }) => {
   const description = React.Children.map(children, child =>
     child.type.displayName === 'Desc' ? child : null
@@ -66,7 +67,12 @@ export const ContentCard = ({
               </span>
             </div>
           )}
-          <h1 style={{ width: '20vw', maxWidth: '320px' }} className="mx-2 font-bold truncate">
+          <h1
+            style={
+              slider ? { width: '60vw', maxWidth: '320px' } : { width: '20vw', maxWidth: '320px' }
+            }
+            className="mx-2 font-bold truncate"
+          >
             {description}
           </h1>
           <div className="flex flex-row space-x-1 text-gray-300 ">
@@ -105,7 +111,7 @@ export const ContentCard = ({
             style={{
               height: '18vw',
               minHeight: '195px',
-              width: '72หvw',
+              width: '72vw',
               maxHeight: '188px',
               objectFit: 'cover'
             }}
@@ -114,7 +120,12 @@ export const ContentCard = ({
             height={188}
           />
         )}
-        <h1 style={{ width: '20vw', maxWidth: '320px' }} className="mx-2 font-bold truncate">
+        <h1
+          style={
+            slider ? { width: '60vw', maxWidth: '320px' } : { width: '20vw', maxWidth: '320px' }
+          }
+          className="mx-2 font-bold truncate"
+        >
           {description}
         </h1>
         <div className="flex flex-row space-x-1 text-gray-300 ">

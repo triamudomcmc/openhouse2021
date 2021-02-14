@@ -60,6 +60,7 @@ const Videos = ({ videos }) => {
                   src={data.thumbnail}
                   duration={data.duration}
                   className="md:w-1/3"
+                  slider={true}
                 >
                   <ContentCard.Desc>{data.title}</ContentCard.Desc>
                   <ContentCard.Author>{data.author}</ContentCard.Author>
@@ -73,6 +74,7 @@ const Videos = ({ videos }) => {
                   duration={data.duration}
                   className="md:w-1/3"
                   disabled={true}
+                  slider={true}
                   callback={() => {
                     turnWarnToastOn()
                   }}
@@ -93,6 +95,7 @@ const Videos = ({ videos }) => {
                   href={data.path}
                   duration={data.duration}
                   className="md:w-1/3"
+                  slider={true}
                 >
                   <ContentCard.Desc>{data.title}</ContentCard.Desc>
                   <ContentCard.Author>{data.author}</ContentCard.Author>
@@ -106,6 +109,7 @@ const Videos = ({ videos }) => {
                   href={data.path}
                   className="md:w-1/3"
                   disabled={true}
+                  slider={true}
                   callback={() => {
                     turnWarnToastOn()
                   }}

@@ -33,6 +33,7 @@ const Blogs = ({ content }) => {
               <ContentCard
                 src={data.thumbnail}
                 href={`/articles/${data.slug}`}
+                slider={true}
                 className="md:w-1/3"
               >
                 <ContentCard.Desc>{data.title}</ContentCard.Desc>
@@ -47,6 +48,7 @@ const Blogs = ({ content }) => {
               <ContentCard
                 src={data.thumbnail}
                 href={`/articles/${data.slug}`}
+                slider={true}
                 className="md:w-1/3"
               >
                 <ContentCard.Desc>{data.title}</ContentCard.Desc>
