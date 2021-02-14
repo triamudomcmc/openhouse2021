@@ -30,7 +30,7 @@ const Videos = ({ post, suggestion }) => {
           ></article>
         </div>
         <div className="mt-20 w-7/12">
-          <h1 className="text-2xl font-bold text-center mb-6">ชมรมอื่นๆ</h1>
+          <h1 className="text-2xl font-bold text-center mb-6">บทความอื่นๆ</h1>
           <div className="flex flex-wrap max-w-3xl justify-center mx-auto space-x-4">
             {suggestion.map(value => {
               return (
@@ -102,7 +102,7 @@ export async function getStaticProps({ params }) {
 
   const suggestion = random.map(index => {
     return {
-      path: `/videos/${index}`,
+      path: `/videos/${index + 1}`,
       thumbnail: obj[index].thumbnail,
       title: obj[index].title
     }
