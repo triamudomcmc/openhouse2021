@@ -30,7 +30,7 @@ export const Modal = (
           ref={ref}
         >
           <Link href="/">
-            <div className="text-lg font-black leading-tight cursor-pointer md:text-2xl font-display">
+            <div className="text-lg font-black leading-tight cursor-pointer lg:text-2xl font-display">
               <h1 className="text-center text-gray-600">
                 TRIAM UDOM ONLINE
                 <br />
@@ -59,7 +59,7 @@ export const Modal = (
             </Link>
             <SocialLink />
           </div>
-          <div className="w-24 pt-8 md:w-48">
+          <div className="w-24 pt-8 lg:w-48">
             <Image src="/assets/tucmc.png" width={1071} height={162} />
           </div>
         </nav>
@@ -82,7 +82,8 @@ export const MobileMenu = ({ className }) => {
     <>
       <div
         className={classNames(
-          'top-0 justify-center w-full h-24 max-w-full md:flex md:h-28 bg-gradient-to-r from-blue-70 via-purple-450 to-red-250',
+          'top-0 justify-center w-full h-24 max-w-full lg:flex lg:h-28 bg-gradient-to-r from-blue-70 via-purple-450' +
+            ' to-red-250',
           className
         )}
       >

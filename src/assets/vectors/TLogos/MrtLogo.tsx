@@ -1,7 +1,7 @@
 export const MrtLogo = ({ ...restprops }) => {
   return (
     <svg
-      className="fill-current w-9 h-9 md:h-18 md:w-18"
+      className="fill-current w-9 h-9 lg:h-18 lg:w-18"
       width="72"
       height="62"
       viewBox="0 0 72 62"
