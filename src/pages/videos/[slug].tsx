@@ -58,9 +58,10 @@ const Videos = ({ post, suggestion }) => {
 
 export async function getStaticPaths() {
   const fetchedData = fs.readFileSync('./_maps/videosMap.json')
+  const maxData = JSON.parse(fetchedData.toString()).length
   let pathsItem = []
   let i = 1
-  while (i <= 26) {
+  while (i <= maxData) {
     pathsItem.push(i)
     i++
   }

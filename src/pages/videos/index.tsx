@@ -6,6 +6,7 @@ import * as fs from 'fs'
 import parseJson from 'parse-json'
 import { Videos } from '../../components/videos/Videos'
 import Footer from '../../components/common/Footer'
+import { shuffleArray } from '../../utils/arraymethods'
 
 export const getStaticProps: GetStaticProps = async () => {
   const fetchedData = fs.readFileSync('./_maps/videosMap.json')
@@ -18,7 +19,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      contents: JSON.parse(fetchedData.toString())
+      contents: shuffleArray(JSON.parse(fetchedData.toString()))
     }
   }
 }

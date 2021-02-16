@@ -13,14 +13,7 @@ import { motion } from 'framer-motion'
 import classNames from 'classnames'
 import { User } from '../../assets/vectors/User'
 import Link from 'next/link'
-
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[array[i], array[j]] = [array[j], array[i]]
-  }
-  return array
-}
+import { shuffleArray } from '../../utils/arraymethods'
 
 export const getStaticProps: GetStaticProps = async () => {
   const fetchedData = getAllPosts(['slug', 'title', 'author', 'thumbnail'], '_articles')
