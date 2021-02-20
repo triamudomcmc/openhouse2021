@@ -86,6 +86,9 @@ const Footer = () => {
                 <Link href="/contact">
                   <h1 className="cursor-pointer">ติดต่อ</h1>
                 </Link>
+                <Link href="https://tucmc.dev">
+                  <h1 className="cursor-pointer text-pink-300">บริการ</h1>
+                </Link>
               </div>
             </div>
             <div className="flex flex-col font-bold text-center mt-3 md:mt-0 md:flex-row md:text-right">
