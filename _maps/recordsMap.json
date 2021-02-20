@@ -178,5 +178,14 @@
     "duration": "23.51",
     "thumbnail": "/assets/records/_thumbnails/thumb_20.jpg",
     "description": ""
+  },
+  {
+    "path": "/records/21",
+    "video": "https://www.youtube.com/embed/0i4ffH11TpQ",
+    "title": "พิธีปิดงาน",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "05.35",
+    "thumbnail": "/assets/records/_thumbnails/thumb_21.jpg",
+    "description": ""
   }
 ]
