@@ -77,7 +77,7 @@ export const ContentCard = ({
           </h1>
           <div className="flex flex-row space-x-1 text-gray-300 ">
             <User />
-            <p className="truncate">{author}</p>
+            <p className={slider ? 'truncate w-60vw' : 'truncate w-60vw lg:w-20vw'}>{author}</p>
           </div>
         </motion.div>
       </Link>
@@ -138,7 +138,7 @@ export const ContentCard = ({
         </h1>
         <div className="flex flex-row space-x-1 text-gray-300 ">
           <User />
-          <p className="truncate">{author}</p>
+          <p className={slider ? 'truncate w-60vw' : 'truncate w-60vw lg:w-20vw'}>{author}</p>
         </div>
       </div>
     )
