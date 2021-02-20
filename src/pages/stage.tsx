@@ -19,6 +19,7 @@ import Footer from '../components/common/Footer'
 import { useAuth } from 'lib/auth'
 import { addQuestion } from 'lib/db'
 import InApp from 'detect-inapp'
+import Router from 'next/router'
 
 type Props = {
   stream: Stream
@@ -39,6 +40,7 @@ const Stage = ({ stream, schedule }) => {
   }
 
   useEffect(() => {
+    Router.push('/records')
     const inapp = new InApp(navigator.userAgent || navigator.vendor)
     if (inapp.isInApp) {
       setBlocked(true)

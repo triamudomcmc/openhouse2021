@@ -51,8 +51,8 @@ export const Modal = (
             <Link href="/videos">
               <a>วิดีโอ</a>
             </Link>
-            <Link href="/stage">
-              <a>รายการสด</a>
+            <Link href="/records">
+              <a>รายการย้อนหลัง</a>
             </Link>
             <Link href="/">
               <a>การสอบเข้า</a>

@@ -99,8 +99,8 @@ const Footer = () => {
                 <Link href="/map">
                   <h1 className="cursor-pointer">การเดินทาง</h1>
                 </Link>
-                <Link href="/stage">
-                  <h1 className="cursor-pointer">รายการสด</h1>
+                <Link href="/records">
+                  <h1 className="cursor-pointer">รายการสดย้อนหลัง</h1>
                 </Link>
                 <Link href="/privacy-policy">
                   <h1 className="cursor-pointer">นโยบายความเป็นส่วนตัว</h1>

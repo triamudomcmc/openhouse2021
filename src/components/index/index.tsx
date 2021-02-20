@@ -33,7 +33,7 @@ export const Index = ({ stream, schedule, contents, videos }) => {
   })
 
   const redirectToStage = () => {
-    Router.push('/stage')
+    Router.push('/records')
   }
 
   const convertTomin = time => {

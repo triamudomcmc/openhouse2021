@@ -6,7 +6,7 @@ import fs from 'fs'
 import Link from 'next/link'
 import React from 'react'
 
-const Videos = ({ post, suggestion }) => {
+const Records = ({ post, suggestion }) => {
   return (
     <Layout>
       <div className="flex flex-col items-center mb-10 w-full">
@@ -30,7 +30,7 @@ const Videos = ({ post, suggestion }) => {
           ></article>
         </div>
         <div className="mt-20 w-7/12">
-          <h1 className="text-2xl font-bold text-center mb-6">วีดีโออื่นๆ</h1>
+          <h1 className="text-2xl font-bold text-center mb-6">รายการสดอื่นๆ</h1>
           <div className="flex flex-wrap max-w-3xl justify-center mx-auto space-x-4">
             {suggestion.map(value => {
               return (
@@ -57,7 +57,7 @@ const Videos = ({ post, suggestion }) => {
 }
 
 export async function getStaticPaths() {
-  const fetchedData = fs.readFileSync('./_maps/videosMap.json')
+  const fetchedData = fs.readFileSync('./_maps/recordsMap.json')
   const maxData = JSON.parse(fetchedData.toString()).length
   let pathsItem = []
   let i = 1
@@ -85,7 +85,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const fetchedData = fs.readFileSync('./_maps/videosMap.json')
+  const fetchedData = fs.readFileSync('./_maps/recordsMap.json')
   const obj = JSON.parse(fetchedData.toString())
   const keys = Object.keys(obj)
 
@@ -103,7 +103,7 @@ export async function getStaticProps({ params }) {
 
   const suggestion = random.map(index => {
     return {
-      path: `/videos/${index + 1}`,
+      path: `/records/${index + 1}`,
       thumbnail: obj[index].thumbnail,
       title: obj[index].title
     }
@@ -119,4 +119,4 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export default Videos
+export default Records
