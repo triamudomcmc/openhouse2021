@@ -22,7 +22,7 @@ const Videos = ({ post, suggestion }) => {
           ></iframe>
           <div className="w-full text-gray-500 space-y-1">
             <h1 className="font-bold mt-6 text-2xl">{post.title}</h1>
-            <h1 className="font-semibold text-xl">{post.author}</h1>
+            <h1 className="font-semibold text-gray-400 text-xl">{post.author}</h1>
           </div>
           <article
             className="font-display text-gray-400 text-lg"
