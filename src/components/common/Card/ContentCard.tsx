@@ -77,7 +77,7 @@ export const ContentCard = ({
           </h1>
           <div className="flex flex-row space-x-1 text-gray-300 ">
             <User />
-            <p>{author}</p>
+            <p className="truncate">{author}</p>
           </div>
         </motion.div>
       </Link>
@@ -138,7 +138,7 @@ export const ContentCard = ({
         </h1>
         <div className="flex flex-row space-x-1 text-gray-300 ">
           <User />
-          <p>{author}</p>
+          <p className="truncate">{author}</p>
         </div>
       </div>
     )
