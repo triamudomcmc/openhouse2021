@@ -169,5 +169,14 @@
     "duration": "24.27",
     "thumbnail": "/assets/records/_thumbnails/thumb_19.jpg",
     "description": ""
+  },
+  {
+    "path": "/records/20",
+    "video": "https://www.youtube.com/embed/nbd1GqVG43o",
+    "title": "สัมภาษณ์นักเรียนศิลป์ญี่ปุ่น",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "23.51",
+    "thumbnail": "/assets/records/_thumbnails/thumb_20.jpg",
+    "description": ""
   }
 ]
