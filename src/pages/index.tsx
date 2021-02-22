@@ -28,10 +28,19 @@ const Renderer = ({
   schedule,
   stream,
   content,
-  videos
+  videos,
+  schoolVideos
 }) => {
   if (completed) {
-    return <Index stream={stream} schedule={schedule} contents={content} videos={videos} />
+    return (
+      <Index
+        stream={stream}
+        schedule={schedule}
+        contents={content}
+        videos={videos}
+        schoolVideos={schoolVideos}
+      />
+    )
   } else {
     return (
       <CountdownContainer
@@ -45,7 +54,7 @@ const Renderer = ({
   }
 }
 
-const IndexPage = ({ schedule, stream, content, videos }) => {
+const IndexPage = ({ schedule, stream, content, videos, schoolVideos }) => {
   const { userData } = useAuth()
 
   useEffect(() => {
@@ -72,6 +81,7 @@ const IndexPage = ({ schedule, stream, content, videos }) => {
           stream={stream}
           content={content}
           videos={videos}
+          schoolVideos={schoolVideos}
         />
       )}
     />
@@ -87,8 +97,19 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   let cleaned = fetchedData.filter(item => Object.keys(item).length > 1)
   const fetchedVidoes = fs.readFileSync('./_maps/videosMap.json', { encoding: 'utf8', flag: 'r' })
   const videosOBJ = JSON.parse(fetchedVidoes)
+  const fetchedSchoolVidoes = fs.readFileSync('./_maps/schoolVideosMap.json', {
+    encoding: 'utf8',
+    flag: 'r'
+  })
+  const schoolVideosOBJ = JSON.parse(fetchedSchoolVidoes)
 
   if (!fetchedVidoes) {
+    return {
+      notFound: true
+    }
+  }
+
+  if (!fetchedSchoolVidoes) {
     return {
       notFound: true
     }
@@ -116,7 +137,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       schedule,
       stream,
       content: cleaned,
-      videos: videosOBJ
+      videos: videosOBJ,
+      schoolVideos: schoolVideosOBJ
     },
     revalidate: 60
   }

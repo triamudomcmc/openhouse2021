@@ -14,7 +14,7 @@ import Programmes from './Programmes'
 import Countdown from 'react-countdown'
 import Footer from '../common/Footer'
 import { Live } from '../common/Live'
-import { SchoolBlogs } from '../SchoolBlogs'
+import SchoolBlogs from '../SchoolBlogs'
 import { useAuth } from '../../lib/auth'
 import { motion } from 'framer-motion'
 import { Google } from '../common/Logo/Google'
@@ -24,7 +24,7 @@ import Router from 'next/router'
 import InApp from 'detect-inapp'
 import { VideoVector } from '../../assets/vectors/index/VideoVector'
 
-export const Index = ({ stream, schedule, contents, videos }) => {
+export const Index = ({ stream, schedule, contents, videos, schoolVideos }) => {
   const [blocked, setBlocked] = useState(false)
   const [currenTTime, setCurrentTime] = useState(0)
   const [liveContent, setLiveContent] = useState({
@@ -261,6 +261,7 @@ export const Index = ({ stream, schedule, contents, videos }) => {
           </div>
         </div>
         <Programmes />
+        <SchoolBlogs videos={schoolVideos} />
         <Videos videos={videos} />
         <Blogs content={contents} />
         <Live schedule={schedule} />
