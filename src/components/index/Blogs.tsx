@@ -1,16 +1,17 @@
 import { ContentCard } from '../common/Card/ContentCard'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-
-const shuffle = array => {
-  return array.sort(() => Math.random() - 0.5)
-}
+import { shuffleArray } from '../../utils/arraymethods'
 
 const Blogs = ({ content }) => {
-  const halfLength = Math.ceil(content.length / 2)
+  const [top, setTop] = useState([])
+  const [bottom, setBottom] = useState([])
 
-  const top = shuffle(content.slice(0, halfLength))
-  const bottom = shuffle(content.slice(halfLength, content.length))
+  useEffect(() => {
+    const halfLength = Math.ceil(content.length / 2)
+    setTop(shuffleArray(content.slice(0, halfLength)))
+    setBottom(shuffleArray(content.slice(halfLength, content.length)))
+  }, [content])
 
   return (
     <div className="w-4/5 md:w-7/12">

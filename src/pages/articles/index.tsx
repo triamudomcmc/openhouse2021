@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Layout } from 'components/common/Layout'
 import { GetStaticProps } from 'next'
@@ -32,6 +32,12 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 const Articles = ({ contents }) => {
+  const [shuffleContent, setShuffleContent] = useState([])
+
+  useEffect(() => {
+    setShuffleContent(shuffleArray(contents))
+  }, [contents])
+
   return (
     <Layout>
       <div className="flex flex-col items-center w-full mb-10">
@@ -100,7 +106,7 @@ const Articles = ({ contents }) => {
                 </motion.div>
               </Link>
             </div>
-            <Clubs contents={contents} />
+            <Clubs contents={shuffleContent} />
           </div>
         }
       </div>

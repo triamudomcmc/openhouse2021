@@ -1,16 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { User } from '../../assets/vectors/User'
 import { ContentCard } from '../common/Card/ContentCard'
 import Toast from '../common/Toasts/Toast'
 import Link from 'next/link'
-
-const shuffle = array => {
-  return array.sort(() => Math.random() - 0.5)
-}
+import { shuffleArray } from '../../utils/arraymethods'
 
 const Videos = ({ videos }) => {
   const [warnToast, setWarnToast] = useState(false)
+  const [top, setTop] = useState([])
+  const [bottom, setBottom] = useState([])
+
+  useEffect(() => {
+    const halfLength = Math.ceil(videos.length / 2)
+    setTop(shuffleArray(videos.slice(0, halfLength)))
+    setBottom(shuffleArray(videos.slice(halfLength, videos.length)))
+  }, [videos])
+
   const turnWarnToastOn = () => {
     setWarnToast(prev => {
       return true
@@ -21,10 +27,6 @@ const Videos = ({ videos }) => {
       })
     }, 4000)
   }
-  const halfLength = Math.ceil(videos.length / 2)
-
-  const top = shuffle(videos.slice(0, halfLength))
-  const bottom = shuffle(videos.slice(halfLength, videos.length))
 
   return (
     <div className="w-4/5 md:w-7/12">
