@@ -2,7 +2,7 @@ import React from 'react'
 
 export const BtsInfo = () => {
   return (
-    <div className="max-w-full space-y-6 lg:space-y-10">
+    <div className="space-y-6 md:w-96 lg:space-y-10">
       <div className="flex flex-row items-center space-x-4">
         <div>
           <p className="flex items-center justify-center w-10 h-10 text-2xl font-bold text-white bg-blue-400 rounded-full">
