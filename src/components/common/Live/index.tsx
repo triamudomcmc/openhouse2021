@@ -19,7 +19,7 @@ export const Live = ({ schedule, className = '', topClassName = 'mt-10 md:mt-56'
           topClassName
         )}
       >
-        <h1 className="text-2xl font-bold text-center mb-4 md:text-6xl lg:text-8xl bg-clip-text text-blue-400">
+        <h1 className="text-3xl font-bold text-center mb-4 md:text-6xl lg:text-8xl bg-clip-text text-blue-400">
           ตารางรายการสด
         </h1>
         <div

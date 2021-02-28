@@ -10,22 +10,24 @@ const Videos = ({ post, suggestion }) => {
   return (
     <Layout>
       <div className="flex flex-col items-center mb-10 w-full">
-        <div className="flex flex-col items-center w-9/12 md:w-7/12 space-y- mt-20">
+        <div className="flex flex-col items-center w-10/12 md:w-7/12 mt-12 md:mt-20">
           <iframe
             width="100%"
             height="505"
-            className="h-80 md:h-505"
+            className="frame-height-mobile md:frame-height-desktop"
             src={post.video}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
-          <div className="w-full text-gray-500 space-y-1">
-            <h1 className="font-bold mt-6 text-2xl">{post.title}</h1>
-            <h1 className="font-semibold text-gray-400 text-xl">{post.author}</h1>
+        </div>
+        <div className="flex flex-col items-center w-9/12 md:w-7/12">
+          <div className="w-full text-gray-500 mt-2 mb-4">
+            <h1 className="font-bold mt-6 text-lg md:text-2xl">{post.title}</h1>
+            <h1 className="font-semibold text-base text-gray-400 md:text-xl">{post.author}</h1>
           </div>
           <article
-            className="font-display text-gray-400 text-lg"
+            className="font-display w-full text-gray-400 text-base md:text-xl"
             dangerouslySetInnerHTML={{ __html: post.description }}
           ></article>
         </div>
@@ -41,7 +43,7 @@ const Videos = ({ post, suggestion }) => {
                       style={{ width: '240px', height: '162px', objectFit: 'cover' }}
                       className="pb-2 w-60 rounded-xl"
                     />
-                    <p style={{ width: '240px' }} className="font-semibold">
+                    <p style={{ width: '240px' }} className="truncate font-semibold">
                       {value.title}
                     </p>
                   </div>

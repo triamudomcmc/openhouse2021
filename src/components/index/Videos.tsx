@@ -40,7 +40,7 @@ const Videos = ({ videos }) => {
       >
         <Toast type="failed" text="เนื้อหายังไม่เปิดใช้งาน โปรดติดตามรายการสด" show={warnToast} />
       </div>
-      <div className="flex flex-row justify-between md:justify-center mt-16 mb-10 items-end">
+      <div className="flex flex-row justify-between md:justify-center mt-4 md:mt-16 md:mb-10 items-end">
         <Link href="/videos">
           <h1 className="text-3xl cursor-pointer font-black text-center text-blue-400 md:mt-48 md:text-7xl">
             วีดีโอ
@@ -52,7 +52,7 @@ const Videos = ({ videos }) => {
           </h1>
         </Link>
       </div>
-      <div className="flex flex-col items-center justify-center py-4 space-y-4">
+      <div className="flex flex-col items-center justify-center py-3 space-y-4">
         <div className="flex max-w-full pb-6 space-y-4 overflow-x-scroll md:space-y-0 md:space-x-4 flex-row">
           {top.map(data => {
             if ('video' in data) {

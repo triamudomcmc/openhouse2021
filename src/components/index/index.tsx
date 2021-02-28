@@ -178,15 +178,15 @@ export const Index = ({ stream, schedule, contents, videos, schoolVideos }) => {
                 date={1614992400000}
                 renderer={({ days }) => (
                   <h1
-                    style={{ fontSize: 'calc(15px + 3.4vw)' }}
-                    className="text-4xl font-bold md:text-8xl text-blue-75"
+                    style={{ width: 'calc(36px + 3.8vw)', fontSize: 'calc(15px + 3.4vw)' }}
+                    className="text-4xl text-center font-bold md:text-8xl text-blue-75"
                   >
                     {days}
                   </h1>
                 )}
               />
               <p
-                style={{ fontSize: 'calc(1px + 1vw)' }}
+                style={{ fontSize: 'calc(6px + 0.8vw)' }}
                 className="text-xs font-medium text-gray-400 md:text-xl"
               >
                 DAYS LEFT
@@ -202,10 +202,12 @@ export const Index = ({ stream, schedule, contents, videos, schoolVideos }) => {
             <Link href="/videos">
               <div
                 style={{ width: '96%', height: '12vw', fontSize: '1.8vw' }}
-                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 w-full justify-center w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
+                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 w-full w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
               >
-                <Camera style={{ width: '50%', height: '50%' }} className="h-9 sm:h-12 md:h-24" />
-                วีดีโอ
+                <div className="flex flex-row justify-center items-end w-full h-2/3">
+                  <Camera style={{ width: '60%', height: '80%' }} className="h-9 sm:h-12 md:h-24" />
+                </div>
+                <span>วีดีโอ</span>
               </div>
             </Link>
           </div>
@@ -213,10 +215,12 @@ export const Index = ({ stream, schedule, contents, videos, schoolVideos }) => {
             <Link href="/clubs">
               <div
                 style={{ width: '96%', height: '12vw', fontSize: '1.8vw' }}
-                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 justify-center w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
+                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
               >
-                <Puzzle style={{ width: '50%', height: '50%' }} className="h-9 sm:h-12 md:h-24" />
-                ชมรม
+                <div className="flex flex-row justify-center items-end w-full h-2/3">
+                  <Puzzle style={{ width: '60%', height: '80%' }} className="h-9 sm:h-12 md:h-24" />
+                </div>
+                <span>ชมรม</span>
               </div>
             </Link>
           </div>
@@ -224,13 +228,12 @@ export const Index = ({ stream, schedule, contents, videos, schoolVideos }) => {
             <Link href="/map">
               <div
                 style={{ width: '96%', height: '12vw', fontSize: '1.8vw' }}
-                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 justify-center w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
+                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
               >
-                <Carv
-                  style={{ width: '36%', height: '36%' }}
-                  className="my-1 h-7 sm:h-10 md:h-24"
-                />
-                <div style={{ marginTop: '0.4vw' }}>การเดินทาง</div>
+                <div className="flex flex-row justify-center items-end w-full h-2/3">
+                  <Carv style={{ width: '28%', height: '80%' }} className="h-7 sm:h-10 md:h-24" />
+                </div>
+                <span>การเดินทาง</span>
               </div>
             </Link>
           </div>
@@ -238,10 +241,12 @@ export const Index = ({ stream, schedule, contents, videos, schoolVideos }) => {
             <Link href="/tickets">
               <div
                 style={{ width: '96%', height: '12vw', fontSize: '1.8vw' }}
-                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 justify-center w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
+                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
               >
-                <CardV style={{ width: '40%', height: '40%' }} className="h-9 sm:h-10 md:h-24" />
-                การ์ด
+                <div className="flex flex-row justify-center items-end w-full h-2/3">
+                  <CardV style={{ width: '40%', height: '80%' }} className="h-9 sm:h-10 md:h-24" />
+                </div>
+                <span>การ์ด</span>
               </div>
             </Link>
           </div>
@@ -249,13 +254,12 @@ export const Index = ({ stream, schedule, contents, videos, schoolVideos }) => {
             <Link href="/contact">
               <div
                 style={{ width: '96%', height: '12vw', fontSize: '1.8vw' }}
-                className="flex flex-col items-center cursor-pointer hover:bg-gray-100 justify-center w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
+                className="flex flex-col items-center cursor-pointer hover:bg-gray-100 w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
               >
-                <Phone
-                  style={{ width: '44%', height: '44%' }}
-                  className="my-1 h-7 sm:h-10 md:h-24"
-                />
-                ติดต่อ
+                <div className="flex flex-row justify-center items-end w-full h-2/3">
+                  <Phone style={{ width: '44%', height: '80%' }} className="h-7 sm:h-10 md:h-24" />
+                </div>
+                <span>ติดต่อ</span>
               </div>
             </Link>
           </div>
