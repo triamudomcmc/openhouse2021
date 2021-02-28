@@ -178,8 +178,8 @@ export const Index = ({ stream, schedule, contents, videos, schoolVideos }) => {
                 date={1614992400000}
                 renderer={({ days }) => (
                   <h1
-                    style={{ fontSize: 'calc(15px + 3.4vw)' }}
-                    className="text-4xl font-bold md:text-8xl text-blue-75"
+                    style={{ width: 'calc(36px + 3.8vw)', fontSize: 'calc(15px + 3.4vw)' }}
+                    className="text-4xl text-center font-bold md:text-8xl text-blue-75"
                   >
                     {days}
                   </h1>
