@@ -1,6 +1,6 @@
 ---
 title: Model United Nations: A Unique Experience in Triam Udom
-author: Pawada Umpriwan, Tanapat Witayangkun
+author: TriamMUN
 thumbnail: /assets/articles/_thumbnails/thumb_15.jpg
 ---
 
@@ -22,7 +22,7 @@ In the morning, there was an opening ceremony. The club’s president told
 us about the purpose of this activity and the head of English department
 gave us a speech. After that, we started the conference. Each delegate
 had to give an opening speech, ordered by the alphabets of the
-delegates’ countries. We had to do the speech within 1-1:30 minutes.
+delegates’ countries. We had to do the speech within 1-1.30 minutes.
 When the last delegate finished the speech, we were allowed to move
 around the room and discuss the topic with other delegates. After
 forming the blocs (the team in which each member shares the same goals),
@@ -59,17 +59,16 @@ successfully.
 “MUN คืออะไร ?” คงจะเป็นคำถามที่หลาย ๆ คนสงสัยแต่อาจจะยังไม่ได้คำตอบ
 หรือว่าคำตอบที่ได้นั้นเข้าใจยากเกินไป
 ในบทความนี้เราเลยมาอธิบายให้ทุกคนฟังเองว่าสรุปแล้ว MUN คืออะไรกันนะ ?
-สหประชาชาติจำลอง หรือเรียกสั้น ๆ ว่า MUN
 
-(เอ็ม-ยู-เอ็น) คือ
+สหประชาชาติจำลอง หรือเรียกสั้น ๆ ว่า MUN (เอ็ม-ยู-เอ็น) คือ
 กิจกรรมนอกเหนือหลักสูตรที่นักเรียนจะสวมบทบาทเป็นผู้แทนของประเทศต่าง ๆ
-หรือหน่วยงานในสหประชาชาติ และจำลองการประชุมสหประชาชาติ และชมรม Triam
+หรือหน่วยงานในสหประชาชาติ และจำลองการประชุมสหประชาชาติ ชมรม Triam
 Udom Model United Nations
 หรือชมรมสหประชาชาติจำลองแห่งเตรียมอุดมศึกษาก็เป็นชมรมที่จัดกิจกรรม MUN
 ขึ้นในโรงเรียนนั่นเอง ถ้าสนใจหรือต้องการข้อมูลเพิ่มเติมเกี่ยวกับ MUN
 หรือชมรมของเราสามารถไปที่เว็บไซต์ https://triammun.club ได้เลย !
 
-ในบทความนี้ เราจะพาทุก ๆ คนไปพบกับ TriamMUNX
+ในบทความนี้ เราจะพาทุก ๆ คนไปพบกับ TriamMUNX และ
 กิจกรรมจำลองการประชุมของสหประชาชาติสุดพิเศษของชมรมเตรียมมุนที่จัดขึ้นปีละครั้งทุก
 ๆ คนในโรงเรียนสามารถเข้าร่วมได้ !
 
@@ -88,8 +87,9 @@ Udom Model United Nations
 ควรที่จะเขียนอธิบายให้ชัดเจนที่สุดเท่าที่จะทำได้
 และควรตรวจสอบหาจุดที่ผิดหรือมีช่องโหว่อะไรที่สามารถถูกคัดค้านได้
 ถ้ามีก็ต้องรีบแก้ทันที เพื่อที่จะทำให้ resolution
-ของพวกเรามีโอกาสเสนอผ่านมากที่สุด หลังจากพักเที่ยงเสร็จแล้ว
-ตัวแทนประเทศทุก ๆ
+ของพวกเรามีโอกาสเสนอผ่านมากที่สุด
+
+หลังจากพักเที่ยงเสร็จแล้วตัวแทนประเทศทุก ๆ
 คนก็กลับมาที่ห้องประชุมเดิมอย่างตรงเวลาและประชุมเพื่อโหวต resolution
 เริ่มจาก resolution I ซึ่งเป็นของบล็อกเรานั่นเอง ตอนนั้นตื่นเต้นมาก ๆ
 โดยในขั้นแรก Main Submitter (คนหลักหรือประธานในการส่ง resolution)
@@ -117,9 +117,5 @@ resolution นี้ผ่านหรือไม่ผ่าน
 แต่ก็ถือว่าเป็นเรื่องที่ปกติมาก ๆ ใน MUN แต่ยังโชคดีที่ resolution II
 กับ resolution III ผ่าน !! ก็ถือว่าการทำ MUN
 จบลงอย่างประสบความสำเร็จเลยทีเดียว
-
-
-
-
 
 <img src="/assets/articles/TriamMUNUnique_assets/media/image2.png" style="width:5.56765in;height:4.17749in" /><img src="/assets/articles/TriamMUNUnique_assets/media/image1.png" style="width:6.06944in;height:4.54792in" />

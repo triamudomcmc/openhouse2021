@@ -5,7 +5,7 @@ import * as Yup from 'yup'
 import Router from 'next/router'
 
 import Input from 'components/ui/Input'
-import { updateUser } from 'lib/db'
+import { getCurrentUserData, updateUser } from 'lib/db'
 import { useAuth } from 'lib/auth'
 import { getRandomWishes } from 'utils/wishes'
 
@@ -15,15 +15,16 @@ const RegisterForm = () => {
     <Formik
       initialValues={{
         prefix: 'นางสาว',
-        name: '',
+        firstname: '',
         lastname: '',
         nickname: '',
-        status: 'เสียชีวิต',
+        status: 'นักเรียน',
         level: 'มัธยมศึกษาปีที่ 1',
-        school: 'วังไกลกังวล',
+        school: '',
         news: [],
         purpose: [],
-        tos: false
+        tos: false,
+        haveWishes: false
       }}
       onSubmit={async (values, { setSubmitting }) => {
         const payload = {
@@ -31,11 +32,16 @@ const RegisterForm = () => {
           wishes: getRandomWishes()
         }
 
-        setSubmitting(true)
-        await updateUser(userData.uid, payload)
-        setSubmitting(false)
+        const data = await getCurrentUserData(userData.uid)
+        if (Object.keys(data).length >= 15) {
+          Router.reload()
+        } else {
+          setSubmitting(true)
+          await updateUser(userData.uid, payload)
+          setSubmitting(false)
 
-        Router.push('/ticket')
+          Router.push('/tickets')
+        }
       }}
     >
       {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
@@ -69,26 +75,30 @@ const RegisterForm = () => {
                 <option>เด็กหญิง</option>
                 <option>ว่าที่ร้อยตรี</option>
                 <option>ว่าที่ร้อยตรีหญิง</option>
+                <option>อื่น ๆ</option>
               </select>
             </div>
 
             <div>
-              <label htmlFor="name" className="block text-sm font-medium leading-5 text-gray-700">
+              <label
+                htmlFor="firstname"
+                className="block text-sm font-medium leading-5 text-gray-700"
+              >
                 ชื่อ
               </label>
               <div className="mt-1">
                 <Input
-                  id="name"
+                  id="firstname"
                   type="text"
-                  name="name"
+                  name="firstname"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={values.name}
+                  value={values.firstname}
                   required
                 />
               </div>
               <p className="my-2 text-sm text-red-500">
-                {errors.name && touched.name && errors.name}
+                {errors.firstname && touched.firstname && errors.firstname}
               </p>
             </div>
 
@@ -120,7 +130,7 @@ const RegisterForm = () => {
                 htmlFor="nickname"
                 className="block text-sm font-medium leading-5 text-gray-700"
               >
-                ชื่อเล่น
+                Username
               </label>
               <div className="mt-1">
                 <Input
@@ -150,52 +160,60 @@ const RegisterForm = () => {
                 onBlur={handleBlur}
                 value={values.status}
               >
-                <option>เสียชีวิต</option>
+                <option>นักเรียน</option>
+                <option>นักศึกษา</option>
+                <option>ผู้ปกครอง</option>
+                <option>นักเรียนเก่า</option>
+                <option>ครู/อาจารย์</option>
+                <option>อื่น ๆ</option>
               </select>
               <p className="my-2 text-sm text-red-500">
                 {errors.status && touched.status && errors.status}
               </p>
             </div>
 
-            <div>
-              <label htmlFor="level" className="block text-sm font-medium text-gray-700">
-                ระดับชั้น
-              </label>
-              <select
-                id="level"
-                name="level"
-                className="block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 rounded-md focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.level}
-              >
-                <option>ต่ำกว่ามัธยมศึกษาปีที่ 1</option>
-                <option>มัธยมศึกษาปีที่ 1</option>
-                <option>มัธยมศึกษาปีที่ 2</option>
-                <option>มัธยมศึกษาปีที่ 3</option>
-                <option>มัธยมศึกษาปีที่ 4</option>
-                <option>มัธยมศึกษาปีที่ 5</option>
-                <option>มัธยมศึกษาปีที่ 6</option>
-              </select>
-              <p className="my-2 text-sm text-red-500">
-                {errors.level && touched.level && errors.level}
-              </p>
-            </div>
+            {values.status === 'นักเรียน' && (
+              <div>
+                <label htmlFor="level" className="block text-sm font-medium text-gray-700">
+                  ระดับชั้น
+                </label>
+                <select
+                  id="level"
+                  name="level"
+                  className="block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 rounded-md focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.level}
+                >
+                  <option>ต่ำกว่ามัธยมศึกษาปีที่ 1</option>
+                  <option>มัธยมศึกษาปีที่ 1</option>
+                  <option>มัธยมศึกษาปีที่ 2</option>
+                  <option>มัธยมศึกษาปีที่ 3</option>
+                  <option>มัธยมศึกษาปีที่ 4</option>
+                  <option>มัธยมศึกษาปีที่ 5</option>
+                  <option>มัธยมศึกษาปีที่ 6</option>
+                </select>
+                <p className="my-2 text-sm text-red-500">
+                  {errors.level && touched.level && errors.level}
+                </p>
+              </div>
+            )}
 
             <div>
-              <label htmlFor="school" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="school" className="block text-sm font-medium leading-5 text-gray-700">
                 โรงเรียน
               </label>
-              <select
-                id="school"
-                name="school"
-                className="block w-full py-2 pl-3 pr-10 mt-1 text-base border-gray-300 rounded-md focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.school}
-              >
-                <option>วังไกลกังวล</option>
-              </select>
+              <div className="mt-1">
+                <Input
+                  id="school"
+                  type="text"
+                  name="school"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.school}
+                  required
+                />
+              </div>
               <p className="my-2 text-sm text-red-500">
                 {errors.school && touched.school && errors.school}
               </p>
@@ -434,12 +452,41 @@ const RegisterForm = () => {
                 onBlur={handleBlur}
                 required
               />
-              <label htmlFor="tos" className="block ml-2 text-sm text-gray-900">
+              <a href="/tos" target="_blank" className="block ml-2 text-sm text-gray-900">
                 ยอมรับข้อตกลงและเงื่อนไขการใช้งาน
-              </label>
+              </a>
             </div>
 
             <p className="my-2 text-sm text-red-500">{errors.tos && touched.tos && errors.tos}</p>
+          </div>
+
+          <div className="relative mt-8">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+              <div className="w-full border-t border-gray-300"></div>
+            </div>
+            <div className="relative flex justify-start">
+              <span className="px-2 text-sm text-gray-500 bg-white">การ์ดต้อนรับ</span>
+            </div>
+          </div>
+
+          <div>
+            <div className="flex items-center mt-4">
+              <input
+                id="haveWishes"
+                name="haveWishes"
+                type="checkbox"
+                className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              <label htmlFor="haveWishes" className="block ml-2 text-sm text-gray-900">
+                รับคำอวยพรจากรุ่นพี่เตรียมฯ
+              </label>
+            </div>
+
+            <p className="my-2 text-sm text-red-500">
+              {errors.haveWishes && touched.haveWishes && errors.haveWishes}
+            </p>
           </div>
 
           <div className="flex flex-row items-baseline justify-between mt-6">

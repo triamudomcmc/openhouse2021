@@ -3,8 +3,18 @@ import React from 'react'
 import { User } from '../../../assets/vectors/User'
 import classNames from 'classnames'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
-export const ContentCard = ({ className = '', duration = '', src, children, href = '#' }) => {
+export const ContentCard = ({
+  className = '',
+  duration = '',
+  src,
+  children,
+  href = '#',
+  disabled = false,
+  callback = () => {},
+  slider = false
+}) => {
   const description = React.Children.map(children, child =>
     child.type.displayName === 'Desc' ? child : null
   )
@@ -12,33 +22,127 @@ export const ContentCard = ({ className = '', duration = '', src, children, href
     child.type.displayName === 'Author' ? child : null
   )
 
-  return (
-    <Link href={href}>
+  if (!disabled) {
+    return (
+      <Link href={href}>
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className={classNames(
+            'flex flex-col justify-between cursor-pointer px-2 pt-3 pb-1 max-w-sm mx-2 space-y-2 shadow-md rounded-xl',
+            className.replace('md:w-1/3', '')
+          )}
+        >
+          {duration === '' ? (
+            <img
+              src={src === '' ? '/assets/nok.png' : src}
+              style={{
+                height: '18vw',
+                minHeight: '195px',
+                width: '72vw',
+                maxHeight: '188px',
+                objectFit: 'cover'
+              }}
+              className="mx-auto rounded-lg"
+              width={240}
+              height={188}
+            />
+          ) : (
+            <div className="relative">
+              <img
+                src={src === '' ? '/assets/nok.png' : src}
+                style={{
+                  height: '18vw',
+                  minHeight: '195px',
+                  width: '72vw',
+                  maxHeight: '188px',
+                  objectFit: 'cover'
+                }}
+                className="mx-auto rounded-lg"
+                width={240}
+                height={188}
+              />
+              <span className="absolute right-0 mr-2 py-1 px-2 bg-white text-sm rounded-md font-semibold bottom-2">
+                {duration}
+              </span>
+            </div>
+          )}
+          <h1
+            style={{ maxWidth: '320px' }}
+            className={
+              slider ? 'mx-2 font-bold truncate w-60vw' : 'mx-2 font-bold truncate w-60vw lg:w-20vw'
+            }
+          >
+            {description}
+          </h1>
+          <div className="flex flex-row items-center space-x-1 text-gray-300 ">
+            <User className="flex-shrink-0" />
+            <p className={slider ? 'truncate w-60vw' : 'truncate w-60vw lg:w-20vw'}>{author}</p>
+          </div>
+        </motion.div>
+      </Link>
+    )
+  } else {
+    return (
       <div
+        onClick={callback}
         className={classNames(
-          'flex flex-col justify-between px-2 pt-3 pb-1 mx-2 space-y-2 shadow-md' +
-            ' md:w-1/3 rounded-xl',
-          className
+          'flex flex-col justify-between bg-gray-200 cursor-pointer px-2 my-3 lg:my-0 pt-3 pb-1 max-w-sm mx-2' +
+            ' space-y-2' +
+            ' shadow-md' +
+            ' rounded-xl',
+          className.replace('md:w-1/3', '')
         )}
       >
         {duration === '' ? (
-          <Image src={src === '' ? '/assets/nok.png' : src} width={288} height={188} />
+          <img
+            src={src === '' ? '/assets/nok.png' : src}
+            style={{
+              height: '18vw',
+              minHeight: '195px',
+              width: '72vw',
+              maxHeight: '188px',
+              objectFit: 'cover'
+            }}
+            className="mx-auto rounded-lg"
+            width={240}
+            height={188}
+          />
         ) : (
           <div className="relative">
-            <img src={src} width={288} height={188} className="w-full" />
-            <div className="absolute mx-2 right-3 bottom-3">
-              <div className="px-2 py-1 text-sm font-semibold bg-white rounded-lg">{duration}</div>
-            </div>
+            <img
+              src={src === '' ? '/assets/nok.png' : src}
+              style={{
+                height: '18vw',
+                minHeight: '195px',
+                width: '72vw',
+                maxHeight: '188px',
+                objectFit: 'cover'
+              }}
+              className="mx-auto rounded-lg"
+              width={240}
+              height={188}
+            />
+            <span className="absolute right-0 mr-2 py-1 px-2 bg-white text-sm rounded-md font-semibold bottom-2">
+              {duration}
+            </span>
           </div>
         )}
-        <h1 className="mx-2 font-bold truncate">{description}</h1>
-        <div className="flex flex-row space-x-1 text-gray-300 ">
-          <User />
-          <p>{author}</p>
+        <h1
+          style={{ maxWidth: '320px' }}
+          className={
+            slider ? 'mx-2 font-bold truncate w-60vw' : 'mx-2 font-bold truncate w-60vw lg:w-20vw'
+          }
+        >
+          {description}
+        </h1>
+        <div className="flex flex-row items-center space-x-1 text-gray-300 ">
+          <User className="flex-shrink-0" />
+          <p className={slider ? 'truncate w-60vw' : 'truncate w-60vw lg:w-20vw'}>{author}</p>
         </div>
       </div>
-    </Link>
-  )
+    )
+  }
 }
 
 const Description = ({ children }) => children

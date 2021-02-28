@@ -1,7 +1,7 @@
 export const BtsInv = ({ ...restprops }) => {
   return (
     <svg
-      className="w-8 h-8 fill-current md:h-16 md:w-16"
+      className="w-8 h-8 fill-current lg:h-16 lg:w-16"
       viewBox="0 0 52 63"
       xmlns="http://www.w3.org/2000/svg"
       {...restprops}

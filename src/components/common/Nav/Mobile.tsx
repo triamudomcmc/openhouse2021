@@ -30,7 +30,7 @@ export const Modal = (
           ref={ref}
         >
           <Link href="/">
-            <div className="text-lg font-black leading-tight cursor-pointer md:text-2xl font-display">
+            <div className="text-lg font-black leading-tight cursor-pointer lg:text-2xl font-display">
               <h1 className="text-center text-gray-600">
                 TRIAM UDOM ONLINE
                 <br />
@@ -49,20 +49,17 @@ export const Modal = (
               <a>บทความ</a>
             </Link>
             <Link href="/videos">
-              <a>วิดิโอ</a>
+              <a>วิดีโอ</a>
             </Link>
-            <Link href="/stage">
-              <a>รายการสด</a>
+            <Link href="/records">
+              <a>รายการย้อนหลัง</a>
             </Link>
             <Link href="/">
               <a>การสอบเข้า</a>
             </Link>
-            <Link href="/contact">
-              <a>ติดต่อ</a>
-            </Link>
             <SocialLink />
           </div>
-          <div className="w-24 pt-8 md:w-48">
+          <div className="w-24 pt-8 lg:w-48">
             <Image src="/assets/tucmc.png" width={1071} height={162} />
           </div>
         </nav>
@@ -85,7 +82,8 @@ export const MobileMenu = ({ className }) => {
     <>
       <div
         className={classNames(
-          'sticky top-0 justify-center w-full h-24 max-w-full md:flex md:h-28 bg-gradient-to-r from-blue-200 via-purple-200 to-red-200',
+          'top-0 justify-center w-full h-24 max-w-full lg:flex lg:h-28 bg-gradient-to-r from-blue-70 via-purple-450' +
+            ' to-red-250',
           className
         )}
       >

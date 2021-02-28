@@ -1,7 +1,7 @@
 export const BtsLogo = ({ ...restprops }) => {
   return (
     <svg
-      className="w-8 h-8 fill-current md:h-16 md:w-16"
+      className="w-8 h-8 fill-current lg:h-16 lg:w-16"
       width="52"
       height="61"
       viewBox="0 0 52 61"

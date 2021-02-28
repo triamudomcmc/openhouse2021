@@ -49,6 +49,7 @@ export async function getTicketData(uid) {
 
   return {
     nickname: data.nickname,
-    wishes: data.wishes
+    wishes: data.wishes,
+    haveWishes: data.haveWishes
   }
 }

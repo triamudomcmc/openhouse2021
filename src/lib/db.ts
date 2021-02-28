@@ -13,6 +13,10 @@ export const createUser = (uid: string, data: firebase.firestore.DocumentData): 
     .set({ uid, ...data }, { merge: true })
 }
 
+export const addQuestion = (question: string) => {
+  return firestore.collection('questions').add({ question })
+}
+
 export const getCurrentUserData = async (
   uid: string
 ): Promise<null | firebase.firestore.DocumentData> => {

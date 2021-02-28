@@ -18,6 +18,7 @@ export interface IUserData extends IInitialUserData {
   purpose: string[]
   tos: boolean
   wishes: string
+  haveWishes: boolean
 }
 
 interface IInitialUserData {
@@ -34,7 +35,9 @@ interface IAuthContext {
   loading: boolean
   signinWithFacebook: (redirect: string) => Promise<void>
   signinWithGoogle: (redirect: string) => Promise<void>
+  signinWithEmail: (email: string, emaillink: string) => Promise<void>
   signout: () => void
+  updateUserData: () => Promise<void>
 }
 
 const AuthContext = React.createContext<IAuthContext | null>(null)
@@ -53,24 +56,18 @@ function useProvideAuth() {
   const [userData, setUserData] = useState<IUserData>(null)
   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    if (userData && Object.keys(userData).length === 5) {
-      Router.push('/onboard')
+  const updateUserData = async () => {
+    const data = await getCurrentUserData(user.uid)
+    if (data) {
+      setUserData(data as IUserData)
+    } else {
+      setUserData(null)
     }
-  }, [userData])
+  }
 
   useEffect(() => {
-    const getData = async () => {
-      const data = await getCurrentUserData(user.uid)
-      if (data) {
-        setUserData(data as IUserData)
-      } else {
-        setUserData(null)
-      }
-    }
-
     if (user) {
-      getData()
+      updateUserData()
     }
   }, [user])
 
@@ -105,6 +102,14 @@ function useProvideAuth() {
     }
   }
 
+  const signinWithEmail = async (email: string, emaillink: string) => {
+    setLoading(true)
+
+    const response = await firebase.auth().signInWithEmailLink(email, emaillink)
+
+    handleUser(response.user)
+  }
+
   const signinWithGoogle = async (redirect: string) => {
     setLoading(true)
 
@@ -136,7 +141,9 @@ function useProvideAuth() {
     loading,
     signinWithFacebook,
     signinWithGoogle,
-    signout
+    signinWithEmail,
+    signout,
+    updateUserData
   }
 }
 

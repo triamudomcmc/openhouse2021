@@ -9,6 +9,9 @@
 
 @layer utilities {
   @variants responsive {
+    .max-w-xxs {
+      max-width: 18rem;
+    }
     .text-shadow {
       text-shadow: 0px 4.87px 9.74px rgba(0, 0, 0, 0.2);
     }
@@ -42,6 +45,30 @@
     /* Hide scrollbar for Chrome, Safari and Opera */
     .scroll-hidden::-webkit-scrollbar {
       display: none;
+    }
+
+    .h-505 {
+      height: 505px;
+    }
+
+    .w-24vw {
+      width: 24vw;
+    }
+
+    .w-76vw {
+      width: 76vw;
+    }
+
+    .w-60vw {
+      width: 60vw;
+    }
+
+    .w-20vw {
+      width: 20vw;
+    }
+
+    .z-extra {
+      z-index: 999;
     }
 
     /* Hide scrollbar for IE, Edge and Firefox */

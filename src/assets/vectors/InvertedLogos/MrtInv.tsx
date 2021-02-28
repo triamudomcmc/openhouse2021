@@ -1,7 +1,7 @@
 export const MrtInv = ({ ...restprops }) => {
   return (
     <svg
-      className="fill-current w-9 h-9 md:h-18 md:w-18"
+      className="fill-current w-9 h-9 lg:h-18 lg:w-18"
       viewBox="0 0 72 62"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

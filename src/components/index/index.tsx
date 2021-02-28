@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import cn from 'classnames'
 import Link from 'next/link'
 import useSWR from 'swr'
@@ -14,9 +14,67 @@ import Programmes from './Programmes'
 import Countdown from 'react-countdown'
 import Footer from '../common/Footer'
 import { Live } from '../common/Live'
-import { SchoolBlogs } from '../SchoolBlogs'
+import SchoolBlogs from '../SchoolBlogs'
+import { useAuth } from '../../lib/auth'
+import { motion } from 'framer-motion'
+import { Google } from '../common/Logo/Google'
+import { Facebook } from '../common/Logo/Facebook'
+import { Email } from '../common/Logo/Email'
+import Router from 'next/router'
+import InApp from 'detect-inapp'
+import { VideoVector } from '../../assets/vectors/index/VideoVector'
 
-export const Index = ({ stream, schedule, contents }) => {
+export const Index = ({ stream, schedule, contents, videos, schoolVideos }) => {
+  const [blocked, setBlocked] = useState(false)
+  const [currenTTime, setCurrentTime] = useState(0)
+  const [liveContent, setLiveContent] = useState({
+    title: 'รายการถ่ายทอดสด',
+    club: 'รายการถ่ายทอดสด'
+  })
+
+  const redirectToStage = () => {
+    Router.push('/records')
+  }
+
+  const convertTomin = time => {
+    return parseInt(time.split(':')[0]) * 60 + parseInt(time.split(':')[1])
+  }
+
+  useEffect(() => {
+    setCurrentTime(date.getHours() * 60 + date.getMinutes())
+    if (window.localStorage.getItem('emailForSignIn') !== null) {
+      Router.push('/signup')
+    }
+    const inapp = new InApp(navigator.userAgent || navigator.vendor)
+    if (inapp.isInApp) {
+      setBlocked(true)
+    }
+    setInterval(() => {
+      let date = new Date()
+      setCurrentTime(date.getHours() * 60 + date.getMinutes())
+    }, 5000)
+  }, [])
+
+  useEffect(() => {
+    let now = new Date().getDate()
+    schedule.forEach(item => {
+      if (now === item.startTime.date) {
+        const start = convertTomin(item.startTime.time)
+        const end = convertTomin(item.endTime.time)
+        if (start <= currenTTime && currenTTime < end) {
+          setLiveContent({
+            title: item.title,
+            club: item.club
+          })
+        }
+      }
+    })
+  }, [currenTTime])
+
+  const { loading, user, signinWithGoogle, signinWithFacebook } = useAuth()
+
+  const date = new Date()
+
   const response = useSWR('/api/stage', {
     initialData: stream,
     refreshInterval: 5000
@@ -38,12 +96,24 @@ export const Index = ({ stream, schedule, contents }) => {
               <h2 className="m-4 text-xl font-bold md:text-4xl md:m-12">12-13 FEBRUARY</h2>
             </div>
             <Link href="/register">
-              <button
+              <motion.button
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
                 type="button"
-                className="inline-flex items-center px-10 py-2 text-base font-bold text-white text-purple-200 bg-white border border-transparent rounded-full md:py-4 w-max md:text-3xl font-display focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-200"
+                className="inline-flex hidden sm:inline-flex items-center px-12 shadow-sm py-2 text-base font-black text-white text-purple-400 bg-white border border-transparent rounded-full md:py-4 w-max md:text-3xl font-display focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-200"
               >
-                เข้าร่วมงาน
-              </button>
+                เข้าสู่ระบบ
+              </motion.button>
+            </Link>
+            <Link href="/register">
+              <motion.button
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
+                type="button"
+                className="inline-flex block sm:hidden items-center px-24 py-2 shadow-sm text-base font-black text-white text-purple-400 bg-white border border-transparent rounded-xl md:py-4 w-max md:text-3xl font-display focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-200"
+              >
+                เข้าสู่ระบบ
+              </motion.button>
             </Link>
           </div>
         </div>
@@ -61,74 +131,142 @@ export const Index = ({ stream, schedule, contents }) => {
         </defs>
       </svg>
       <div className="relative flex flex-col items-center justify-center -top-16 md:-top-36 font-display">
-        <div className="w-4/5 px-5 py-5 mb-3 bg-white shadow-lg md:w-7/12 rounded-3xl md:px-10 smd:py-8">
-          <div className="mb-4 ml-2 font-medium md:mb-8">
-            <div className="flex items-center text-xs md:text-2xl">
-              <span className="px-2 text-xs font-semibold text-white bg-red-400 md:text-2xl">
-                LIVE
-              </span>
-              <span className="ml-2 md:ml-4">ไอ้ตะวัน ประธาน กช. โดนรุมกระทืบ</span>
-            </div>
-            <div className="mt-1 text-xs text-gray-300 min-w-min md:text-2xl">
-              Public Event | ประธานชมรม | 10.30-16.80 น.
-            </div>
-          </div>
-          <div className="frame-height-mobile md:frame-height-desktop">
-            <iframe
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              frameBorder="0"
-              src={`${updatedStream.stream}?autoplay=1&mute=1`}
-              width="100%"
-              height="100%"
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={redirectToStage}
+          className="w-4/5 px-5 py-5 mb-3 bg-white shadow-lg md:w-7/12 rounded-xl sm:rounded-2xl md:rounded-3xl md:px-10 smd:py-8"
+        >
+          <div className="flex flex-col justify-center items-center py-0 md:py-6 lg:py-14">
+            <VideoVector
+              style={{ height: '10vw', width: '15vw', minWidth: '100px', minHeight: '80px' }}
             />
-          </div>
-        </div>
-        <div className="flex flex-row justify-center w-4/5 px-4 py-4 mb-3 bg-white shadow-lg md:w-7/12 rounded-3xl md:px-12 md:py-16">
-          <div className="flex flex-col items-center justify-center mx-auto">
-            <h1 className="text-3xl font-semibold md:font-bold md:text-7xl text-blue-75">
-              สอบเข้า
+            <h1 style={{ fontSize: 'calc(5px + 3.5vw)' }} className="text-pink-300 font-black">
+              รายการสด
             </h1>
-            <h1 className="text-xs font-bold text-gray-400 md:text-3xl">6 March 2021</h1>
+            <h1
+              style={{ fontSize: 'calc(5px + 2vw)', lineHeight: 'calc(5px + 1vw)' }}
+              className="text-gray-400 font-black"
+            >
+              ย้อนหลัง
+            </h1>
           </div>
-          <div className="flex flex-col items-center justify-center mx-auto">
-            <Countdown
-              date={1614992400000}
-              renderer={({ days }) => (
-                <h1 className="text-4xl font-bold md:text-8xl text-blue-75">{days}</h1>
-              )}
-            />
-            <p className="text-xs font-medium text-gray-400 md:text-xl">DAYS LEFT</p>
+        </motion.div>
+        <Link href="/articles/admission">
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.95 }}
+            style={{ paddingTop: '2.4vw', paddingBottom: '2.4vw' }}
+            className="flex flex-row justify-center w-4/5 px-4 mb-3 bg-white shadow-lg md:w-7/12 rounded-xl sm:rounded-2xl md:rounded-3xl md:px-12"
+          >
+            <div className="flex flex-col items-center justify-center mx-auto">
+              <h1
+                style={{ fontSize: 'calc(15px + 3.5vw)' }}
+                className="text-3xl font-semibold md:font-bold md:text-7xl text-blue-75"
+              >
+                สอบเข้า
+              </h1>
+              <h1
+                style={{ fontSize: 'calc(5px + 2vw)' }}
+                className="text-xs font-bold text-gray-400 md:text-3xl"
+              >
+                6 March 2021
+              </h1>
+            </div>
+            <div className="flex flex-col items-center justify-center mx-auto">
+              <Countdown
+                date={1614992400000}
+                renderer={({ days }) => (
+                  <h1
+                    style={{ fontSize: 'calc(15px + 3.4vw)' }}
+                    className="text-4xl font-bold md:text-8xl text-blue-75"
+                  >
+                    {days}
+                  </h1>
+                )}
+              />
+              <p
+                style={{ fontSize: 'calc(1px + 1vw)' }}
+                className="text-xs font-medium text-gray-400 md:text-xl"
+              >
+                DAYS LEFT
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center h-20 mx-auto md:h-full">
+              <Group8 style={{ width: '16vw' }} className="w-24 md:w-full" />
+            </div>
+          </motion.div>
+        </Link>
+        <div className="flex flex-wrap items-center justify-evenly w-4/5 md:w-7/12">
+          <div className="w-1/5">
+            <Link href="/videos">
+              <div
+                style={{ width: '96%', height: '12vw', fontSize: '1.8vw' }}
+                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 w-full w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
+              >
+                <div className="flex flex-row justify-center items-end w-full h-2/3">
+                  <Camera style={{ width: '60%', height: '80%' }} className="h-9 sm:h-12 md:h-24" />
+                </div>
+                <span>วีดีโอ</span>
+              </div>
+            </Link>
           </div>
-          <div className="flex flex-col items-center justify-center h-20 mx-auto md:h-full">
-            <Group8 className="w-24 md:w-full" />
+          <div className="w-1/5">
+            <Link href="/clubs">
+              <div
+                style={{ width: '96%', height: '12vw', fontSize: '1.8vw' }}
+                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
+              >
+                <div className="flex flex-row justify-center items-end w-full h-2/3">
+                  <Puzzle style={{ width: '60%', height: '80%' }} className="h-9 sm:h-12 md:h-24" />
+                </div>
+                <span>ชมรม</span>
+              </div>
+            </Link>
           </div>
-        </div>
-        <div className="flex flex-wrap items-center justify-center w-4/5 space-x-2 md:justify-between md:w-7/12 md:space-x-2">
-          <div className="flex flex-col items-center justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
-            <Camera className="h-9 sm:h-12 md:h-24" />
-            วีดีโอ
+          <div className="w-1/5">
+            <Link href="/map">
+              <div
+                style={{ width: '96%', height: '12vw', fontSize: '1.8vw' }}
+                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
+              >
+                <div className="flex flex-row justify-center items-end w-full h-2/3">
+                  <Carv style={{ width: '28%', height: '80%' }} className="h-7 sm:h-10 md:h-24" />
+                </div>
+                <span>การเดินทาง</span>
+              </div>
+            </Link>
           </div>
-          <div className="flex flex-col items-center justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
-            <Puzzle className="h-9 sm:h-12 md:h-24" />
-            ชมรม
+          <div className="w-1/5">
+            <Link href="/tickets">
+              <div
+                style={{ width: '96%', height: '12vw', fontSize: '1.8vw' }}
+                className="flex flex-col cursor-pointer mr-2 items-center hover:bg-gray-100 w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
+              >
+                <div className="flex flex-row justify-center items-end w-full h-2/3">
+                  <CardV style={{ width: '40%', height: '80%' }} className="h-9 sm:h-10 md:h-24" />
+                </div>
+                <span>การ์ด</span>
+              </div>
+            </Link>
           </div>
-          <div className="flex flex-col items-center justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
-            <Carv className="my-1 h-7 sm:h-10 md:h-24" />
-            การเดินทาง
-          </div>
-          <div className="flex-col items-center justify-center hidden w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 2xl:flex md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
-            <CardV className="h-9 sm:h-10 md:h-24" />
-            การ์ดต้อนรับ
-          </div>
-          <div className="flex flex-col items-center justify-center w-16 h-16 mt-2 text-xs text-gray-400 bg-white shadow-lg md:mt-4 sm:w-24 sm:h-24 md:font-semibold md:text-lg md:w-44 md:h-44 rounded-xl md:rounded-3xl">
-            <Phone className="my-1 h-7 sm:h-10 md:h-24" />
-            ติดต่อ
+          <div className="w-1/5">
+            <Link href="/contact">
+              <div
+                style={{ width: '96%', height: '12vw', fontSize: '1.8vw' }}
+                className="flex flex-col items-center cursor-pointer hover:bg-gray-100 w-16 h-16 text-xxs text-gray-400 bg-white shadow-lg sm:w-24 sm:h-24 md:font-semibold md:text-xl md:h-44 rounded-xl md:rounded-3xl"
+              >
+                <div className="flex flex-row justify-center items-end w-full h-2/3">
+                  <Phone style={{ width: '44%', height: '80%' }} className="h-7 sm:h-10 md:h-24" />
+                </div>
+                <span>ติดต่อ</span>
+              </div>
+            </Link>
           </div>
         </div>
         <Programmes />
-        <SchoolBlogs />
-        <Videos />
+        <SchoolBlogs videos={schoolVideos} />
+        <Videos videos={videos} />
         <Blogs content={contents} />
         <Live schedule={schedule} />
       </div>

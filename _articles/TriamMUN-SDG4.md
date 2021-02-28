@@ -1,6 +1,6 @@
 ---
 title: SDG 4: Quality Education
-author: Ramanya Kamutharat
+author: TriamMUN
 thumbnail: /assets/articles/_thumbnails/thumb_13.jpg
 ---
 
@@ -9,9 +9,9 @@ blueprint for a better and more sustainable future for all, comprising
 17 goals, and 169 targets. They were set in September 2015 by the United
 Nations General Assembly, New York, United States, and were expected to
 be achieved by August 2030. To make it simpler, the SDGs are like goals
-set by the UN for all nations to achieve by 2030 !
+set by the UN for all nations to achieve by 2030!
 
-**Zooming in, What Is SDG 4 Talking about ?**
+**Zooming in, What Is SDG 4 Talking about?**
 
 The full title of SDG 4 that we’re focusing on is "Ensure inclusive and
 equitable quality education and promote lifelong learning opportunities
@@ -44,15 +44,15 @@ educational gap.
 **Problems Cannot Solve Themselves**
 
 That’s why they need your help! As an educational injustice and
-discrimination are apparent, why don’t we do something ? Even though
+discrimination are apparent, why don’t we do something? Even though
 we’re students, it doesn’t mean that we can’t make any changes. Let’s
-begin with ourselves ! We can start by raising people’s awareness
+begin with ourselves! We can start by raising people’s awareness
 through social media in order to make the problems noticeable for
 authorities or any capable organizations, so they can take serious
 actions. Of course, changes might not come in an instant, but doing so
-is surely a nice start !
+is surely a nice start!
 
-**SDGs คืออะไร ?**
+**SDGs คืออะไร?**
 
 SDGs (Sustainable Development Goals)
 เป็นเป้าหมายที่ถูกออกแบบมาให้เป็นพิมพ์เขียวสำหรับอนาคตที่ยั่งยืนกว่าและดีกว่าสำหรับทุกคน
@@ -60,7 +60,7 @@ SDGs (Sustainable Development Goals)
 และตั้งเป้าที่จะทำให้สำเร็จภายในเดือนสิงหาคมปีค.ศ. 2030 ประกอบไปด้วย 17
 เป้าหมายและ 169 เป้าประสงค์ ถ้าจะให้พูดง่าย ๆ SDGs
 ก็เป็นเหมือนเป้าหมายที่สหประชาชาติได้ตั้งไว้เพื่อให้ทุกชาติทำให้สำเร็จภายในปี
-2030 นั่นเอง !
+2030 นั่นเอง!
 
 **มาดูกันซิว่า SDG ข้อ 4 กำลังพูดถึงอะไร**
 
@@ -96,15 +96,15 @@ SDGs (Sustainable Development Goals)
 
 **ปัญหาไม่สามารถแก้ไขตัวเองได้**
 
-เพราะแบบนี้จึงต้องการความช่วยเหลือ !
+เพราะแบบนี้จึงต้องการความช่วยเหลือ!
 ในขณะที่ความไม่เป็นธรรมและการแบ่งชนชั้นทางการศึกษานั้นกำลังเกิดขึ้นอย่างชัดเจนมากพอที่จะทำให้เรารู้ตัวได้ขนาดนี้
-ทำไมเราไม่ทำอะไรซักอย่างล่ะ ? ถึงแม้ว่าพวกเราจะเป็นนักเรียน
+ทำไมเราไม่ทำอะไรซักอย่างล่ะ? ถึงแม้ว่าพวกเราจะเป็นนักเรียน
 แต่ก็ไม่ได้หมายความว่าเราจะไม่สามารถสร้างความเปลี่ยนแปลงอะไรได้เลยนะ
 เริ่มจากตัวเราเอง
 เราสามารถเริ่มโดยการสร้างความตระหนักให้แก่คนทั่วไปได้ผ่านสื่อโซเชียลเพื่อที่จะสร้างความสนใจให้เจ้าหน้าที่หรือหน่วยงานที่มีความสามารถ
 พวกเขาจะได้เข้ามาแก้ปัญหานี้อย่างจริงจังมากขึ้น
 แน่นอนว่าการเปลี่ยนแปลงอาจไม่ได้ได้มาภายในเวลาอันชั่วครู่
-แต่การทำเช่นนั้นคือการเริ่มต้นที่ดีอย่างแน่นอน !
+แต่การทำเช่นนั้นคือการเริ่มต้นที่ดีอย่างแน่นอน!
 
 <img src="/assets/articles/TriamMUN-SDG4_assets/media/image1.jpg" style="width:5.24097in;height:3.42569in" />
 

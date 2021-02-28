@@ -1,0 +1,29 @@
+[
+  {
+    "path": "/school/1",
+    "video": "https://www.youtube.com/embed/VW91hOB5hvY",
+    "title": "84 facts about Triam Udom | EP.1 พาทัวร์โรงเรียนเตรียมฯ ⛲️⊹\uD83E\uDE84⋆",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "17.17",
+    "thumbnail": "/assets/school/thumb_1.jpg",
+    "description": ""
+  },
+  {
+    "path": "/school/2",
+    "video": "https://www.youtube.com/embed/LFJm5rhVzWE",
+    "title": "84 facts about Triam Udom | EP.2 กิจกรรมในโรงเรียนเตรียมฯ *\uD83D\uDCD3꒰\uD83E\uDD0D",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "11.50",
+    "thumbnail": "/assets/school/thumb_2.jpg",
+    "description": ""
+  },
+  {
+    "path": "/school/3",
+    "video": "https://www.youtube.com/embed/AU-ovMQ5AFU",
+    "title": "84 facts about Triam Udom | EP.3 Lifestyle เด็กเตรียมฯ \uD83E\uDEA1⋆｡˚\uD83D\uDC55",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "14.47",
+    "thumbnail": "/assets/school/thumb_3.jpg",
+    "description": ""
+  }
+]

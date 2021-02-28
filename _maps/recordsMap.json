@@ -1,0 +1,191 @@
+[
+  {
+    "path": "/records/1",
+    "video": "https://www.youtube.com/embed/oML7cDKmrvY",
+    "title": "สัมภาษณ์นักเรียนศิลป์เยอรมัน",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "24.23",
+    "thumbnail": "/assets/records/_thumbnails/thumb_1.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/2",
+    "video": "https://www.youtube.com/embed/rkEeNINNtqw",
+    "title": "พบปะรองฯ วิชาการ",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "13.30",
+    "thumbnail": "/assets/records/_thumbnails/thumb_2.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/3",
+    "video": "https://www.youtube.com/embed/2SyZwtbtOII",
+    "title": "สัมภาษณ์นักเรียน Gifted",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "24.42",
+    "thumbnail": "/assets/records/_thumbnails/thumb_3.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/4",
+    "video": "https://www.youtube.com/embed/FSWPFfmtb8A",
+    "title": "สัมภาษณ์ครู",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "19.02",
+    "thumbnail": "/assets/records/_thumbnails/thumb_4.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/5",
+    "video": "https://www.youtube.com/embed/JFVYwThZVzo",
+    "title": "สัมภาษณ์นักเรียนศิลป์คำนวณ",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "24.59",
+    "thumbnail": "/assets/records/_thumbnails/thumb_5.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/6",
+    "video": "https://www.youtube.com/embed/jImWiPnQEtM",
+    "title": "พิธีเปิดงาน",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "16.42",
+    "thumbnail": "/assets/records/_thumbnails/thumb_6.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/7",
+    "video": "https://www.youtube.com/embed/owYQbJ9Mm7k",
+    "title": "สัมภาษณ์นักเรียนเก่า \"มิลค์ ณัฐพัชร ทวีวรรณบูลย์\"",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "18.38",
+    "thumbnail": "/assets/records/_thumbnails/thumb_7.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/8",
+    "video": "https://www.youtube.com/embed/92kONB1o19I",
+    "title": "สัมภาษณ์นักเรียนสายวิทย์-คณิต รอบที่ 1",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "24.01",
+    "thumbnail": "/assets/records/_thumbnails/thumb_8.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/9",
+    "video": "https://www.youtube.com/embed/Z_mHxbPVMCY",
+    "title": "สัมภาษณ์ผู้อำนวยการโรงเรียน",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "18.03",
+    "thumbnail": "/assets/records/_thumbnails/thumb_9.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/10",
+    "video": "https://www.youtube.com/embed/HJsYuUWzOok",
+    "title": "พิธีปิดงานวันที่ 1",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "03.15",
+    "thumbnail": "/assets/records/_thumbnails/thumb_10.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/11",
+    "video": "https://www.youtube.com/embed/qSTUNrWFDSo",
+    "title": "สัมภาษณ์นักเรียนเก่า \"บูม ธริศร ธรวิกรัย\"",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "19.10",
+    "thumbnail": "/assets/records/_thumbnails/thumb_11.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/12",
+    "video": "https://www.youtube.com/embed/XIp_HCPYT4Q",
+    "title": "สัมภาษณ์รุ่นพี่",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "34.59",
+    "thumbnail": "/assets/records/_thumbnails/thumb_12.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/13",
+    "video": "https://www.youtube.com/embed/VaPNW-_oDGQ",
+    "title": "สัมภาษณ์นักเรียนศิลป์ฝรั่งเศส",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "24.59",
+    "thumbnail": "/assets/records/_thumbnails/thumb_13.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/14",
+    "video": "https://www.youtube.com/embed/5XQn1D6orFw",
+    "title": "สัมภาษณ์นักเรียนศิลป์สเปน",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "24.48",
+    "thumbnail": "/assets/records/_thumbnails/thumb_14.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/15",
+    "video": "https://www.youtube.com/embed/95aIAndgeoA",
+    "title": "สัมภาษณ์นักเรียนศิลป์เกาหลี",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "23.25",
+    "thumbnail": "/assets/records/_thumbnails/thumb_15.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/16",
+    "video": "https://www.youtube.com/embed/s4kZNRf2r1s",
+    "title": "พิธีเปิดงานวันที่ 2",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "06.58",
+    "thumbnail": "/assets/records/_thumbnails/thumb_16.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/17",
+    "video": "https://www.youtube.com/embed/hKxB-ylX1cs",
+    "title": "สัมภาษณ์นักเรียนสายวิทย์-คณิต รอบที่ 2",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "23.49",
+    "thumbnail": "/assets/records/_thumbnails/thumb_17.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/18",
+    "video": "https://www.youtube.com/embed/OwVCKIV0TMU",
+    "title": "สเปนเข้าใจไม่ท่องจำ",
+    "author": "สายการเรียนศิลป์สเปน",
+    "duration": "07.58",
+    "thumbnail": "/assets/records/_thumbnails/thumb_18.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/19",
+    "video": "https://www.youtube.com/embed/7szT8i9E3TM",
+    "title": "สัมภาษณ์นักเรียนศิลป์จีน",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "24.27",
+    "thumbnail": "/assets/records/_thumbnails/thumb_19.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/20",
+    "video": "https://www.youtube.com/embed/nbd1GqVG43o",
+    "title": "สัมภาษณ์นักเรียนศิลป์ญี่ปุ่น",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "23.51",
+    "thumbnail": "/assets/records/_thumbnails/thumb_20.jpg",
+    "description": ""
+  },
+  {
+    "path": "/records/21",
+    "video": "https://www.youtube.com/embed/0i4ffH11TpQ",
+    "title": "พิธีปิดงาน",
+    "author": "คณะกรรมการงานกิจกรรมพัฒนาผู้เรียน",
+    "duration": "05.35",
+    "thumbnail": "/assets/records/_thumbnails/thumb_21.jpg",
+    "description": ""
+  }
+]

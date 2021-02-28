@@ -8,8 +8,8 @@ export const MrtMap = ({ ...restprops }) => {
       xmlns="http://www.w3.org/2000/svg"
       {...restprops}
     >
-      <rect x="318.481" width="29.8358" height="824.836" fill="url(#paint0_linear)" />
-      <rect x="15.1475" y="158.502" width="908.128" height="28.5927" fill="url(#paint1_linear)" />
+      <rect x="318.481" width="29.8358" height="824.836" fill="url(#paint7_linear)" />
+      <rect x="15.1475" y="158.502" width="908.128" height="28.5927" fill="url(#paint8_linear)" />
       <rect
         x="658.484"
         y="161.611"
@@ -25,7 +25,7 @@ export const MrtMap = ({ ...restprops }) => {
         width="941.664"
         height="31.6854"
         transform="rotate(8.90372 -7.0957 748.467)"
-        fill="url(#paint2_linear)"
+        fill="url(#paint9_linear)"
       />
       <rect x="183.598" y="615.986" width="123.073" height="123.694" rx="8.62473" fill="#E1E1E1" />
       <rect x="359.504" y="88.8848" width="70.8601" height="52.8343" rx="5.23644" fill="#E1E1E1" />
@@ -182,7 +182,7 @@ export const MrtMap = ({ ...restprops }) => {
       />
       <defs>
         <linearGradient
-          id="paint0_linear"
+          id="paint7_linear"
           x1="333.782"
           y1="799.036"
           x2="333.665"
@@ -193,7 +193,7 @@ export const MrtMap = ({ ...restprops }) => {
           <stop offset="1" stop-color="#E1E1E1" stop-opacity="0" />
         </linearGradient>
         <linearGradient
-          id="paint1_linear"
+          id="paint8_linear"
           x1="79.7917"
           y1="158.503"
           x2="805.432"
@@ -206,7 +206,7 @@ export const MrtMap = ({ ...restprops }) => {
           <stop offset="1" stop-color="#E1E1E1" stop-opacity="0" />
         </linearGradient>
         <linearGradient
-          id="paint2_linear"
+          id="paint9_linear"
           x1="177.049"
           y1="728.356"
           x2="758.996"

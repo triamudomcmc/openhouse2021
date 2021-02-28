@@ -33,11 +33,11 @@ export const Inside = () => {
   const getCurrentMap = () => {
     switch (currentTab) {
       case 'bus':
-        return <BusMap />
+        return <BusMap className="w-96 lg:w-auto" />
       case 'bts':
-        return <BtsMap />
+        return <BtsMap className="w-96 lg:w-auto" />
       case 'mrt':
-        return <MrtMap />
+        return <MrtMap className="w-96 lg:w-auto" />
     }
   }
 
@@ -60,17 +60,17 @@ export const Inside = () => {
   }
 
   return (
-    <div className="max-w-full pt-14 md:pt-0">
+    <div className="max-w-full pt-14 lg:pt-0">
       <div className="flex max-w-full ">
-        <div className="flex items-center justify-center max-w-full -ml-4 -mr-16 md:m-0 h-80 md:h-full md:w-1/2 md:flex-col">
+        <div className="flex w-full items-center justify-center max-w-full -ml-4 -mr-16 lg:m-0 h-80 lg:h-full lg:w-1/2 lg:flex-col">
           {getCurrentMap()}
         </div>
-        <div className="flex flex-col items-center justify-center md:w-1/2">
-          <div className="flex flex-col self-center max-w-full py-12 space-y-2 md:space-y-0 md:space-x-4 md:flex-row">
+        <div className="flex flex-col items-center justify-center lg:w-1/2">
+          <div className="flex flex-col self-center max-w-full py-12 space-y-2 lg:space-y-0 lg:space-x-4 lg:flex-row">
             <div>
               <p
                 className={cn(
-                  'flex items-center w-14 h-14 justify-center rounded-full shadow-md md:h-24 md:w-24',
+                  'flex items-center w-14 h-14 justify-center rounded-full shadow-md lg:h-24 lg:w-24',
                   highlightbus
                 )}
                 onClick={() => setCurrentTab('bus')}
@@ -82,14 +82,14 @@ export const Inside = () => {
                   <BusInv />
                 </div>
               </p>
-              <p className="flex items-center justify-center pt-2 text-xs text-center md:text-sm">
+              <p className="flex items-center justify-center pt-2 text-xs text-center lg:text-sm">
                 รถประจำทาง
               </p>
             </div>
             <div>
               <p
                 className={cn(
-                  'flex items-center w-14 h-14 justify-center rounded-full shadow-md md:h-24 md:w-24',
+                  'flex items-center w-14 h-14 justify-center rounded-full shadow-md lg:h-24 lg:w-24',
                   highlightbts
                 )}
                 onClick={() => setCurrentTab('bts')}
@@ -101,14 +101,14 @@ export const Inside = () => {
                   <BtsInv />
                 </div>
               </p>
-              <p className="flex items-center justify-center pt-2 text-xs text-center md:text-sm">
+              <p className="flex items-center justify-center pt-2 text-xs text-center lg:text-sm">
                 BTS
               </p>
             </div>
             <div>
               <p
                 className={cn(
-                  'flex items-center pb-1 w-14 h-14 justify-center md:pb-2 rounded-full shadow-md md:h-24 md:w-24',
+                  'flex items-center pb-1 w-14 h-14 justify-center lg:pb-2 rounded-full shadow-md lg:h-24 lg:w-24',
                   highlightmrt
                 )}
                 onClick={() => setCurrentTab('mrt')}
@@ -120,15 +120,15 @@ export const Inside = () => {
                   <MrtInv />
                 </div>
               </p>
-              <p className="flex items-center justify-center pt-2 text-xs text-center md:text-sm">
+              <p className="flex items-center justify-center pt-2 text-xs text-center lg:text-sm">
                 MRT
               </p>
             </div>
           </div>
-          <div className="hidden h-1/3 md:flex">{getCurrentTab()}</div>
+          <div className="hidden h-1/3 lg:flex">{getCurrentTab()}</div>
         </div>
       </div>
-      <div className="flex items-center justify-center pt-16 mx-4 h-1/3 md:hidden">
+      <div className="flex items-center justify-center pt-16 mx-4 h-1/3 lg:hidden">
         {getCurrentTab()}
       </div>
     </div>

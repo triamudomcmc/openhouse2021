@@ -1,57 +1,127 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { User } from '../../assets/vectors/User'
 import { ContentCard } from '../common/Card/ContentCard'
+import Toast from '../common/Toasts/Toast'
+import Link from 'next/link'
+import { shuffleArray } from '../../utils/arraymethods'
 
-const Videos = () => {
+const Videos = ({ videos }) => {
+  const [warnToast, setWarnToast] = useState(false)
+  const [top, setTop] = useState([])
+  const [bottom, setBottom] = useState([])
+
+  useEffect(() => {
+    const halfLength = Math.ceil(videos.length / 2)
+    setTop(shuffleArray(videos.slice(0, halfLength)))
+    setBottom(shuffleArray(videos.slice(halfLength, videos.length)))
+  }, [videos])
+
+  const turnWarnToastOn = () => {
+    setWarnToast(prev => {
+      return true
+    })
+    setTimeout(() => {
+      setWarnToast(prev => {
+        return false
+      })
+    }, 4000)
+  }
+
   return (
     <div className="w-4/5 md:w-7/12">
-      <div className="flex flex-row justify-between md:justify-center mt-16 mb-10 items-end">
-        <h1 className="text-3xl font-black text-center text-blue-400 md:mt-48 md:text-7xl">
-          วีดีโอ
-        </h1>
-        <h1 className="block md:hidden font-bold text-lg text-gray-400">ดูทั้งหมด</h1>
+      <div
+        onClick={() => {
+          setWarnToast(prevState => {
+            return false
+          })
+        }}
+        className="fixed cursor-pointer"
+      >
+        <Toast type="failed" text="เนื้อหายังไม่เปิดใช้งาน โปรดติดตามรายการสด" show={warnToast} />
       </div>
-      <div className="flex flex-col items-center justify-center py-4 space-y-4">
+      <div className="flex flex-row justify-between md:justify-center mt-4 md:mt-16 md:mb-10 items-end">
+        <Link href="/videos">
+          <h1 className="text-3xl cursor-pointer font-black text-center text-blue-400 md:mt-48 md:text-7xl">
+            วีดีโอ
+          </h1>
+        </Link>
+        <Link href="/videos">
+          <h1 className="block md:hidden cursor-pointer font-bold text-lg text-gray-400">
+            ดูทั้งหมด
+          </h1>
+        </Link>
+      </div>
+      <div className="flex flex-col items-center justify-center py-3 space-y-4">
         <div className="flex max-w-full pb-6 space-y-4 overflow-x-scroll md:space-y-0 md:space-x-4 flex-row">
-          <ContentCard src="/assets/nok.png" duration="12.30" className="md:w-1/3">
-            <ContentCard.Desc>
-              เปิดพิกัด ต้นต้อยติ่งในโรงเรียน ! อาวุธสง ครามของต้องห้ามประจำโรงเรียนเตรียมอุดมศึกษา
-            </ContentCard.Desc>
-            <ContentCard.Author>ไอร่’ ตะวัน นน’ คนไม่มี คัยย.</ContentCard.Author>
-          </ContentCard>
-          <ContentCard src="/assets/nok.png" duration="12.30">
-            <ContentCard.Desc>
-              เปิดพิกัด ต้นต้อยติ่งในโรงเรียน ! อาวุธสง ครามของต้องห้ามประจำโรงเรียนเตรียมอุดมศึกษา
-            </ContentCard.Desc>
-            <ContentCard.Author>ไอร่’ ตะวัน นน’ คนไม่มี คัยย.</ContentCard.Author>
-          </ContentCard>
-          <ContentCard src="/assets/nok.png" duration="12.30">
-            <ContentCard.Desc>
-              เปิดพิกัด ต้นต้อยติ่งในโรงเรียน ! อาวุธสง ครามของต้องห้ามประจำโรงเรียนเตรียมอุดมศึกษา
-            </ContentCard.Desc>
-            <ContentCard.Author>ไอร่’ ตะวัน นน’ คนไม่มี คัยย.</ContentCard.Author>
-          </ContentCard>
+          {top.map(data => {
+            if ('video' in data) {
+              return (
+                <ContentCard
+                  href={data.path}
+                  src={data.thumbnail}
+                  duration={data.duration}
+                  className="md:w-1/3"
+                  slider={true}
+                >
+                  <ContentCard.Desc>{data.title}</ContentCard.Desc>
+                  <ContentCard.Author>{data.author}</ContentCard.Author>
+                </ContentCard>
+              )
+            } else {
+              return (
+                <ContentCard
+                  src={data.thumbnail}
+                  href={data.path}
+                  duration={data.duration}
+                  className="md:w-1/3"
+                  disabled={true}
+                  slider={true}
+                  callback={() => {
+                    turnWarnToastOn()
+                  }}
+                >
+                  <ContentCard.Desc>{data.title}</ContentCard.Desc>
+                  <ContentCard.Author>{data.author}</ContentCard.Author>
+                </ContentCard>
+              )
+            }
+          })}
         </div>
         <div className="flex max-w-full pb-6 space-y-4 overflow-x-scroll md:space-y-0 md:space-x-4 flex-row">
-          <ContentCard src="/assets/nok.png" duration="12.30">
-            <ContentCard.Desc>
-              เปิดพิกัด ต้นต้อยติ่งในโรงเรียน ! อาวุธสง ครามของต้องห้ามประจำโรงเรียนเตรียมอุดมศึกษา
-            </ContentCard.Desc>
-            <ContentCard.Author>ไอร่’ ตะวัน นน’ คนไม่มี คัยย.</ContentCard.Author>
-          </ContentCard>
-          <ContentCard src="/assets/nok.png" duration="12.30">
-            <ContentCard.Desc>
-              เปิดพิกัด ต้นต้อยติ่งในโรงเรียน ! อาวุธสง ครามของต้องห้ามประจำโรงเรียนเตรียมอุดมศึกษา
-            </ContentCard.Desc>
-            <ContentCard.Author>ไอร่’ ตะวัน นน’ คนไม่มี คัยย.</ContentCard.Author>
-          </ContentCard>
-          <ContentCard src="/assets/nok.png" duration="12.30">
-            <ContentCard.Desc>
-              เปิดพิกัด ต้นต้อยติ่งในโรงเรียน ! อาวุธสง ครามของต้องห้ามประจำโรงเรียนเตรียมอุดมศึกษา
-            </ContentCard.Desc>
-            <ContentCard.Author>ไอร่’ ตะวัน นน’ คนไม่มี คัยย.</ContentCard.Author>
-          </ContentCard>
+          {bottom.map(data => {
+            if ('video' in data) {
+              return (
+                <ContentCard
+                  src={data.thumbnail}
+                  href={data.path}
+                  duration={data.duration}
+                  className="md:w-1/3"
+                  slider={true}
+                >
+                  <ContentCard.Desc>{data.title}</ContentCard.Desc>
+                  <ContentCard.Author>{data.author}</ContentCard.Author>
+                </ContentCard>
+              )
+            } else {
+              return (
+                <ContentCard
+                  src={data.thumbnail}
+                  duration={data.duration}
+                  href={data.path}
+                  className="md:w-1/3"
+                  disabled={true}
+                  slider={true}
+                  callback={() => {
+                    turnWarnToastOn()
+                  }}
+                >
+                  <ContentCard.Desc>{data.title}</ContentCard.Desc>
+                  <ContentCard.Author>{data.author}</ContentCard.Author>
+                </ContentCard>
+              )
+            }
+          })}
         </div>
       </div>
     </div>

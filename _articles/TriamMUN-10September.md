@@ -1,6 +1,6 @@
 ---
 title: September 10: World Suicide Prevention Day
-author: Natnicha Kaewtatip
+author: TriamMUN
 thumbnail: /assets/articles/_thumbnails/thumb_14.jpg
 ---
 
