@@ -186,7 +186,7 @@ export const Index = ({ stream, schedule, contents, videos, schoolVideos }) => {
                 )}
               />
               <p
-                style={{ fontSize: 'calc(1px + 1vw)' }}
+                style={{ fontSize: 'calc(6px + 0.8vw)' }}
                 className="text-xs font-medium text-gray-400 md:text-xl"
               >
                 DAYS LEFT
