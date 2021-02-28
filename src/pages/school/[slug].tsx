@@ -5,6 +5,7 @@ import Footer from '../../components/common/Footer'
 import fs from 'fs'
 import Link from 'next/link'
 import React from 'react'
+import { parseDecription } from '../../utils/decriptionParser'
 
 const Videos = ({ post, suggestion }) => {
   return (
@@ -112,10 +113,20 @@ export async function getStaticProps({ params }) {
   })
 
   const data = JSON.parse(fetchedData.toString())
+  let parsed = []
+
+  for (const item of data) {
+    let current = {}
+    for (const key in item) {
+      current[key] =
+        key === 'description' ? await parseDecription(await markdownToHtml(item[key])) : item[key]
+    }
+    parsed.push(current)
+  }
 
   return {
     props: {
-      post: data[params.slug - 1],
+      post: parsed[params.slug - 1],
       suggestion: suggestion
     }
   }
